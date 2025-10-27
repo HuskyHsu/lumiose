@@ -1,0 +1,3 @@
+[submodule "za-textport"]
+	path = za-textport
+	url = git@github.com:projectpokemon/za-textport.git
