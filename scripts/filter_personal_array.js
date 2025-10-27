@@ -1,6 +1,7 @@
 // scripts/filter_personal_array.js
 const fs = require('fs').promises;
 const path = require('path');
+const { addMultiLanguageSpeciesNames } = require('./species-reader');
 
 async function main() {
   const inputPath = path.join(__dirname, '..', 'za-textport', 'Raw', 'personal_array.json');
@@ -10,23 +11,29 @@ async function main() {
   try {
     await fs.mkdir(outDir, { recursive: true });
 
+    // Read and parse raw personal array
     const text = await fs.readFile(inputPath, 'utf8');
-    const data = JSON.parse(text).Table;
-
-    if (!Array.isArray(data)) {
-      console.error('input JSON is not an array.');
-      process.exitCode = 2;
-      return;
+    const parsed = JSON.parse(text);
+    // Support two formats: direct array, or { Table: [...] }
+    const arr = Array.isArray(parsed) ? parsed : Array.isArray(parsed.Table) ? parsed.Table : null;
+    if (!arr) {
+      throw new Error('Input JSON does not contain array (array or Table)');
     }
 
-    const filtered = data.filter((item) => item.IsPresentInGame !== false);
+    // Filter: remove items where IsPresentInGame === false
+    const filtered = arr.filter((item) => item.IsPresentInGame !== false);
 
-    await fs.writeFile(outputPath, JSON.stringify(filtered, null, 2), 'utf8');
+    // Add multi-language species names (Chinese, Japanese, English)
+    const { items: namedItems, namedCount } = await addMultiLanguageSpeciesNames(filtered);
 
-    console.log(`Done: wrote ${filtered.length} items to ${outputPath}`);
+    await fs.writeFile(outputPath, JSON.stringify(namedItems, null, 2), 'utf8');
+
+    console.log(
+      `Complete: wrote ${namedItems.length} items to ${outputPath}, annotated ${namedCount} names`
+    );
   } catch (err) {
-    console.error('error: ', err.message || err);
-    process.exitCode = 1;
+    console.error('Error:', err.message || err);
+    process.exit(1);
   }
 }
 
