@@ -4,6 +4,7 @@ const path = require('path');
 const { addMultiLanguageSpeciesNames } = require('./convertSpecies');
 const { convertAllTypeIdsToNames } = require('./convertType');
 const { convertAbilitiesNames } = require('./convertAbilities');
+const { addMultiLanguageMoveNames } = require('./convertMoves');
 
 async function main() {
   const inputPath = path.join(__dirname, '..', 'za-textport', 'Raw', 'personal_array.json');
@@ -35,8 +36,28 @@ async function main() {
     // Convert abilities from IDs to names
     pokemonList = await convertAbilitiesNames(pokemonList, language);
 
+    // Convert moves from IDs to names
+    pokemonList = await addMultiLanguageMoveNames(pokemonList);
+
+    const deletedFields = [
+      'IsPresentInGame',
+      'EggGroup1',
+      'EggGroup2',
+      'Hatch',
+      'HatchCycles',
+      'EggMoves',
+      'ReminderMoves',
+    ];
+    // Remove unnecessary fields
+    pokemonList = pokemonList.map((item) => {
+      deletedFields.forEach((field) => {
+        delete item[field];
+      });
+      return item;
+    });
+
     // console.log
-    pokemonList.slice(0, 30).forEach((item, index) => {
+    pokemonList.slice(0, 10).forEach((item, index) => {
       const name = `${item.Name.zh}${item.Info.Form !== 0 ? '(' + item.Info.Form + ')' : ''}`;
 
       console.log(`${name}: ${item.Ability1} / ${item.Ability2} / ${item.AbilityH}`);
