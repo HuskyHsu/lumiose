@@ -1,13 +1,15 @@
 // scripts/filter_personal_array.js
 const fs = require('fs').promises;
 const path = require('path');
-const { addMultiLanguageSpeciesNames } = require('./speciesReader');
-const { convertTypeIdToName } = require('./convertType');
+const { addMultiLanguageSpeciesNames } = require('./convertSpecies');
+const { convertAllTypeIdsToNames } = require('./convertType');
+const { convertAbilitiesNames } = require('./convertAbilities');
 
 async function main() {
   const inputPath = path.join(__dirname, '..', 'za-textport', 'Raw', 'personal_array.json');
   const outDir = path.join(__dirname, '..', 'data');
   const outputPath = path.join(outDir, 'personal_array.json');
+  const language = 'zh'; // 'zh', 'ja', 'en'
 
   try {
     await fs.mkdir(outDir, { recursive: true });
@@ -28,21 +30,16 @@ async function main() {
     ({ items: pokemonList } = await addMultiLanguageSpeciesNames(pokemonList));
 
     // Convert Type1 and Type2 from IDs to names
-    pokemonList.forEach((item) => {
-      item.Type1 = convertTypeIdToName(item.Type1);
-      item.Type2 = convertTypeIdToName(item.Type2);
-      if (item.Type1 === null) {
-        console.warn(`Warning: Item ${item.Name?.en || 'unknown'} has invalid Type1 ID`);
-      }
+    pokemonList = convertAllTypeIdsToNames(pokemonList, language);
 
-      if (item.Type2 === null) {
-        console.warn(`Warning: Item ${item.Name?.en || 'unknown'} has invalid Type2 ID`);
-      }
-    });
+    // Convert abilities from IDs to names
+    pokemonList = await convertAbilitiesNames(pokemonList, language);
 
     // console.log
     pokemonList.slice(0, 30).forEach((item, index) => {
-      console.log(`${item.Name.zh}: ${item.Type1} / ${item.Type2}`);
+      const name = `${item.Name.zh}${item.Info.Form !== 0 ? '(' + item.Info.Form + ')' : ''}`;
+
+      console.log(`${name}: ${item.Ability1} / ${item.Ability2} / ${item.AbilityH}`);
     });
 
     await fs.writeFile(outputPath, JSON.stringify(pokemonList, null, 2), 'utf8');
