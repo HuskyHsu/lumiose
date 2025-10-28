@@ -1,0 +1,1 @@
+node scripts/pokemonDataParser.js za-textport/Trad_Chinese/personal.txt data/personal_zh.json
