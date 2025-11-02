@@ -57,11 +57,11 @@ async function main() {
     });
 
     // console.log
-    pokemonList.slice(0, 10).forEach((item, index) => {
-      const name = `${item.Name.zh}${item.Info.Form !== 0 ? '(' + item.Info.Form + ')' : ''}`;
+    // pokemonList.slice(0, 10).forEach((item, index) => {
+    //   const name = `${item.Name.zh}${item.Info.Form !== 0 ? '(' + item.Info.Form + ')' : ''}`;
 
-      console.log(`${name}: ${item.Ability1} / ${item.Ability2} / ${item.AbilityH}`);
-    });
+    //   console.log(`${name}: ${item.Ability1} / ${item.Ability2} / ${item.AbilityH}`);
+    // });
 
     await fs.writeFile(outputPath, JSON.stringify(pokemonList, null, 2), 'utf8');
 

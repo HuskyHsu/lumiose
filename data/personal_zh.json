@@ -181,12 +181,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "妙蛙草-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "妙蛙草-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 2,
@@ -374,12 +376,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "妙蛙花-0",
-      "level": 32,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "妙蛙花-0",
+        "level": 32,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 3,
@@ -1018,12 +1022,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "火恐龍-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "火恐龍-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 5,
@@ -1238,12 +1244,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "噴火龍-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "噴火龍-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 6,
@@ -2223,12 +2231,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "卡咪龜-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "卡咪龜-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 8,
@@ -2434,12 +2444,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "水箭龜-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "水箭龜-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 9,
@@ -3011,12 +3023,14 @@
         "name": "電網"
       }
     ],
-    "evolution": {
-      "into": "鐵殼蛹-0",
-      "level": 7,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "鐵殼蛹-0",
+        "level": 7,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 14,
@@ -3087,12 +3101,14 @@
         "name": "電網"
       }
     ],
-    "evolution": {
-      "into": "大針蜂-0",
-      "level": 10,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "大針蜂-0",
+        "level": 10,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 15,
@@ -3639,12 +3655,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "比比鳥-0",
-      "level": 18,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "比比鳥-0",
+        "level": 18,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 17,
@@ -3809,12 +3827,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "大比鳥-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "大比鳥-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 18,
@@ -4350,12 +4370,14 @@
         "name": "垃圾射擊"
       }
     ],
-    "evolution": {
-      "into": "阿柏怪-0",
-      "level": 22,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "阿柏怪-0",
+        "level": 22,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 24,
@@ -4773,7 +4795,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "雷丘-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "雷之石"
+      }
+    ]
   },
   {
     "pid": 26,
@@ -5483,7 +5512,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "皮可西-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "月之石"
+      }
+    ]
   },
   {
     "pid": 36,
@@ -6183,12 +6219,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": {
-      "into": "勇基拉-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "勇基拉-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 64,
@@ -6387,12 +6425,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": {
-      "into": "胡地-0",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "胡地-0",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 65,
@@ -7018,12 +7058,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "豪力-0",
-      "level": 28,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "豪力-0",
+        "level": 28,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 67,
@@ -7240,12 +7282,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "怪力-0",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "怪力-0",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 68,
@@ -7653,12 +7697,14 @@
         "name": "毒菱"
       }
     ],
-    "evolution": {
-      "into": "口呆花-0",
-      "level": 21,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "口呆花-0",
+        "level": 21,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 70,
@@ -7833,7 +7879,14 @@
         "name": "毒菱"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "大食花-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "葉之石"
+      }
+    ]
   },
   {
     "pid": 71,
@@ -8455,7 +8508,20 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "呆殼獸-0",
+        "level": 37,
+        "method": "LevelUp",
+        "condition": "0"
+      },
+      {
+        "into": "呆呆王-0",
+        "level": 0,
+        "method": "TradeHeldItem",
+        "condition": "王者之證"
+      }
+    ]
   },
   {
     "pid": 1048,
@@ -8684,7 +8750,20 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "呆殼獸-2",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "伽勒荳蔻手環"
+      },
+      {
+        "into": "呆呆王-1",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "伽勒荳蔻花圈"
+      }
+    ]
   },
   {
     "pid": 80,
@@ -9714,12 +9793,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "鬼斯通-0",
-      "level": 25,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "鬼斯通-0",
+        "level": 25,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 93,
@@ -9945,12 +10026,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "耿鬼-0",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "耿鬼-0",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 94,
@@ -10620,7 +10703,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "大鋼蛇-0",
+        "level": 0,
+        "method": "TradeHeldItem",
+        "condition": "金屬膜"
+      }
+    ]
   },
   {
     "pid": 115,
@@ -11341,7 +11431,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "寶石海星-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "水之石"
+      }
+    ]
   },
   {
     "pid": 121,
@@ -12050,12 +12147,20 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "劈斧螳螂-0",
-      "level": 0,
-      "method": "Hisui",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "巨鉗螳螂-0",
+        "level": 0,
+        "method": "TradeHeldItem",
+        "condition": "金屬膜"
+      },
+      {
+        "into": "劈斧螳螂-0",
+        "level": 0,
+        "method": "Hisui",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 127,
@@ -12489,12 +12594,14 @@
         "name": "水炮"
       }
     ],
-    "evolution": {
-      "into": "暴鯉龍-0",
-      "level": 20,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "暴鯉龍-0",
+        "level": 20,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 130,
@@ -13135,12 +13242,56 @@
         "name": "鐵尾"
       }
     ],
-    "evolution": {
-      "into": "月亮伊布-0",
-      "level": 0,
-      "method": "LevelUpFriendshipNight",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "葉伊布-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "葉之石"
+      },
+      {
+        "into": "冰伊布-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "冰之石"
+      },
+      {
+        "into": "雷伊布-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "雷之石"
+      },
+      {
+        "into": "水伊布-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "水之石"
+      },
+      {
+        "into": "火伊布-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "火之石"
+      },
+      {
+        "into": "仙子伊布-0",
+        "level": 0,
+        "method": "LevelUpAffection50MoveType",
+        "condition": "妖精"
+      },
+      {
+        "into": "太陽伊布-0",
+        "level": 0,
+        "method": "LevelUpFriendshipMorning",
+        "condition": "0"
+      },
+      {
+        "into": "月亮伊布-0",
+        "level": 0,
+        "method": "LevelUpFriendshipNight",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 134,
@@ -14452,12 +14603,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "哈克龍-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "哈克龍-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 148,
@@ -14669,12 +14822,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "快龍-0",
-      "level": 55,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "快龍-0",
+        "level": 55,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 149,
@@ -16382,12 +16537,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "月桂葉-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "月桂葉-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 153,
@@ -16597,12 +16754,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "大竺葵-0",
-      "level": 32,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "大竺葵-0",
+        "level": 32,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 154,
@@ -17256,12 +17415,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "藍鱷-0",
-      "level": 18,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "藍鱷-0",
+        "level": 18,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 159,
@@ -17477,12 +17638,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "大力鱷-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "大力鱷-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 160,
@@ -18163,12 +18326,14 @@
         "name": "電網"
       }
     ],
-    "evolution": {
-      "into": "阿利多斯-0",
-      "level": 22,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "阿利多斯-0",
+        "level": 22,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 168,
@@ -18581,12 +18746,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "皮卡丘-0",
-      "level": 0,
-      "method": "LevelUpFriendship",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "皮卡丘-0",
+        "level": 0,
+        "method": "LevelUpFriendship",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 173,
@@ -18828,12 +18995,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "皮皮-0",
-      "level": 0,
-      "method": "LevelUpFriendship",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "皮皮-0",
+        "level": 0,
+        "method": "LevelUpFriendship",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 179,
@@ -19004,12 +19173,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "茸茸羊-0",
-      "level": 15,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "茸茸羊-0",
+        "level": 15,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 180,
@@ -19196,12 +19367,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "電龍-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "電龍-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 181,
@@ -22867,12 +23040,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "黑魯加-0",
-      "level": 24,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "黑魯加-0",
+        "level": 24,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 229,
@@ -23529,12 +23704,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": {
-      "into": "沙基拉斯-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "沙基拉斯-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 247,
@@ -23751,12 +23928,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": {
-      "into": "班基拉斯-0",
-      "level": 55,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "班基拉斯-0",
+        "level": 55,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 248,
@@ -24579,12 +24758,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": {
-      "into": "奇魯莉安-0",
-      "level": 20,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "奇魯莉安-0",
+        "level": 20,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 281,
@@ -24809,7 +24990,20 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "沙奈朵-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      },
+      {
+        "into": "艾路雷朵-0",
+        "level": 30,
+        "method": "UseItemMale",
+        "condition": "覺醒之石"
+      }
+    ]
   },
   {
     "pid": 282,
@@ -26615,12 +26809,14 @@
         "name": "鐵尾"
       }
     ],
-    "evolution": {
-      "into": "可多拉-0",
-      "level": 32,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "可多拉-0",
+        "level": 32,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 305,
@@ -26834,12 +27030,14 @@
         "name": "鐵尾"
       }
     ],
-    "evolution": {
-      "into": "波士可多拉-0",
-      "level": 42,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "波士可多拉-0",
+        "level": 42,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 306,
@@ -27667,12 +27865,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "恰雷姆-0",
-      "level": 37,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "恰雷姆-0",
+        "level": 37,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 308,
@@ -28351,12 +28551,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "雷電獸-0",
-      "level": 26,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "雷電獸-0",
+        "level": 26,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 310,
@@ -29011,7 +29213,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "羅絲雷朵-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 318,
@@ -29194,12 +29403,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "巨牙鯊-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "巨牙鯊-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 319,
@@ -29872,12 +30083,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "噴火駝-0",
-      "level": 33,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "噴火駝-0",
+        "level": 33,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 323,
@@ -30545,12 +30758,14 @@
         "name": "逆鱗"
       }
     ],
-    "evolution": {
-      "into": "七夕青鳥-0",
-      "level": 35,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "七夕青鳥-0",
+        "level": 35,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 334,
@@ -31220,12 +31435,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "詛咒娃娃-0",
-      "level": 37,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "詛咒娃娃-0",
+        "level": 37,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 354,
@@ -32330,7 +32547,20 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "冰鬼護-0",
+        "level": 42,
+        "method": "LevelUp",
+        "condition": "0"
+      },
+      {
+        "into": "雪妖女-0",
+        "level": 0,
+        "method": "UseItemFemale",
+        "condition": "覺醒之石"
+      }
+    ]
   },
   {
     "pid": 362,
@@ -32944,12 +33174,14 @@
         "name": "水炮"
       }
     ],
-    "evolution": {
-      "into": "甲殼龍-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "甲殼龍-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 372,
@@ -33165,12 +33397,14 @@
         "name": "水炮"
       }
     ],
-    "evolution": {
-      "into": "暴飛龍-0",
-      "level": 50,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "暴飛龍-0",
+        "level": 50,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 373,
@@ -33759,12 +33993,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "金屬怪-0",
-      "level": 20,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "金屬怪-0",
+        "level": 20,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 375,
@@ -33984,12 +34220,14 @@
         "name": "替身"
       }
     ],
-    "evolution": {
-      "into": "巨金怪-0",
-      "level": 45,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "巨金怪-0",
+        "level": 45,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 376,
@@ -34586,12 +34824,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "毒薔薇-0",
-      "level": 0,
-      "method": "LevelUpFriendshipMorning",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "毒薔薇-0",
+        "level": 0,
+        "method": "LevelUpFriendshipMorning",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 407,
@@ -34983,12 +35223,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "長耳兔-0",
-      "level": 0,
-      "method": "LevelUpFriendship",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "長耳兔-0",
+        "level": 0,
+        "method": "LevelUpFriendship",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 428,
@@ -35661,12 +35903,14 @@
         "name": "逆鱗"
       }
     ],
-    "evolution": {
-      "into": "尖牙陸鯊-0",
-      "level": 24,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "尖牙陸鯊-0",
+        "level": 24,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 444,
@@ -35881,12 +36125,14 @@
         "name": "逆鱗"
       }
     ],
-    "evolution": {
-      "into": "烈咬陸鯊-0",
-      "level": 48,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "烈咬陸鯊-0",
+        "level": 48,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 445,
@@ -36562,12 +36808,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "路卡利歐-0",
-      "level": 0,
-      "method": "LevelUpFriendshipMorning",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "路卡利歐-0",
+        "level": 0,
+        "method": "LevelUpFriendshipMorning",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 448,
@@ -37312,12 +37560,14 @@
         "name": "吹飛"
       }
     ],
-    "evolution": {
-      "into": "河馬獸-0",
-      "level": 34,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "河馬獸-0",
+        "level": 34,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 450,
@@ -37670,12 +37920,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "暴雪王-0",
-      "level": 40,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "暴雪王-0",
+        "level": 40,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 460,
@@ -39709,12 +39961,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "炒炒豬-0",
-      "level": 17,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "炒炒豬-0",
+        "level": 17,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 499,
@@ -39952,12 +40206,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "炎武王-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "炎武王-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 500,
@@ -40659,12 +40915,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "步哨鼠-0",
-      "level": 20,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "步哨鼠-0",
+        "level": 20,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 505,
@@ -41105,7 +41363,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花椰猿-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "葉之石"
+      }
+    ]
   },
   {
     "pid": 512,
@@ -41544,7 +41809,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "爆香猿-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "火之石"
+      }
+    ]
   },
   {
     "pid": 514,
@@ -41995,7 +42267,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "冷水猿-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "水之石"
+      }
+    ]
   },
   {
     "pid": 516,
@@ -42406,12 +42685,14 @@
         "name": "替身"
       }
     ],
-    "evolution": {
-      "into": "龍頭地鼠-0",
-      "level": 31,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "龍頭地鼠-0",
+        "level": 31,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 530,
@@ -43494,12 +43775,14 @@
         "name": "毒菱"
       }
     ],
-    "evolution": {
-      "into": "車輪毬-0",
-      "level": 22,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "車輪毬-0",
+        "level": 22,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 544,
@@ -43660,12 +43943,14 @@
         "name": "毒菱"
       }
     ],
-    "evolution": {
-      "into": "蜈蚣王-0",
-      "level": 30,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "蜈蚣王-0",
+        "level": 30,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 545,
@@ -44304,12 +44589,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": {
-      "into": "混混鱷-0",
-      "level": 29,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "混混鱷-0",
+        "level": 29,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 552,
@@ -44516,12 +44803,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": {
-      "into": "流氓鱷-0",
-      "level": 40,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "流氓鱷-0",
+        "level": 40,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 553,
@@ -45000,12 +45289,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "頭巾混混-0",
-      "level": 39,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "頭巾混混-0",
+        "level": 39,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 560,
@@ -45715,12 +46006,14 @@
         "name": "垃圾射擊"
       }
     ],
-    "evolution": {
-      "into": "灰塵山-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "灰塵山-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 569,
@@ -46085,12 +46378,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "多多冰-0",
-      "level": 35,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "多多冰-0",
+        "level": 35,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 583,
@@ -46241,12 +46536,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "雙倍多多冰-0",
-      "level": 47,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "雙倍多多冰-0",
+        "level": 47,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 584,
@@ -46672,12 +46969,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "麻麻鰻-0",
-      "level": 39,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "麻麻鰻-0",
+        "level": 39,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 603,
@@ -46857,7 +47156,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "麻麻鰻魚王-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "雷之石"
+      }
+    ]
   },
   {
     "pid": 604,
@@ -47555,12 +47861,14 @@
         "name": "回復封鎖"
       }
     ],
-    "evolution": {
-      "into": "燈火幽靈-0",
-      "level": 41,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "燈火幽靈-0",
+        "level": 41,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 608,
@@ -47754,7 +48062,14 @@
         "name": "回復封鎖"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "水晶燈火靈-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "暗之石"
+      }
+    ]
   },
   {
     "pid": 609,
@@ -48766,12 +49081,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "胖胖哈力-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "胖胖哈力-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 651,
@@ -48985,12 +49302,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "布里卡隆-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "布里卡隆-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 652,
@@ -49717,12 +50036,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "長尾火狐-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "長尾火狐-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 654,
@@ -49910,12 +50231,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "妖火紅狐-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "妖火紅狐-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 655,
@@ -50600,12 +50923,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "呱頭蛙-0",
-      "level": 16,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "呱頭蛙-0",
+        "level": 16,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 657,
@@ -50842,12 +51167,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "甲賀忍蛙-0",
-      "level": 36,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "甲賀忍蛙-0",
+        "level": 36,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 658,
@@ -51799,12 +52126,14 @@
         "name": "撒菱"
       }
     ],
-    "evolution": {
-      "into": "掘地兔-0",
-      "level": 20,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "掘地兔-0",
+        "level": 20,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 660,
@@ -52194,12 +52523,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "火箭雀-0",
-      "level": 17,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "火箭雀-0",
+        "level": 17,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 662,
@@ -52387,12 +52718,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "烈箭鷹-0",
-      "level": 35,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "烈箭鷹-0",
+        "level": 35,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 663,
@@ -52667,12 +53000,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-0",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-0",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1231,
@@ -52739,12 +53074,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-1",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-1",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1232,
@@ -52811,12 +53148,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-2",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-2",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1233,
@@ -52883,12 +53222,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-3",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-3",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1234,
@@ -52955,12 +53296,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-4",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-4",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1235,
@@ -53027,12 +53370,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-5",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-5",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1236,
@@ -53099,12 +53444,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-6",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-6",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1237,
@@ -53171,12 +53518,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-7",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-7",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1238,
@@ -53243,12 +53592,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-8",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-8",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1239,
@@ -53315,12 +53666,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-9",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-9",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1240,
@@ -53387,12 +53740,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-10",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-10",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1241,
@@ -53459,12 +53814,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-11",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-11",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1242,
@@ -53531,12 +53888,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-12",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-12",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1243,
@@ -53603,12 +53962,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-13",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-13",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1244,
@@ -53675,12 +54036,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-14",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-14",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1245,
@@ -53747,12 +54110,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-15",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-15",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1246,
@@ -53819,12 +54184,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-16",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-16",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1247,
@@ -53891,12 +54258,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-17",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-17",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1248,
@@ -53963,12 +54332,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-18",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-18",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1249,
@@ -54035,12 +54406,14 @@
         "name": "守住"
       }
     ],
-    "evolution": {
-      "into": "粉蝶蛹-19",
-      "level": 9,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "粉蝶蛹-19",
+        "level": 9,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 665,
@@ -54130,12 +54503,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-0",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-0",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1250,
@@ -54225,12 +54600,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-1",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-1",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1251,
@@ -54320,12 +54697,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-2",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-2",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1252,
@@ -54415,12 +54794,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-3",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-3",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1253,
@@ -54510,12 +54891,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-4",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-4",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1254,
@@ -54605,12 +54988,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-5",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-5",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1255,
@@ -54700,12 +55085,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-6",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-6",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1256,
@@ -54795,12 +55182,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-7",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-7",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1257,
@@ -54890,12 +55279,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-8",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-8",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1258,
@@ -54985,12 +55376,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-9",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-9",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1259,
@@ -55080,12 +55473,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-10",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-10",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1260,
@@ -55175,12 +55570,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-11",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-11",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1261,
@@ -55270,12 +55667,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-12",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-12",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1262,
@@ -55365,12 +55764,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-13",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-13",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1263,
@@ -55460,12 +55861,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-14",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-14",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1264,
@@ -55555,12 +55958,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-15",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-15",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1265,
@@ -55650,12 +56055,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-16",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-16",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1266,
@@ -55745,12 +56152,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-17",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-17",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1267,
@@ -55840,12 +56249,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-18",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-18",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1268,
@@ -55935,12 +56346,14 @@
         "name": "鐵壁"
       }
     ],
-    "evolution": {
-      "into": "彩粉蝶-19",
-      "level": 12,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "彩粉蝶-19",
+        "level": 12,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 666,
@@ -59974,12 +60387,14 @@
         "name": "閃焰衝鋒"
       }
     ],
-    "evolution": {
-      "into": "火炎獅-0",
-      "level": 35,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "火炎獅-0",
+        "level": 35,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 668,
@@ -60598,12 +61013,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "花葉蒂-0",
-      "level": 19,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "花葉蒂-0",
+        "level": 19,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1289,
@@ -60762,12 +61179,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "花葉蒂-1",
-      "level": 19,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "花葉蒂-1",
+        "level": 19,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1290,
@@ -60926,12 +61345,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "花葉蒂-2",
-      "level": 19,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "花葉蒂-2",
+        "level": 19,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1291,
@@ -61090,12 +61511,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "花葉蒂-3",
-      "level": 19,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "花葉蒂-3",
+        "level": 19,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1292,
@@ -61254,12 +61677,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": {
-      "into": "花葉蒂-4",
-      "level": 19,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "花葉蒂-4",
+        "level": 19,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 670,
@@ -61427,7 +61852,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花潔夫人-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 1293,
@@ -61595,7 +62027,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花潔夫人-1",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 1294,
@@ -61763,7 +62202,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花潔夫人-2",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 1295,
@@ -61931,7 +62377,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花潔夫人-3",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 1296,
@@ -62099,7 +62552,14 @@
         "name": "揮指"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "花潔夫人-4",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "光之石"
+      }
+    ]
   },
   {
     "pid": 1297,
@@ -63498,12 +63958,14 @@
         "name": "瘋狂伏特"
       }
     ],
-    "evolution": {
-      "into": "坐騎山羊-0",
-      "level": 32,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "坐騎山羊-0",
+        "level": 32,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 673,
@@ -63917,7 +64379,14 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "流氓熊貓-0",
+        "level": 32,
+        "method": "LevelUpMoveType",
+        "condition": "一般"
+      }
+    ]
   },
   {
     "pid": 675,
@@ -66446,12 +66915,20 @@
         "name": "自我激勵"
       }
     ],
-    "evolution": {
-      "into": "超能妙喵-1",
-      "level": 25,
-      "method": "LevelUpFormFemale1",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "超能妙喵-0",
+        "level": 25,
+        "method": "LevelUpMale",
+        "condition": "0"
+      },
+      {
+        "into": "超能妙喵-1",
+        "level": 25,
+        "method": "LevelUpFormFemale1",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 678,
@@ -67061,12 +67538,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "雙劍鞘-0",
-      "level": 35,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "雙劍鞘-0",
+        "level": 35,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 680,
@@ -67233,7 +67712,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "堅盾劍怪-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "暗之石"
+      }
+    ]
   },
   {
     "pid": 681,
@@ -67773,7 +68259,14 @@
         "name": "回復封鎖"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "芳香精-0",
+        "level": 0,
+        "method": "TradeHeldItem",
+        "condition": "香袋"
+      }
+    ]
   },
   {
     "pid": 683,
@@ -68119,7 +68612,14 @@
         "name": "魔法閃耀"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "胖甜妮-0",
+        "level": 0,
+        "method": "TradeHeldItem",
+        "condition": "泡沫奶油"
+      }
+    ]
   },
   {
     "pid": 685,
@@ -68491,12 +68991,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "烏賊王-0",
-      "level": 30,
-      "method": "LevelUpInverted",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "烏賊王-0",
+        "level": 30,
+        "method": "LevelUpInverted",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 687,
@@ -69155,12 +69657,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "龜足巨鎧-0",
-      "level": 39,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "龜足巨鎧-0",
+        "level": 39,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 689,
@@ -69864,12 +70368,14 @@
         "name": "垃圾射擊"
       }
     ],
-    "evolution": {
-      "into": "毒藻龍-0",
-      "level": 48,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "毒藻龍-0",
+        "level": 48,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 691,
@@ -70479,12 +70985,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "鋼炮臂蝦-0",
-      "level": 37,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "鋼炮臂蝦-0",
+        "level": 37,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 693,
@@ -70875,7 +71383,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": null
+    "evolution": [
+      {
+        "into": "光電傘蜥-0",
+        "level": 0,
+        "method": "UseItem",
+        "condition": "日之石"
+      }
+    ]
   },
   {
     "pid": 695,
@@ -71325,12 +71840,14 @@
         "name": "近身戰"
       }
     ],
-    "evolution": {
-      "into": "怪顎龍-0",
-      "level": 39,
-      "method": "LevelUpMorning",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "怪顎龍-0",
+        "level": 39,
+        "method": "LevelUpMorning",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 697,
@@ -71797,12 +72314,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "冰雪巨龍-0",
-      "level": 39,
-      "method": "LevelUpNight",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "冰雪巨龍-0",
+        "level": 39,
+        "method": "LevelUpNight",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 699,
@@ -73244,12 +73763,20 @@
         "name": "逆鱗"
       }
     ],
-    "evolution": {
-      "into": "黏美兒-0",
-      "level": 0,
-      "method": "Hisui",
-      "condition": 1
-    }
+    "evolution": [
+      {
+        "into": "黏美兒-0",
+        "level": 40,
+        "method": "LevelUp",
+        "condition": "0"
+      },
+      {
+        "into": "黏美兒-0",
+        "level": 0,
+        "method": "Hisui",
+        "condition": "1"
+      }
+    ]
   },
   {
     "pid": 705,
@@ -73439,12 +73966,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "黏美龍-0",
-      "level": 50,
-      "method": "LevelUpWeather",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "黏美龍-0",
+        "level": 50,
+        "method": "LevelUpWeather",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1318,
@@ -73652,12 +74181,14 @@
         "name": "打雷"
       }
     ],
-    "evolution": {
-      "into": "黏美龍-1",
-      "level": 50,
-      "method": "LevelUpWeather",
-      "condition": 1
-    }
+    "evolution": [
+      {
+        "into": "黏美龍-1",
+        "level": 50,
+        "method": "LevelUpWeather",
+        "condition": "1"
+      }
+    ]
   },
   {
     "pid": 706,
@@ -74526,12 +75057,14 @@
         "name": "回復封鎖"
       }
     ],
-    "evolution": {
-      "into": "朽木妖-0",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "朽木妖-0",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 709,
@@ -74920,12 +75453,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "南瓜怪人-0",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "南瓜怪人-0",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1320,
@@ -75114,12 +75649,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "南瓜怪人-1",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "南瓜怪人-1",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1321,
@@ -75308,12 +75845,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "南瓜怪人-2",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "南瓜怪人-2",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 1322,
@@ -75502,12 +76041,14 @@
         "name": "詛咒"
       }
     ],
-    "evolution": {
-      "into": "南瓜怪人-3",
-      "level": 0,
-      "method": "Trade",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "南瓜怪人-3",
+        "level": 0,
+        "method": "Trade",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 711,
@@ -76561,12 +77102,14 @@
         "name": "暴風雪"
       }
     ],
-    "evolution": {
-      "into": "冰岩怪-0",
-      "level": 37,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "冰岩怪-0",
+        "level": 37,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 713,
@@ -77226,12 +77769,14 @@
         "name": "挑釁"
       }
     ],
-    "evolution": {
-      "into": "音波龍-0",
-      "level": 48,
-      "method": "LevelUp",
-      "condition": 0
-    }
+    "evolution": [
+      {
+        "into": "音波龍-0",
+        "level": 48,
+        "method": "LevelUp",
+        "condition": "0"
+      }
+    ]
   },
   {
     "pid": 715,

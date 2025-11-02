@@ -108,7 +108,10 @@ function parsePokemonSection(section) {
         i++;
       }
     } else if (line.startsWith('Evolves into')) {
-      pokemon.evolution = parseEvolution(line);
+      if (pokemon.evolution === undefined) {
+        pokemon.evolution = [];
+      }
+      pokemon.evolution.push(parseEvolution(line));
     }
   }
 
@@ -316,13 +319,13 @@ function parseTMMoves(lines, startIndex) {
  */
 function parseEvolution(line) {
   // 解析格式: "Evolves into 妙蛙草-0 @ lv16 (LevelUp) [0]"
-  const match = line.match(/Evolves into\s*(.+?)\s*@\s*lv(\d+)\s*\((.+?)\)\s*\[(\d+)\]/);
+  const match = line.match(/Evolves into\s*(.+?)\s*@\s*lv(\d+)\s*\((.+?)\)\s*\[(.+)\]/);
   if (match) {
     return {
       into: match[1].trim(),
       level: parseInt(match[2]),
       method: match[3].trim(),
-      condition: parseInt(match[4]),
+      condition: match[4],
     };
   }
   return null;
