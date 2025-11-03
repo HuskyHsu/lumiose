@@ -2,6 +2,12 @@
 const { get } = require('http');
 const { readNames } = require('./utils');
 
+const MoveCategoryMap = {
+  1: 'Physical',
+  2: 'Special',
+  0: 'Status',
+};
+
 /**
  * Add multi-language species names to items based on their Info.SpeciesNational index
  * Creates a Name object with Chinese, Japanese, and English names
@@ -101,4 +107,4 @@ async function addMultiLanguageMoveNames(items) {
   return items;
 }
 
-module.exports = { addMultiLanguageMoveNames };
+module.exports = { addMultiLanguageMoveNames, MoveCategoryMap };
