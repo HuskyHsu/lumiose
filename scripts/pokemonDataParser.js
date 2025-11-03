@@ -73,9 +73,9 @@ function parsePokemonSection(section) {
     const line = lines[i];
 
     if (line.startsWith('Base Stats:')) {
-      pokemon.baseStats = parseBaseStats(line);
+      pokemon.base = parseBaseStats(line);
     } else if (line.startsWith('EV Yield:')) {
-      pokemon.evYield = parseEVYield(line);
+      pokemon.ev = parseEVYield(line);
     } else if (line.startsWith('Gender Ratio:')) {
       pokemon.genderRatio = parseGenderRatio(line);
     } else if (line.startsWith('Catch Rate:')) {
@@ -125,15 +125,16 @@ function parseBaseStats(line) {
   const match = line.match(/Base Stats:\s*(.+?)\s*\(BST:\s*(\d+)\)/);
   if (match) {
     const stats = match[1].split('.').map((s) => parseInt(s));
-    return {
-      hp: stats[0] || 0,
-      attack: stats[1] || 0,
-      defense: stats[2] || 0,
-      spAttack: stats[3] || 0,
-      spDefense: stats[4] || 0,
-      speed: stats[5] || 0,
-      total: parseInt(match[2]),
-    };
+    return stats;
+    // return {
+    //   hp: stats[0] || 0,
+    //   attack: stats[1] || 0,
+    //   defense: stats[2] || 0,
+    //   spAttack: stats[3] || 0,
+    //   spDefense: stats[4] || 0,
+    //   speed: stats[5] || 0,
+    //   total: parseInt(match[2]),
+    // };
   }
   return null;
 }
@@ -145,14 +146,15 @@ function parseEVYield(line) {
   const match = line.match(/EV Yield:\s*(.+)/);
   if (match) {
     const evs = match[1].split('.').map((s) => parseInt(s));
-    return {
-      hp: evs[0] || 0,
-      attack: evs[1] || 0,
-      defense: evs[2] || 0,
-      spAttack: evs[3] || 0,
-      spDefense: evs[4] || 0,
-      speed: evs[5] || 0,
-    };
+    return evs;
+    // return {
+    //   hp: evs[0] || 0,
+    //   attack: evs[1] || 0,
+    //   defense: evs[2] || 0,
+    //   spAttack: evs[3] || 0,
+    //   spDefense: evs[4] || 0,
+    //   speed: evs[5] || 0,
+    // };
   }
   return null;
 }

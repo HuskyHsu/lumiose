@@ -131,21 +131,21 @@ const atlFormMap = {
   '火炎獅-1': 'MEGA',
   花蓓蓓: '紅花',
   '花蓓蓓-1': '橙花',
-  '花蓓蓓-2': '藍花',
-  '花蓓蓓-3': '白花',
-  '花蓓蓓-4': '黃花',
+  '花蓓蓓-2': '黃花',
+  '花蓓蓓-3': '藍花',
+  '花蓓蓓-4': '白花',
   花葉蒂: '紅花',
   '花葉蒂-1': '橙花',
-  '花葉蒂-2': '藍花',
-  '花葉蒂-3': '白花',
-  '花葉蒂-4': '黃花',
+  '花葉蒂-2': '黃花',
+  '花葉蒂-3': '藍花',
+  '花葉蒂-4': '白花',
   '花葉蒂-5': 'Eternal',
   '花葉蒂-6': 'MEGA',
   花潔夫人: '紅花',
   '花潔夫人-1': '橙花',
-  '花潔夫人-2': '藍花',
-  '花潔夫人-3': '白花',
-  '花潔夫人-4': '黃花',
+  '花潔夫人-2': '黃花',
+  '花潔夫人-3': '藍花',
+  '花潔夫人-4': '白花',
   '多麗米亞-1': '心形',
   '多麗米亞-2': '星形',
   '多麗米亞-3': '菱形',
@@ -391,9 +391,9 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       mergedPokemon.name.en = mergedPokemon.name.en.replace(/-\d$/, '');
 
       mergedPokemon = {
-        lumioseId: mergedPokemon.lumioseId,
         pid: mergedPokemon.pid,
         form: mergedPokemon.form,
+        lumioseId: mergedPokemon.lumioseId,
         altForm: mergedPokemon.altForm,
         link: `${mergedPokemon.pid}${mergedPokemon.form > 0 ? `-${mergedPokemon.form}` : ''}`,
         ...mergedPokemon,
@@ -474,6 +474,8 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           pokemon.evolutionTree = evolution;
         }
       }
+
+      pokemon.source = targetLink;
 
       // delete pokemon.evolution;
       // delete pokemon.levelUpMoves;
@@ -653,6 +655,8 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
               stage,
               abilities,
               abilitiyH,
+              evolution,
+              evolutionTree,
               ...rest
             } = row;
             return rest;
