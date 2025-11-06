@@ -406,9 +406,9 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
       mergedPokemon.form = nameToFormMap[mergedPokemon.name.zh] || 0;
 
-      mergedPokemon.name.zh = mergedPokemon.name.zh.replace(/-\d$/, '');
-      mergedPokemon.name.ja = mergedPokemon.name.ja.replace(/-\d$/, '');
-      mergedPokemon.name.en = mergedPokemon.name.en.replace(/-\d$/, '');
+      mergedPokemon.name.zh = mergedPokemon.name.zh.replace(/-\d+$/, '');
+      mergedPokemon.name.ja = mergedPokemon.name.ja.replace(/-\d+$/, '');
+      mergedPokemon.name.en = mergedPokemon.name.en.replace(/-\d+$/, '');
 
       mergedPokemon = {
         pid: mergedPokemon.pid,
