@@ -1,35 +1,43 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <main className='container mx-auto p-8'>
+      <h1 className='text-3xl font-bold mb-8'>My shadcn/ui Project</h1>
+
+      <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
+        <Card>
+          <CardHeader>
+            <CardTitle>Getting Started</CardTitle>
+            <CardDescription>Learn the basics of shadcn/ui component development.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>This card demonstrates the basic structure and styling of shadcn/ui components.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Design System</CardTitle>
+            <CardDescription>Explore the systematic approach to UI development.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>shadcn/ui provides a complete design system with consistent tokens and patterns.</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Customization</CardTitle>
+            <CardDescription>Discover how to customize components for your needs.</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <p>
+              Since you own the component code, you can modify anything to match your requirements.
+            </p>
+          </CardContent>
+        </Card>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </main>
+  );
 }
 
-export default App
+export default App;
