@@ -14,11 +14,10 @@ function About() {
             這是一個使用 React Router 與 HashRouter 的示範專案，專為 GitHub Pages 部署而設計。
           </p>
           <p className='mb-4'>
-            HashRouter 使用 URL 的 hash 部分來保持 UI 與 URL 的同步，這對於靜態檔案託管服務（如 GitHub Pages）來說是完美的解決方案。
+            HashRouter 使用 URL 的 hash 部分來保持 UI 與 URL 的同步，這對於靜態檔案託管服務（如
+            GitHub Pages）來說是完美的解決方案。
           </p>
-          <p>
-            透過這種方式，我們可以在不需要伺服器端路由配置的情況下實現客戶端路由。
-          </p>
+          <p>透過這種方式，我們可以在不需要伺服器端路由配置的情況下實現客戶端路由。</p>
         </CardContent>
       </Card>
     </div>

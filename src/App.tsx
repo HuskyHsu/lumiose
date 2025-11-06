@@ -1,19 +1,17 @@
-import Navigation from '@/components/Navigation';
-import About from '@/pages/About';
-import Home from '@/pages/Home';
+import MainLayout from '@/layouts/MainLayout';
 import { Route, Routes } from 'react-router-dom';
+
+import About from '@/pages/about';
+import Home from '@/pages/home';
 
 function App() {
   return (
-    <div className='min-h-screen bg-gray-50'>
-      <Navigation />
-      <main className='container mx-auto p-8'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-        </Routes>
-      </main>
-    </div>
+    <Routes>
+      <Route path='/' element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path='about' element={<About />} />
+      </Route>
+    </Routes>
   );
 }
 
