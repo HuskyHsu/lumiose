@@ -64,7 +64,4 @@ const convertAllTypeIdsToNames = (items, language = 'zh') => {
   });
 };
 
-module.exports = {
-  convertAllTypeIdsToNames,
-  TypeIdEnMap,
-};
+export { convertAllTypeIdsToNames, TypeIdEnMap };

@@ -1,6 +1,11 @@
-const fs = require('fs').promises;
-const { TypeIdEnMap } = require('./convertType');
-const { MoveCategoryMap } = require('./convertMoves');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { MoveCategoryMap } from './convertMoves.js';
+import { TypeIdEnMap } from './convertType.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const atlFormMap = {
   '妙蛙花-1': 'MEGA',
@@ -623,7 +628,6 @@ async function saveToJSON(mergedData, outputPath) {
     }
 
     // check if output directory exists
-    const path = require('path');
     const dir = path.dirname(outputPath);
     await fs.mkdir(dir, { recursive: true });
     await fs.writeFile(outputPath, jsonString, 'utf8');
@@ -655,33 +659,32 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
     }
 
     if (baseFile) {
-      await saveToJSON(
-        mergedData
-          .filter((row) => row.lumioseId > 0)
-          .map((row) => {
-            const {
-              levelUpMoves,
-              tmMoves,
-              form,
-              alphaMove,
-              eggGroup,
-              expGroup,
-              genderRatio,
-              catchRate,
-              height,
-              weight,
-              color,
-              stage,
-              abilities,
-              abilitiyH,
-              evolution,
-              evolutionTree,
-              ...rest
-            } = row;
-            return rest;
-          }),
-        baseFile
-      );
+      const baseList = mergedData
+        .filter((row) => row.lumioseId > 0)
+        .map((row) => {
+          const {
+            levelUpMoves,
+            tmMoves,
+            form,
+            alphaMove,
+            eggGroup,
+            expGroup,
+            genderRatio,
+            catchRate,
+            height,
+            weight,
+            color,
+            stage,
+            abilities,
+            abilitiyH,
+            evolution,
+            evolutionTree,
+            ...rest
+          } = row;
+          return rest;
+        });
+
+      await saveToJSON(baseList, baseFile);
     }
 
     return mergedData;
@@ -692,7 +695,7 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
 }
 
 // 如果直接執行此腳本
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   if (args.length < 3) {
     console.log('使用方法: node mergeLanguageData.js <中文文件> <日文文件> <英文文件> [輸出文件]');
@@ -707,7 +710,7 @@ if (require.main === module) {
   const jaFile = args[1];
   const enFile = args[2];
   const outputFile = args[3] || `data/${version}/personal.json`;
-  const baseFile = `data/${version}/personal_base.json`;
+  const baseFile = `public/data/base_pm_list_${version}.json`;
 
   main(zhFile, jaFile, enFile, outputFile, baseFile)
     .then(() => {
@@ -719,13 +722,13 @@ if (require.main === module) {
     });
 }
 
-module.exports = {
-  mergeLanguageData,
-  saveToJSON,
-  main,
+export {
   createMultiLanguageField,
+  main,
   mergeAbilitiesArray,
-  mergeTypeArray,
+  mergeLanguageData,
   mergeMoveArray,
   mergeTMArray,
+  mergeTypeArray,
+  saveToJSON,
 };

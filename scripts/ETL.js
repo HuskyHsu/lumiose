@@ -1,10 +1,14 @@
 // scripts/filter_personal_array.js
-const fs = require('fs').promises;
-const path = require('path');
-const { addMultiLanguageSpeciesNames } = require('./convertSpecies');
-const { convertAllTypeIdsToNames } = require('./convertType');
-const { convertAbilitiesNames } = require('./convertAbilities');
-const { addMultiLanguageMoveNames } = require('./convertMoves');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { convertAbilitiesNames } from './convertAbilities.js';
+import { addMultiLanguageMoveNames } from './convertMoves.js';
+import { addMultiLanguageSpeciesNames } from './convertSpecies.js';
+import { convertAllTypeIdsToNames } from './convertType.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   const inputPath = path.join(__dirname, '..', 'za-textport', 'Raw', 'personal_array.json');
@@ -72,5 +76,8 @@ async function main() {
   }
 }
 
-if (require.main === module) main();
-module.exports = { main };
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { main };

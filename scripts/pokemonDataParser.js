@@ -1,5 +1,4 @@
-const fs = require('fs').promises;
-const path = require('path');
+import { promises as fs } from 'fs';
 
 /**
  * 解析寶可夢資料文本文件並轉換為JSON格式
@@ -374,7 +373,7 @@ async function main(inputFile, outputFile) {
 }
 
 // 如果直接執行此腳本
-if (require.main === module) {
+if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   if (args.length < 1) {
     console.log('使用方法: node pokemonDataParser.js <輸入文件> [輸出文件]');
@@ -395,8 +394,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = {
-  parsePokemonData,
-  saveToJSON,
-  main,
-};
+export { main, parsePokemonData, saveToJSON };

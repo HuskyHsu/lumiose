@@ -1,7 +1,11 @@
 // scripts/filter_personal_array.js
-const fs = require('fs').promises;
-const path = require('path');
-const { readNames } = require('./utils');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { readNames } from './utils.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function main() {
   const inputPath = path.join(__dirname, '..', 'za-textport', 'Raw', 'waza_array.json');
@@ -81,5 +85,8 @@ async function main() {
   }
 }
 
-if (require.main === module) main();
-module.exports = { main };
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}
+
+export { main };

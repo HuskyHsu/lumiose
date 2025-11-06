@@ -1,6 +1,5 @@
 // scripts/species-reader.js
-const { get } = require('http');
-const { readNames } = require('./utils');
+import { readNames } from './utils.js';
 
 const MoveCategoryMap = {
   1: 'Physical',
@@ -107,4 +106,4 @@ async function addMultiLanguageMoveNames(items) {
   return items;
 }
 
-module.exports = { addMultiLanguageMoveNames, MoveCategoryMap };
+export { addMultiLanguageMoveNames, MoveCategoryMap };

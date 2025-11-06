@@ -1,5 +1,5 @@
 // scripts/species-reader.js
-const { readNames } = require('./utils');
+import { readNames } from './utils.js';
 
 /**
  * Add multi-language species names to items based on their Info.SpeciesNational index
@@ -60,4 +60,4 @@ async function addMultiLanguageSpeciesNames(items) {
   return { items, namedCount };
 }
 
-module.exports = { addMultiLanguageSpeciesNames };
+export { addMultiLanguageSpeciesNames };

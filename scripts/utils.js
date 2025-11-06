@@ -1,5 +1,9 @@
-const fs = require('fs').promises;
-const path = require('path');
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 async function readNames(language, type) {
   // Construct the path to the type.txt file based on language and type
@@ -20,4 +24,4 @@ async function readNames(language, type) {
   }
 }
 
-module.exports = { readNames };
+export { readNames };

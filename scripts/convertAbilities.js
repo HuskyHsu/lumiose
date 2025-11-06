@@ -1,5 +1,5 @@
 // scripts/species-reader.js
-const { readNames } = require('./utils');
+import { readNames } from './utils.js';
 
 // Convert ability IDs to names for all items
 async function convertAbilitiesNames(items, language = 'zh') {
@@ -38,4 +38,4 @@ async function convertAbilitiesNames(items, language = 'zh') {
   });
 }
 
-module.exports = { convertAbilitiesNames };
+export { convertAbilitiesNames };
