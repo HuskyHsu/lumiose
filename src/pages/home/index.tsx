@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { fetchPokemonData } from '@/services/pokemonService';
 import type { PokemonList } from '@/types/pokemon';
 
@@ -58,11 +58,25 @@ function Home() {
             <CardHeader>
               <CardTitle>
                 #{pokemon.lumioseId} {pokemon.name.zh}
+                {pokemon.altForm && <span className='text-xs'>{pokemon.altForm}</span>}
               </CardTitle>
-              {pokemon.altForm && <CardDescription>{pokemon.altForm}</CardDescription>}
             </CardHeader>
             <CardContent>
-              <p>{pokemon.type.join(', ')}</p>
+              <div className='flex flex-col items-center space-y-2'>
+                <div className='w-16 h-16 relative'>
+                  <img
+                    src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+                    alt={pokemon.name.zh}
+                    className='w-full h-full object-contain'
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <p className='text-sm text-center'>{pokemon.type.join(', ')}</p>
+                <p>{pokemon.link}</p>
+              </div>
             </CardContent>
           </Card>
         ))}

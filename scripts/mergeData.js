@@ -177,7 +177,7 @@ const atlFormMap = {
   '南瓜怪人-1': '中顆種',
   '南瓜怪人-2': '大顆種',
   '南瓜怪人-3': '巨顆種',
-  '冰岩怪-1': '',
+  '冰岩怪-1': 'Hisui',
   基格爾德: '50%',
   '基格爾德-1': '10%',
   '基格爾德-2': '',
@@ -508,8 +508,19 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
     }
 
-    // 依照 id 排序
-    mergedData.sort((a, b) => a.lumioseId - b.lumioseId);
+    // 依照 id 排序，特殊處理 718 和 718-1 的順序
+    mergedData.sort((a, b) => {
+      // 如果兩者都是 718 相關，讓 718-1 排在 718 前面
+      if (a.link === '718' && b.link === '718-1') {
+        return 1;
+      }
+      if (a.link === '718-1' && b.link === '718') {
+        return -1;
+      }
+      // 其他情況依照原本的 lumioseId 排序
+      return a.lumioseId - b.lumioseId;
+    });
+
     console.log(`成功合併 ${mergedData.length} 筆寶可夢資料`);
 
     return mergedData;
@@ -653,7 +664,10 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
 
     if (outputFile) {
       await saveToJSON(
-        mergedData.filter((row) => row.lumioseId > 0),
+        mergedData
+          .filter((row) => row.lumioseId > 0)
+          .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
+          .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link)),
         outputFile
       );
     }
@@ -661,6 +675,8 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
     if (baseFile) {
       const baseList = mergedData
         .filter((row) => row.lumioseId > 0)
+        .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
+        .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link))
         .map((row) => {
           const {
             levelUpMoves,
