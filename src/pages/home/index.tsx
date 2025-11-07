@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { fetchPokemonData } from '@/services/pokemonService';
 import type { PokemonList } from '@/types/pokemon';
 
@@ -52,47 +51,26 @@ function Home() {
       <h1 className='text-3xl font-bold'>PokeDex</h1>
 
       <p className='mb-4'>總共載入了 {pokemonList.length} 隻寶可夢</p>
-      <div className='grid  grid-cols-4 gap-2'>
-        {pokemonList.map((pokemon) => (
-          <Card key={pokemon.link}>
-            <CardHeader>
-              <CardTitle>
-                #{pokemon.lumioseId} {pokemon.name.zh}
+      <div className='flex gap-2 flex-wrap text-slate-800'>
+        {pokemonList.map((pokemon) => {
+          return (
+            <div key={pokemon.link}>
+              <div className='bg-sky-100/70 p-2 flex flex-col items-center'>
+                <div
+                  className='w-16 h-16 relative bg-cover rounded-tr-xl rounded-bl-xl bg-sky-900/70'
+                  style={{
+                    backgroundImage: `url(${import.meta.env.BASE_URL}images/pmIcon/${
+                      pokemon.link
+                    }.png)`,
+                  }}
+                ></div>
+                <span>#{pokemon.lumioseId}</span>
+                <span>{pokemon.name.zh}</span>
                 {pokemon.altForm && <span className='text-xs'>{pokemon.altForm}</span>}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className='flex flex-col items-center space-y-2'>
-                <div className='w-16 h-16 relative'>
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
-                    alt={pokemon.name.zh}
-                    className='w-full h-full object-contain'
-                    onError={(e) => {
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                    }}
-                  />
-                </div>
-                <div className='flex gap-2'>
-                  {pokemon.type.map((type) => {
-                    return (
-                      <img
-                        src={`${import.meta.env.BASE_URL}images/type/${type}.png`}
-                        alt={type}
-                        className='w-5 h-5'
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.style.display = 'none';
-                        }}
-                      />
-                    );
-                  })}
-                </div>
               </div>
-            </CardContent>
-          </Card>
-        ))}
+            </div>
+          );
+        })}
       </div>
     </div>
   );
