@@ -55,7 +55,7 @@ function Home() {
         {pokemonList.map((pokemon) => {
           return (
             <div key={pokemon.link}>
-              <div className='bg-sky-100/70 p-2 flex flex-col items-center'>
+              <div className='bg-sky-100/70 p-2 flex flex-col gap-1 items-center w-24'>
                 <div
                   className='w-16 h-16 relative bg-cover rounded-tr-xl rounded-bl-xl bg-sky-900/70'
                   style={{
@@ -67,6 +67,21 @@ function Home() {
                 <span>#{pokemon.lumioseId}</span>
                 <span>{pokemon.name.zh}</span>
                 {pokemon.altForm && <span className='text-xs'>{pokemon.altForm}</span>}
+                <div className='flex gap-2'>
+                  {pokemon.type.map((type) => {
+                    return (
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/type/${type}.png`}
+                        alt={type}
+                        className='w-5 h-5'
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </div>
           );
