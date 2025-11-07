@@ -74,8 +74,21 @@ function Home() {
                     }}
                   />
                 </div>
-                <p className='text-sm text-center'>{pokemon.type.join(', ')}</p>
-                <p>{pokemon.link}</p>
+                <div className='flex gap-2'>
+                  {pokemon.type.map((type) => {
+                    return (
+                      <img
+                        src={`${import.meta.env.BASE_URL}images/type/${type}.png`}
+                        alt={type}
+                        className='w-5 h-5'
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.style.display = 'none';
+                        }}
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </CardContent>
           </Card>
