@@ -3,7 +3,12 @@ import { Outlet } from 'react-router-dom';
 
 function MainLayout() {
   return (
-    <div className='min-h-screen bg-gray-50'>
+    <div
+      className='min-h-screen'
+      style={{
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/pattern_triangles.png)`,
+      }}
+    >
       <Navigation />
       <main className='container mx-auto p-8'>
         <Outlet />

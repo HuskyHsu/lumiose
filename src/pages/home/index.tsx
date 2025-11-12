@@ -51,12 +51,10 @@ function Home() {
   return (
     <div className='space-y-6'>
       <h1 className='text-3xl font-bold'>PokeDex</h1>
-
-      <p className='mb-4'>總共載入了 {pokemonList.length} 隻寶可夢</p>
-      <div className='flex gap-x-3 gap-y-6 flex-wrap justify-around text-slate-800'>
+      <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800'>
         {pokemonList.map((pokemon) => {
           return (
-            <div key={pokemon.link} className='group cursor-pointer'>
+            <div key={pokemon.link} className='group cursor-pointer w-fit '>
               <div
                 className={cn(
                   'p-2 flex flex-col gap-3 items-center relative',
@@ -112,7 +110,7 @@ function Home() {
                 </div>
                 <span
                   className={cn(
-                    'text-lg rounded-tr-xl rounded-bl-xl px-3 pb-1 w-full text-center',
+                    'text-lg rounded-tr-xl rounded-bl-xl px-3 pb-1 text-center',
                     `bg-white`
                   )}
                 >
