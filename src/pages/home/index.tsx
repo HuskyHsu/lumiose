@@ -42,7 +42,7 @@ function Home() {
       <div className='space-y-6'>
         <h1 className='text-3xl font-bold'>PokeDex</h1>
         <div className='flex justify-center items-center h-64'>
-          <p className='text-lg text-red-500'>錯誤: {error}</p>
+          <p className='text-lg text-red-500'>Error: {error}</p>
         </div>
       </div>
     );
@@ -54,10 +54,10 @@ function Home() {
       <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800'>
         {pokemonList.map((pokemon) => {
           return (
-            <div key={pokemon.link} className='group cursor-pointer w-fit '>
+            <div key={pokemon.link} className='group cursor-pointer w-fit'>
               <div
                 className={cn(
-                  'p-2 flex flex-col gap-3 items-center relative',
+                  'px-4 pt-4 pb-3 flex flex-col gap-3 items-center relative',
                   'rounded-tr-3xl rounded-bl-3xl',
                   `bg-linear-to-tl to-pokemon-fighting`,
                   FromClass[pokemon.type[0] as keyof typeof FromClass],
@@ -81,7 +81,7 @@ function Home() {
                 >
                   <span
                     className={cn(
-                      'absolute -left-4 -top-6',
+                      'absolute -left-6 -top-8',
                       'group-hover:text-yellow-400 group-hover:-translate-y-1 group-hover:-translate-x-1',
                       'text-white font-bold text-4xl drop-shadow-lg',
                       'transition-all duration-300'
@@ -96,7 +96,7 @@ function Home() {
                     <span
                       className={cn(
                         'absolute -right-2 -bottom-1',
-                        'text-white group-hover:text-yellow-400 group-hover:translate-x-1',
+                        'text-white group-hover:text-yellow-400 group-hover:translate-x-4',
                         'font-bold text-md drop-shadow-lg',
                         'transition-all duration-300'
                       )}
@@ -110,7 +110,7 @@ function Home() {
                 </div>
                 <span
                   className={cn(
-                    'text-lg rounded-tr-xl rounded-bl-xl px-3 pb-1 text-center',
+                    'text-lg rounded-tr-xl rounded-bl-xl px-3 pb-1 text-center w-full',
                     `bg-white`
                   )}
                 >
