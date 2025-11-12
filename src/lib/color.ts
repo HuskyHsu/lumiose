@@ -1,0 +1,66 @@
+export const BgClass = {
+  Bug: 'bg-pokemon-bug',
+  Dark: 'bg-pokemon-dark',
+  Dragon: 'bg-pokemon-dragon',
+  Electric: 'bg-pokemon-electric',
+  Fairy: 'bg-pokemon-fairy',
+  Fighting: 'bg-pokemon-fighting',
+  Fire: 'bg-pokemon-fire',
+  Flying: 'bg-pokemon-flying',
+  Ghost: 'bg-pokemon-ghost',
+  Grass: 'bg-pokemon-grass',
+  Ground: 'bg-pokemon-ground',
+  Ice: 'bg-pokemon-ice',
+  Normal: 'bg-pokemon-normal',
+  Poison: 'bg-pokemon-poison',
+  Psychic: 'bg-pokemon-psychic',
+  Rock: 'bg-pokemon-rock',
+  Steel: 'bg-pokemon-steel',
+  Water: 'bg-pokemon-water',
+} as const;
+
+export const FromClass = {
+  Bug: 'from-pokemon-bug/60',
+  Dark: 'from-pokemon-dark/60',
+  Dragon: 'from-pokemon-dragon/60',
+  Electric: 'from-pokemon-electric/60',
+  Fairy: 'from-pokemon-fairy/60',
+  Fighting: 'from-pokemon-fighting/60',
+  Fire: 'from-pokemon-fire/60',
+  Flying: 'from-pokemon-flying/60',
+  Ghost: 'from-pokemon-ghost/60',
+  Grass: 'from-pokemon-grass/60',
+  Ground: 'from-pokemon-ground/60',
+  Ice: 'from-pokemon-ice/60',
+  Normal: 'from-pokemon-normal/60',
+  Poison: 'from-pokemon-poison/60',
+  Psychic: 'from-pokemon-psychic/60',
+  Rock: 'from-pokemon-rock/60',
+  Steel: 'from-pokemon-steel/60',
+  Water: 'from-pokemon-water/60',
+} as const;
+
+export const ToClass = {
+  Bug: 'to-pokemon-bug/60',
+  Dark: 'to-pokemon-dark/60',
+  Dragon: 'to-pokemon-dragon/60',
+  Electric: 'to-pokemon-electric/60',
+  Fairy: 'to-pokemon-fairy/60',
+  Fighting: 'to-pokemon-fighting/60',
+  Fire: 'to-pokemon-fire/60',
+  Flying: 'to-pokemon-flying/60',
+  Ghost: 'to-pokemon-ghost/60',
+  Grass: 'to-pokemon-grass/60',
+  Ground: 'to-pokemon-ground/60',
+  Ice: 'to-pokemon-ice/60',
+  Normal: 'to-pokemon-normal/60',
+  Poison: 'to-pokemon-poison/60',
+  Psychic: 'to-pokemon-psychic/60',
+  Rock: 'to-pokemon-rock/60',
+  Steel: 'to-pokemon-steel/60',
+  Water: 'to-pokemon-water/60',
+} as const;
+
+export type BgClass = (typeof BgClass)[keyof typeof BgClass];
+export type FromClass = (typeof FromClass)[keyof typeof FromClass];
+export type ToClass = (typeof ToClass)[keyof typeof ToClass];
