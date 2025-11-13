@@ -26,8 +26,8 @@ const PokemonCard = memo(function PokemonCard({ pokemon }: PokemonCardProps) {
     <div className='group cursor-pointer w-fit'>
       <div
         className={cn(
-          'px-4 pt-4 pb-3 flex flex-col gap-3 items-center relative',
-          'rounded-tr-3xl rounded-bl-3xl',
+          'px-2 md:px-4 pt-2 md:pt-4 pb-3 flex flex-col gap-3 items-center relative',
+          'rounded-tr-2xl rounded-bl-2xl md:rounded-tr-3xl md:rounded-bl-3xl',
           'shadow-list-items',
           'bg-linear-to-tl to-pokemon-fighting',
           colorClasses,

@@ -1,4 +1,3 @@
-import Navigation from '@/components/Navigation';
 import { Outlet } from 'react-router-dom';
 
 function MainLayout() {
@@ -9,8 +8,8 @@ function MainLayout() {
         backgroundImage: `url(${import.meta.env.BASE_URL}images/pattern_hex.png)`,
       }}
     >
-      <Navigation />
-      <main className='container mx-auto p-8'>
+      {/* <Navigation /> */}
+      <main className='container mx-auto p-4 md:p-8 max-w-6xl'>
         <Outlet />
       </main>
     </div>

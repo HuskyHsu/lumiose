@@ -18,7 +18,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
   }, [onSearchChange]);
 
   return (
-    <div className='mb-6'>
+    <div className='mb-4'>
       <div className='flex items-center justify-between mb-4'>
         <h2 className='text-lg font-semibold text-slate-700'>Search Pokemon</h2>
       </div>

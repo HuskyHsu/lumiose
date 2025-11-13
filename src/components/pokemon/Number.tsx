@@ -8,7 +8,7 @@ function PokemonNumber({ number }: PokemonNumberProps) {
   return (
     <span
       className={cn(
-        'absolute -left-6 -top-8',
+        'absolute -left-4 -top-6 md:-left-6 md:-top-8',
         'group-hover:text-yellow-400 group-hover:-translate-y-1 group-hover:-translate-x-1',
         'text-white font-bold text-4xl drop-shadow-lg',
         'transition-all duration-300'

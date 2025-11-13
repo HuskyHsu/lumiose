@@ -24,7 +24,7 @@ function Home() {
 }
 
 function PageHeader() {
-  return <h1 className='text-3xl font-bold'>PokeDex</h1>;
+  return <h1 className='text-3xl font-bold'>Lumiose PokeDex</h1>;
 }
 
 interface PageContentProps {

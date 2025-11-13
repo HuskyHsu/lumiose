@@ -7,7 +7,11 @@ interface PokemonNameProps {
 function PokemonName({ name }: PokemonNameProps) {
   return (
     <span
-      className={cn('text-lg rounded-tr-xl rounded-bl-xl px-3 pb-1 text-center w-full', 'bg-white')}
+      className={cn(
+        'rounded-tr-xl rounded-bl-xl px-3 text-center w-full h-8 flex items-center justify-center',
+        name.length > 4 ? 'text-md' : 'text-lg',
+        'bg-white'
+      )}
     >
       {name}
     </span>

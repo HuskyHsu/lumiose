@@ -4,8 +4,8 @@ function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: '首頁' },
-    { path: '/about', label: '關於我們' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
   ];
 
   return (
