@@ -1,24 +1,37 @@
 import type { PokemonList } from '@/types/pokemon';
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 
 export function usePokemonFilter(pokemonList: PokemonList) {
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
 
+  // Memoize the type checking function to avoid recreating it on every render
+  const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
+    return filterTypes.every((selectedType) => pokemonTypes.includes(selectedType));
+  }, []);
+
   const filteredPokemonList = useMemo(() => {
     if (selectedTypes.length === 0) {
-      // 沒有選擇任何屬性時，顯示全部
       return pokemonList;
     }
 
-    // 篩選邏輯：Pokemon必須擁有所有選中的屬性才會被顯示
-    return pokemonList.filter((pokemon) => {
-      return selectedTypes.every((selectedType) => pokemon.type.includes(selectedType));
-    });
-  }, [pokemonList, selectedTypes]);
+    // Optimized filtering: early return for better performance
+    const result = [];
+    for (const pokemon of pokemonList) {
+      if (typeMatches(pokemon.type, selectedTypes)) {
+        result.push(pokemon);
+      }
+    }
+    return result;
+  }, [pokemonList, selectedTypes, typeMatches]);
+
+  // Memoize the setter to prevent unnecessary re-renders
+  const memoizedSetSelectedTypes = useCallback((types: string[]) => {
+    setSelectedTypes(types);
+  }, []);
 
   return {
     selectedTypes,
-    setSelectedTypes,
+    setSelectedTypes: memoizedSetSelectedTypes,
     filteredPokemonList,
   };
 }

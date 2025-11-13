@@ -5,6 +5,7 @@ import { TypeFilter } from '@/components/ui/TypeFilter';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import type { PokemonList } from '@/types/pokemon';
+import { memo } from 'react';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
@@ -45,14 +46,14 @@ interface PokemonGridProps {
   pokemonList: PokemonList;
 }
 
-function PokemonGrid({ pokemonList }: PokemonGridProps) {
+const PokemonGrid = memo(function PokemonGrid({ pokemonList }: PokemonGridProps) {
   return (
-    <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800'>
+    <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800 transition-all duration-200 ease-in-out'>
       {pokemonList.map((pokemon) => (
         <PokemonCard key={pokemon.link} pokemon={pokemon} />
       ))}
     </div>
   );
-}
+});
 
 export default Home;
