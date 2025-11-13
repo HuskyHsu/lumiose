@@ -6,7 +6,7 @@ function MainLayout() {
     <div
       className='min-h-screen'
       style={{
-        backgroundImage: `url(${import.meta.env.BASE_URL}images/pattern_triangles.png)`,
+        backgroundImage: `url(${import.meta.env.BASE_URL}images/pattern_hex.png)`,
       }}
     >
       <Navigation />
