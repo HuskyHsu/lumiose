@@ -616,7 +616,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "雪原花紋",
+    "altForm": "雪國花紋",
     "link": "666-1",
     "name": {
       "zh": "彩粉蝶",
@@ -648,7 +648,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "大陸花紋",
+    "altForm": "雪原花紋",
     "link": "666-2",
     "name": {
       "zh": "彩粉蝶",
@@ -680,7 +680,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "庭園花紋",
+    "altForm": "大陸花紋",
     "link": "666-3",
     "name": {
       "zh": "彩粉蝶",
@@ -712,7 +712,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "高雅花紋",
+    "altForm": "庭園花紋",
     "link": "666-4",
     "name": {
       "zh": "彩粉蝶",
@@ -744,7 +744,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "花園花紋",
+    "altForm": "高雅花紋",
     "link": "666-5",
     "name": {
       "zh": "彩粉蝶",
@@ -776,7 +776,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "摩登花紋",
+    "altForm": "花園花紋",
     "link": "666-6",
     "name": {
       "zh": "彩粉蝶",
@@ -808,7 +808,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "大海花紋",
+    "altForm": "摩登花紋",
     "link": "666-7",
     "name": {
       "zh": "彩粉蝶",
@@ -840,7 +840,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "群島花紋",
+    "altForm": "大海花紋",
     "link": "666-8",
     "name": {
       "zh": "彩粉蝶",
@@ -872,7 +872,7 @@
   {
     "pid": 666,
     "lumioseId": 17,
-    "altForm": "雪國花紋",
+    "altForm": "群島花紋",
     "link": "666-9",
     "name": {
       "zh": "彩粉蝶",
@@ -2060,7 +2060,7 @@
   {
     "pid": 669,
     "lumioseId": 38,
-    "altForm": "橙花",
+    "altForm": "黃花",
     "link": "669-1",
     "name": {
       "zh": "花蓓蓓",
@@ -2091,7 +2091,7 @@
   {
     "pid": 669,
     "lumioseId": 38,
-    "altForm": "黃花",
+    "altForm": "橙花",
     "link": "669-2",
     "name": {
       "zh": "花蓓蓓",
@@ -2215,7 +2215,7 @@
   {
     "pid": 670,
     "lumioseId": 39,
-    "altForm": "橙花",
+    "altForm": "黃花",
     "link": "670-1",
     "name": {
       "zh": "花葉蒂",
@@ -2246,7 +2246,7 @@
   {
     "pid": 670,
     "lumioseId": 39,
-    "altForm": "黃花",
+    "altForm": "橙花",
     "link": "670-2",
     "name": {
       "zh": "花葉蒂",
@@ -2432,7 +2432,7 @@
   {
     "pid": 671,
     "lumioseId": 40,
-    "altForm": "橙花",
+    "altForm": "黃花",
     "link": "671-1",
     "name": {
       "zh": "花潔夫人",
@@ -2463,7 +2463,7 @@
   {
     "pid": 671,
     "lumioseId": 40,
-    "altForm": "黃花",
+    "altForm": "橙花",
     "link": "671-2",
     "name": {
       "zh": "花潔夫人",
