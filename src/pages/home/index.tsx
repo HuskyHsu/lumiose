@@ -1,16 +1,20 @@
 import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { TypeFilter } from '@/components/ui/TypeFilter';
 import { usePokemonData } from '@/hooks/usePokemonData';
+import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import type { PokemonList } from '@/types/pokemon';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
+  const { selectedTypes, setSelectedTypes, filteredPokemonList } = usePokemonFilter(pokemonList);
 
   return (
     <div className='space-y-6'>
       <PageHeader />
-      <PageContent loading={loading} error={error} pokemonList={pokemonList} />
+      <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
+      <PageContent loading={loading} error={error} pokemonList={filteredPokemonList} />
     </div>
   );
 }
