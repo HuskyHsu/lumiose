@@ -8,9 +8,10 @@ import PokemonTypes from './Types';
 
 interface PokemonCardProps {
   pokemon: Pokemon;
+  isShiny?: boolean;
 }
 
-const PokemonCard = memo(function PokemonCard({ pokemon }: PokemonCardProps) {
+const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: PokemonCardProps) {
   // Memoize expensive color class calculations
   const colorClasses = useMemo(() => {
     const primaryType = pokemon.type[0];
@@ -35,7 +36,7 @@ const PokemonCard = memo(function PokemonCard({ pokemon }: PokemonCardProps) {
           'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60'
         )}
       >
-        <PokemonImage pokemon={pokemon} />
+        <PokemonImage pokemon={pokemon} isShiny={isShiny} />
         <PokemonName name={pokemon.name.zh} />
         <PokemonTypes types={pokemon.type} />
       </div>
