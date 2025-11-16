@@ -79,6 +79,7 @@ fixLinkMap['693'] = '757';
 
 fixLinkMap['704'] = '763';
 fixLinkMap['705'] = '764';
+fixLinkMap['705-1'] = '764-1';
 fixLinkMap['706'] = '765';
 fixLinkMap['706-1'] = '765-1';
 
@@ -245,6 +246,10 @@ function buildDestFileName(link) {
 function copyAndRenameFile(sourceFilePath, destFilePath, link) {
   try {
     fs.copyFileSync(sourceFilePath, destFilePath);
+    fs.copyFileSync(
+      sourceFilePath.replace('0.png', '1.png'),
+      destFilePath.replace('.png', 's.png')
+    );
     // console.log(`✅ 成功複製: ${link}.png`);
     return true;
   } catch (error) {
