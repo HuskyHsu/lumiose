@@ -457,6 +457,12 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
 
       pokemon.source = targetLink;
 
+      targetLink = pokemon.link;
+      while (evolutionMap.has(targetLink) && evolutionMap.get(targetLink).to.length) {
+        targetLink = evolutionMap.get(targetLink).to[0].link;
+      }
+      pokemon.latest = targetLink === pokemon.link;
+
       // delete pokemon.evolution;
       // delete pokemon.levelUpMoves;
       // delete pokemon.tmMoves;

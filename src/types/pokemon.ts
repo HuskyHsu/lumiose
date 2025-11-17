@@ -15,6 +15,7 @@ export interface Pokemon {
   ev: [number, number, number, number, number, number]; // EV yields in same order as base stats
   type: string[];
   source: string;
+  latest: boolean;
   altForm?: string; // Optional alternative form name
 }
 

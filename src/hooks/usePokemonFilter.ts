@@ -34,40 +34,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
 
   // Function to filter only final evolution forms
   const getFinalFormPokemon = useCallback((pokemonList: PokemonList) => {
-    // Group Pokemon by source (evolution chain)
-    const sourceGroups = new Map<string, Pokemon[]>();
-
-    pokemonList.forEach((pokemon) => {
-      const source = pokemon.source;
-      if (!sourceGroups.has(source)) {
-        sourceGroups.set(source, []);
-      }
-      sourceGroups.get(source)!.push(pokemon);
-    });
-
-    // For each source group, find the Pokemon with highest pid
-    const finalForms: Pokemon[] = [];
-
-    sourceGroups.forEach((group) => {
-      // Find the maximum pid in this group
-      const maxPid = Math.max(...group.map((p) => p.pid));
-
-      // Get all Pokemon with the maximum pid
-      const maxPidPokemon = group.filter((p) => p.pid === maxPid);
-
-      // Filter out MEGA forms (altForm starting with "MEGA")
-      const nonMegaForms = maxPidPokemon.filter((p) => !p.altForm?.startsWith('MEGA'));
-
-      if (nonMegaForms.length > 0) {
-        // Add all non-MEGA forms with max pid
-        finalForms.push(...nonMegaForms);
-      } else {
-        // If only MEGA forms exist, add all of them
-        finalForms.push(...maxPidPokemon);
-      }
-    });
-
-    return finalForms;
+    return pokemonList.filter((pokemon) => pokemon.latest);
   }, []);
 
   const filteredPokemonList = useMemo(() => {
