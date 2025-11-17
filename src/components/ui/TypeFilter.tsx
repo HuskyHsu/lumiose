@@ -51,7 +51,7 @@ export function TypeFilter({ selectedTypes, onTypeChange }: TypeFilterProps) {
   };
 
   return (
-    <div className='mb-8'>
+    <div className='mb-4'>
       <h2 className='text-lg font-semibold text-slate-700 mb-4'>Type Filter</h2>
       <div className='grid grid-cols-9 md:grid-cols-18 lg:grid-cols-22 gap-2'>
         {POKEMON_TYPES.map((type) => {

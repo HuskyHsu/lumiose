@@ -1,5 +1,6 @@
 import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
+import FinalFormToggle from '@/components/ui/FinalFormToggle';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { SearchFilter } from '@/components/ui/SearchFilter';
 import ShinyToggle from '@/components/ui/ShinyToggle';
@@ -12,22 +13,26 @@ import { memo } from 'react';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
-  const { selectedTypes, setSelectedTypes, searchKeyword, setSearchKeyword, filteredPokemonList } =
-    usePokemonFilter(pokemonList);
+  const {
+    selectedTypes,
+    setSelectedTypes,
+    searchKeyword,
+    setSearchKeyword,
+    isFinalFormOnly,
+    toggleFinalFormOnly,
+    filteredPokemonList,
+  } = usePokemonFilter(pokemonList);
   const { isShiny, toggleShiny } = useShinyToggle();
 
   return (
     <div className='space-y-6'>
       <PageHeader />
-      <div className='flex gap-4'>
-        <div className='grow'>
-          <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
-        </div>
-        <div className='w-16 md:w-24'>
-          <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
-        </div>
-      </div>
+      <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
+      <div className='flex gap-2'>
+        <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
+        <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
+      </div>
       <PageContent
         loading={loading}
         error={error}
@@ -68,7 +73,7 @@ interface PokemonGridProps {
 
 const PokemonGrid = memo(function PokemonGrid({ pokemonList, isShiny }: PokemonGridProps) {
   return (
-    <div className='grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800 transition-all duration-200 ease-in-out'>
+    <div className='grid grid-cols-3 sm:grid-cols-4 mt-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800 transition-all duration-200 ease-in-out'>
       {pokemonList.map((pokemon) => (
         <PokemonCard key={pokemon.link} pokemon={pokemon} isShiny={isShiny} />
       ))}
