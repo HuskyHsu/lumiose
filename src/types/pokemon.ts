@@ -20,3 +20,45 @@ export interface Pokemon {
 }
 
 export type PokemonList = Pokemon[];
+
+// Detailed Pokemon types for the detail page
+export interface PokemonMove {
+  id: number;
+  name: PokemonName;
+  type: string;
+  category: 'Physical' | 'Special' | 'Status';
+  power: number;
+  cooldown: number;
+}
+
+export interface LevelUpMove extends PokemonMove {
+  level: number;
+  plus: number;
+}
+
+export interface TMMove extends PokemonMove {
+  tm: number;
+}
+
+export interface EvolutionNode {
+  link: string;
+  type: string[];
+  name: PokemonName;
+  altForm?: string;
+  level?: number;
+  method?: string;
+  condition?: PokemonName;
+  to?: EvolutionNode[];
+}
+
+export interface DetailedPokemon extends Pokemon {
+  genderRatio: number;
+  catchRate: number;
+  expGroup: string;
+  height: number;
+  weight: number;
+  alphaMove: PokemonMove;
+  levelUpMoves: LevelUpMove[];
+  tmMoves: TMMove[];
+  evolutionTree: EvolutionNode;
+}

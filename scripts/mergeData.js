@@ -598,7 +598,7 @@ function mergeTMArray(zhTMs, jaTMs, enTMs, moveMap) {
 async function saveToJSON(mergedData, outputPath) {
   try {
     let jsonString = '';
-    if (outputPath.includes('personal_base.json')) {
+    if (outputPath.includes('personal_base.json') || !Array.isArray(mergedData)) {
       jsonString = JSON.stringify(mergedData);
     } else {
       jsonString = JSON.stringify(mergedData, null, 2);
@@ -622,20 +622,24 @@ async function saveToJSON(mergedData, outputPath) {
  * @param {string} enFile - 英文資料文件路徑
  * @param {string} outputFile - 輸出文件路徑（可選）
  */
-async function main(zhFile, jaFile, enFile, outputFile, baseFile) {
+async function main(zhFile, jaFile, enFile, outputFile, baseFile, detailPath) {
   try {
     console.log('開始合併多語言寶可夢資料...');
 
     const mergedData = await mergeLanguageData(zhFile, jaFile, enFile);
 
     if (outputFile) {
-      await saveToJSON(
-        mergedData
-          .filter((row) => row.lumioseId > 0)
-          .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
-          .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link)),
-        outputFile
-      );
+      const pmList = mergedData
+        .filter((row) => row.lumioseId > 0)
+        .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
+        .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link));
+
+      await saveToJSON(pmList, outputFile);
+
+      for (let pm of pmList) {
+        const { form, stage, abilities, abilitiyH, eggGroup, color, evolution, ...rest } = pm;
+        await saveToJSON(rest, `${detailPath}/${pm.link}.json`);
+      }
     }
 
     if (baseFile) {
@@ -693,8 +697,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const enFile = args[2];
   const outputFile = args[3] || `data/${version}/personal.json`;
   const baseFile = `public/data/base_pm_list_${version}.json`;
+  const detailPath = `public/data/pm`;
 
-  main(zhFile, jaFile, enFile, outputFile, baseFile)
+  main(zhFile, jaFile, enFile, outputFile, baseFile, detailPath)
     .then(() => {
       console.log('合併完成！');
     })

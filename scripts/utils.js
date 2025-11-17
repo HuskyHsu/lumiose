@@ -10,10 +10,7 @@ async function readNames(language, type) {
   const typePath = path.join(__dirname, '..', 'za-textport', language, `${type}.txt`);
   try {
     const text = await fs.readFile(typePath, 'utf8');
-    return text
-      .split(/\r?\n/)
-      .map((s) => s.trim())
-      .filter((s) => s.length > 0);
+    return text.split(/\r?\n/).map((s) => s.trim());
   } catch (e) {
     // If unable to read type file, return empty array and warn
     console.warn(

@@ -31656,9 +31656,9 @@
   {
     "MoveID": 670,
     "Name": {
-      "zh": "麻麻刺刺",
-      "ja": "びりびりちくちく",
-      "en": "Zing Zap"
+      "zh": "樹葉",
+      "ja": "このは",
+      "en": "Leafage"
     },
     "CanUseMove": true,
     "Type": 11,
@@ -31789,9 +31789,9 @@
   {
     "MoveID": 679,
     "Name": {
-      "zh": "閃閃雷光",
-      "ja": "ピカピカサンダー",
-      "en": "Pika Papow"
+      "zh": "猛撲",
+      "ja": "とびかかる",
+      "en": "Lunge"
     },
     "CanUseMove": true,
     "Type": 6,
@@ -31922,9 +31922,9 @@
   {
     "MoveID": 687,
     "Name": {
-      "zh": "亮亮風暴",
-      "ja": "きらきらストーム",
-      "en": "Sparkly Swirl"
+      "zh": "核心懲罰者",
+      "ja": "コアパニッシャー",
+      "en": "Core Enforcer"
     },
     "CanUseMove": true,
     "Type": 15,
@@ -32055,9 +32055,9 @@
   {
     "MoveID": 693,
     "Name": {
-      "zh": "緊咬不放",
-      "ja": "くらいつく",
-      "en": "Jaw Lock"
+      "zh": "狂舞揮打",
+      "ja": "ぶんまわす",
+      "en": "Brutal Swing"
     },
     "CanUseMove": true,
     "Type": 16,
@@ -32188,9 +32188,9 @@
   {
     "MoveID": 710,
     "Name": {
-      "zh": "極巨寒冰",
-      "ja": "ダイアイス",
-      "en": "Max Hailstorm"
+      "zh": "水流裂破",
+      "ja": "アクアブレイク",
+      "en": "Liquidation"
     },
     "CanUseMove": true,
     "Type": 10,
@@ -32321,9 +32321,9 @@
   {
     "MoveID": 748,
     "Name": {
-      "zh": "臂貝武器",
-      "ja": "シェルアームズ",
-      "en": "Shell Side Arm"
+      "zh": "背水一戰",
+      "ja": "はいすいのじん",
+      "en": "No Retreat"
     },
     "CanUseMove": true,
     "Type": 1,
@@ -32454,9 +32454,9 @@
   {
     "MoveID": 784,
     "Name": {
-      "zh": "勝利之舞",
-      "ja": "しょうりのまい",
-      "en": "Victory Dance"
+      "zh": "廣域破壞",
+      "ja": "ワイドブレイカー",
+      "en": "Breaking Swipe"
     },
     "CanUseMove": true,
     "Type": 15,
@@ -32587,9 +32587,9 @@
   {
     "MoveID": 812,
     "Name": {
-      "zh": "三連鑽",
-      "ja": "トリプルダイブ",
-      "en": "Triple Dive"
+      "zh": "快速折返",
+      "ja": "クイックターン",
+      "en": "Flip Turn"
     },
     "CanUseMove": true,
     "Type": 10,
@@ -32719,7 +32719,11 @@
   },
   {
     "MoveID": 920,
-    "Name": {},
+    "Name": {
+      "zh": "歸無之光",
+      "ja": "{無|む}に{帰|き}す{光|ひかり}",
+      "en": "Nihil Light"
+    },
     "CanUseMove": true,
     "Type": 15,
     "Quality": 0,

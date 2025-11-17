@@ -1,4 +1,4 @@
-import type { PokemonList } from '@/types/pokemon';
+import type { DetailedPokemon, PokemonList } from '@/types/pokemon';
 
 const HOST = import.meta.env.BASE_URL;
 
@@ -10,5 +10,16 @@ export const fetchPokemonData = async (): Promise<PokemonList> => {
   }
 
   const data: PokemonList = await response.json();
+  return data;
+};
+
+export const fetchPokemonDetail = async (link: string): Promise<DetailedPokemon> => {
+  const response = await fetch(`${HOST}/data/pm/${link}.json`);
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data: DetailedPokemon = await response.json();
   return data;
 };

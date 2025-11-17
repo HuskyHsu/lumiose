@@ -20,6 +20,10 @@ async function main() {
     readNames('English', 'moves'),
   ]);
 
+  // console.log(zhMoves.length);
+  // console.log(jaMoves.length);
+  // console.log(enMoves.length);
+
   const zipMoveNames = (idx) => {
     const nameObj = {};
 
@@ -62,7 +66,6 @@ async function main() {
     //   console.log(`Param ${index}:`, item);
     // });
 
-    // Filter: remove items where IsPresentInGame === false
     let moveList = arr
       .filter((item) => item.CanUseMove !== false)
       .map((item) => {

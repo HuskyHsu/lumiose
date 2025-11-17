@@ -2,6 +2,7 @@ import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
 import type { Pokemon } from '@/types/pokemon';
 import { memo, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import PokemonImage from './Image';
 import PokemonName from './Name';
 import PokemonTypes from './Types';
@@ -24,7 +25,7 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
   }, [pokemon.type]);
 
   return (
-    <div className='group cursor-pointer w-fit'>
+    <Link to={`/pokemon/${pokemon.link}`} className='group cursor-pointer w-fit'>
       <div
         className={cn(
           'px-2 md:px-4 pt-2 md:pt-4 pb-3 flex flex-col gap-3 items-center relative',
@@ -40,7 +41,7 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
         <PokemonName name={pokemon.name.zh} />
         <PokemonTypes types={pokemon.type} />
       </div>
-    </div>
+    </Link>
   );
 });
 
