@@ -29,7 +29,7 @@ function Home() {
       <PageHeader />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
-      <div className='flex gap-2'>
+      <div className='flex gap-4'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
       </div>

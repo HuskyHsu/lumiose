@@ -28,7 +28,7 @@ function FinalFormToggle({ isFinalFormOnly, onToggle }: FinalFormToggleProps) {
           />
         </button>
       </div>
-      <span>最終型態</span>
+      <span>Final</span>
     </div>
   );
 }
