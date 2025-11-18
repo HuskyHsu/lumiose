@@ -1,3 +1,4 @@
+import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent } from '@/components/ui/card';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
@@ -22,20 +23,22 @@ export default function PokemonHeader({ pokemon }: PokemonHeaderProps) {
         <div className='flex items-center justify-between'>
           <div>
             <h1 className='text-4xl font-bold mb-2'>{pokemon.name.zh}</h1>
-            <p className='text-xl text-white/80'>
-              {pokemon.name.en} / {pokemon.name.ja}
+            <p className='text-xl'>
+              {pokemon.name.ja} / {pokemon.name.en}
             </p>
             <div className='flex gap-2 mt-4'>
-              {pokemon.type.map((type) => (
-                <span key={type} className='px-3 py-1 rounded-full bg-white/20 text-sm font-medium'>
-                  {type}
-                </span>
-              ))}
+              <PokemonTypes types={pokemon.type} />
             </div>
           </div>
-          <div className='text-righ'>
-            <div className='text-3xl font-bold'>#{pokemon.pid.toString().padStart(3, '0')}</div>
-            <div className='text-sm opacity-80'>Lumiose ID: {pokemon.lumioseId}</div>
+          <div className='text-righ flex'>
+            <img
+              src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+              alt={pokemon.name.zh}
+            />
+            <img
+              src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
+              alt={pokemon.name.zh}
+            />
           </div>
         </div>
       </CardContent>

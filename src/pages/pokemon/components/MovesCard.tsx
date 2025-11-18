@@ -20,21 +20,21 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
       <CardHeader>
         <CardTitle>Moves</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className='px-2 md:px-6'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 text-center'>
           <div>
             <h4 className='font-semibold mb-3'>Level Up Moves</h4>
             <Table>
               <TableHeader>
-                <TableRow>
-                  <TableHead>
-                    Level<span className='text-xs font-light italic'> +plus</span>
+                <TableRow className=''>
+                  <TableHead className='w-2/12'>
+                    Lv<span className='text-xs font-light italic'> +plus</span>
                   </TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Type</TableHead>
-                  <TableHead>category</TableHead>
-                  <TableHead>power</TableHead>
-                  <TableHead>CD</TableHead>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-1/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
+                  <TableHead className='w-2/12'>Att.</TableHead>
+                  <TableHead className='w-2/12'>CD</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -90,12 +90,12 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead>TM</TableHead>
-                  <TableHead>Name</TableHead>
-                  <TableHead>Type</TableHead>
-                  <TableHead>category</TableHead>
-                  <TableHead>power</TableHead>
-                  <TableHead>CD</TableHead>
+                  <TableHead className='w-2/12'>TM</TableHead>
+                  <TableHead className='w-3/12'>Name</TableHead>
+                  <TableHead className='w-1/12'>Type</TableHead>
+                  <TableHead className='w-2/12'>Cat.</TableHead>
+                  <TableHead className='w-2/12'>Att.</TableHead>
+                  <TableHead className='w-2/12'>CD</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
