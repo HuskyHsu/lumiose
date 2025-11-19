@@ -65,7 +65,7 @@ function PokemonDetail() {
         <BasicInfo pokemon={pokemon} />
         <StatsCard pokemon={pokemon} />
         <MovesCard pokemon={pokemon} />
-        <EvolutionCard pokemon={pokemon} />
+        {pokemon.evolutionTree && <EvolutionCard pokemon={pokemon} />}
       </div>
     </div>
   );

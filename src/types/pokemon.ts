@@ -45,8 +45,8 @@ export interface EvolutionNode {
   type: string[];
   name: PokemonName;
   altForm?: string;
-  level?: number;
-  method?: string;
+  level: number;
+  method: string;
   condition?: PokemonName;
   to?: EvolutionNode[];
 }
@@ -60,5 +60,5 @@ export interface DetailedPokemon extends Pokemon {
   alphaMove: PokemonMove;
   levelUpMoves: LevelUpMove[];
   tmMoves: TMMove[];
-  evolutionTree: EvolutionNode;
+  evolutionTree?: EvolutionNode;
 }
