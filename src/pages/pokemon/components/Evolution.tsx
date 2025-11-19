@@ -58,51 +58,10 @@ const getConditionText = (evolution: EvolutionNode) => {
   }`;
 };
 
-const getEvolutionTreeMaxDepth = (evolutionTree: EvolutionNode): number => {
-  // If no children, depth is 1 (current node)
-  if (!evolutionTree.to || evolutionTree.to.length === 0) {
-    return 1;
-  }
-
-  // Recursively calculate max depth of all children, then add current node depth
-  const maxChildDepth = Math.max(
-    ...evolutionTree.to.map((child) => getEvolutionTreeMaxDepth(child))
-  );
-  return 1 + maxChildDepth;
-};
-
-const getEvolutionTreeMaxWidth = (evolutionTree: EvolutionNode): number => {
-  // Use BFS to count nodes at each level
-  const queue: EvolutionNode[][] = [[evolutionTree]];
-  let maxWidth = 1; // At least the root node
-
-  while (queue.length > 0) {
-    const currentLevel = queue.shift()!;
-    const currentWidth = currentLevel.length;
-
-    // Update max width if current level is wider
-    maxWidth = Math.max(maxWidth, currentWidth);
-
-    // Collect all children for the next level
-    const nextLevel: EvolutionNode[] = [];
-    currentLevel.forEach((node) => {
-      if (node.to && node.to.length > 0) {
-        nextLevel.push(...node.to);
-      }
-    });
-
-    // Add next level to queue if it has nodes
-    if (nextLevel.length > 0) {
-      queue.push(nextLevel);
-    }
-  }
-
-  return maxWidth;
-};
-
 export function Evolution({ pokemon }: Props) {
   // 1-1-1-1
   // 1-1-1-2
+  // 1-1-2-2
   // 1-1-1
   // 1-1-2
   // 1-2-2
@@ -119,14 +78,20 @@ export function Evolution({ pokemon }: Props) {
     return;
   }
 
-  // Calculate the maximum depth and width of the evolution tree
-  const maxDepth = getEvolutionTreeMaxDepth(pokemon.evolutionTree);
-  const maxWidth = getEvolutionTreeMaxWidth(pokemon.evolutionTree);
-  console.log('Evolution tree max depth:', maxDepth);
-  console.log('Evolution tree max width:', maxWidth);
-
+  // Check if we have 3 or 4 level evolution chains
   const isThree = pokemon.evolutionTree.to?.find((evolve) => evolve.to);
-  const cols = isThree ? 'grid-cols-3 md:grid-cols-5' : 'grid-cols-3';
+  const isFour = pokemon.evolutionTree.to?.find((evolve) =>
+    evolve.to?.find((subEvolve) => subEvolve.to)
+  );
+
+  // Determine grid columns based on evolution depth
+  let cols = 'grid-cols-3';
+  if (isFour) {
+    cols = 'grid-cols-3 md:grid-cols-7'; // 4 levels: pokemon + condition + pokemon + condition + pokemon + condition + pokemon
+  } else if (isThree) {
+    cols = 'grid-cols-3 md:grid-cols-5'; // 3 levels: pokemon + condition + pokemon + condition + pokemon
+  }
+
   const rows = rowSpanMap[(pokemon.evolutionTree?.to?.length || 1) as keyof typeof rowSpanMap];
 
   let keyId = 0;
@@ -136,18 +101,41 @@ export function Evolution({ pokemon }: Props) {
 
     const secRows = rowSpanMap[(evolution.to?.length || 1) as keyof typeof rowSpanMap];
 
-    const rowsClass =
-      rows === 'row-span-1' && secRows === 'row-span-2' ? 'row-span-2' : 'row-span-1';
+    // Calculate the maximum width at the deepest level for proper row-span alignment
+    let maxDeepestWidth = 1;
+    if (evolution.to) {
+      evolution.to.forEach((thirdLevel) => {
+        if (thirdLevel.to) {
+          maxDeepestWidth = Math.max(maxDeepestWidth, thirdLevel.to.length);
+        }
+      });
+    }
+
+    // For 4-level chains, if any branch at the 4th level has multiple evolutions,
+    // all previous levels should use row-span-2 for alignment
+    const fourthLevelRows = rowSpanMap[maxDeepestWidth as keyof typeof rowSpanMap];
+    const shouldUseRowSpan2 = isFour && fourthLevelRows === 'row-span-2';
+
+    let rowsClass = 'row-span-1';
+    if (shouldUseRowSpan2) {
+      rowsClass = 'row-span-2';
+    } else {
+      rowsClass = rows === 'row-span-1' && secRows === 'row-span-2' ? 'row-span-2' : 'row-span-1';
+    }
 
     if (i === 0 && pokemon.evolutionTree) {
+      let firstPokemonRowSpan = rows;
+      if (shouldUseRowSpan2) {
+        firstPokemonRowSpan = 'row-span-2';
+      } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
+        firstPokemonRowSpan = 'row-span-2';
+      }
+
       rowElement.push(
         <SubCard
           key={keyId}
           pm={pokemon.evolutionTree}
-          className={cn(
-            'text-xs',
-            rows === 'row-span-1' && secRows === 'row-span-2' ? 'row-span-2' : rows
-          )}
+          className={cn('text-xs', firstPokemonRowSpan)}
         />
       );
     }
@@ -161,27 +149,64 @@ export function Evolution({ pokemon }: Props) {
     keyId += 3;
     if (evolution.to) {
       evolution.to.forEach((evolution_) => {
+        // Third level pokemon should also use row-span-2 if 4th level has multiple branches
+        const thirdLevelRowSpan = shouldUseRowSpan2 ? 'row-span-2' : 'row-span-1';
+
         acc = acc.concat([
           <Condition
             key={keyId}
             condition={getConditionText(evolution_)}
-            className={cn('hidden md:block')}
+            className={cn('hidden md:block', thirdLevelRowSpan)}
           />,
-          <SubCard key={keyId + 1} pm={evolution_} className={cn('hidden text-xs md:block')} />,
+          <SubCard
+            key={keyId + 1}
+            pm={evolution_}
+            className={cn('hidden text-xs md:block', thirdLevelRowSpan)}
+          />,
         ]);
         keyId += 2;
+
+        // Handle 4th level evolution
+        if (evolution_.to) {
+          evolution_.to.forEach((fourthEvolution) => {
+            acc = acc.concat([
+              <Condition
+                key={keyId}
+                condition={getConditionText(fourthEvolution)}
+                className={cn('hidden md:block')}
+              />,
+              <SubCard
+                key={keyId + 1}
+                pm={fourthEvolution}
+                className={cn('hidden text-xs md:block')}
+              />,
+            ]);
+            keyId += 2;
+          });
+        } else if (isFour) {
+          // Add empty spaces for alignment when we have 4-level chain but this branch doesn't go to 4th level
+          acc = acc.concat([
+            <span key={keyId + 12345} className={cn('hidden text-xs md:block')} />,
+            <span key={keyId + 123456} className={cn('hidden text-xs md:block')} />,
+          ]);
+          keyId += 2;
+        }
       });
-    } else if (isThree) {
-      acc = acc.concat([
-        <span key={keyId + 12345} className={cn('hidden text-xs md:block')} />,
-        <span key={keyId + 123456} className={cn('hidden text-xs md:block')} />,
-      ]);
+    } else if (isThree || isFour) {
+      // Add empty spaces for alignment
+      const emptySpaces = isFour ? 4 : 2;
+      for (let i = 0; i < emptySpaces; i++) {
+        acc = acc.concat([
+          <span key={keyId + 12345 + i} className={cn('hidden text-xs md:block')} />,
+        ]);
+      }
     }
 
     return acc;
   }, [] as JSX.Element[]);
 
   let hasHr = false;
+  let hasHr4th = false;
   pokemon.evolutionTree?.to?.forEach((evolution) => {
     if (evolution.to) {
       if (hasHr === false) {
@@ -207,6 +232,34 @@ export function Evolution({ pokemon }: Props) {
           <SubCard key={keyId + 2} pm={evolution_} className={cn('text-xs md:hidden')} />
         );
         keyId += 3;
+
+        // Handle 4th level evolution for mobile
+        if (evolution_.to) {
+          evolution_.to.forEach((fourthEvolution, j, fourthList) => {
+            if (hasHr4th === false) {
+              evolutionPath?.push(<hr className='col-span-3 w-full md:hidden' key={998} />);
+              hasHr4th = true;
+            }
+
+            evolutionPath?.push(
+              <SubCard
+                key={keyId}
+                pm={evolution_}
+                className={cn(
+                  'text-xs md:hidden',
+                  fourthList.length > 1 ? (j === 0 ? 'row-span-2' : 'hidden') : ''
+                )}
+              />,
+              <Condition
+                key={keyId + 1}
+                condition={getConditionText(fourthEvolution)}
+                className='md:hidden'
+              />,
+              <SubCard key={keyId + 2} pm={fourthEvolution} className={cn('text-xs md:hidden')} />
+            );
+            keyId += 3;
+          });
+        }
       });
     }
   });
