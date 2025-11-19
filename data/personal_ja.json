@@ -73405,8 +73405,8 @@
         "condition": "0"
       },
       {
-        "into": "ヌメイル-0",
-        "level": 0,
+        "into": "ヌメイル-1",
+        "level": 40,
         "method": "Hisui",
         "condition": "1"
       }

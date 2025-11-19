@@ -27,7 +27,7 @@ function SubCard({ pm, className = '' }: SubCardProps) {
       />
       <span className={cn()}>
         {pm.name.zh}
-        {pm.altForm ? <span className='text-xs'>({pm.altForm})</span> : ''}
+        {pm.altForm && <span className='text-xs'>({pm.altForm})</span>}
       </span>
     </div>
   );

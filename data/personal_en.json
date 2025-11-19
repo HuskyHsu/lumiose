@@ -73405,8 +73405,8 @@
         "condition": "0"
       },
       {
-        "into": "Sliggoo-0",
-        "level": 0,
+        "into": "Sliggoo-1",
+        "level": 40,
         "method": "Hisui",
         "condition": "1"
       }

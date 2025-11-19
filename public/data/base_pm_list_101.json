@@ -2441,7 +2441,7 @@
       "Fairy"
     ],
     "source": "670-5",
-    "latest": true
+    "latest": false
   },
   {
     "pid": 670,
@@ -2472,7 +2472,7 @@
     "type": [
       "Fairy"
     ],
-    "source": "669",
+    "source": "670-5",
     "latest": true
   },
   {
@@ -8196,7 +8196,7 @@
       "Steel",
       "Dragon"
     ],
-    "source": "705-1",
+    "source": "704",
     "latest": false
   },
   {
@@ -8260,7 +8260,7 @@
       "Steel",
       "Dragon"
     ],
-    "source": "705-1",
+    "source": "704",
     "latest": true
   },
   {

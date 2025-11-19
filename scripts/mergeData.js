@@ -413,7 +413,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
 
       if (pokemon.altForm?.startsWith('MEGA')) {
-        const from = evolutionMap.get(pokemon.link.replace(/-\d+$/, ''));
+        let from = evolutionMap.get(pokemon.link.replace(/-\d+$/, ''));
+        if (pokemon.pid === 670) {
+          from = evolutionMap.get('670-5');
+        }
         const to = evolutionMap.get(pokemon.link);
         if (from && to) {
           to.level = 0;
