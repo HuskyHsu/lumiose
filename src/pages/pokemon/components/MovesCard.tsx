@@ -20,7 +20,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
       <CardHeader>
         <CardTitle>Moves</CardTitle>
       </CardHeader>
-      <CardContent className='px-2 md:px-6'>
+      <CardContent className='px-0 md:px-6'>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 text-center'>
           <div>
             <h4 className='font-semibold mb-3'>Level Up Moves</h4>

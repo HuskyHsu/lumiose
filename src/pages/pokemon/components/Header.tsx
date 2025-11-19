@@ -1,4 +1,3 @@
-import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent } from '@/components/ui/card';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
@@ -26,20 +25,17 @@ export default function PokemonHeader({ pokemon }: PokemonHeaderProps) {
             <p className='text-xl'>
               {pokemon.name.ja} / {pokemon.name.en}
             </p>
-            <div className='flex gap-2 mt-4'>
-              <PokemonTypes types={pokemon.type} />
-            </div>
           </div>
-          <div className='text-righ flex'>
-            <img
-              src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
-              alt={pokemon.name.zh}
-            />
-            <img
-              src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
-              alt={pokemon.name.zh}
-            />
-          </div>
+        </div>
+        <div className='flex justify-around'>
+          <img
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+            alt={pokemon.name.zh}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
+            alt={pokemon.name.zh}
+          />
         </div>
       </CardContent>
     </Card>
