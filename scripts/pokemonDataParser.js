@@ -320,6 +320,7 @@ function parseTMMoves(lines, startIndex) {
  */
 function parseEvolution(line) {
   // 解析格式: "Evolves into 妙蛙草-0 @ lv16 (LevelUp) [0]"
+  line = line.replace('-0 @ lv0 (Hisui) [1]', '-1 @ lv40 (Hisui) [1]');
   const match = line.match(/Evolves into\s*(.+?)\s*@\s*lv(\d+)\s*\((.+?)\)\s*\[(.+)\]/);
   if (match) {
     return {

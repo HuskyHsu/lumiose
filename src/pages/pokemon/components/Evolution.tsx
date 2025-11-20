@@ -1,3 +1,4 @@
+import { getEvolutionMethodTranslation } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 import type { DetailedPokemon, EvolutionNode } from '@/types/pokemon';
 import type { JSX } from 'react';
@@ -18,42 +19,31 @@ type SubCardProps = { pm: EvolutionNode; className?: string };
 
 function SubCard({ pm, className = '' }: SubCardProps) {
   return (
-    <div className={cn(className)}>
-      <span className={cn()} />
+    <div className={cn('flex flex-col items-center justify-center', className)}>
       <img
         className='h-18'
         src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`}
         alt={pm.name.zh}
       />
-      <span className={cn()}>
-        {pm.name.zh}
+      <div className='flex items-center'>
+        <span className={cn('block text-sm')}>{pm.name.zh}</span>
         {pm.altForm && <span className='text-xs'>({pm.altForm})</span>}
-      </span>
+      </div>
     </div>
   );
 }
 
 const Condition = ({ condition, className = '' }: { condition: string; className?: string }) => {
   return (
-    <span className={cn('relative flex h-full w-full items-center text-right', className)}>
-      <span
-        className={cn(
-          'absolute',
-          'inset-x-0',
-          'top-1/2 -translate-y-1/3',
-          'text-xs',
-          'flex justify-center text-center',
-          'text-[12px] md:text-base'
-        )}
-      >
-        {condition} ⇨
-      </span>
+    <span className={cn('flex justify-center items-center', className)}>
+      <span className={cn('text-center', 'text-sm')}>{condition} ⇨</span>
     </span>
   );
 };
 
 const getConditionText = (evolution: EvolutionNode) => {
-  return `${evolution.method}${evolution.level ?? 0 > 0 ? evolution.level : ''}${
+  const translatedMethod = getEvolutionMethodTranslation(evolution.method);
+  return `${translatedMethod}${evolution.level ?? 0 > 0 ? evolution.level : ''}${
     evolution.condition?.zh ? '(' + evolution.condition?.zh + ')' : ''
   }`;
 };
