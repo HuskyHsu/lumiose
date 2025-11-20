@@ -1,27 +1,4 @@
-import { useState } from 'react';
-
-const POKEMON_TYPES = [
-  'Normal',
-  'Fighting',
-  'Flying',
-  'Poison',
-  'Ground',
-  'Rock',
-  'Bug',
-  'Ghost',
-  'Steel',
-  'Fire',
-  'Water',
-  'Grass',
-  'Electric',
-  'Psychic',
-  'Ice',
-  'Dragon',
-  'Dark',
-  'Fairy',
-] as const;
-
-type PokemonType = (typeof POKEMON_TYPES)[number];
+import { POKEMON_TYPES, type PokemonType } from '@/lib/constants/pokemon';
 
 interface TypeFilterProps {
   selectedTypes: string[];
@@ -29,22 +6,20 @@ interface TypeFilterProps {
 }
 
 export function TypeFilter({ selectedTypes, onTypeChange }: TypeFilterProps) {
-  const [isAllSelected, setIsAllSelected] = useState(true);
+  // Determine if all types are selected based on the selectedTypes prop
+  const isAllSelected = selectedTypes.length === 0;
 
   const handleTypeClick = (type: PokemonType) => {
     if (isAllSelected) {
-      setIsAllSelected(false);
+      // If all types are selected (none specifically chosen), select only this type
       onTypeChange([type]);
     } else {
       if (selectedTypes.includes(type)) {
+        // If this type is already selected, remove it
         const newTypes = selectedTypes.filter((t) => t !== type);
-        if (newTypes.length === 0) {
-          setIsAllSelected(true);
-          onTypeChange([]);
-        } else {
-          onTypeChange(newTypes);
-        }
+        onTypeChange(newTypes);
       } else {
+        // If this type is not selected, add it to the selection
         onTypeChange([...selectedTypes, type]);
       }
     }

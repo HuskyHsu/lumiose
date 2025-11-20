@@ -1,15 +1,21 @@
-import { useCallback, useState } from 'react';
+import { useCallback } from 'react';
+import { useUrlParams } from './useUrlParams';
 
 export function useShinyToggle() {
-  const [isShiny, setIsShiny] = useState<boolean>(false);
+  const { getBooleanParam, setBooleanParam } = useUrlParams();
+
+  const isShiny = getBooleanParam('shiny', false);
 
   const toggleShiny = useCallback(() => {
-    setIsShiny((prev) => !prev);
-  }, []);
+    setBooleanParam('shiny', !isShiny, false);
+  }, [setBooleanParam, isShiny]);
 
-  const setShiny = useCallback((shiny: boolean) => {
-    setIsShiny(shiny);
-  }, []);
+  const setShiny = useCallback(
+    (shiny: boolean) => {
+      setBooleanParam('shiny', shiny, false);
+    },
+    [setBooleanParam]
+  );
 
   return {
     isShiny,

@@ -1,10 +1,14 @@
 import type { Pokemon, PokemonList } from '@/types/pokemon';
-import { useCallback, useMemo, useState } from 'react';
+import { useCallback, useMemo } from 'react';
+import { useUrlParams } from './useUrlParams';
 
 export function usePokemonFilter(pokemonList: PokemonList) {
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
-  const [searchKeyword, setSearchKeyword] = useState<string>('');
-  const [isFinalFormOnly, setIsFinalFormOnly] = useState<boolean>(false);
+  const { getArrayParam, getParam, getBooleanParam, setArrayParam, setParam, setBooleanParam } =
+    useUrlParams();
+
+  const selectedTypes = getArrayParam('types');
+  const searchKeyword = getParam('search') || '';
+  const isFinalFormOnly = getBooleanParam('finalForm', false);
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -67,17 +71,23 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   ]);
 
   // Memoize the setters to prevent unnecessary re-renders
-  const memoizedSetSelectedTypes = useCallback((types: string[]) => {
-    setSelectedTypes(types);
-  }, []);
+  const memoizedSetSelectedTypes = useCallback(
+    (types: string[]) => {
+      setArrayParam('types', types);
+    },
+    [setArrayParam]
+  );
 
-  const memoizedSetSearchKeyword = useCallback((keyword: string) => {
-    setSearchKeyword(keyword);
-  }, []);
+  const memoizedSetSearchKeyword = useCallback(
+    (keyword: string) => {
+      setParam('search', keyword);
+    },
+    [setParam]
+  );
 
   const toggleFinalFormOnly = useCallback(() => {
-    setIsFinalFormOnly((prev) => !prev);
-  }, []);
+    setBooleanParam('finalForm', !isFinalFormOnly, false);
+  }, [setBooleanParam, isFinalFormOnly]);
 
   return {
     selectedTypes,
