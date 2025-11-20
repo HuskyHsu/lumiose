@@ -43,7 +43,7 @@ const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: stri
       <span>{translatedMethod}</span>
       <span className={cn('text-xs')}>{level}</span>
       <span>{condition}</span>
-      <span>⇨</span>
+      <span className='text-xl'>⇨</span>
     </div>
   );
 };
