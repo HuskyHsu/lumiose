@@ -94,7 +94,7 @@ function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
   const nextPokemon = getNextPokemon();
 
   return (
-    <div className='flex items-center justify-center gap-4 py-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-lg shadow-sm'>
+    <div className='flex items-center justify-center gap-4 py-4 bg-linear-to-r from-purple-100 to-blue-100 rounded-lg shadow-sm'>
       {/* Previous Arrow */}
       <Link
         to={`/pokemon/${previousPokemon.link}`}
@@ -105,17 +105,17 @@ function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
       </Link>
 
       {/* Pokemon Navigation List */}
-      <div className={`flex items-center ${isMobile ? 'gap-1' : 'gap-2'}`}>
+      <div className={`flex items-center gap-2`}>
         {navigationPokemon.map((pokemon, index) => {
           const sideCount = isMobile ? 2 : 3;
           const isCurrent = index === sideCount; // Middle item is current (mobile: index 2, desktop: index 3)
-          const pokemonNumber = pokemon.pid.toString().padStart(4, '0');
+          const pokemonNumber = pokemon.lumioseId.toString().padStart(3, '0');
 
           return (
             <Link
               key={pokemon.link}
               to={`/pokemon/${pokemon.link}`}
-              className={`flex flex-col items-center p-2 rounded-lg transition-all duration-200 ${
+              className={`flex flex-col items-center p-1 md:p-2 rounded-lg transition-all duration-200 ${
                 isCurrent
                   ? 'bg-yellow-200 shadow-md scale-110 border-2 border-yellow-400'
                   : 'bg-white hover:bg-gray-50 shadow-sm hover:shadow-md hover:scale-105'

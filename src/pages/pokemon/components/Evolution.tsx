@@ -1,3 +1,4 @@
+import { FromClass, ToClass } from '@/lib/color';
 import { getEvolutionMethodTranslation } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 import type { DetailedPokemon, EvolutionNode } from '@/types/pokemon';
@@ -19,19 +20,42 @@ const rowSpanMap = {
 type SubCardProps = { pm: EvolutionNode; className?: string };
 
 function SubCard({ pm, className = '' }: SubCardProps) {
+  const imagePath = `${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`;
+
+  const colorClasses = () => {
+    const primaryType = pm.type[0];
+    const secondaryType = pm.type[1] || pm.type[0];
+
+    return cn(
+      FromClass[primaryType as keyof typeof FromClass],
+      ToClass[secondaryType as keyof typeof ToClass]
+    );
+  };
+
   return (
     <Link
-      className={cn('flex flex-col items-center justify-center', className)}
+      key={pm.link}
       to={`/pokemon/${pm.link}`}
+      className={cn(
+        `flex flex-col items-center p-2 rounded-lg transition-all duration-200`,
+        'hover:bg-gray-50 shadow-sm hover:shadow-md hover:scale-105',
+        'bg-linear-to-tl',
+        colorClasses(),
+        className
+      )}
+      title={pm.name.zh}
     >
-      <img
-        className='h-18'
-        src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`}
-        alt={pm.name.zh}
-      />
-      <div className='flex items-center'>
-        <p className={cn('flex text-sm')}>{pm.name.zh}</p>
-        {pm.altForm && <p className='text-xs'>({pm.altForm})</p>}
+      {/* Pokemon Icon */}
+      <div
+        className={cn('w-18 h-18 relative bg-cover rounded-xl', 'bg-stone-700')}
+        style={{
+          backgroundImage: `url(${imagePath})`,
+        }}
+      ></div>
+
+      {/* Pokemon Name */}
+      <div className={`text-xs text-center mt-1`}>
+        <div className={`font-medium text-gray-700`}>{pm.name.zh}</div>
       </div>
     </Link>
   );
