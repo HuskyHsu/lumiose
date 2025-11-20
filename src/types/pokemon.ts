@@ -62,3 +62,17 @@ export interface DetailedPokemon extends Pokemon {
   tmMoves: TMMove[];
   evolutionTree?: EvolutionNode;
 }
+
+// Type weakness related types
+export interface TypeWeaknessProps {
+  pokemon: DetailedPokemon;
+}
+
+export interface WeaknessDisplayProps {
+  types: string[];
+}
+
+export interface TypeRateProps {
+  targetRate: import('@/lib/constants/typeEffectiveness').EffectivenessMultiplier;
+  types: string[];
+}

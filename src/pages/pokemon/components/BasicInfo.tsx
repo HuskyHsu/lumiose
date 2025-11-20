@@ -2,6 +2,7 @@ import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
+import { TypeWeakness } from './TypeWeakness';
 
 interface BasicInfoProps {
   pokemon: DetailedPokemon;
@@ -81,6 +82,7 @@ export default function BasicInfo({ pokemon }: BasicInfoProps) {
               </span>
             </div>
           ))}
+          <TypeWeakness pokemon={pokemon} />
         </div>
       </CardContent>
     </Card>

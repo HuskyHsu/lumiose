@@ -2,6 +2,7 @@ import { getEvolutionMethodTranslation } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 import type { DetailedPokemon, EvolutionNode } from '@/types/pokemon';
 import type { JSX } from 'react';
+import { Link } from 'react-router-dom';
 
 type Props = {
   pokemon: DetailedPokemon;
@@ -19,7 +20,10 @@ type SubCardProps = { pm: EvolutionNode; className?: string };
 
 function SubCard({ pm, className = '' }: SubCardProps) {
   return (
-    <div className={cn('flex flex-col items-center justify-center', className)}>
+    <Link
+      className={cn('flex flex-col items-center justify-center', className)}
+      to={`/pokemon/${pm.link}`}
+    >
       <img
         className='h-18'
         src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`}
@@ -29,7 +33,7 @@ function SubCard({ pm, className = '' }: SubCardProps) {
         <p className={cn('flex text-sm')}>{pm.name.zh}</p>
         {pm.altForm && <p className='text-xs'>({pm.altForm})</p>}
       </div>
-    </div>
+    </Link>
   );
 }
 
