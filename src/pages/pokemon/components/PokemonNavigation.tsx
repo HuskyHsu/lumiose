@@ -119,7 +119,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
             <button
               key={pokemon.link}
               onClick={() => handlePokemonNavigation(pokemon.link)}
-              className={`flex flex-col items-center p-1 md:p-2 rounded-lg transition-all duration-200 ${
+              className={`flex flex-col items-center p-1 md:p-2 rounded-lg ${
                 isCurrent
                   ? 'bg-yellow-200 shadow-md scale-110 border-2 border-yellow-400'
                   : 'bg-white hover:bg-gray-50 shadow-sm hover:shadow-md hover:scale-105'
