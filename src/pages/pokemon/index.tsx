@@ -12,7 +12,6 @@ import {
   BasicInfo,
   EvolutionCard,
   MovesCard,
-  PokemonHeader,
   PokemonNavigation,
   StatsCard,
 } from './components';
@@ -77,7 +76,6 @@ function PokemonDetail() {
     <div className='space-y-6'>
       <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
-      <PokemonHeader pokemon={pokemon} />
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         <BasicInfo pokemon={pokemon} />
         <StatsCard pokemon={pokemon} />

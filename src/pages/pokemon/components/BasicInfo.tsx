@@ -29,6 +29,10 @@ type Render = {
 export default function BasicInfo({ pokemon }: BasicInfoProps) {
   const renderData: Render[] = [
     {
+      title: 'Name(zh)',
+      Content: ({ pokemon }: ContentProps) => <>{pokemon.name.zh}</>,
+    },
+    {
       title: 'Name(en)',
       Content: ({ pokemon }: ContentProps) => <>{pokemon.name.en}</>,
     },
@@ -73,6 +77,16 @@ export default function BasicInfo({ pokemon }: BasicInfoProps) {
         <CardTitle>Basic Information</CardTitle>
       </CardHeader>
       <CardContent className='space-y-4'>
+        <div className='flex justify-around'>
+          <img
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+            alt={pokemon.name.zh}
+          />
+          <img
+            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
+            alt={pokemon.name.zh}
+          />
+        </div>
         <div className='space-y-2'>
           {renderData.map((data, index) => (
             <div className='flex justify-between' key={index}>
