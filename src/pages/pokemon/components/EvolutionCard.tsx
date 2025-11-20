@@ -4,9 +4,10 @@ import { Evolution } from './Evolution';
 
 interface EvolutionCardProps {
   pokemon: DetailedPokemon;
+  onPokemonChange: (newLink: string) => Promise<void>;
 }
 
-export default function EvolutionCard({ pokemon }: EvolutionCardProps) {
+export default function EvolutionCard({ pokemon, onPokemonChange }: EvolutionCardProps) {
   return (
     <Card className='lg:col-span-2'>
       <CardHeader>
@@ -14,7 +15,7 @@ export default function EvolutionCard({ pokemon }: EvolutionCardProps) {
       </CardHeader>
       <CardContent>
         <div className='flex justify-center'>
-          <Evolution pokemon={pokemon} />
+          <Evolution pokemon={pokemon} onPokemonChange={onPokemonChange} />
         </div>
       </CardContent>
     </Card>

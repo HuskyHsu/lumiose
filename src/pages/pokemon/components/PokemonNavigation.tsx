@@ -1,15 +1,15 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { fetchPokemonData } from '@/services/pokemonService';
 import type { Pokemon } from '@/types/pokemon';
 
 interface PokemonNavigationProps {
   currentPokemonLink: string;
+  onPokemonChange: (newLink: string) => Promise<void>;
 }
 
-function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
+function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavigationProps) {
   const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
   const [currentIndex, setCurrentIndex] = useState<number>(-1);
   const [loading, setLoading] = useState(true);
@@ -93,16 +93,20 @@ function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
   const previousPokemon = getPreviousPokemon();
   const nextPokemon = getNextPokemon();
 
+  const handlePokemonNavigation = (pokemonLink: string) => {
+    onPokemonChange(pokemonLink);
+  };
+
   return (
     <div className='flex items-center justify-center gap-4 py-4 bg-linear-to-r from-purple-100 to-blue-100 rounded-lg shadow-sm'>
       {/* Previous Arrow */}
-      <Link
-        to={`/pokemon/${previousPokemon.link}`}
+      <button
+        onClick={() => handlePokemonNavigation(previousPokemon.link)}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
         title={`前往 ${previousPokemon.name.zh}`}
       >
         <ChevronLeft className='w-5 h-5 text-gray-600' />
-      </Link>
+      </button>
 
       {/* Pokemon Navigation List */}
       <div className={`flex items-center gap-2`}>
@@ -112,9 +116,9 @@ function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
           const pokemonNumber = pokemon.lumioseId.toString().padStart(3, '0');
 
           return (
-            <Link
+            <button
               key={pokemon.link}
-              to={`/pokemon/${pokemon.link}`}
+              onClick={() => handlePokemonNavigation(pokemon.link)}
               className={`flex flex-col items-center p-1 md:p-2 rounded-lg transition-all duration-200 ${
                 isCurrent
                   ? 'bg-yellow-200 shadow-md scale-110 border-2 border-yellow-400'
@@ -146,19 +150,19 @@ function PokemonNavigation({ currentPokemonLink }: PokemonNavigationProps) {
                   {pokemon.name.zh}
                 </div>
               </div>
-            </Link>
+            </button>
           );
         })}
       </div>
 
       {/* Next Arrow */}
-      <Link
-        to={`/pokemon/${nextPokemon.link}`}
+      <button
+        onClick={() => handlePokemonNavigation(nextPokemon.link)}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
         title={`前往 ${nextPokemon.name.zh}`}
       >
         <ChevronRight className='w-5 h-5 text-gray-600' />
-      </Link>
+      </button>
     </div>
   );
 }

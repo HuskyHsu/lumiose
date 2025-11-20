@@ -19,9 +19,36 @@ import {
 
 function PokemonDetail() {
   const { link } = useParams<{ link: string }>();
+  const [currentLink, setCurrentLink] = useState<string>(link || '');
   const [pokemon, setPokemon] = useState<DetailedPokemon | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  const loadPokemonDetail = async (pokemonLink: string) => {
+    try {
+      setLoading(true);
+      const data = await fetchPokemonDetail(pokemonLink);
+      setPokemon(data);
+      setError(null);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load Pokemon details');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handlePokemonChange = async (newLink: string) => {
+    if (newLink === currentLink) return;
+
+    // Update URL without triggering route change
+    window.history.replaceState(null, '', `/pokemon/${newLink}`);
+
+    // Update current link state
+    setCurrentLink(newLink);
+
+    // Load new Pokemon data
+    await loadPokemonDetail(newLink);
+  };
 
   useEffect(() => {
     if (!link) {
@@ -30,23 +57,11 @@ function PokemonDetail() {
       return;
     }
 
-    const loadPokemonDetail = async () => {
-      try {
-        setLoading(true);
-        const data = await fetchPokemonDetail(link);
-        setPokemon(data);
-        setError(null);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load Pokemon details');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    loadPokemonDetail();
+    setCurrentLink(link);
+    loadPokemonDetail(link);
   }, [link]);
 
-  if (loading) {
+  if (loading && pokemon === null) {
     return <LoadingSpinner />;
   }
 
@@ -61,13 +76,15 @@ function PokemonDetail() {
   return (
     <div className='space-y-6'>
       <BackButton />
-      <PokemonNavigation currentPokemonLink={link!} />
+      <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <PokemonHeader pokemon={pokemon} />
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
         <BasicInfo pokemon={pokemon} />
         <StatsCard pokemon={pokemon} />
         <MovesCard pokemon={pokemon} />
-        {pokemon.evolutionTree && <EvolutionCard pokemon={pokemon} />}
+        {pokemon.evolutionTree && (
+          <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
+        )}
       </div>
     </div>
   );
