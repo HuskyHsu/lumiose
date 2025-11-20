@@ -26,26 +26,26 @@ function SubCard({ pm, className = '' }: SubCardProps) {
         alt={pm.name.zh}
       />
       <div className='flex items-center'>
-        <span className={cn('block text-sm')}>{pm.name.zh}</span>
-        {pm.altForm && <span className='text-xs'>({pm.altForm})</span>}
+        <p className={cn('flex text-sm')}>{pm.name.zh}</p>
+        {pm.altForm && <p className='text-xs'>({pm.altForm})</p>}
       </div>
     </div>
   );
 }
 
-const Condition = ({ condition, className = '' }: { condition: string; className?: string }) => {
-  return (
-    <span className={cn('flex justify-center items-center', className)}>
-      <span className={cn('text-center', 'text-sm')}>{condition} ⇨</span>
-    </span>
-  );
-};
+const Condition = ({ pm, className = '' }: { pm: EvolutionNode; className?: string }) => {
+  const translatedMethod = getEvolutionMethodTranslation(pm.method);
+  const level = pm.level ?? 0 > 0 ? 'lv' + pm.level : '';
+  const condition = pm.condition?.zh ? '(' + pm.condition?.zh + ')' : '';
 
-const getConditionText = (evolution: EvolutionNode) => {
-  const translatedMethod = getEvolutionMethodTranslation(evolution.method);
-  return `${translatedMethod}${evolution.level ?? 0 > 0 ? evolution.level : ''}${
-    evolution.condition?.zh ? '(' + evolution.condition?.zh + ')' : ''
-  }`;
+  return (
+    <div className={cn('text-center text-sm flex flex-col', className)}>
+      <span>{translatedMethod}</span>
+      <span className={cn('text-xs')}>{level}</span>
+      <span>{condition}</span>
+      <span>⇨</span>
+    </div>
+  );
 };
 
 export function Evolution({ pokemon }: Props) {
@@ -131,7 +131,7 @@ export function Evolution({ pokemon }: Props) {
     }
 
     rowElement = rowElement.concat([
-      <Condition key={keyId + 1} condition={getConditionText(evolution)} className={rowsClass} />,
+      <Condition key={keyId + 1} pm={evolution} className={rowsClass} />,
       <SubCard key={keyId + 2} pm={evolution} className={cn('text-xs', rowsClass)} />,
     ]);
 
@@ -145,13 +145,13 @@ export function Evolution({ pokemon }: Props) {
         acc = acc.concat([
           <Condition
             key={keyId}
-            condition={getConditionText(evolution_)}
-            className={cn('hidden md:block', thirdLevelRowSpan)}
+            pm={evolution_}
+            className={cn('hidden md:flex', thirdLevelRowSpan)}
           />,
           <SubCard
             key={keyId + 1}
             pm={evolution_}
-            className={cn('hidden text-xs md:block', thirdLevelRowSpan)}
+            className={cn('hidden text-xs md:flex', thirdLevelRowSpan)}
           />,
         ]);
         keyId += 2;
@@ -160,15 +160,11 @@ export function Evolution({ pokemon }: Props) {
         if (evolution_.to) {
           evolution_.to.forEach((fourthEvolution) => {
             acc = acc.concat([
-              <Condition
-                key={keyId}
-                condition={getConditionText(fourthEvolution)}
-                className={cn('hidden md:block')}
-              />,
+              <Condition key={keyId} pm={fourthEvolution} className={cn('hidden md:flex')} />,
               <SubCard
                 key={keyId + 1}
                 pm={fourthEvolution}
-                className={cn('hidden text-xs md:block')}
+                className={cn('hidden text-xs md:flex')}
               />,
             ]);
             keyId += 2;
@@ -176,8 +172,8 @@ export function Evolution({ pokemon }: Props) {
         } else if (isFour) {
           // Add empty spaces for alignment when we have 4-level chain but this branch doesn't go to 4th level
           acc = acc.concat([
-            <span key={keyId + 12345} className={cn('hidden text-xs md:block')} />,
-            <span key={keyId + 123456} className={cn('hidden text-xs md:block')} />,
+            <span key={keyId + 12345} className={cn('hidden text-xs md:flex')} />,
+            <span key={keyId + 123456} className={cn('hidden text-xs md:flex')} />,
           ]);
           keyId += 2;
         }
@@ -187,7 +183,7 @@ export function Evolution({ pokemon }: Props) {
       const emptySpaces = isFour ? 4 : 2;
       for (let i = 0; i < emptySpaces; i++) {
         acc = acc.concat([
-          <span key={keyId + 12345 + i} className={cn('hidden text-xs md:block')} />,
+          <span key={keyId + 12345 + i} className={cn('hidden text-xs md:flex')} />,
         ]);
       }
     }
@@ -214,11 +210,7 @@ export function Evolution({ pokemon }: Props) {
               list.length > 1 ? (i === 0 ? 'row-span-2' : 'hidden') : ''
             )}
           />,
-          <Condition
-            key={keyId + 1}
-            condition={getConditionText(evolution_)}
-            className='md:hidden'
-          />,
+          <Condition key={keyId + 1} pm={evolution_} className='md:hidden' />,
           <SubCard key={keyId + 2} pm={evolution_} className={cn('text-xs md:hidden')} />
         );
         keyId += 3;
@@ -240,11 +232,7 @@ export function Evolution({ pokemon }: Props) {
                   fourthList.length > 1 ? (j === 0 ? 'row-span-2' : 'hidden') : ''
                 )}
               />,
-              <Condition
-                key={keyId + 1}
-                condition={getConditionText(fourthEvolution)}
-                className='md:hidden'
-              />,
+              <Condition key={keyId + 1} pm={fourthEvolution} className='md:hidden' />,
               <SubCard key={keyId + 2} pm={fourthEvolution} className={cn('text-xs md:hidden')} />
             );
             keyId += 3;
