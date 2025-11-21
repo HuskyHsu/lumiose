@@ -145,9 +145,9 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
     if (shouldUseRowSpan2) {
       rowsClass = 'row-span-2';
     } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
-      rowsClass = 'row-span-2';
+      rowsClass = secRows;
     } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
-      rowsClass = 'row-[span_20_/_span_20]';
+      rowsClass = secRows;
     } else {
       rowsClass = 'row-span-1';
     }
@@ -157,9 +157,9 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
       if (shouldUseRowSpan2) {
         firstPokemonRowSpan = 'row-span-2';
       } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
-        firstPokemonRowSpan = 'row-span-2';
+        firstPokemonRowSpan = secRows;
       } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
-        firstPokemonRowSpan = 'row-[span_20_/_span_20]';
+        firstPokemonRowSpan = secRows;
       }
 
       rowElement.push(
