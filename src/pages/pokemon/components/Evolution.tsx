@@ -15,6 +15,7 @@ const rowSpanMap = {
   3: 'row-span-3',
   4: 'row-span-4',
   8: 'row-[span_8_/_span_8]',
+  20: 'row-[span_20_/_span_20]',
 };
 
 type SubCardProps = { pm: EvolutionNode; className?: string; onClick?: () => void };
@@ -56,9 +57,7 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
       {/* Pokemon Name */}
       <div className={`text-sm text-center mt-1`}>
         <span className={`font-medium text-gray-700`}>{pm.name.zh}</span>
-        {
-          pm.altForm && <span className='font-light text-[10px]'>({pm.altForm})</span>
-        }
+        {pm.altForm && <span className='font-light text-[10px]'>({pm.altForm})</span>}
       </div>
     </button>
   );
@@ -90,6 +89,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
   // 1-1-1
   // 1-1-2
   // 1-2-2
+  // 1-1-20
   // 1-1
   // 1-2
   // 1-3
@@ -144,8 +144,12 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
     let rowsClass = 'row-span-1';
     if (shouldUseRowSpan2) {
       rowsClass = 'row-span-2';
+    } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
+      rowsClass = 'row-span-2';
+    } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
+      rowsClass = 'row-[span_20_/_span_20]';
     } else {
-      rowsClass = rows === 'row-span-1' && secRows === 'row-span-2' ? 'row-span-2' : 'row-span-1';
+      rowsClass = 'row-span-1';
     }
 
     if (i === 0 && pokemon.evolutionTree) {
@@ -154,6 +158,8 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
         firstPokemonRowSpan = 'row-span-2';
       } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
         firstPokemonRowSpan = 'row-span-2';
+      } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
+        firstPokemonRowSpan = 'row-[span_20_/_span_20]';
       }
 
       rowElement.push(

@@ -445,6 +445,27 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
     });
 
+    // 665-1~17 link to 666
+    for (let i = 1; i <= 19; i++) {
+      const from = evolutionMap.get('665');
+      const target = mergedData.find((pm) => pm.link === `665-${i}`);
+      target.evolution.forEach((evo) => {
+        const target = evolutionMap.get(evo.link);
+        target.level = evo.level;
+        target.method = evo.method;
+        target.condition = evo.condition;
+
+        from.to.push(target);
+        from.to.sort((a, b) => {
+          const a_ = Number(a.link.includes('-') ? a.link.split('-').pop() : 0);
+          const b_ = Number(b.link.includes('-') ? b.link.split('-').pop() : 0);
+          return a_ - b_;
+        });
+
+        inverseEvolutionMap.set(evo.link, from.link);
+      });
+    }
+
     mergedData.forEach((pokemon) => {
       let targetLink = pokemon.link;
       while (inverseEvolutionMap.has(targetLink)) {
