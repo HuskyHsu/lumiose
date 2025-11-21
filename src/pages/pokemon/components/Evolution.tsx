@@ -54,8 +54,11 @@ function SubCard({ pm, className = '', onClick }: SubCardProps) {
       ></div>
 
       {/* Pokemon Name */}
-      <div className={`text-xs text-center mt-1`}>
-        <div className={`font-medium text-gray-700`}>{pm.name.zh}</div>
+      <div className={`text-sm text-center mt-1`}>
+        <span className={`font-medium text-gray-700`}>{pm.name.zh}</span>
+        {
+          pm.altForm && <span className='font-light text-[10px]'>({pm.altForm})</span>
+        }
       </div>
     </button>
   );

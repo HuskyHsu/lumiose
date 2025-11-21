@@ -148,6 +148,9 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
                 <div className='text-gray-500'>#{pokemonNumber}</div>
                 <div className={`font-medium ${isCurrent ? 'text-yellow-800' : 'text-gray-700'}`}>
                   {pokemon.name.zh}
+                  {pokemon.altForm && (
+                    <span className='font-light text-[10px]'>({pokemon.altForm})</span>
+                  )}
                 </div>
               </div>
             </button>
