@@ -320,7 +320,12 @@ function parseTMMoves(lines, startIndex) {
  */
 function parseEvolution(line) {
   // 解析格式: "Evolves into 妙蛙草-0 @ lv16 (LevelUp) [0]"
-  line = line.replace('-0 @ lv0 (Hisui) [1]', '-1 @ lv40 (Hisui) [1]');
+  line = line
+    .replace('-0 @ lv0 (Hisui) [1]', '-1 @ lv40 (Hisui) [0]')
+    .replace('-1 @ lv50 (LevelUpWeather) [1]', '-1 @ lv50 (LevelUpWeather) [0]')
+    .replace('(LevelUpMoveType) [ノーマル]', '(LevelUpMoveType) [あく]')
+    .replace('(LevelUpMoveType) [一般]', '(LevelUpMoveType) [惡]')
+    .replace('(LevelUpMoveType) [Normal]', '(LevelUpMoveType) [Dark]');
   const match = line.match(/Evolves into\s*(.+?)\s*@\s*lv(\d+)\s*\((.+?)\)\s*\[(.+)\]/);
   if (match) {
     return {

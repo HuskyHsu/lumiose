@@ -313,6 +313,17 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
 
       // 合併進化資訊
+      if (basePokemon.pid === 680) {
+        basePokemon.evolution.push(JSON.parse(JSON.stringify(basePokemon.evolution[0])));
+        basePokemon.evolution[1].into = basePokemon.evolution[0].into.replace(/-\d$/, '-1');
+        zhPokemon.evolution.push(JSON.parse(JSON.stringify(zhPokemon.evolution[0])));
+        zhPokemon.evolution[1].into = zhPokemon.evolution[0].into.replace(/-\d$/, '-1');
+        jaPokemon.evolution.push(JSON.parse(JSON.stringify(jaPokemon.evolution[0])));
+        jaPokemon.evolution[1].into = jaPokemon.evolution[0].into.replace(/-\d$/, '-1');
+        enPokemon.evolution.push(JSON.parse(JSON.stringify(enPokemon.evolution[0])));
+        enPokemon.evolution[1].into = enPokemon.evolution[0].into.replace(/-\d$/, '-1');
+      }
+
       if (basePokemon.evolution) {
         mergedPokemon.evolution = basePokemon.evolution
           .map((_, index) => {
@@ -416,7 +427,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         let from = evolutionMap.get(pokemon.link.replace(/-\d+$/, ''));
         if (pokemon.pid === 670) {
           from = evolutionMap.get('670-5');
+        } else if (pokemon.pid === 718) {
+          from = evolutionMap.get('718-4');
         }
+
         const to = evolutionMap.get(pokemon.link);
         if (from && to) {
           to.level = 0;

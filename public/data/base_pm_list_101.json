@@ -3934,7 +3934,7 @@
       "Steel",
       "Ghost"
     ],
-    "source": "681-1",
+    "source": "679",
     "latest": true
   },
   {
@@ -11250,7 +11250,7 @@
       "Ground"
     ],
     "source": "718",
-    "latest": false
+    "latest": true
   },
   {
     "pid": 718,
@@ -11283,7 +11283,7 @@
       "Ground"
     ],
     "source": "718-4",
-    "latest": true
+    "latest": false
   },
   {
     "pid": 718,
@@ -11315,7 +11315,7 @@
       "Dragon",
       "Ground"
     ],
-    "source": "718",
+    "source": "718-4",
     "latest": true
   },
   {

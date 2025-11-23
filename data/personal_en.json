@@ -64063,7 +64063,7 @@
         "into": "Pangoro-0",
         "level": 32,
         "method": "LevelUpMoveType",
-        "condition": "Normal"
+        "condition": "Dark"
       }
     ]
   },
@@ -73408,7 +73408,7 @@
         "into": "Sliggoo-1",
         "level": 40,
         "method": "Hisui",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },
@@ -73818,7 +73818,7 @@
         "into": "Goodra-1",
         "level": 50,
         "method": "LevelUpWeather",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },

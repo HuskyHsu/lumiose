@@ -64063,7 +64063,7 @@
         "into": "流氓熊貓-0",
         "level": 32,
         "method": "LevelUpMoveType",
-        "condition": "一般"
+        "condition": "惡"
       }
     ]
   },
@@ -73408,7 +73408,7 @@
         "into": "黏美兒-1",
         "level": 40,
         "method": "Hisui",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },
@@ -73818,7 +73818,7 @@
         "into": "黏美龍-1",
         "level": 50,
         "method": "LevelUpWeather",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },

@@ -42,7 +42,7 @@ function PokemonDetail() {
     if (newLink === currentLink) return;
 
     // Update URL without triggering route change
-    window.history.replaceState(null, '', `/pokemon/${newLink}`);
+    window.history.replaceState(null, '', `${import.meta.env.BASE_URL}#/pokemon/${newLink}`);
 
     // Update current link state
     setCurrentLink(newLink);

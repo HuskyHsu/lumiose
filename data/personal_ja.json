@@ -64063,7 +64063,7 @@
         "into": "ゴロンダ-0",
         "level": 32,
         "method": "LevelUpMoveType",
-        "condition": "ノーマル"
+        "condition": "あく"
       }
     ]
   },
@@ -73408,7 +73408,7 @@
         "into": "ヌメイル-1",
         "level": 40,
         "method": "Hisui",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },
@@ -73818,7 +73818,7 @@
         "into": "ヌメルゴン-1",
         "level": 50,
         "method": "LevelUpWeather",
-        "condition": "1"
+        "condition": "0"
       }
     ]
   },

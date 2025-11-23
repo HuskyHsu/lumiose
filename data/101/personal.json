@@ -57676,9 +57676,9 @@
         "level": 32,
         "method": "LevelUpMoveType",
         "condition": {
-          "zh": "一般",
-          "ja": "ノーマル",
-          "en": "Normal"
+          "zh": "惡",
+          "ja": "あく",
+          "en": "Dark"
         }
       }
     ],
@@ -57707,9 +57707,9 @@
           "level": 32,
           "method": "LevelUpMoveType",
           "condition": {
-            "zh": "一般",
-            "ja": "ノーマル",
-            "en": "Normal"
+            "zh": "惡",
+            "ja": "あく",
+            "en": "Dark"
           }
         }
       ]
@@ -58549,9 +58549,9 @@
           "level": 32,
           "method": "LevelUpMoveType",
           "condition": {
-            "zh": "一般",
-            "ja": "ノーマル",
-            "en": "Normal"
+            "zh": "惡",
+            "ja": "あく",
+            "en": "Dark"
           }
         }
       ]
@@ -76096,6 +76096,26 @@
                 "ja": "やみのいし",
                 "en": "Dusk Stone"
               }
+            },
+            {
+              "link": "681-1",
+              "type": [
+                "Steel",
+                "Ghost"
+              ],
+              "name": {
+                "zh": "堅盾劍怪",
+                "ja": "ギルガルド",
+                "en": "Aegislash"
+              },
+              "altForm": "刀劍",
+              "level": 0,
+              "method": "UseItem",
+              "condition": {
+                "zh": "暗之石",
+                "ja": "やみのいし",
+                "en": "Dusk Stone"
+              }
             }
           ],
           "level": 35,
@@ -76548,6 +76568,16 @@
           "ja": "やみのいし",
           "en": "Dusk Stone"
         }
+      },
+      {
+        "link": "681-1",
+        "level": 0,
+        "method": "UseItem",
+        "condition": {
+          "zh": "暗之石",
+          "ja": "やみのいし",
+          "en": "Dusk Stone"
+        }
       }
     ],
     "evolutionTree": {
@@ -76586,6 +76616,26 @@
                 "en": "Aegislash"
               },
               "altForm": "盾牌",
+              "level": 0,
+              "method": "UseItem",
+              "condition": {
+                "zh": "暗之石",
+                "ja": "やみのいし",
+                "en": "Dusk Stone"
+              }
+            },
+            {
+              "link": "681-1",
+              "type": [
+                "Steel",
+                "Ghost"
+              ],
+              "name": {
+                "zh": "堅盾劍怪",
+                "ja": "ギルガルド",
+                "en": "Aegislash"
+              },
+              "altForm": "刀劍",
               "level": 0,
               "method": "UseItem",
               "condition": {
@@ -77146,6 +77196,26 @@
                 "ja": "やみのいし",
                 "en": "Dusk Stone"
               }
+            },
+            {
+              "link": "681-1",
+              "type": [
+                "Steel",
+                "Ghost"
+              ],
+              "name": {
+                "zh": "堅盾劍怪",
+                "ja": "ギルガルド",
+                "en": "Aegislash"
+              },
+              "altForm": "刀劍",
+              "level": 0,
+              "method": "UseItem",
+              "condition": {
+                "zh": "暗之石",
+                "ja": "やみのいし",
+                "en": "Dusk Stone"
+              }
             }
           ],
           "level": 35,
@@ -77656,7 +77726,77 @@
         "cooldown": 12
       }
     ],
-    "source": "681-1",
+    "evolutionTree": {
+      "link": "679",
+      "type": [
+        "Steel",
+        "Ghost"
+      ],
+      "name": {
+        "zh": "獨劍鞘",
+        "ja": "ヒトツキ",
+        "en": "Honedge"
+      },
+      "to": [
+        {
+          "link": "680",
+          "type": [
+            "Steel",
+            "Ghost"
+          ],
+          "name": {
+            "zh": "雙劍鞘",
+            "ja": "ニダンギル",
+            "en": "Doublade"
+          },
+          "to": [
+            {
+              "link": "681",
+              "type": [
+                "Steel",
+                "Ghost"
+              ],
+              "name": {
+                "zh": "堅盾劍怪",
+                "ja": "ギルガルド",
+                "en": "Aegislash"
+              },
+              "altForm": "盾牌",
+              "level": 0,
+              "method": "UseItem",
+              "condition": {
+                "zh": "暗之石",
+                "ja": "やみのいし",
+                "en": "Dusk Stone"
+              }
+            },
+            {
+              "link": "681-1",
+              "type": [
+                "Steel",
+                "Ghost"
+              ],
+              "name": {
+                "zh": "堅盾劍怪",
+                "ja": "ギルガルド",
+                "en": "Aegislash"
+              },
+              "altForm": "刀劍",
+              "level": 0,
+              "method": "UseItem",
+              "condition": {
+                "zh": "暗之石",
+                "ja": "やみのいし",
+                "en": "Dusk Stone"
+              }
+            }
+          ],
+          "level": 35,
+          "method": "LevelUp"
+        }
+      ]
+    },
+    "source": "679",
     "latest": true
   },
   {
@@ -164926,12 +165066,7 @@
       {
         "link": "705-1",
         "level": 40,
-        "method": "Hisui",
-        "condition": {
-          "zh": "1",
-          "ja": "1",
-          "en": "1"
-        }
+        "method": "Hisui"
       }
     ],
     "evolutionTree": {
@@ -164999,21 +165134,11 @@
               },
               "altForm": "Hisui",
               "level": 50,
-              "method": "LevelUpWeather",
-              "condition": {
-                "zh": "1",
-                "ja": "1",
-                "en": "1"
-              }
+              "method": "LevelUpWeather"
             }
           ],
           "level": 40,
-          "method": "Hisui",
-          "condition": {
-            "zh": "1",
-            "ja": "1",
-            "en": "1"
-          }
+          "method": "Hisui"
         }
       ]
     },
@@ -165596,21 +165721,11 @@
               },
               "altForm": "Hisui",
               "level": 50,
-              "method": "LevelUpWeather",
-              "condition": {
-                "zh": "1",
-                "ja": "1",
-                "en": "1"
-              }
+              "method": "LevelUpWeather"
             }
           ],
           "level": 40,
-          "method": "Hisui",
-          "condition": {
-            "zh": "1",
-            "ja": "1",
-            "en": "1"
-          }
+          "method": "Hisui"
         }
       ]
     },
@@ -166180,12 +166295,7 @@
       {
         "link": "706-1",
         "level": 50,
-        "method": "LevelUpWeather",
-        "condition": {
-          "zh": "1",
-          "ja": "1",
-          "en": "1"
-        }
+        "method": "LevelUpWeather"
       }
     ],
     "evolutionTree": {
@@ -166253,21 +166363,11 @@
               },
               "altForm": "Hisui",
               "level": 50,
-              "method": "LevelUpWeather",
-              "condition": {
-                "zh": "1",
-                "ja": "1",
-                "en": "1"
-              }
+              "method": "LevelUpWeather"
             }
           ],
           "level": 40,
-          "method": "Hisui",
-          "condition": {
-            "zh": "1",
-            "ja": "1",
-            "en": "1"
-          }
+          "method": "Hisui"
         }
       ]
     },
@@ -167040,21 +167140,11 @@
               },
               "altForm": "Hisui",
               "level": 50,
-              "method": "LevelUpWeather",
-              "condition": {
-                "zh": "1",
-                "ja": "1",
-                "en": "1"
-              }
+              "method": "LevelUpWeather"
             }
           ],
           "level": 40,
-          "method": "Hisui",
-          "condition": {
-            "zh": "1",
-            "ja": "1",
-            "en": "1"
-          }
+          "method": "Hisui"
         }
       ]
     },
@@ -167896,21 +167986,11 @@
               },
               "altForm": "Hisui",
               "level": 50,
-              "method": "LevelUpWeather",
-              "condition": {
-                "zh": "1",
-                "ja": "1",
-                "en": "1"
-              }
+              "method": "LevelUpWeather"
             }
           ],
           "level": 40,
-          "method": "Hisui",
-          "condition": {
-            "zh": "1",
-            "ja": "1",
-            "en": "1"
-          }
+          "method": "Hisui"
         }
       ]
     },
@@ -228826,43 +228906,8 @@
         "cooldown": 12
       }
     ],
-    "evolutionTree": {
-      "link": "718",
-      "type": [
-        "Dragon",
-        "Ground"
-      ],
-      "name": {
-        "zh": "基格爾德",
-        "ja": "ジガルデ",
-        "en": "Zygarde"
-      },
-      "altForm": "50%",
-      "to": [
-        {
-          "link": "718-5",
-          "type": [
-            "Dragon",
-            "Ground"
-          ],
-          "name": {
-            "zh": "基格爾德",
-            "ja": "ジガルデ",
-            "en": "Zygarde"
-          },
-          "altForm": "MEGA",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "基格爾德進化石",
-            "ja": "ジガルデナイト",
-            "en": "Zygardeite"
-          }
-        }
-      ]
-    },
     "source": "718",
-    "latest": false
+    "latest": true
   },
   {
     "pid": 718,
@@ -229486,8 +229531,43 @@
         "cooldown": 12
       }
     ],
+    "evolutionTree": {
+      "link": "718-4",
+      "type": [
+        "Dragon",
+        "Ground"
+      ],
+      "name": {
+        "zh": "基格爾德",
+        "ja": "ジガルデ",
+        "en": "Zygarde"
+      },
+      "altForm": "完全體",
+      "to": [
+        {
+          "link": "718-5",
+          "type": [
+            "Dragon",
+            "Ground"
+          ],
+          "name": {
+            "zh": "基格爾德",
+            "ja": "ジガルデ",
+            "en": "Zygarde"
+          },
+          "altForm": "MEGA",
+          "level": 0,
+          "method": "MegaEvolution",
+          "condition": {
+            "zh": "基格爾德進化石",
+            "ja": "ジガルデナイト",
+            "en": "Zygardeite"
+          }
+        }
+      ]
+    },
     "source": "718-4",
-    "latest": true
+    "latest": false
   },
   {
     "pid": 718,
@@ -230112,7 +230192,7 @@
       }
     ],
     "evolutionTree": {
-      "link": "718",
+      "link": "718-4",
       "type": [
         "Dragon",
         "Ground"
@@ -230122,7 +230202,7 @@
         "ja": "ジガルデ",
         "en": "Zygarde"
       },
-      "altForm": "50%",
+      "altForm": "完全體",
       "to": [
         {
           "link": "718-5",
@@ -230146,7 +230226,7 @@
         }
       ]
     },
-    "source": "718",
+    "source": "718-4",
     "latest": true
   },
   {
