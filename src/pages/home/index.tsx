@@ -1,6 +1,5 @@
 import { PokemonCard } from '@/components/pokemon';
 import PWAInstallButton from '@/components/PWAInstallButton';
-import PWAStatus from '@/components/PWAStatus';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import FinalFormToggle from '@/components/ui/FinalFormToggle';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
@@ -30,7 +29,7 @@ function Home() {
     <div className='space-y-6'>
       <PageHeader />
       <PWAInstallButton />
-      <PWAStatus />
+      {/* <PWAStatus /> */}
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
       <div className='flex gap-4'>
@@ -49,8 +48,8 @@ function Home() {
 
 function PageHeader() {
   return (
-    <h1 className='flex items-center text-3xl font-bold'>
-      <img src={`${import.meta.env.BASE_URL}images/mega_shard.png`} className='w-10 h-10' />
+    <h1 className='flex items-end gap-2 text-3xl font-bold'>
+      <img src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`} className='w-8 h-8' />
       Lumiose Pokédex
     </h1>
   );

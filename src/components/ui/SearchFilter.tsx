@@ -20,7 +20,13 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
   return (
     <div className='mb-4'>
       <div className='flex items-center justify-between mb-4'>
-        <h2 className='text-lg font-semibold text-slate-700'>Search Pokemon</h2>
+        <h2 className='flex items-center text-lg font-semibold text-slate-700'>
+          <img
+            src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
+            className='w-10 h-10'
+          />
+          Search Keywords
+        </h2>
       </div>
 
       <div className='relative'>

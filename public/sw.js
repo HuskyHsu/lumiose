@@ -3,7 +3,12 @@ const STATIC_CACHE = 'lumiose-static-v1';
 const IMAGE_CACHE = 'lumiose-images-v1';
 
 // Static assets that need to be pre-cached
-const STATIC_ASSETS = ['/', '/manifest.json', '/images/pwa-192x192.png', '/images/pwa-512x512.png'];
+const STATIC_ASSETS = [
+  '/',
+  '/lumiose/manifest.json',
+  '/lumiose/images/appIcon/pwa-512x512.png',
+  '/lumiose/images/appIcon/pwa-maskable-512x512.png',
+];
 
 // Install event - pre-cache static assets
 self.addEventListener('install', (event) => {
@@ -70,7 +75,7 @@ self.addEventListener('fetch', (event) => {
       caches.open(IMAGE_CACHE).then((cache) => {
         return cache.match(request).then((cachedResponse) => {
           if (cachedResponse) {
-            console.log('Image served from cache:', url.pathname);
+            // console.log('Image served from cache:', url.pathname);
             return cachedResponse;
           }
 
@@ -78,14 +83,14 @@ self.addEventListener('fetch', (event) => {
           return fetch(request)
             .then((networkResponse) => {
               if (networkResponse.ok) {
-                console.log('Image cached from network:', url.pathname);
+                // console.log('Image cached from network:', url.pathname);
                 cache.put(request, networkResponse.clone());
               }
               return networkResponse;
             })
             .catch(() => {
               // Fallback when network fails
-              console.log('Failed to fetch image:', url.pathname);
+              console.error('Failed to fetch image:', url.pathname);
               return new Response('Image not available offline', {
                 status: 404,
                 statusText: 'Not Found',
