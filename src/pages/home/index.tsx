@@ -1,4 +1,6 @@
 import { PokemonCard } from '@/components/pokemon';
+import PWAInstallButton from '@/components/PWAInstallButton';
+import PWAStatus from '@/components/PWAStatus';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import FinalFormToggle from '@/components/ui/FinalFormToggle';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
@@ -27,6 +29,8 @@ function Home() {
   return (
     <div className='space-y-6'>
       <PageHeader />
+      <PWAInstallButton />
+      <PWAStatus />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
       <div className='flex gap-4'>
@@ -44,7 +48,12 @@ function Home() {
 }
 
 function PageHeader() {
-  return <h1 className='text-3xl font-bold'>Lumiose PokeDex</h1>;
+  return (
+    <h1 className='flex items-center text-3xl font-bold'>
+      <img src={`${import.meta.env.BASE_URL}images/mega_shard.png`} className='w-10 h-10' />
+      Lumiose Pokédex
+    </h1>
+  );
 }
 
 interface PageContentProps {

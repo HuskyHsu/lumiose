@@ -4,11 +4,41 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/images/pwa-192x192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lumiose</title>
+    <title>Lumiose Pokédex App</title>
+
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Lumiose Pokédex - Your comprehensive Pokémon database" />
+    <meta name="theme-color" content="#D4F4D6" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Lumiose Pokédex" />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="/images/pwa-192x192.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="/images/pwa-192x192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/images/pwa-512x512.png" />
+
+    <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/lumiose/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
