@@ -3,14 +3,9 @@
   "short_name": "Lumiose Pokédex App",
   "icons": [
     {
-      "src": "images/favicon.ico",
-      "sizes": "256x256",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "images/pwa-192x192.png",
+      "src": "images/pwa-512x512.png",
       "type": "image/png",
-      "sizes": "192x192",
+      "sizes": "512x512",
       "purpose": "maskable any"
     },
     {
@@ -20,9 +15,14 @@
       "purpose": "maskable any"
     },
     {
-      "src": "images/pwa-512x512.png",
+      "src": "images/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/pwa-192x192.png",
       "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "purpose": "maskable any"
     }
   ],
