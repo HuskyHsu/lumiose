@@ -1,0 +1,25 @@
+{
+  "name": "Lumiose Pokédex App",
+  "short_name": "Lumiose Pokédex App",
+  "icons": [
+    {
+      "src": "images/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "images/pwa-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/pwa-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#ffbbdf",
+  "theme_color": "#f5359a",
+  "start_url": "."
+}
