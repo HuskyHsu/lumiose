@@ -59,8 +59,8 @@ export class PWAImageCache {
       for (let i = 0; i < pokemonData.length; i += batchSize) {
         const batch = pokemonData.slice(i, i + batchSize);
         const promises = batch.flatMap(async (link) => {
-          const normalImageUrl = `${import.meta.env.BASE_URL}/images/pmIcon/${link}.png`;
-          const shinyImageUrl = `${import.meta.env.BASE_URL}/images/pmIcon/${link}s.png`;
+          const normalImageUrl = `${import.meta.env.BASE_URL}images/pmIcon/${link}.png`;
+          const shinyImageUrl = `${import.meta.env.BASE_URL}images/pmIcon/${link}s.png`;
 
           const imagePromises = [];
 
