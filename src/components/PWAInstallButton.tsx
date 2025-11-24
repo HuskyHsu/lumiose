@@ -1,14 +1,22 @@
+import { usePokemonContext } from '@/contexts/PokemonContext';
 import {
   canShowInstallPrompt,
   isPWAInstalled,
   isPWASupported,
+  PWAImageCache,
   showInstallPrompt,
 } from '@/utils/pwaUtils';
 import { useEffect, useState } from 'react';
 
-export default function PWAInstallButton() {
+interface PWAInstallButtonProps {
+  preloadPokemonImages?: boolean;
+}
+
+export default function PWAInstallButton({ preloadPokemonImages = true }: PWAInstallButtonProps) {
   const [canInstall, setCanInstall] = useState(false);
   const [isInstalling, setIsInstalling] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(false);
+  const { pokemonList } = usePokemonContext();
 
   useEffect(() => {
     const updateInstallStatus = () => {
@@ -44,6 +52,23 @@ export default function PWAInstallButton() {
       const installed = await showInstallPrompt();
       if (installed) {
         setCanInstall(false);
+
+        if (preloadPokemonImages && pokemonList.length > 0) {
+          setIsPreloading(true);
+          try {
+            const pokemonIds = pokemonList.map((pokemon) => pokemon.link);
+
+            console.log(
+              `Starting to preload ${pokemonIds.length} Pokemon images (normal + shiny)...`
+            );
+            await PWAImageCache.preloadPokemonImages(pokemonIds);
+            console.log('Pokemon images preloaded successfully');
+          } catch (preloadError) {
+            console.error('Failed to preload Pokemon images:', preloadError);
+          } finally {
+            setIsPreloading(false);
+          }
+        }
       }
     } catch (error) {
       console.error('Failed to install app:', error);
@@ -62,9 +87,15 @@ export default function PWAInstallButton() {
       onClick={handleInstallApp}
       disabled={isInstalling}
       className='fixed top-4 right-4 z-50 w-12 h-12 bg-green-600 hover:bg-green-700 text-white rounded-full shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center'
-      title={isInstalling ? 'Installing...' : 'Install to Desktop'}
+      title={
+        isPreloading
+          ? 'Preloading Pokemon images...'
+          : isInstalling
+          ? 'Installing...'
+          : 'Install to Desktop'
+      }
     >
-      {isInstalling ? (
+      {isInstalling || isPreloading ? (
         <div className='w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin' />
       ) : (
         <svg

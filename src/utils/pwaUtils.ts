@@ -14,7 +14,7 @@ interface BeforeInstallPromptEvent extends Event {
 
 export class PWAImageCache {
   private static readonly IMAGE_CACHE_NAME = 'lumiose-images-v1';
-  private static readonly MAX_CACHE_SIZE = 30 * 1024 * 1024; // 30MB
+  private static readonly MAX_CACHE_SIZE = 50 * 1024 * 1024; // 50MB
 
   // Preload critical Pokemon images
   static async preloadCriticalImages(): Promise<void> {
@@ -48,28 +48,61 @@ export class PWAImageCache {
     }
   }
 
-  // Batch preload Pokemon images
-  static async preloadPokemonImages(pokemonIds: number[]): Promise<void> {
+  // Batch preload Pokemon images (both normal and shiny)
+  static async preloadPokemonImages(pokemonData: string[]): Promise<void> {
     if (!('serviceWorker' in navigator)) return;
 
     try {
       const cache = await caches.open(this.IMAGE_CACHE_NAME);
-      const batchSize = 10; // Process 10 images at a time
+      const batchSize = 5; // Process 5 Pokemon at a time (each has 2 images)
 
-      for (let i = 0; i < pokemonIds.length; i += batchSize) {
-        const batch = pokemonIds.slice(i, i + batchSize);
-        const promises = batch.map(async (id) => {
-          const imageUrl = `/images/pmIcon/${id}.png`;
-          const response = await cache.match(imageUrl);
+      for (let i = 0; i < pokemonData.length; i += batchSize) {
+        const batch = pokemonData.slice(i, i + batchSize);
+        const promises = batch.flatMap(async (link) => {
+          const normalImageUrl = `${import.meta.env.BASE_URL}/images/pmIcon/${link}.png`;
+          const shinyImageUrl = `${import.meta.env.BASE_URL}/images/pmIcon/${link}s.png`;
 
-          if (!response) {
-            try {
-              await cache.add(imageUrl);
-              console.log(`Cached Pokemon image: ${id}`);
-            } catch (error) {
-              console.warn(`Failed to cache Pokemon image: ${id}`, error);
+          const imagePromises = [];
+
+          // Cache normal image
+          try {
+            const normalResponse = await cache.match(normalImageUrl);
+            if (!normalResponse) {
+              imagePromises.push(
+                cache
+                  .add(normalImageUrl)
+                  .then(() => {
+                    console.log(`Cached normal Pokemon image: ${link}`);
+                  })
+                  .catch((error) => {
+                    console.warn(`Failed to cache normal Pokemon image: ${link}`, error);
+                  })
+              );
             }
+          } catch (error) {
+            console.warn(`Error checking normal Pokemon image: ${link}`, error);
           }
+
+          // Cache shiny image
+          try {
+            const shinyResponse = await cache.match(shinyImageUrl);
+            if (!shinyResponse) {
+              imagePromises.push(
+                cache
+                  .add(shinyImageUrl)
+                  .then(() => {
+                    console.log(`Cached shiny Pokemon image: ${link}s`);
+                  })
+                  .catch((error) => {
+                    console.warn(`Failed to cache shiny Pokemon image: ${link}s`, error);
+                  })
+              );
+            }
+          } catch (error) {
+            console.warn(`Error checking shiny Pokemon image: ${link}s`, error);
+          }
+
+          return Promise.all(imagePromises);
         });
 
         await Promise.all(promises);
