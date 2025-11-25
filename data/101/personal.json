@@ -200610,6 +200610,15 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "sunny",
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "694",
       "type": [

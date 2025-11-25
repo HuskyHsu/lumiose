@@ -17,7 +17,32 @@ interface PokemonCardProps {
 const weatherEmojis = {
   day: '☀️',
   night: '🌙',
+  sunny: '🌞',
 } as const;
+
+// Weather combination display logic
+const getWeatherDisplay = (weatherConditions: string[]) => {
+  if (weatherConditions.length > 1) {
+    const hasDay = weatherConditions.includes('day');
+    const hasSunny = weatherConditions.includes('sunny');
+
+    if (hasSunny && hasDay) {
+      return [{ emoji: '🌅', title: 'Sunny Day', key: 'sunny-day' }];
+    }
+
+    return weatherConditions.map((weather) => ({
+      emoji: weatherEmojis[weather as keyof typeof weatherEmojis] || '❓',
+      title: weather,
+      key: weather,
+    }));
+  }
+
+  return weatherConditions.map((weather) => ({
+    emoji: weatherEmojis[weather as keyof typeof weatherEmojis] || '❓',
+    title: weather,
+    key: weather,
+  }));
+};
 
 const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: PokemonCardProps) {
   const location = useLocation();
@@ -89,16 +114,18 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
         {/* Weather indicator */}
         {weatherInfo && (
           <div className='absolute top-1 right-1 flex gap-1'>
-            {weatherInfo.map((weather) => (
+            {getWeatherDisplay(weatherInfo).map((weatherDisplay) => (
               <span
-                key={weather}
+                key={weatherDisplay.key}
                 className={cn(
-                  'text-2xl rounded-full px-1.5 pb-1',
-                  weather === 'day' ? 'bg-sky-200' : 'bg-blue-900'
+                  'text-2xl rounded-full w-10 h-10 text-center leading-9',
+                  weatherDisplay.title.includes('day') || weatherDisplay.title.includes('Sunny')
+                    ? 'bg-sky-200'
+                    : 'bg-blue-900'
                 )}
-                title={`Available during ${weather}`}
+                title={`Available during ${weatherDisplay.title}`}
               >
-                {weatherEmojis[weather as keyof typeof weatherEmojis]}
+                {weatherDisplay.emoji}
               </span>
             ))}
           </div>

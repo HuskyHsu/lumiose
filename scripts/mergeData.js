@@ -32,7 +32,42 @@ async function parseZoneData() {
       const spawnsText = match[2];
 
       // 分割寶可夢名稱，保留天氣條件
-      const pokemonEntries = spawnsText.split(', ').map((entry) => {
+      // 使用更智能的分割方式，避免分割括號內的逗號
+      const pokemonEntries = [];
+      let currentEntry = '';
+      let inParentheses = false;
+
+      for (let i = 0; i < spawnsText.length; i++) {
+        const char = spawnsText[i];
+
+        if (char === '(') {
+          inParentheses = true;
+          currentEntry += char;
+        } else if (char === ')') {
+          inParentheses = false;
+          currentEntry += char;
+        } else if (char === ',' && !inParentheses) {
+          // 只有在括號外的逗號才分割
+          if (spawnsText[i + 1] === ' ') {
+            // 這是分隔符
+            pokemonEntries.push(currentEntry.trim());
+            currentEntry = '';
+            i++; // 跳過空格
+          } else {
+            currentEntry += char;
+          }
+        } else {
+          currentEntry += char;
+        }
+      }
+
+      // 添加最後一個條目
+      if (currentEntry.trim()) {
+        pokemonEntries.push(currentEntry.trim());
+      }
+
+      // 解析每個寶可夢條目
+      const parsedEntries = pokemonEntries.map((entry) => {
         const weatherMatch = entry.match(/^(.+?)\s*\(([^)]+)\)$/);
         if (weatherMatch) {
           // 有天氣條件
@@ -46,7 +81,7 @@ async function parseZoneData() {
       });
 
       // 為每個寶可夢添加區域ID和天氣資訊
-      for (const entry of pokemonEntries) {
+      for (const entry of parsedEntries) {
         const { name, weather } = entry;
 
         // 添加區域資訊
@@ -737,7 +772,7 @@ function mergeTMArray(zhTMs, jaTMs, enTMs, moveMap) {
 async function saveToJSON(mergedData, outputPath) {
   try {
     let jsonString = '';
-    if (outputPath.includes('personal_base.json') || !Array.isArray(mergedData)) {
+    if (outputPath.includes('base') || !Array.isArray(mergedData)) {
       jsonString = JSON.stringify(mergedData);
     } else {
       jsonString = JSON.stringify(mergedData, null, 2);
@@ -856,5 +891,6 @@ export {
   mergeMoveArray,
   mergeTMArray,
   mergeTypeArray,
+  parseZoneData,
   saveToJSON,
 };
