@@ -35,7 +35,11 @@ function PokemonDetail() {
 
       // Track Pokemon detail page view
       if (data) {
-        trackPageView(`/pokemon/${pokemonLink}`, `${data.name.en} - Pokédex`);
+        // Set page title with Chinese and English names
+        const pageTitle = `${data.name.zh} ${data.name.en} - Pokédex`;
+        document.title = pageTitle;
+
+        trackPageView(`/pokemon/${pokemonLink}`, pageTitle);
 
         // Track custom event for Pokemon detail view
         trackCustomEvent('pokemon_detail_view', {
