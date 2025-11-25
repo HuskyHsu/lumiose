@@ -6,6 +6,11 @@ export interface PokemonName {
   en: string;
 }
 
+interface Zone {
+  id: number;
+  weather: string[];
+}
+
 export interface Pokemon {
   pid: number;
   lumioseId: number;
@@ -17,6 +22,7 @@ export interface Pokemon {
   source: string;
   latest: boolean;
   altForm?: string; // Optional alternative form name
+  zone?: Zone[];
 }
 
 export type PokemonList = Pokemon[];

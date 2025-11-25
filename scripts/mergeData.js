@@ -7,6 +7,76 @@ import { TypeIdEnMap } from './convertType.js';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/**
+ * 解析區域資料並創建寶可夢到區域和天氣的映射
+ * @returns {Promise<Object>} 包含區域映射和天氣映射的物件
+ */
+async function parseZoneData() {
+  try {
+    const csvPath = path.join(__dirname, 'zoneList.csv');
+    const csvContent = await fs.readFile(csvPath, 'utf8');
+    const lines = csvContent.trim().split('\n');
+
+    // 跳過標題行
+    const dataLines = lines.slice(1);
+
+    const pokemonToZones = new Map();
+    const pokemonToWeather = new Map();
+
+    for (const line of dataLines) {
+      // 解析CSV行，處理引號內的逗號
+      const match = line.match(/^(\d+),"(.+)"$/);
+      if (!match) continue;
+
+      const zoneId = parseInt(match[1]);
+      const spawnsText = match[2];
+
+      // 分割寶可夢名稱，保留天氣條件
+      const pokemonEntries = spawnsText.split(', ').map((entry) => {
+        const weatherMatch = entry.match(/^(.+?)\s*\(([^)]+)\)$/);
+        if (weatherMatch) {
+          // 有天氣條件
+          const pokemonName = weatherMatch[1].trim();
+          const weatherConditions = weatherMatch[2].split(',').map((w) => w.trim());
+          return { name: pokemonName, weather: weatherConditions };
+        } else {
+          // 沒有天氣條件，表示任何天氣都可以出現
+          return { name: entry.trim(), weather: ['any'] };
+        }
+      });
+
+      // 為每個寶可夢添加區域ID和天氣資訊
+      for (const entry of pokemonEntries) {
+        const { name, weather } = entry;
+
+        // 添加區域資訊
+        if (!pokemonToZones.has(name)) {
+          pokemonToZones.set(name, []);
+        }
+        pokemonToZones.get(name).push(zoneId);
+
+        // 添加天氣資訊
+        if (!pokemonToWeather.has(name)) {
+          pokemonToWeather.set(name, new Map());
+        }
+        const weatherMap = pokemonToWeather.get(name);
+        if (!weatherMap.has(zoneId)) {
+          weatherMap.set(zoneId, []);
+        }
+        weatherMap.get(zoneId).push(...weather);
+      }
+    }
+
+    console.log(`成功解析區域資料，共 ${pokemonToZones.size} 種寶可夢有區域資訊`);
+    console.log(`成功解析天氣資料，共 ${pokemonToWeather.size} 種寶可夢有天氣資訊`);
+
+    return { pokemonToZones, pokemonToWeather };
+  } catch (error) {
+    console.error('解析區域資料時發生錯誤:', error);
+    return { pokemonToZones: new Map(), pokemonToWeather: new Map() };
+  }
+}
+
 const atlFormMap = {
   '妙蛙花-1': 'MEGA',
   '噴火龍-1': 'MEGA-X',
@@ -159,14 +229,17 @@ const atlFormMap = {
  */
 async function mergeLanguageData(zhFile, jaFile, enFile) {
   try {
-    // 讀取三個語言版本的資料
-    const [zhData, jaData, enData, rowData, moveData] = await Promise.all([
+    // 讀取三個語言版本的資料和區域資料
+    const [zhData, jaData, enData, rowData, moveData, zoneData] = await Promise.all([
       fs.readFile(zhFile, 'utf8').then(JSON.parse),
       fs.readFile(jaFile, 'utf8').then(JSON.parse),
       fs.readFile(enFile, 'utf8').then(JSON.parse),
       fs.readFile('data/personal_array.json', 'utf8').then(JSON.parse),
       fs.readFile('data/waza_array.json', 'utf8').then(JSON.parse),
+      parseZoneData(),
     ]);
+
+    const { pokemonToZones, pokemonToWeather } = zoneData;
 
     console.log(
       `載入資料: 中文 ${zhData.length} 筆, 日文 ${jaData.length} 筆, 英文 ${enData.length} 筆`
@@ -380,6 +453,34 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       mergedPokemon.name.zh = mergedPokemon.name.zh.replace(/-\d+$/, '');
       mergedPokemon.name.ja = mergedPokemon.name.ja.replace(/-\d+$/, '');
       mergedPokemon.name.en = mergedPokemon.name.en.replace(/-\d+$/, '');
+
+      // 添加區域和天氣資訊
+      const zones = pokemonToZones.get(mergedPokemon.name.en);
+      const weatherData = pokemonToWeather.get(mergedPokemon.name.en);
+
+      // 特殊處理：彩粉蝶只有花園花紋可以被捕捉到
+      const isVivillon = mergedPokemon.name.zh.includes('彩粉蝶');
+      const isGardenPattern = mergedPokemon.altForm === '花園花紋';
+
+      if (zones && zones.length > 0 && (!isVivillon || isGardenPattern)) {
+        // 添加天氣資訊
+        if (weatherData) {
+          const zoneWeatherInfo = [];
+          for (const zoneId of zones) {
+            const weatherConditions = weatherData.get(zoneId);
+            if (weatherConditions) {
+              zoneWeatherInfo.push({
+                id: zoneId,
+                weather: [...new Set(weatherConditions)], // 去除重複的天氣條件
+              });
+            }
+          }
+          mergedPokemon.zone = zoneWeatherInfo;
+        } else {
+          // 如果沒有天氣資訊，則只添加區域資訊
+          mergedPokemon.zone = zones.sort((a, b) => a - b);
+        }
+      }
 
       mergedPokemon = {
         pid: mergedPokemon.pid,

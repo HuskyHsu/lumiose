@@ -13,8 +13,18 @@ interface PokemonCardProps {
   isShiny?: boolean;
 }
 
+// Weather emoji mapping
+const weatherEmojis = {
+  day: '☀️',
+  night: '🌙',
+} as const;
+
 const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: PokemonCardProps) {
   const location = useLocation();
+
+  // Get selected zone from URL params
+  const searchParams = new URLSearchParams(location.search);
+  const selectedZone = searchParams.get('zone');
 
   // Memoize expensive color class calculations
   const colorClasses = useMemo(() => {
@@ -26,6 +36,19 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
       ToClass[secondaryType as keyof typeof ToClass]
     );
   }, [pokemon.type]);
+
+  // Get weather info for the selected zone
+  const weatherInfo = useMemo(() => {
+    if (!selectedZone || !pokemon.zone) return null;
+
+    const zoneId = parseInt(selectedZone, 10);
+    const zoneData = pokemon.zone.find((zone) => zone.id === zoneId);
+
+    if (!zoneData) return null;
+
+    const specialWeather = zoneData.weather.filter((weather) => weather !== 'any');
+    return specialWeather.length > 0 ? specialWeather : null;
+  }, [selectedZone, pokemon.zone]);
 
   const handleClick = () => {
     // Store current URL (including search params) for the back button
@@ -63,6 +86,20 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
         )}
       >
         <PokemonImage pokemon={pokemon} isShiny={isShiny} />
+        {/* Weather indicator */}
+        {weatherInfo && (
+          <div className='absolute top-1 right-1 flex gap-1'>
+            {weatherInfo.map((weather) => (
+              <span
+                key={weather}
+                className='text-2xl bg-white rounded-full px-1'
+                title={`Available during ${weather}`}
+              >
+                {weatherEmojis[weather as keyof typeof weatherEmojis]}
+              </span>
+            ))}
+          </div>
+        )}
         <PokemonName name={pokemon.name.zh} />
         <PokemonTypes types={pokemon.type} />
       </div>

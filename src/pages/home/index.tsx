@@ -12,6 +12,7 @@ import {
   SearchFilter,
   ShinyToggle,
   TypeFilter,
+  ZoneFilter,
 } from './components';
 
 function Home() {
@@ -21,6 +22,8 @@ function Home() {
     setSelectedTypes,
     searchKeyword,
     setSearchKeyword,
+    selectedZone,
+    setSelectedZone,
     isFinalFormOnly,
     toggleFinalFormOnly,
     filteredPokemonList,
@@ -34,6 +37,7 @@ function Home() {
       {/* <PWAStatus /> */}
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
+      <ZoneFilter selectedZone={selectedZone} onZoneChange={setSelectedZone} />
       <div className='flex gap-4'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />

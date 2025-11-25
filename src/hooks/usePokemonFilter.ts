@@ -9,6 +9,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   const selectedTypes = getArrayParam('types');
   const searchKeyword = getParam('search') || '';
   const isFinalFormOnly = getBooleanParam('finalForm', false);
+  const selectedZone = getParam('zone') || '';
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -36,6 +37,16 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     return nameMatches || altFormMatches || lumioseIdMatches;
   }, []);
 
+  // Memoize the zone matching function
+  const zoneMatches = useCallback((pokemon: Pokemon, zoneId: string) => {
+    if (!zoneId.trim()) return true;
+
+    const zoneNumber = parseInt(zoneId, 10);
+    if (isNaN(zoneNumber)) return true;
+
+    return pokemon.zone?.some((zone) => zone.id === zoneNumber) || false;
+  }, []);
+
   // Function to filter only final evolution forms
   const getFinalFormPokemon = useCallback((pokemonList: PokemonList) => {
     return pokemonList.filter((pokemon) => pokemon.latest);
@@ -59,14 +70,21 @@ export function usePokemonFilter(pokemonList: PokemonList) {
       result = result.filter((pokemon) => typeMatches(pokemon.type, selectedTypes));
     }
 
+    // Apply zone filter
+    if (selectedZone.trim()) {
+      result = result.filter((pokemon) => zoneMatches(pokemon, selectedZone));
+    }
+
     return result;
   }, [
     pokemonList,
     selectedTypes,
     searchKeyword,
+    selectedZone,
     isFinalFormOnly,
     typeMatches,
     keywordMatches,
+    zoneMatches,
     getFinalFormPokemon,
   ]);
 
@@ -85,6 +103,13 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     [setParam]
   );
 
+  const memoizedSetSelectedZone = useCallback(
+    (zone: string) => {
+      setParam('zone', zone);
+    },
+    [setParam]
+  );
+
   const toggleFinalFormOnly = useCallback(() => {
     setBooleanParam('finalForm', !isFinalFormOnly, false);
   }, [setBooleanParam, isFinalFormOnly]);
@@ -94,6 +119,8 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     setSelectedTypes: memoizedSetSelectedTypes,
     searchKeyword,
     setSearchKeyword: memoizedSetSearchKeyword,
+    selectedZone,
+    setSelectedZone: memoizedSetSelectedZone,
     isFinalFormOnly,
     toggleFinalFormOnly,
     filteredPokemonList,

@@ -8745,6 +8745,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "661",
       "type": [
@@ -9295,6 +9303,14 @@
         "link": "663",
         "level": 35,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -10475,6 +10491,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "659",
       "type": [
@@ -11124,6 +11154,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "659",
       "type": [
@@ -11288,6 +11326,14 @@
         "link": "665",
         "level": 9,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -11819,6 +11865,14 @@
         "link": "666",
         "level": 12,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -17685,6 +17739,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 7
+      }
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -29030,6 +29092,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "13",
       "type": [
@@ -29242,6 +29312,20 @@
         "link": "15",
         "level": 10,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -29822,6 +29906,14 @@
         "category": "Special",
         "power": 55,
         "cooldown": 7
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -30405,6 +30497,14 @@
         "cooldown": 7
       }
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "13",
       "type": [
@@ -30906,6 +31006,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "16",
       "type": [
@@ -31405,6 +31519,14 @@
         "link": "18",
         "level": 36,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -32964,6 +33086,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "179",
       "type": [
@@ -33532,6 +33662,20 @@
         "link": "181",
         "level": 30,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -35475,6 +35619,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -36151,6 +36309,14 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -36498,6 +36664,14 @@
         "link": "315",
         "level": 0,
         "method": "LevelUpFriendshipMorning"
+      }
+    ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -37096,6 +37270,14 @@
           "ja": "ひかりのいし",
           "en": "Shiny Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -37866,6 +38048,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "129",
       "type": [
@@ -38598,6 +38794,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -39335,6 +39539,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "129",
       "type": [
@@ -39986,6 +40198,20 @@
         "link": "689",
         "level": 39,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -40739,6 +40965,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -41495,6 +41729,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "688",
       "type": [
@@ -42140,6 +42382,20 @@
           "ja": "みずのいし",
           "en": "Water Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "night"
+        ]
+      },
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -42938,6 +43194,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -43739,6 +44003,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "120",
       "type": [
@@ -44210,6 +44482,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -44674,6 +44954,14 @@
         "link": "670-1",
         "level": 19,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -45142,6 +45430,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-2",
       "type": [
@@ -45608,6 +45904,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -46072,6 +46376,14 @@
         "link": "670-4",
         "level": 19,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -46572,6 +46884,14 @@
         }
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -47068,6 +47388,14 @@
           "ja": "ひかりのいし",
           "en": "Shiny Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -47568,6 +47896,14 @@
         }
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-2",
       "type": [
@@ -48066,6 +48402,14 @@
         }
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -48562,6 +48906,14 @@
           "ja": "ひかりのいし",
           "en": "Shiny Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -49063,6 +49415,14 @@
         "cooldown": 4
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "670-5",
       "type": [
@@ -49546,6 +49906,14 @@
         "cooldown": 4
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "670-5",
       "type": [
@@ -50027,6 +50395,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 4
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -50528,6 +50904,14 @@
         "cooldown": 4
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-1",
       "type": [
@@ -51025,6 +51409,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 4
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -51526,6 +51918,14 @@
         "cooldown": 4
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -52023,6 +52423,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 4
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -52621,6 +53029,14 @@
         "link": "673",
         "level": 32,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -53271,6 +53687,14 @@
         "cooldown": 8
       }
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "672",
       "type": [
@@ -53771,6 +54195,20 @@
         "link": "678-1",
         "level": 25,
         "method": "LevelUpFormFemale1"
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -55739,6 +56177,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "667",
       "type": [
@@ -56425,6 +56871,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 8
+      }
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -57116,6 +57570,14 @@
         "cooldown": 8
       }
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "667",
       "type": [
@@ -57680,6 +58142,14 @@
           "ja": "あく",
           "en": "Dark"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -60724,6 +61194,14 @@
         "method": "LevelUpFriendship"
       }
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "172",
       "type": [
@@ -61334,6 +61812,14 @@
           "ja": "かみなりのいし",
           "en": "Thunder Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -63340,6 +63826,14 @@
         "method": "LevelUpFriendship"
       }
     ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "173",
       "type": [
@@ -64160,6 +64654,14 @@
           "ja": "つきのいし",
           "en": "Moon Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -66474,6 +66976,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "167",
       "type": [
@@ -67632,6 +68142,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "23",
       "type": [
@@ -68243,6 +68761,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "23",
       "type": [
@@ -68651,6 +69177,14 @@
         "link": "64",
         "level": 16,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -69263,6 +69797,14 @@
         "link": "65",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -71090,6 +71632,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "92",
       "type": [
@@ -71781,6 +72331,14 @@
         "link": "94",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -73748,6 +74306,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "543",
       "type": [
@@ -74234,6 +74800,14 @@
         "link": "545",
         "level": 30,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -74901,6 +75475,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -75571,6 +76153,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "543",
       "type": [
@@ -76051,6 +76641,14 @@
         "link": "680",
         "level": 35,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -78255,6 +78853,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "69",
       "type": [
@@ -78788,6 +79400,14 @@
           "ja": "リーフのいし",
           "en": "Leaf Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -84545,6 +85165,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "307",
       "type": [
@@ -85251,6 +85879,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -85962,6 +86598,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "307",
       "type": [
@@ -86577,6 +87221,14 @@
         "link": "310",
         "level": 26,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -93460,6 +94112,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "228",
       "type": [
@@ -95365,6 +96025,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "333",
       "type": [
@@ -96061,6 +96735,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -96760,6 +97442,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -97498,6 +98188,20 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "531",
       "type": [
@@ -98212,6 +98916,20 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -100659,6 +101377,14 @@
         "link": "197",
         "level": 0,
         "method": "LevelUpFriendshipNight"
+      }
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -106961,6 +107687,14 @@
         "method": "LevelUpFriendship"
       }
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "427",
       "type": [
@@ -108983,6 +109717,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "night"
+        ]
+      },
+      {
+        "id": 15,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "353",
       "type": [
@@ -110708,6 +111456,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "582",
       "type": [
@@ -112269,6 +113031,14 @@
         "link": "323",
         "level": 33,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -114227,6 +114997,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "449",
       "type": [
@@ -115288,6 +116066,20 @@
         "link": "530",
         "level": 31,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -117188,6 +117980,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "551",
       "type": [
@@ -117806,6 +118606,14 @@
         "link": "553",
         "level": 40,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -119201,6 +120009,20 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "66",
       "type": [
@@ -119844,6 +120666,14 @@
         "link": "68",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -121109,6 +121939,14 @@
         "link": "444",
         "level": 24,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -123869,6 +124707,14 @@
         "cooldown": 8
       }
     ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "703",
     "latest": true
   },
@@ -124663,6 +125509,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 4
+      }
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -125491,6 +126345,14 @@
         "cooldown": 4
       }
     ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "302",
       "type": [
@@ -126266,6 +127128,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "303",
       "type": [
@@ -127035,6 +127905,14 @@
         "category": "Special",
         "power": 120,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -131525,6 +132403,20 @@
         }
       }
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "79",
       "type": [
@@ -132251,6 +133143,20 @@
           "ja": "ガラナツリース",
           "en": "Galarica Wreath"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -137206,6 +138112,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "318",
       "type": [
@@ -138742,6 +139656,14 @@
         "link": "603",
         "level": 39,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -153548,6 +154470,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "618",
     "latest": true
   },
@@ -154090,6 +155020,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "618-1",
@@ -154656,6 +155594,20 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "676",
@@ -155225,6 +156177,20 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-1",
     "latest": true
   },
@@ -155790,6 +156756,20 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "676-2",
@@ -156359,6 +157339,20 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-3",
     "latest": true
   },
@@ -156924,6 +157918,20 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "676-4",
@@ -157493,6 +158501,20 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-5",
     "latest": true
   },
@@ -158058,6 +159080,20 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "676-6",
@@ -158627,6 +159663,20 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-7",
     "latest": true
   },
@@ -159192,6 +160242,20 @@
         "category": "Status",
         "power": 0,
         "cooldown": 15
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "676-8",
@@ -159761,6 +160825,20 @@
         "cooldown": 15
       }
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-9",
     "latest": true
   },
@@ -160286,6 +161364,14 @@
         "link": "687",
         "level": 30,
         "method": "LevelUpInverted"
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -164021,6 +165107,14 @@
         "link": "693",
         "level": 37,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -168433,6 +169527,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "225",
     "latest": true
   },
@@ -168889,6 +169991,14 @@
           "ja": "めざめいし",
           "en": "Dawn Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -172163,6 +173273,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "459",
       "type": [
@@ -173921,6 +175039,14 @@
         "link": "713",
         "level": 37,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -175682,6 +176808,14 @@
           "ja": "メタルコート",
           "en": "Metal Coat"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -177551,6 +178685,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "127",
       "type": [
@@ -178083,6 +179225,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -178782,6 +179932,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "214",
       "type": [
@@ -179476,6 +180634,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "214",
       "type": [
@@ -180024,6 +181190,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "source": "587",
@@ -181777,6 +182951,14 @@
         "link": "709",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -185279,6 +186461,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "714",
       "type": [
@@ -186026,6 +187216,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "714",
       "type": [
@@ -186511,6 +187709,14 @@
         "category": "Status",
         "power": 0,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "source": "707",
@@ -187641,6 +188847,14 @@
           "ja": "やみのいし",
           "en": "Dusk Stone"
         }
+      }
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "night"
+        ]
       }
     ],
     "evolutionTree": {
@@ -193515,6 +194729,14 @@
         }
       }
     ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "95",
       "type": [
@@ -195580,6 +196802,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "304",
       "type": [
@@ -196226,6 +197456,14 @@
         "link": "306",
         "level": 42,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -199919,6 +201157,14 @@
         "method": "Trade"
       }
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "710",
       "type": [
@@ -200461,6 +201707,14 @@
         "link": "711-1",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -201007,6 +202261,14 @@
         "method": "Trade"
       }
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "710-2",
       "type": [
@@ -201549,6 +202811,14 @@
         "link": "711-3",
         "level": 0,
         "method": "Trade"
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -204676,6 +205946,14 @@
         "link": "247",
         "level": 30,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -207810,6 +209088,14 @@
         "method": "LevelUp"
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "656",
       "type": [
@@ -210684,6 +211970,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "870",
       "type": [
@@ -211243,6 +212537,14 @@
         "category": "Physical",
         "power": 120,
         "cooldown": 12
+      }
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -211846,6 +213148,14 @@
         "link": "651",
         "level": 16,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -214880,6 +216190,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "227",
       "type": [
@@ -215513,6 +216831,14 @@
         "cooldown": 12
       }
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "227",
       "type": [
@@ -216000,6 +217326,14 @@
         "link": "654",
         "level": 16,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -218720,6 +220054,14 @@
         "link": "372",
         "level": 30,
         "method": "LevelUp"
+      }
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -221753,6 +223095,14 @@
         "cooldown": 10
       }
     ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "evolutionTree": {
       "link": "115",
       "type": [
@@ -222504,6 +223854,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
       }
     ],
     "evolutionTree": {
@@ -223332,6 +224690,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {
@@ -224163,6 +225529,14 @@
         "category": "Special",
         "power": 110,
         "cooldown": 10
+      }
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "day"
+        ]
       }
     ],
     "evolutionTree": {

@@ -408,6 +408,14 @@
       "Normal",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "661",
     "latest": false
   },
@@ -439,6 +447,14 @@
     "type": [
       "Fire",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "661",
     "latest": false
@@ -503,6 +519,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "659",
     "latest": false
   },
@@ -535,6 +565,14 @@
       "Normal",
       "Ground"
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "659",
     "latest": true
   },
@@ -566,6 +604,14 @@
     "type": [
       "Bug"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "664",
     "latest": false
   },
@@ -596,6 +642,14 @@
     ],
     "type": [
       "Bug"
+    ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "664",
     "latest": false
@@ -827,6 +881,14 @@
     "type": [
       "Bug",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "664",
     "latest": true
@@ -1289,6 +1351,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "13",
     "latest": false
   },
@@ -1321,6 +1391,20 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "13",
     "latest": false
   },
@@ -1352,6 +1436,14 @@
     "type": [
       "Bug",
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "13",
     "latest": false
@@ -1386,6 +1478,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "13",
     "latest": true
   },
@@ -1418,6 +1518,20 @@
       "Normal",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "16",
     "latest": false
   },
@@ -1449,6 +1563,14 @@
     "type": [
       "Normal",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "16",
     "latest": false
@@ -1546,6 +1668,14 @@
     "type": [
       "Electric"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "179",
     "latest": false
   },
@@ -1576,6 +1706,20 @@
     ],
     "type": [
       "Electric"
+    ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "179",
     "latest": false
@@ -1672,6 +1816,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "504",
     "latest": false
   },
@@ -1702,6 +1860,14 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "504",
     "latest": true
@@ -1735,6 +1901,14 @@
       "Grass",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "406",
     "latest": false
   },
@@ -1766,6 +1940,14 @@
     "type": [
       "Grass",
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "406",
     "latest": false
@@ -1830,6 +2012,20 @@
     "type": [
       "Water"
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "129",
     "latest": false
   },
@@ -1861,6 +2057,14 @@
     "type": [
       "Water",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "129",
     "latest": false
@@ -1895,6 +2099,14 @@
       "Water",
       "Dark"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "129",
     "latest": true
   },
@@ -1927,6 +2139,20 @@
       "Rock",
       "Water"
     ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "688",
     "latest": false
   },
@@ -1958,6 +2184,14 @@
     "type": [
       "Rock",
       "Water"
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "688",
     "latest": false
@@ -1992,6 +2226,14 @@
       "Rock",
       "Fighting"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "688",
     "latest": true
   },
@@ -2022,6 +2264,20 @@
     ],
     "type": [
       "Water"
+    ],
+    "zone": [
+      {
+        "id": 2,
+        "weather": [
+          "night"
+        ]
+      },
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "120",
     "latest": false
@@ -2054,6 +2310,14 @@
     "type": [
       "Water",
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "120",
     "latest": false
@@ -2088,6 +2352,14 @@
       "Water",
       "Psychic"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "120",
     "latest": true
   },
@@ -2119,6 +2391,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669",
     "latest": false
@@ -2152,6 +2432,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-1",
     "latest": false
   },
@@ -2183,6 +2471,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669-2",
     "latest": false
@@ -2216,6 +2512,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-3",
     "latest": false
   },
@@ -2247,6 +2551,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669-4",
     "latest": false
@@ -2280,6 +2592,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669",
     "latest": false
   },
@@ -2311,6 +2631,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669-1",
     "latest": false
@@ -2344,6 +2672,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-2",
     "latest": false
   },
@@ -2375,6 +2711,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669-3",
     "latest": false
@@ -2408,6 +2752,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-4",
     "latest": false
   },
@@ -2439,6 +2791,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "670-5",
     "latest": false
@@ -2472,6 +2832,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "670-5",
     "latest": true
   },
@@ -2503,6 +2871,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669",
     "latest": true
@@ -2536,6 +2912,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-1",
     "latest": true
   },
@@ -2567,6 +2951,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "669-2",
     "latest": true
@@ -2600,6 +2992,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-3",
     "latest": true
   },
@@ -2632,6 +3032,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "669-4",
     "latest": true
   },
@@ -2662,6 +3070,14 @@
     ],
     "type": [
       "Grass"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "672",
     "latest": false
@@ -2694,6 +3110,14 @@
     "type": [
       "Grass"
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "672",
     "latest": true
   },
@@ -2724,6 +3148,20 @@
     ],
     "type": [
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "677",
     "latest": false
@@ -2821,6 +3259,14 @@
       "Fire",
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "667",
     "latest": false
   },
@@ -2852,6 +3298,14 @@
     "type": [
       "Fire",
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "667",
     "latest": false
@@ -2886,6 +3340,14 @@
       "Fire",
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "667",
     "latest": true
   },
@@ -2916,6 +3378,14 @@
     ],
     "type": [
       "Fighting"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "674",
     "latest": false
@@ -3074,6 +3544,14 @@
     "type": [
       "Electric"
     ],
+    "zone": [
+      {
+        "id": 1,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "172",
     "latest": false
   },
@@ -3104,6 +3582,14 @@
     ],
     "type": [
       "Electric"
+    ],
+    "zone": [
+      {
+        "id": 3,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "172",
     "latest": false
@@ -3200,6 +3686,14 @@
     "type": [
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "173",
     "latest": false
   },
@@ -3230,6 +3724,14 @@
     ],
     "type": [
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "173",
     "latest": false
@@ -3327,6 +3829,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "167",
     "latest": false
   },
@@ -3390,6 +3900,14 @@
     "type": [
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "23",
     "latest": false
   },
@@ -3420,6 +3938,14 @@
     ],
     "type": [
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "23",
     "latest": true
@@ -3452,6 +3978,14 @@
     "type": [
       "Psychic"
     ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "63",
     "latest": false
   },
@@ -3482,6 +4016,14 @@
     ],
     "type": [
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "63",
     "latest": false
@@ -3578,6 +4120,14 @@
       "Ghost",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "92",
     "latest": false
   },
@@ -3609,6 +4159,14 @@
     "type": [
       "Ghost",
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "92",
     "latest": false
@@ -3707,6 +4265,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "543",
     "latest": false
   },
@@ -3739,6 +4305,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "543",
     "latest": false
   },
@@ -3770,6 +4344,14 @@
     "type": [
       "Bug",
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "543",
     "latest": false
@@ -3804,6 +4386,14 @@
       "Bug",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "543",
     "latest": true
   },
@@ -3835,6 +4425,14 @@
     "type": [
       "Steel",
       "Ghost"
+    ],
+    "zone": [
+      {
+        "id": 4,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "679",
     "latest": false
@@ -3966,6 +4564,20 @@
       "Grass",
       "Poison"
     ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "69",
     "latest": false
   },
@@ -3997,6 +4609,14 @@
     "type": [
       "Grass",
       "Poison"
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "69",
     "latest": false
@@ -4281,6 +4901,14 @@
       "Fighting",
       "Psychic"
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "307",
     "latest": false
   },
@@ -4312,6 +4940,14 @@
     "type": [
       "Fighting",
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "307",
     "latest": false
@@ -4346,6 +4982,14 @@
       "Fighting",
       "Psychic"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "307",
     "latest": true
   },
@@ -4376,6 +5020,14 @@
     ],
     "type": [
       "Electric"
+    ],
+    "zone": [
+      {
+        "id": 5,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "309",
     "latest": false
@@ -4666,6 +5318,14 @@
       "Dark",
       "Fire"
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "228",
     "latest": false
   },
@@ -4763,6 +5423,20 @@
       "Normal",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "333",
     "latest": false
   },
@@ -4794,6 +5468,14 @@
     "type": [
       "Dragon",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "333",
     "latest": false
@@ -4828,6 +5510,14 @@
       "Dragon",
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "333",
     "latest": true
   },
@@ -4858,6 +5548,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "531",
     "latest": false
@@ -4891,6 +5595,20 @@
     "type": [
       "Normal",
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "531",
     "latest": true
@@ -5046,6 +5764,14 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "133",
     "latest": false
@@ -5326,6 +6052,14 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 6,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "427",
     "latest": false
   },
@@ -5421,6 +6155,20 @@
     "type": [
       "Ghost"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "night"
+        ]
+      },
+      {
+        "id": 15,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "353",
     "latest": false
   },
@@ -5515,6 +6263,20 @@
     "type": [
       "Ice"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "582",
     "latest": false
   },
@@ -5608,6 +6370,14 @@
     "type": [
       "Fire",
       "Ground"
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "322",
     "latest": false
@@ -5705,6 +6475,14 @@
     "type": [
       "Ground"
     ],
+    "zone": [
+      {
+        "id": 7,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "449",
     "latest": false
   },
@@ -5766,6 +6544,20 @@
     ],
     "type": [
       "Ground"
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "529",
     "latest": false
@@ -5864,6 +6656,14 @@
       "Ground",
       "Dark"
     ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "551",
     "latest": false
   },
@@ -5895,6 +6695,14 @@
     "type": [
       "Ground",
       "Dark"
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "551",
     "latest": false
@@ -5959,6 +6767,20 @@
     "type": [
       "Fighting"
     ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "66",
     "latest": false
   },
@@ -5989,6 +6811,14 @@
     ],
     "type": [
       "Fighting"
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "66",
     "latest": false
@@ -6052,6 +6882,14 @@
     "type": [
       "Dragon",
       "Ground"
+    ],
+    "zone": [
+      {
+        "id": 8,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "443",
     "latest": false
@@ -6182,6 +7020,14 @@
       "Rock",
       "Fairy"
     ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "703",
     "latest": true
   },
@@ -6213,6 +7059,14 @@
     "type": [
       "Dark",
       "Ghost"
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "302",
     "latest": false
@@ -6247,6 +7101,14 @@
       "Dark",
       "Ghost"
     ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "302",
     "latest": true
   },
@@ -6278,6 +7140,14 @@
     "type": [
       "Steel",
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "303",
     "latest": false
@@ -6311,6 +7181,14 @@
     "type": [
       "Steel",
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 9,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "303",
     "latest": true
@@ -6503,6 +7381,20 @@
       "Water",
       "Psychic"
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "79",
     "latest": false
   },
@@ -6534,6 +7426,20 @@
     ],
     "type": [
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "79-1",
     "latest": false
@@ -6730,6 +7636,14 @@
       "Water",
       "Dark"
     ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "318",
     "latest": false
   },
@@ -6825,6 +7739,14 @@
     ],
     "type": [
       "Electric"
+    ],
+    "zone": [
+      {
+        "id": 10,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "602",
     "latest": false
@@ -7493,6 +8415,14 @@
       "Ground",
       "Electric"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "618",
     "latest": true
   },
@@ -7526,6 +8456,14 @@
       "Ground",
       "Steel"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "618-1",
     "latest": true
   },
@@ -7556,6 +8494,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "676",
     "latest": true
@@ -7589,6 +8541,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-1",
     "latest": true
   },
@@ -7620,6 +8586,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "676-2",
     "latest": true
@@ -7653,6 +8633,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-3",
     "latest": true
   },
@@ -7684,6 +8678,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "676-4",
     "latest": true
@@ -7717,6 +8725,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-5",
     "latest": true
   },
@@ -7748,6 +8770,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "676-6",
     "latest": true
@@ -7781,6 +8817,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-7",
     "latest": true
   },
@@ -7812,6 +8862,20 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "676-8",
     "latest": true
@@ -7845,6 +8909,20 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      },
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "676-9",
     "latest": true
   },
@@ -7876,6 +8954,14 @@
     "type": [
       "Dark",
       "Psychic"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "686",
     "latest": false
@@ -8069,6 +9155,14 @@
     ],
     "type": [
       "Water"
+    ],
+    "zone": [
+      {
+        "id": 11,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "692",
     "latest": false
@@ -8292,6 +9386,14 @@
       "Ice",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "225",
     "latest": true
   },
@@ -8322,6 +9424,14 @@
     ],
     "type": [
       "Ice"
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "361",
     "latest": false
@@ -8483,6 +9593,14 @@
       "Grass",
       "Ice"
     ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "459",
     "latest": false
   },
@@ -8578,6 +9696,14 @@
     ],
     "type": [
       "Ice"
+    ],
+    "zone": [
+      {
+        "id": 12,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "712",
     "latest": false
@@ -8675,6 +9801,14 @@
       "Bug",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "123",
     "latest": false
   },
@@ -8771,6 +9905,14 @@
     "type": [
       "Bug"
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "127",
     "latest": false
   },
@@ -8804,6 +9946,14 @@
       "Bug",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "127",
     "latest": true
   },
@@ -8835,6 +9985,14 @@
     "type": [
       "Bug",
       "Fighting"
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "214",
     "latest": false
@@ -8869,6 +10027,14 @@
       "Bug",
       "Fighting"
     ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "214",
     "latest": true
   },
@@ -8900,6 +10066,14 @@
     "type": [
       "Electric",
       "Flying"
+    ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "587",
     "latest": true
@@ -8997,6 +10171,14 @@
     "type": [
       "Ghost",
       "Grass"
+    ],
+    "zone": [
+      {
+        "id": 13,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "708",
     "latest": false
@@ -9159,6 +10341,14 @@
       "Flying",
       "Dragon"
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "714",
     "latest": false
   },
@@ -9191,6 +10381,14 @@
       "Flying",
       "Dragon"
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "night"
+        ]
+      }
+    ],
     "source": "714",
     "latest": true
   },
@@ -9222,6 +10420,14 @@
     "type": [
       "Steel",
       "Fairy"
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "707",
     "latest": true
@@ -9286,6 +10492,14 @@
     "type": [
       "Ghost",
       "Fire"
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "night"
+        ]
+      }
     ],
     "source": "607",
     "latest": false
@@ -9577,6 +10791,14 @@
       "Rock",
       "Ground"
     ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "95",
     "latest": false
   },
@@ -9674,6 +10896,14 @@
       "Steel",
       "Rock"
     ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "304",
     "latest": false
   },
@@ -9705,6 +10935,14 @@
     "type": [
       "Steel",
       "Rock"
+    ],
+    "zone": [
+      {
+        "id": 14,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "304",
     "latest": false
@@ -9867,6 +11105,14 @@
       "Ghost",
       "Grass"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "710",
     "latest": false
   },
@@ -9899,6 +11145,14 @@
     "type": [
       "Ghost",
       "Grass"
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "710-1",
     "latest": false
@@ -9933,6 +11187,14 @@
       "Ghost",
       "Grass"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "710-2",
     "latest": false
   },
@@ -9965,6 +11227,14 @@
     "type": [
       "Ghost",
       "Grass"
+    ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "710-3",
     "latest": false
@@ -10130,6 +11400,14 @@
       "Rock",
       "Ground"
     ],
+    "zone": [
+      {
+        "id": 15,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "246",
     "latest": false
   },
@@ -10258,6 +11536,14 @@
     "type": [
       "Water"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "656",
     "latest": false
   },
@@ -10385,6 +11671,14 @@
     "type": [
       "Fighting"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "870",
     "latest": false
   },
@@ -10417,6 +11711,14 @@
     "type": [
       "Fighting"
     ],
+    "zone": [
+      {
+        "id": 16,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "870",
     "latest": true
   },
@@ -10447,6 +11749,14 @@
     ],
     "type": [
       "Grass"
+    ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "650",
     "latest": false
@@ -10576,6 +11886,14 @@
       "Steel",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "227",
     "latest": false
   },
@@ -10609,6 +11927,14 @@
       "Steel",
       "Flying"
     ],
+    "zone": [
+      {
+        "id": 17,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "227",
     "latest": true
   },
@@ -10639,6 +11965,14 @@
     ],
     "type": [
       "Fire"
+    ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "653",
     "latest": false
@@ -10767,6 +12101,14 @@
     "type": [
       "Dragon"
     ],
+    "zone": [
+      {
+        "id": 18,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "371",
     "latest": false
   },
@@ -10894,6 +12236,14 @@
     "type": [
       "Normal"
     ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
+    ],
     "source": "115",
     "latest": false
   },
@@ -10925,6 +12275,14 @@
     ],
     "type": [
       "Normal"
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "any"
+        ]
+      }
     ],
     "source": "115",
     "latest": true
@@ -10958,6 +12316,14 @@
       "Normal",
       "Dragon"
     ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "day"
+        ]
+      }
+    ],
     "source": "780",
     "latest": false
   },
@@ -10990,6 +12356,14 @@
     "type": [
       "Normal",
       "Dragon"
+    ],
+    "zone": [
+      {
+        "id": 19,
+        "weather": [
+          "day"
+        ]
+      }
     ],
     "source": "780",
     "latest": true
