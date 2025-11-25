@@ -108,10 +108,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
     <div className='mb-4'>
       <div className='flex items-center justify-between mb-4'>
         <h2 className='flex items-center text-lg font-semibold text-slate-700'>
-          <img
-            src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
-            className='w-10 h-10'
-          />
+          <img src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`} className='w-8 h-8' />
           Search Keywords
         </h2>
       </div>
