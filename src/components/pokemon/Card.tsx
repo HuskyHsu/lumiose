@@ -92,7 +92,10 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
             {weatherInfo.map((weather) => (
               <span
                 key={weather}
-                className='text-2xl bg-white rounded-full px-1'
+                className={cn(
+                  'text-2xl rounded-full px-1.5 pb-1',
+                  weather === 'day' ? 'bg-sky-200' : 'bg-blue-900'
+                )}
                 title={`Available during ${weather}`}
               >
                 {weatherEmojis[weather as keyof typeof weatherEmojis]}
