@@ -82,3 +82,13 @@ export interface TypeRateProps {
   targetRate: import('@/lib/constants/typeEffectiveness').EffectivenessMultiplier;
   types: string[];
 }
+
+export type BasePoint = {
+  Hp: number;
+  Atk: number;
+  Def: number;
+  SpA: number;
+  SpD: number;
+  Spe: number;
+  Total: number;
+};
