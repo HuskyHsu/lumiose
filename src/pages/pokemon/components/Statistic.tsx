@@ -166,12 +166,9 @@ export function Statistic({ pokemon }: Props) {
             </tr>
           </thead>
           <tbody>
-            {cases.map((c) => (
+            {[cases[0]].map((c) => (
               <tr
-                className={cn(
-                  'border-b text-center',
-                  c.name === 'INITIAL' ? 'bg-gray-200' : 'hover:bg-gray-100 hover:text-gray-900'
-                )}
+                className={cn('border-b text-center', 'hover:bg-gray-100 hover:text-gray-900')}
                 key={c.name}
               >
                 <td className='py-1'>{c.name}</td>
@@ -182,7 +179,7 @@ export function Statistic({ pokemon }: Props) {
                 ))}
               </tr>
             ))}
-            <tr className={cn('border-b text-center', 'bg-custom-gold/30')}>
+            <tr className={cn('border-b text-center', 'bg-gray-200')}>
               <td className='py-1'>自訂</td>
               {['Hp', 'Atk', 'Def', 'SpA', 'SpD', 'Spe'].map((key, i) => {
                 return (
@@ -203,6 +200,19 @@ export function Statistic({ pokemon }: Props) {
                 );
               })}
             </tr>
+            {[cases[1]].map((c) => (
+              <tr
+                className={cn('border-b text-center', 'hover:bg-gray-100 hover:text-gray-900')}
+                key={c.name}
+              >
+                <td className='py-1'>{c.name}</td>
+                {pokemon.base.map((stat, i) => (
+                  <td className='py-1' key={i}>
+                    {calStatistic(stat, c.individual, c.base, lv, i === 0, c.nature)}
+                  </td>
+                ))}
+              </tr>
+            ))}
           </tbody>
         </table>
         <div>
@@ -278,16 +288,14 @@ export function Statistic({ pokemon }: Props) {
                   );
                 })}
               </tr>
+              <tr className={cn('border-b text-center')}></tr>
               <tr className={cn('border-b text-center')}>
                 <td className=''>性格 ⇧</td>
-              </tr>
-              <tr className={cn('border-b text-center')}>
-                <td />
                 <td />
                 {['Atk', 'Def', 'SpA', 'SpD', 'Spe'].map((key) => {
                   const isPositive = nature[key as keyof typeof nature] > 0;
                   return (
-                    <td key={key} className='py-2'>
+                    <td key={key} className=''>
                       <button
                         type='button'
                         className={cn(
@@ -305,7 +313,7 @@ export function Statistic({ pokemon }: Props) {
                           });
                         }}
                       >
-                        {isPositive ? <ArrowBigUp className='fill-white stroke-none' /> : '-'}
+                        {isPositive ? <ArrowBigUp className='fill-white stroke-none h-5' /> : '-'}
                       </button>
                     </td>
                   );
@@ -336,7 +344,7 @@ export function Statistic({ pokemon }: Props) {
                           });
                         }}
                       >
-                        {isNegative ? <ArrowBigDown className='fill-white stroke-none' /> : '-'}
+                        {isNegative ? <ArrowBigDown className='fill-white stroke-none h-5' /> : '-'}
                       </button>
                     </td>
                   );
