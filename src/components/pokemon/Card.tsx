@@ -2,6 +2,7 @@ import { trackCustomEvent, trackEvent } from '@/lib/analytics';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
 import type { Pokemon } from '@/types/pokemon';
+import { Haze, Moon, Sun } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import PokemonImage from './Image';
@@ -15,9 +16,9 @@ interface PokemonCardProps {
 
 // Weather emoji mapping
 const weatherEmojis = {
-  day: '☀️',
-  night: '🌙',
-  sunny: '🌞',
+  day: <Sun className='stroke-yellow-400 fill-yellow-300' />,
+  night: <Moon className='stroke-white fill-gray-400' />,
+  sunny: <Haze className='stroke-yellow-400 fill-yellow-300' />,
 } as const;
 
 // Weather combination display logic
@@ -27,7 +28,7 @@ const getWeatherDisplay = (weatherConditions: string[]) => {
     const hasSunny = weatherConditions.includes('sunny');
 
     if (hasSunny && hasDay) {
-      return [{ emoji: '🌅', title: 'Sunny Day', key: 'sunny-day' }];
+      return [{ emoji: weatherEmojis.sunny, title: 'Sunny Day', key: 'sunny-day' }];
     }
 
     return weatherConditions.map((weather) => ({
@@ -118,9 +119,9 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
               <span
                 key={weatherDisplay.key}
                 className={cn(
-                  'text-2xl rounded-full w-10 h-10 text-center leading-9',
+                  'rounded-full w-10 h-10 flex items-center justify-center',
                   weatherDisplay.title.includes('day') || weatherDisplay.title.includes('Sunny')
-                    ? 'bg-sky-200'
+                    ? 'bg-sky-600'
                     : 'bg-blue-900'
                 )}
                 title={`Available during ${weatherDisplay.title}`}

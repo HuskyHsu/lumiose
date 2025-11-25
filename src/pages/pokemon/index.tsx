@@ -16,6 +16,7 @@ import {
   PokemonNavigation,
   StatsCard,
 } from './components';
+import QuickNavigation from './components/QuickNavigation';
 
 function PokemonDetail() {
   const { link } = useParams<{ link: string }>();
@@ -125,13 +126,22 @@ function PokemonDetail() {
       <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
-        <BasicInfo pokemon={pokemon} />
-        <StatsCard pokemon={pokemon} />
-        <MovesCard pokemon={pokemon} />
+        <div id='basic-info'>
+          <BasicInfo pokemon={pokemon} />
+        </div>
+        <div id='stats'>
+          <StatsCard pokemon={pokemon} />
+        </div>
+        <div id='moves' className='col-span-1 md:col-span-2'>
+          <MovesCard pokemon={pokemon} />
+        </div>
         {pokemon.evolutionTree && (
-          <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
+          <div id='evolution' className='col-span-1 md:col-span-2'>
+            <EvolutionCard pokemon={pokemon} onPokemonChange={handlePokemonChange} />
+          </div>
         )}
       </div>
+      <QuickNavigation hasEvolution={!!pokemon.evolutionTree} />
     </div>
   );
 }

@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <>
       <footer className='mt-16 border-t border-gray-200 bg-gray-50/80 backdrop-blur-sm'>
-        <div className='container mx-auto px-4 py-4 max-w-6xl'>
+        <div className='container mx-auto px-4 py-4 max-w-3xl'>
           <div className='flex flex-col md:flex-row justify-between items-center gap-4'>
             {/* Left side - App info */}
             <div className='flex items-center gap-4'>
