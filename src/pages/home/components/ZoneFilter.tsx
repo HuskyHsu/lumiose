@@ -32,15 +32,6 @@ export function ZoneFilter({ selectedZone, onZoneChange }: ZoneFilterProps) {
     onZoneChange(newZone);
   };
 
-  const handleAllZonesClick = () => {
-    if (selectedZone !== '') {
-      trackCustomEvent('zone_filter_clear', {
-        previous_zone: selectedZone,
-      });
-      onZoneChange('');
-    }
-  };
-
   return (
     <div className='mb-4'>
       <h2 className='text-lg font-semibold text-slate-700 mb-4 flex items-center'>
