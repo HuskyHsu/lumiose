@@ -66,7 +66,7 @@ export function TypeFilter({ selectedTypes, onTypeChange }: TypeFilterProps) {
                     ? 'border-blue-400 bg-blue-50 shadow-sm'
                     : 'border-gray-200 bg-white hover:border-gray-300'
                 }
-                ${shouldFade ? 'opacity-40' : 'opacity-100'}
+                ${shouldFade ? 'opacity-30' : 'opacity-100'}
                 hover:scale-105 active:scale-95
               `}
               />
