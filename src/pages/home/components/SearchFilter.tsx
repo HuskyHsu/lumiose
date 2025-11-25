@@ -1,5 +1,5 @@
 import { trackCustomEvent } from '@/lib/analytics';
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 interface SearchFilterProps {
   searchKeyword: string;
@@ -8,20 +8,48 @@ interface SearchFilterProps {
 
 export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProps) {
   const searchTimeoutRef = useRef<number | undefined>(undefined);
+  const analyticsTimeoutRef = useRef<number | undefined>(undefined);
+  const [inputValue, setInputValue] = useState(searchKeyword);
+  const [isComposing, setIsComposing] = useState(false);
 
-  const handleInputChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      const value = event.target.value;
-      onSearchChange(value);
+  // Update input value when searchKeyword prop changes (e.g., when cleared externally)
+  useEffect(() => {
+    setInputValue(searchKeyword);
+  }, [searchKeyword]);
 
+  const debouncedSearch = useCallback(
+    (value: string) => {
       // Clear previous timeout
       if (searchTimeoutRef.current) {
         clearTimeout(searchTimeoutRef.current);
       }
 
+      // Debounce the actual search functionality
+      searchTimeoutRef.current = setTimeout(() => {
+        onSearchChange(value);
+      }, 300);
+    },
+    [onSearchChange]
+  );
+
+  const handleInputChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const value = event.target.value;
+      setInputValue(value);
+
+      // Don't trigger search during IME composition
+      if (!isComposing) {
+        debouncedSearch(value);
+      }
+
+      // Clear previous analytics timeout
+      if (analyticsTimeoutRef.current) {
+        clearTimeout(analyticsTimeoutRef.current);
+      }
+
       // Track search after user stops typing for 1 second
       if (value.trim()) {
-        searchTimeoutRef.current = setTimeout(() => {
+        analyticsTimeoutRef.current = setTimeout(() => {
           trackCustomEvent('pokemon_search', {
             search_term: value.trim(),
             search_length: value.trim().length,
@@ -29,15 +57,33 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
         }, 1000);
       }
     },
-    [onSearchChange]
+    [debouncedSearch, isComposing]
+  );
+
+  const handleCompositionStart = useCallback(() => {
+    setIsComposing(true);
+  }, []);
+
+  const handleCompositionEnd = useCallback(
+    (event: React.CompositionEvent<HTMLInputElement>) => {
+      setIsComposing(false);
+      const value = event.currentTarget.value;
+      setInputValue(value);
+      debouncedSearch(value);
+    },
+    [debouncedSearch]
   );
 
   const handleClearSearch = useCallback(() => {
-    // Clear timeout when clearing search
+    // Clear timeouts when clearing search
     if (searchTimeoutRef.current) {
       clearTimeout(searchTimeoutRef.current);
     }
+    if (analyticsTimeoutRef.current) {
+      clearTimeout(analyticsTimeoutRef.current);
+    }
 
+    setInputValue('');
     onSearchChange('');
 
     // Track search clear action
@@ -46,11 +92,14 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
     });
   }, [onSearchChange, searchKeyword]);
 
-  // Cleanup timeout on unmount
+  // Cleanup timeouts on unmount
   useEffect(() => {
     return () => {
       if (searchTimeoutRef.current) {
         clearTimeout(searchTimeoutRef.current);
+      }
+      if (analyticsTimeoutRef.current) {
+        clearTimeout(analyticsTimeoutRef.current);
       }
     };
   }, []);
@@ -86,8 +135,10 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
         </div>
         <input
           type='text'
-          value={searchKeyword}
+          value={inputValue}
           onChange={handleInputChange}
+          onCompositionStart={handleCompositionStart}
+          onCompositionEnd={handleCompositionEnd}
           placeholder='Search by name, or ID...'
           className='
             w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg
@@ -96,7 +147,7 @@ export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProp
             bg-white text-slate-700 placeholder-gray-400
           '
         />
-        {searchKeyword && (
+        {inputValue && (
           <button
             onClick={handleClearSearch}
             className='

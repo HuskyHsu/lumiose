@@ -1,16 +1,18 @@
 import { PokemonCard } from '@/components/pokemon';
-import PWAInstallButton from '@/components/PWAInstallButton';
 import ErrorMessage from '@/components/ui/ErrorMessage';
-import FinalFormToggle from '@/components/ui/FinalFormToggle';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
-import { SearchFilter } from '@/components/ui/SearchFilter';
-import ShinyToggle from '@/components/ui/ShinyToggle';
-import { TypeFilter } from '@/components/ui/TypeFilter';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
 import type { PokemonList } from '@/types/pokemon';
 import { memo } from 'react';
+import {
+  FinalFormToggle,
+  PWAInstallButton,
+  SearchFilter,
+  ShinyToggle,
+  TypeFilter,
+} from './components';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
