@@ -333,6 +333,8 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
     const evolutionMap = new Map();
     const inverseEvolutionMap = new Map();
 
+    const baseMaxValues = [0, 0, 0, 0, 0, 0];
+
     zhData.forEach((pokemon) => zhMap.set(pokemon.pid, pokemon));
     jaData.forEach((pokemon) => jaMap.set(pokemon.pid, pokemon));
     enData.forEach((pokemon) => enMap.set(pokemon.pid, pokemon));
@@ -662,6 +664,16 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
     });
 
     console.log(`成功合併 ${mergedData.length} 筆寶可夢資料`);
+
+    mergedData.forEach((pm) => {
+      pm.base.forEach((v, i) => {
+        if (v > baseMaxValues[i]) {
+          baseMaxValues[i] = v;
+        }
+      });
+    });
+
+    console.log('單項最大個體質', baseMaxValues);
 
     return mergedData;
   } catch (error) {
