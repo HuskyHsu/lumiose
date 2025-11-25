@@ -1,3 +1,4 @@
+import { trackCustomEvent } from '@/lib/analytics';
 import { POKEMON_TYPES, type PokemonType } from '@/lib/constants/pokemon';
 
 interface TypeFilterProps {
@@ -10,19 +11,34 @@ export function TypeFilter({ selectedTypes, onTypeChange }: TypeFilterProps) {
   const isAllSelected = selectedTypes.length === 0;
 
   const handleTypeClick = (type: PokemonType) => {
+    let newTypes: string[];
+    let action: string;
+
     if (isAllSelected) {
       // If all types are selected (none specifically chosen), select only this type
-      onTypeChange([type]);
+      newTypes = [type];
+      action = 'type_filter_select';
     } else {
       if (selectedTypes.includes(type)) {
         // If this type is already selected, remove it
-        const newTypes = selectedTypes.filter((t) => t !== type);
-        onTypeChange(newTypes);
+        newTypes = selectedTypes.filter((t) => t !== type);
+        action = 'type_filter_deselect';
       } else {
         // If this type is not selected, add it to the selection
-        onTypeChange([...selectedTypes, type]);
+        newTypes = [...selectedTypes, type];
+        action = 'type_filter_select';
       }
     }
+
+    // Track type filter usage
+    trackCustomEvent(action, {
+      pokemon_type: type,
+      selected_types: newTypes,
+      total_selected: newTypes.length,
+      previous_selection: selectedTypes,
+    });
+
+    onTypeChange(newTypes);
   };
 
   return (

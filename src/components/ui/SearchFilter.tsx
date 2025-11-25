@@ -1,4 +1,5 @@
-import { useCallback } from 'react';
+import { trackCustomEvent } from '@/lib/analytics';
+import { useCallback, useEffect, useRef } from 'react';
 
 interface SearchFilterProps {
   searchKeyword: string;
@@ -6,16 +7,53 @@ interface SearchFilterProps {
 }
 
 export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProps) {
+  const searchTimeoutRef = useRef<number>();
+
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
-      onSearchChange(event.target.value);
+      const value = event.target.value;
+      onSearchChange(value);
+
+      // Clear previous timeout
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+      }
+
+      // Track search after user stops typing for 1 second
+      if (value.trim()) {
+        searchTimeoutRef.current = setTimeout(() => {
+          trackCustomEvent('pokemon_search', {
+            search_term: value.trim(),
+            search_length: value.trim().length,
+          });
+        }, 1000);
+      }
     },
     [onSearchChange]
   );
 
   const handleClearSearch = useCallback(() => {
+    // Clear timeout when clearing search
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
     onSearchChange('');
-  }, [onSearchChange]);
+
+    // Track search clear action
+    trackCustomEvent('pokemon_search_clear', {
+      previous_search_term: searchKeyword,
+    });
+  }, [onSearchChange, searchKeyword]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className='mb-4'>

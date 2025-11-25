@@ -1,3 +1,4 @@
+import { trackCustomEvent, trackEvent } from '@/lib/analytics';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
 import type { Pokemon } from '@/types/pokemon';
@@ -30,6 +31,18 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
     // Store current URL (including search params) for the back button
     const currentUrl = location.pathname + location.search;
     sessionStorage.setItem('pokemonListReferrer', currentUrl);
+
+    // Track Pokemon card click
+    trackEvent('click', 'pokemon_card', pokemon.name.en);
+
+    // Track custom event with more details
+    trackCustomEvent('pokemon_card_click', {
+      pokemon_name: pokemon.name.en,
+      pokemon_id: pokemon.lumioseId,
+      pokemon_type_primary: pokemon.type[0],
+      pokemon_type_secondary: pokemon.type[1] || null,
+      page_location: location.pathname,
+    });
   };
 
   return (

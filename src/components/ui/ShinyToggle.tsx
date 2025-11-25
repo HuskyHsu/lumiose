@@ -1,3 +1,4 @@
+import { trackCustomEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
 
 interface ShinyToggleProps {
@@ -6,12 +7,22 @@ interface ShinyToggleProps {
 }
 
 function ShinyToggle({ isShiny, onToggle }: ShinyToggleProps) {
+  const handleToggle = () => {
+    // Track shiny toggle
+    trackCustomEvent('shiny_toggle', {
+      new_state: !isShiny,
+      previous_state: isShiny,
+    });
+
+    onToggle();
+  };
+
   return (
     <div className='mb-4 flex gap-2 items-center'>
       <div className='flex flex-col justify-center h-10'>
         <button
           type='button'
-          onClick={onToggle}
+          onClick={handleToggle}
           className={cn(
             'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out',
             'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',

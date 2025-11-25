@@ -4,6 +4,7 @@ import { useLocation, useParams } from 'react-router-dom';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
+import { trackCustomEvent, trackPageView } from '@/lib/analytics';
 import { fetchPokemonDetail } from '@/services/pokemonService';
 import type { DetailedPokemon } from '@/types/pokemon';
 
@@ -31,6 +32,19 @@ function PokemonDetail() {
       const data = await fetchPokemonDetail(pokemonLink);
       setPokemon(data);
       setError(null);
+
+      // Track Pokemon detail page view
+      if (data) {
+        trackPageView(`/pokemon/${pokemonLink}`, `${data.name.en} - Pokédex`);
+
+        // Track custom event for Pokemon detail view
+        trackCustomEvent('pokemon_detail_view', {
+          pokemon_name: data.name.en,
+          pokemon_id: data.lumioseId,
+          pokemon_type_primary: data.type[0],
+          pokemon_type_secondary: data.type[1] || null,
+        });
+      }
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load Pokemon details');
     } finally {
@@ -40,6 +54,13 @@ function PokemonDetail() {
 
   const handlePokemonChange = async (newLink: string) => {
     if (newLink === currentLink) return;
+
+    // Track Pokemon navigation
+    trackCustomEvent('pokemon_navigation', {
+      from_pokemon: currentLink,
+      to_pokemon: newLink,
+      navigation_type: 'pokemon_detail_navigation',
+    });
 
     // Update URL without triggering route change
     window.history.replaceState(null, '', `${import.meta.env.BASE_URL}#/pokemon/${newLink}`);
