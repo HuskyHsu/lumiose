@@ -256,6 +256,58 @@ const atlFormMap = {
 };
 
 /**
+ * 寶可夢捕捉條件函數陣列
+ * 每個函數接收一個寶可夢物件，返回 true 表示可以被捕捉，false 表示不能被捕捉
+ */
+const pokemonCatchableConditions = [
+  // 彩粉蝶只有花園花紋可以被捕捉到
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('彩粉蝶');
+    const isGardenPattern = pokemon.altForm === '花園花紋';
+    return !isVivillon || isGardenPattern;
+  },
+
+  // Mega型態的都不會被捕捉到
+  (pokemon) => {
+    return !pokemon.altForm?.startsWith('MEGA');
+  },
+
+  (pokemon) => {
+    return !pokemon.altForm?.startsWith('Galar');
+  },
+
+  (pokemon) => {
+    return ['黃花', '橙花', '藍花', '白花', 'Eternal'].every(
+      (color) => !pokemon.altForm?.startsWith(color)
+    );
+  },
+
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('多麗米亞');
+    const isGardenPattern = pokemon.altForm === undefined;
+    return !isVivillon || isGardenPattern;
+  },
+
+  // 可以在這裡添加更多條件函數
+  // 例如：
+  // (pokemon) => {
+  //   // 某些特定寶可夢不能被捕捉
+  //   const excludedPokemon = ['某寶可夢名稱'];
+  //   return !excludedPokemon.includes(pokemon.name.zh);
+  // },
+];
+
+/**
+ * 檢查寶可夢是否可以被捕捉
+ * @param {Object} pokemon - 寶可夢物件
+ * @returns {boolean} 是否可以被捕捉
+ */
+function checkPokemonCatchable(pokemon) {
+  // 所有條件都必須為 true，寶可夢才能被捕捉
+  return pokemonCatchableConditions.every((condition) => condition(pokemon));
+}
+
+/**
  * 合併三種語言的寶可夢資料
  * @param {string} zhFile - 中文資料文件路徑
  * @param {string} jaFile - 日文資料文件路徑
@@ -495,11 +547,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       const zones = pokemonToZones.get(mergedPokemon.name.en);
       const weatherData = pokemonToWeather.get(mergedPokemon.name.en);
 
-      // 特殊處理：彩粉蝶只有花園花紋可以被捕捉到
-      const isVivillon = mergedPokemon.name.zh.includes('彩粉蝶');
-      const isGardenPattern = mergedPokemon.altForm === '花園花紋';
+      // 檢查是否可以被捕捉
+      const isCatchable = checkPokemonCatchable(mergedPokemon);
 
-      if (zones && zones.length > 0 && (!isVivillon || isGardenPattern)) {
+      if (zones && zones.length > 0 && isCatchable) {
         // 添加天氣資訊
         if (weatherData) {
           const zoneWeatherInfo = [];
@@ -896,6 +947,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export {
+  checkPokemonCatchable,
   createMultiLanguageField,
   main,
   mergeAbilitiesArray,
@@ -904,5 +956,6 @@ export {
   mergeTMArray,
   mergeTypeArray,
   parseZoneData,
+  pokemonCatchableConditions,
   saveToJSON,
 };
