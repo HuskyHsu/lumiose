@@ -1,3 +1,4 @@
+import { useAnalytics } from '@/hooks/useAnalytics';
 import MainLayout from '@/layouts/MainLayout';
 import { Route, Routes } from 'react-router-dom';
 
@@ -6,6 +7,9 @@ import Home from '@/pages/home';
 import PokemonDetail from '@/pages/pokemon';
 
 function App() {
+  // init Google Analytics
+  useAnalytics();
+
   return (
     <Routes>
       <Route path='/' element={<MainLayout />}>
