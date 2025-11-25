@@ -7,7 +7,7 @@ interface SearchFilterProps {
 }
 
 export function SearchFilter({ searchKeyword, onSearchChange }: SearchFilterProps) {
-  const searchTimeoutRef = useRef<number>();
+  const searchTimeoutRef = useRef<number | undefined>(undefined);
 
   const handleInputChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
