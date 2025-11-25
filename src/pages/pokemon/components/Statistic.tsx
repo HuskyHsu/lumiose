@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+import { ArrowBigDown, ArrowBigUp } from 'lucide-react';
 import { useState } from 'react';
 
 import type { BasePoint, DetailedPokemon } from '@/types/pokemon';
@@ -295,7 +296,8 @@ export function Statistic({ pokemon }: Props) {
                           isPositive
                             ? 'bg-red-500 border-red-500 text-white focus:ring-grredeen-300'
                             : 'bg-gray-50 border-gray-300 hover:border-red-400 focus:ring-red-300',
-                          'text-center font-medium'
+                          'text-center font-medium',
+                          'flex items-center justify-center'
                         )}
                         onClick={() => {
                           setNature((prev) => {
@@ -303,7 +305,7 @@ export function Statistic({ pokemon }: Props) {
                           });
                         }}
                       >
-                        {isPositive ? '⇧' : '-'}
+                        {isPositive ? <ArrowBigUp className='fill-white stroke-none' /> : '-'}
                       </button>
                     </td>
                   );
@@ -324,7 +326,9 @@ export function Statistic({ pokemon }: Props) {
                           isNegative
                             ? 'bg-blue-500 border-blue-500 text-white focus:ring-blue-300'
                             : 'bg-gray-50 border-gray-300 hover:border-blue-400 focus:ring-blue-300',
-                          'text-center font-medium'
+                          'text-center font-medium',
+
+                          'flex items-center justify-center'
                         )}
                         onClick={() => {
                           setNature((prev) => {
@@ -332,7 +336,7 @@ export function Statistic({ pokemon }: Props) {
                           });
                         }}
                       >
-                        {isNegative ? '⇩' : '-'}
+                        {isNegative ? <ArrowBigDown className='fill-white stroke-none' /> : '-'}
                       </button>
                     </td>
                   );

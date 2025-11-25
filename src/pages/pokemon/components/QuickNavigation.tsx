@@ -83,7 +83,7 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
   return (
     <div
       className={`fixed ${
-        isNearBottom ? 'bottom-36' : 'bottom-8'
+        isNearBottom ? 'bottom-36 md:bottom-24' : 'bottom-8'
       } left-1/2 transform -translate-x-1/2 z-50 lg:hidden transition-all duration-300`}
     >
       <div className='bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-2 flex items-center space-x-1'>
