@@ -103,7 +103,7 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
             onClick={() => scrollToSection(item.id)}
             className={`w-10 h-10 flex items-center justify-center rounded-xl transition-all duration-200 ${
               activeSection === item.id
-                ? 'bg-blue-100 border-2 border-blue-300 scale-110'
+                ? 'bg-green-100 border-2 border-green-300 scale-110'
                 : 'bg-gray-100 hover:bg-gray-200 border-2 border-transparent'
             }`}
             aria-label={`Scroll to ${item.label}`}
