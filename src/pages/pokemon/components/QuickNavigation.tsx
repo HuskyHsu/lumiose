@@ -55,7 +55,7 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
       const distanceFromBottom = documentHeight - (scrollY + windowHeight);
-      setIsNearBottom(distanceFromBottom <= 200); // 200px threshold
+      setIsNearBottom(distanceFromBottom <= 30); // 30px threshold
 
       // Find which section is currently in view
       const sections = navItems.map((item) => document.getElementById(item.id));
@@ -84,7 +84,7 @@ const QuickNavigation = ({ hasEvolution }: QuickNavigationProps) => {
     <div
       className={`fixed ${
         isNearBottom ? 'bottom-36 md:bottom-24' : 'bottom-8'
-      } left-1/2 transform -translate-x-1/2 z-50 lg:hidden transition-all duration-300`}
+      } left-1/2 transform -translate-x-1/2 z-50 lg:hidden transition-all duration-600`}
     >
       <div className='bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-200 p-2 flex items-center space-x-1'>
         {/* Scroll to top */}
