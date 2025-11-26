@@ -139,7 +139,6 @@ const filteredPokemonList = useMemo(() => {
 - **Component Memoization**: `memo()` wrapper for Pokemon grid to prevent unnecessary re-renders
 - **Lazy Loading**: Pokemon detail data loaded on-demand
 - **URL State Synchronization**: Filter states persist across page refreshes
-- **Optimized Filtering**: Efficient algorithms for multi-criteria filtering
 
 ### PWA Features
 
@@ -234,15 +233,59 @@ npm run preview
 
 ### Pokemon Detail Pages
 
-|                                                                           Basic Information & Stats                                                                            |                                                                                           IV/EV Calculator & Stats                                                                                            |
-| :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                ![Pokemon Basic Information](doc/Pokemon-1.png)                                                                 |                                                                                ![IV/EV Calculator & Stats](doc/Pokemon-2.png)                                                                                 |
-| **Comprehensive Pokemon Data:**<br/>• Multi-language names<br/>• Interactive base stats visualization<br/>• Type information with effectiveness<br/>• Physical characteristics | **Advanced Stats Calculator:**<br/>• Individual Values (IV) calculator and display<br/>• Effort Values (EV) tracking and optimization<br/>• Real-time stat calculations<br/>• Competitive battle optimization |
+<table>
+<tr>
+<th width="50%">Basic Information & Stats</th>
+<th width="50%">IV/EV Calculator & Stats</th>
+</tr>
+<tr>
+<td width="50%" align="center">
+<img src="doc/Pokemon-1.png" alt="Pokemon Basic Information" />
+<br/>
+<strong>Comprehensive Pokemon Data:</strong><br/>
+• Multi-language names (Chinese, Japanese, English)<br/>
+• Interactive base stats visualization<br/>
+• Type information with effectiveness<br/>
+• Physical characteristics (height, weight, catch rate)
+</td>
+<td width="50%" align="center">
+<img src="doc/Pokemon-2.png" alt="IV/EV Calculator & Stats" />
+<br/>
+<strong>Advanced Stats Calculator:</strong><br/>
+• Individual Values (IV) calculator and display<br/>
+• Effort Values (EV) tracking and optimization<br/>
+• Real-time stat calculations<br/>
+• Competitive battle optimization
+</td>
+</tr>
+</table>
 
-|                                                                                                        Moves & Abilities                                                                                                        |                                                                                                            Evolution Tree                                                                                                             |
-| :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|                                                                                         ![Pokemon Moves & Abilities](doc/Pokemon-3.png)                                                                                         |                                                                                             ![Pokemon Evolution Tree](doc/Pokemon-4.png)                                                                                              |
-| **Detailed Move Information:**<br/>• Level-up moves with power and cooldown data<br/>• TM compatibility with move categories<br/>• Alpha moves with special descriptions<br/>• Move classifications (Physical, Special, Status) | **Interactive Evolution System:**<br/>• Visual evolution chain representation<br/>• Level requirements and special conditions<br/>• Click-to-navigate between evolution forms<br/>• Support for regional variants and mega evolutions |
+<table>
+<tr>
+<th width="50%">Moves & Abilities</th>
+<th width="50%">Evolution Tree</th>
+</tr>
+<tr>
+<td width="50%" align="center">
+<img src="doc/Pokemon-3.png" alt="Pokemon Moves & Abilities" />
+<br/>
+<strong>Detailed Move Information:</strong><br/>
+• Level-up moves with power and cooldown data<br/>
+• TM compatibility with move categories<br/>
+• Alpha moves with special descriptions<br/>
+• Move classifications (Physical, Special, Status)
+</td>
+<td width="50%" align="center">
+<img src="doc/Pokemon-4.png" alt="Pokemon Evolution Tree" />
+<br/>
+<strong>Interactive Evolution System:</strong><br/>
+• Visual evolution chain representation<br/>
+• Level requirements and special conditions<br/>
+• Click-to-navigate between evolution forms<br/>
+• Support for regional variants and mega evolutions
+</td>
+</tr>
+</table>
 
 ### Core Features
 
@@ -257,12 +300,3 @@ npm run preview
 - **Evolution Navigation**: Interactive evolution tree with direct navigation
 - **Type Effectiveness**: Visual type matchup charts
 - **Performance Optimized**: Fast loading and smooth interactions
-
-### Technical Features
-
-- **Offline Support**: Service worker for offline functionality
-- **URL State Management**: Shareable filtered views
-- **Analytics Integration**: User behavior tracking
-- **Accessibility**: ARIA labels and keyboard navigation
-- **SEO Optimized**: Meta tags and structured data
-- **Cross-browser Compatibility**: Modern browser support
