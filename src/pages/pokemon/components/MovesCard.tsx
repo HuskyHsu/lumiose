@@ -27,14 +27,15 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-2/12'>
+                  <TableHead className='w-3/12'>
                     Lv<span className='text-xs font-light italic'> +plus</span>
                   </TableHead>
+                  <TableHead className='w-1/12'>TM</TableHead>
                   <TableHead className='w-3/12'>Name</TableHead>
                   <TableHead className='w-1/12'>Type</TableHead>
-                  <TableHead className='w-2/12'>Cat.</TableHead>
+                  <TableHead className='w-1/12'>Cat.</TableHead>
                   <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-2/12'>CD</TableHead>
+                  <TableHead className='w-1/12'>CD</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -43,6 +44,12 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                     <div className='flex justify-center'>
                       <PokemonTypes types={['Alpha']} />
                     </div>
+                  </TableCell>
+                  <TableCell>
+                    {pokemon.tmMoves
+                      .find((tm) => tm.id === pokemon.alphaMove.id)
+                      ?.tm.toString()
+                      .padStart(3, '0')}
                   </TableCell>
                   <TableCell>{pokemon.alphaMove.name.zh}</TableCell>
                   <TableCell>
@@ -60,27 +67,34 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   </TableCell>
                   <TableCell>{pokemon.alphaMove.cooldown}</TableCell>
                 </TableRow>
-                {pokemon.levelUpMoves.map((move) => (
-                  <TableRow key={move.id}>
-                    <TableCell>
-                      {move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—'}
-                      <span className='text-xs font-light italic'> +{move.plus}</span>
-                    </TableCell>
-                    <TableCell>{move.name.zh}</TableCell>
-                    <TableCell>
-                      <div className='flex justify-center'>
-                        <PokemonTypes types={[move.type]} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div className='flex justify-center'>
-                        <PokemonTypes types={[move.category]} />
-                      </div>
-                    </TableCell>
-                    <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
-                    <TableCell>{move.cooldown}</TableCell>
-                  </TableRow>
-                ))}
+                {pokemon.levelUpMoves.map((move) => {
+                  const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
+                  const subInfo = `+${move.plus}`;
+                  const TM = pokemon.tmMoves.find((tm) => tm.id === move.id);
+
+                  return (
+                    <TableRow key={move.id}>
+                      <TableCell className='flex gap-0 justify-center items-end'>
+                        {from}
+                        <span className='text-xs font-light italic'>{subInfo}</span>
+                      </TableCell>
+                      <TableCell>{TM?.tm.toString().padStart(3, '0')}</TableCell>
+                      <TableCell>{move.name.zh}</TableCell>
+                      <TableCell>
+                        <div className='flex justify-center'>
+                          <PokemonTypes types={[move.type]} />
+                        </div>
+                      </TableCell>
+                      <TableCell>
+                        <div className='flex justify-center'>
+                          <PokemonTypes types={[move.category]} />
+                        </div>
+                      </TableCell>
+                      <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
+                      <TableCell>{move.cooldown}</TableCell>
+                    </TableRow>
+                  );
+                })}
               </TableBody>
             </Table>
           </div>
