@@ -125,7 +125,7 @@ function PokemonDetail() {
     <div className='space-y-6'>
       <BackButton />
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
-      <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div id='basic-info'>
           <BasicInfo pokemon={pokemon} />
         </div>

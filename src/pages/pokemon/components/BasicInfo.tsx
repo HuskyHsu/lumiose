@@ -62,7 +62,7 @@ export default function BasicInfo({ pokemon }: BasicInfoProps) {
       Content: ({ pokemon }: ContentProps) => <>{pokemon.weight}kg</>,
     },
     {
-      title: 'Catch Rate',
+      title: 'Catch Rate(0~255)',
       Content: ({ pokemon }: ContentProps) => <>{pokemon.catchRate}</>,
     },
     {

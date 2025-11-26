@@ -153,7 +153,7 @@ export function Statistic({ pokemon }: Props) {
           onChange={(e) => setLv(parseInt(e.target.value))}
         />
         <table className='w-full table-fixed text-center text-sm'>
-          <thead className='bg-gray-100 text-xs uppercase'>
+          <thead className='bg-gray-100 text-xs'>
             <tr className='bg-custom-gold/50'>
               <th scope='col' className='whitespace-nowrap py-1'>
                 case
@@ -218,8 +218,8 @@ export function Statistic({ pokemon }: Props) {
         <div>
           <label className='block font-medium'>自訂參數</label>
           <table className='w-full table-fixed text-center text-sm'>
-            <thead className='bg-gray-100 text-xs uppercase'>
-              <tr className='bg-custom-gold/50 '>
+            <thead className='bg-gray-100 text-xs'>
+              <tr className='bg-custom-gold/50'>
                 <th scope='col' className='whitespace-nowrap py-1'>
                   {}
                 </th>

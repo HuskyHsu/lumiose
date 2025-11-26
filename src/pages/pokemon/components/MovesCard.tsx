@@ -27,7 +27,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
             <Table>
               <TableHeader>
                 <TableRow className=''>
-                  <TableHead className='w-3/12'>
+                  <TableHead className='w-2/12'>
                     Lv<span className='text-xs font-light italic'>+plus</span>
                   </TableHead>
                   <TableHead className='w-1/12'>TM</TableHead>
@@ -35,7 +35,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   <TableHead className='w-1/12'>Type</TableHead>
                   <TableHead className='w-1/12'>Cat.</TableHead>
                   <TableHead className='w-2/12'>Att.</TableHead>
-                  <TableHead className='w-1/12'>CD</TableHead>
+                  <TableHead className='w-2/12'>CD</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
