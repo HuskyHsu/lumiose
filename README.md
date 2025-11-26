@@ -287,6 +287,15 @@ npm run preview
 </tr>
 </table>
 
+### PWA (Progressive Web App) Support
+
+|                                                                                                 Desktop App Experience                                                                                                  |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                            ![PWA Desktop App](doc/PWA-1.gif)                                                                                            |
+| **Native App Experience:**<br/>• Install directly to desktop from browser<br/>• Standalone window without browser UI<br/>• Offline functionality with cached data<br/>• Native app-like performance and user experience |
+
+The Lumiose Pokédex can be installed as a Progressive Web App (PWA), providing a native app experience on desktop and mobile devices. Once installed, the app launches in its own window without browser navigation elements, offering seamless offline access to your Pokémon data.
+
 ### Core Features
 
 - **Comprehensive Pokemon Database**: Complete Pokemon data with multi-language support
