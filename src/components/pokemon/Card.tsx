@@ -12,6 +12,8 @@ import PokemonTypes from './Types';
 interface PokemonCardProps {
   pokemon: Pokemon;
   isShiny?: boolean;
+  selectedZone?: string | null;
+  isAlphaZone?: boolean;
 }
 
 // Weather emoji mapping
@@ -45,12 +47,13 @@ const getWeatherDisplay = (weatherConditions: string[]) => {
   }));
 };
 
-const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: PokemonCardProps) {
+const PokemonCard = memo(function PokemonCard({
+  pokemon,
+  isShiny = false,
+  selectedZone,
+  isAlphaZone = false,
+}: PokemonCardProps) {
   const location = useLocation();
-
-  // Get selected zone from URL params
-  const searchParams = new URLSearchParams(location.search);
-  const selectedZone = searchParams.get('zone');
 
   // Memoize expensive color class calculations
   const colorClasses = useMemo(() => {
@@ -112,23 +115,32 @@ const PokemonCard = memo(function PokemonCard({ pokemon, isShiny = false }: Poke
         )}
       >
         <PokemonImage pokemon={pokemon} isShiny={isShiny} />
-        {/* Weather indicator */}
-        {weatherInfo && (
+        {/* Weather indicator or Alpha indicator */}
+        {selectedZone && (
           <div className='absolute top-1 right-1 flex gap-1'>
-            {getWeatherDisplay(weatherInfo).map((weatherDisplay) => (
-              <span
-                key={weatherDisplay.key}
-                className={cn(
-                  'rounded-full w-10 h-10 flex items-center justify-center',
-                  weatherDisplay.title.includes('day') || weatherDisplay.title.includes('Sunny')
-                    ? 'bg-sky-600'
-                    : 'bg-blue-900'
-                )}
-                title={`Available during ${weatherDisplay.title}`}
-              >
-                {weatherDisplay.emoji}
-              </span>
-            ))}
+            {isAlphaZone ? (
+              // Show Alpha indicator when using Alpha Zone filter
+              <div className='flex items-center'>
+                <PokemonTypes types={['Alpha']} className='w-10 h-10' />
+              </div>
+            ) : (
+              // Show weather info when using normal zone filter
+              weatherInfo &&
+              getWeatherDisplay(weatherInfo).map((weatherDisplay) => (
+                <span
+                  key={weatherDisplay.key}
+                  className={cn(
+                    'rounded-full w-10 h-10 flex items-center justify-center',
+                    weatherDisplay.title.includes('day') || weatherDisplay.title.includes('Sunny')
+                      ? 'bg-sky-600'
+                      : 'bg-blue-900'
+                  )}
+                  title={`Available during ${weatherDisplay.title}`}
+                >
+                  {weatherDisplay.emoji}
+                </span>
+              ))
+            )}
           </div>
         )}
         <PokemonName name={pokemon.name.zh} />

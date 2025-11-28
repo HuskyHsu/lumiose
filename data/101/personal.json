@@ -8777,6 +8777,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      3
+    ],
     "evolutionTree": {
       "link": "661",
       "type": [
@@ -9336,6 +9339,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      7
     ],
     "evolutionTree": {
       "link": "661",
@@ -9947,6 +9953,9 @@
         "power": 120,
         "cooldown": 8
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "661",
@@ -11185,6 +11194,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "659",
@@ -17772,6 +17784,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "664",
@@ -29940,6 +29955,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      15
+    ],
     "evolutionTree": {
       "link": "13",
       "type": [
@@ -31035,6 +31053,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      1
     ],
     "evolutionTree": {
       "link": "16",
@@ -34416,6 +34437,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      16
+    ],
     "evolutionTree": {
       "link": "179",
       "type": [
@@ -36333,6 +36357,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      10
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -37902,6 +37929,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "406",
       "type": [
@@ -38085,6 +38115,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      2
     ],
     "evolutionTree": {
       "link": "129",
@@ -38827,6 +38860,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "129",
@@ -40230,6 +40266,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      6
+    ],
     "evolutionTree": {
       "link": "688",
       "type": [
@@ -40990,6 +41029,9 @@
           "night"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "688",
@@ -42406,6 +42448,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      2
+    ],
     "evolutionTree": {
       "link": "120",
       "type": [
@@ -43211,6 +43256,9 @@
           "night"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "120",
@@ -50325,6 +50373,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -53583,6 +53634,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "672",
       "type": [
@@ -54778,6 +54832,9 @@
         "cooldown": 15
       }
     ],
+    "alphaZone": [
+      9
+    ],
     "evolutionTree": {
       "link": "677",
       "type": [
@@ -55432,6 +55489,9 @@
         "cooldown": 15
       }
     ],
+    "alphaZone": [
+      9
+    ],
     "evolutionTree": {
       "link": "677",
       "type": [
@@ -56072,6 +56132,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      3
     ],
     "evolutionTree": {
       "link": "667",
@@ -56768,6 +56831,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      17
     ],
     "evolutionTree": {
       "link": "667",
@@ -58874,6 +58940,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "674",
       "type": [
@@ -59993,6 +60062,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "568",
       "type": [
@@ -60526,6 +60598,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "source": "702",
     "latest": true
@@ -61702,6 +61777,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      6
+    ],
     "evolutionTree": {
       "link": "172",
       "type": [
@@ -62341,6 +62419,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "172",
@@ -64544,6 +64625,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      19
+    ],
     "evolutionTree": {
       "link": "173",
       "type": [
@@ -65406,6 +65490,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "173",
@@ -66864,6 +66951,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      4
+    ],
     "evolutionTree": {
       "link": "167",
       "type": [
@@ -67467,6 +67557,9 @@
         "power": 55,
         "cooldown": 7
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "167",
@@ -68648,6 +68741,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      10
     ],
     "evolutionTree": {
       "link": "23",
@@ -70316,6 +70412,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "63",
@@ -72959,6 +73058,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "92",
       "type": [
@@ -74690,6 +74792,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      5
+    ],
     "evolutionTree": {
       "link": "543",
       "type": [
@@ -75364,6 +75469,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "543",
@@ -77623,6 +77731,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "679",
       "type": [
@@ -78739,6 +78850,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      5
+    ],
     "evolutionTree": {
       "link": "69",
       "type": [
@@ -79281,6 +79395,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      13
     ],
     "evolutionTree": {
       "link": "69",
@@ -79871,6 +79988,9 @@
         "power": 0,
         "cooldown": 7
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "69",
@@ -81735,6 +81855,9 @@
         "cooldown": 15
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "511",
       "type": [
@@ -83071,6 +83194,9 @@
         "cooldown": 8
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "513",
       "type": [
@@ -84393,6 +84519,9 @@
         "power": 110,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "515",
@@ -85760,6 +85889,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "307",
@@ -87767,6 +87899,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      9
     ],
     "evolutionTree": {
       "link": "309",
@@ -90666,6 +90801,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "280",
       "type": [
@@ -92416,6 +92554,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "280",
@@ -94666,6 +94807,9 @@
         "cooldown": 8
       }
     ],
+    "alphaZone": [
+      6
+    ],
     "evolutionTree": {
       "link": "228",
       "type": [
@@ -96616,6 +96760,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "333",
@@ -101990,6 +102137,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -102730,6 +102880,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -103442,6 +103595,9 @@
         "power": 120,
         "cooldown": 8
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "133",
@@ -105570,6 +105726,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -106217,6 +106376,9 @@
         "power": 110,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "133",
@@ -106877,6 +107039,9 @@
         "power": 0,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "133",
@@ -108257,6 +108422,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      18
     ],
     "evolutionTree": {
       "link": "427",
@@ -110224,6 +110392,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      15
     ],
     "evolutionTree": {
       "link": "353",
@@ -112223,6 +112394,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "582",
       "type": [
@@ -113605,6 +113779,9 @@
         "power": 120,
         "cooldown": 8
       }
+    ],
+    "alphaZone": [
+      8
     ],
     "evolutionTree": {
       "link": "322",
@@ -115414,6 +115591,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "449",
       "type": [
@@ -116588,6 +116768,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      14
     ],
     "evolutionTree": {
       "link": "529",
@@ -118474,6 +118657,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      8
+    ],
     "evolutionTree": {
       "link": "551",
       "type": [
@@ -119218,6 +119404,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "551",
@@ -121225,6 +121414,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "66",
       "type": [
@@ -123207,6 +123399,9 @@
         "cooldown": 15
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "443",
       "type": [
@@ -124573,6 +124768,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "source": "703",
     "latest": true
   },
@@ -125376,6 +125574,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "302",
@@ -126986,6 +127187,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      17
+    ],
     "evolutionTree": {
       "link": "303",
       "type": [
@@ -128505,6 +128709,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "359",
@@ -130695,6 +130902,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "447",
@@ -133816,6 +134026,9 @@
         "power": 110,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      11
     ],
     "evolutionTree": {
       "link": "79",
@@ -138626,6 +138839,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      10
+    ],
     "evolutionTree": {
       "link": "318",
       "type": [
@@ -140832,6 +141048,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "602",
@@ -143806,6 +144025,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "147",
@@ -154338,6 +154560,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "source": "618",
     "latest": true
   },
@@ -155461,6 +155686,10 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      19,
+      20
     ],
     "source": "676",
     "latest": true
@@ -161769,6 +161998,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "686",
       "type": [
@@ -163681,6 +163913,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "690",
       "type": [
@@ -165412,6 +165647,9 @@
         "power": 110,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      11
     ],
     "evolutionTree": {
       "link": "692",
@@ -167911,6 +168149,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "704",
       "type": [
@@ -168757,6 +168998,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "704",
       "type": [
@@ -169276,6 +169520,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "source": "225",
     "latest": true
@@ -171759,6 +172006,9 @@
         "cooldown": 10
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "361",
       "type": [
@@ -173640,6 +173890,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      12
+    ],
     "evolutionTree": {
       "link": "459",
       "type": [
@@ -175390,6 +175643,9 @@
         "power": 110,
         "cooldown": 12
       }
+    ],
+    "alphaZone": [
+      12
     ],
     "evolutionTree": {
       "link": "712",
@@ -178435,6 +178691,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "127",
       "type": [
@@ -179673,6 +179932,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "214",
@@ -181538,6 +181800,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "701",
       "type": [
@@ -183260,6 +183525,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      13
+    ],
     "evolutionTree": {
       "link": "708",
       "type": [
@@ -184745,6 +185013,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "559",
@@ -186958,6 +187229,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "714",
       "type": [
@@ -187452,6 +187726,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "source": "707",
     "latest": true
@@ -189220,6 +189497,9 @@
         "power": 120,
         "cooldown": 8
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "607",
@@ -198148,6 +198428,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "304",
       "type": [
@@ -200360,6 +200643,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "694",
@@ -205096,6 +205382,10 @@
         "cooldown": 15
       }
     ],
+    "alphaZone": [
+      15,
+      20
+    ],
     "evolutionTree": {
       "link": "710-3",
       "type": [
@@ -207305,6 +207595,9 @@
         "power": 110,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "246",
@@ -211729,6 +212022,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      20
+    ],
     "evolutionTree": {
       "link": "870",
       "type": [
@@ -215940,6 +216236,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "227",
@@ -221251,6 +221550,9 @@
         "cooldown": 12
       }
     ],
+    "alphaZone": [
+      18
+    ],
     "evolutionTree": {
       "link": "371",
       "type": [
@@ -222837,6 +223139,9 @@
           "any"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "115",
@@ -224426,6 +224731,9 @@
           "day"
         ]
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "780",
@@ -226852,6 +227160,9 @@
         "power": 0,
         "cooldown": 10
       }
+    ],
+    "alphaZone": [
+      20
     ],
     "evolutionTree": {
       "link": "374",

@@ -23,6 +23,7 @@ export interface Pokemon {
   latest: boolean;
   altForm?: string; // Optional alternative form name
   zone?: Zone[];
+  alphaZone?: number[]; // Alpha zone IDs where this Pokemon can be found
 }
 
 export type PokemonList = Pokemon[];

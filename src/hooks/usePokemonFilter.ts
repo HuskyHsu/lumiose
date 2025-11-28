@@ -10,6 +10,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   const searchKeyword = getParam('search') || '';
   const isFinalFormOnly = getBooleanParam('finalForm', false);
   const selectedZone = getParam('zone') || '';
+  const isAlphaZone = getBooleanParam('alphaZone', false);
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -38,13 +39,19 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   }, []);
 
   // Memoize the zone matching function
-  const zoneMatches = useCallback((pokemon: Pokemon, zoneId: string) => {
+  const zoneMatches = useCallback((pokemon: Pokemon, zoneId: string, useAlphaZone: boolean) => {
     if (!zoneId.trim()) return true;
 
     const zoneNumber = parseInt(zoneId, 10);
     if (isNaN(zoneNumber)) return true;
 
-    return pokemon.zone?.some((zone) => zone.id === zoneNumber) || false;
+    if (useAlphaZone) {
+      // Check alphaZone array
+      return pokemon.alphaZone?.includes(zoneNumber) || false;
+    } else {
+      // Check regular zone array
+      return pokemon.zone?.some((zone) => zone.id === zoneNumber) || false;
+    }
   }, []);
 
   // Function to filter only final evolution forms
@@ -72,7 +79,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
 
     // Apply zone filter
     if (selectedZone.trim()) {
-      result = result.filter((pokemon) => zoneMatches(pokemon, selectedZone));
+      result = result.filter((pokemon) => zoneMatches(pokemon, selectedZone, isAlphaZone));
     }
 
     return result;
@@ -81,6 +88,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     selectedTypes,
     searchKeyword,
     selectedZone,
+    isAlphaZone,
     isFinalFormOnly,
     typeMatches,
     keywordMatches,
@@ -114,6 +122,10 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     setBooleanParam('finalForm', !isFinalFormOnly, false);
   }, [setBooleanParam, isFinalFormOnly]);
 
+  const toggleAlphaZone = useCallback(() => {
+    setBooleanParam('alphaZone', !isAlphaZone, false);
+  }, [setBooleanParam, isAlphaZone]);
+
   return {
     selectedTypes,
     setSelectedTypes: memoizedSetSelectedTypes,
@@ -123,6 +135,8 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     setSelectedZone: memoizedSetSelectedZone,
     isFinalFormOnly,
     toggleFinalFormOnly,
+    isAlphaZone,
+    toggleAlphaZone,
     filteredPokemonList,
   };
 }

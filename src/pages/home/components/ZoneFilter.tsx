@@ -1,11 +1,20 @@
+import { PokemonTypes } from '@/components/pokemon';
 import { trackCustomEvent } from '@/lib/analytics';
+import { cn } from '@/lib/utils';
 
 interface ZoneFilterProps {
   selectedZone: string;
   onZoneChange: (zone: string) => void;
+  isAlphaZone: boolean;
+  onAlphaZoneToggle: () => void;
 }
 
-export function ZoneFilter({ selectedZone, onZoneChange }: ZoneFilterProps) {
+export function ZoneFilter({
+  selectedZone,
+  onZoneChange,
+  isAlphaZone,
+  onAlphaZoneToggle,
+}: ZoneFilterProps) {
   const zones = Array.from({ length: 20 }, (_, i) => i + 1);
 
   const handleZoneClick = (zone: number) => {
@@ -39,6 +48,31 @@ export function ZoneFilter({ selectedZone, onZoneChange }: ZoneFilterProps) {
         Wild Zones
       </h2>
       <div className='flex flex-col gap-3'>
+        {/* Alpha Zone Toggle */}
+        <div className='mb-1 flex gap-2 items-center'>
+          <div className='flex flex-col justify-center h-6'>
+            <button
+              type='button'
+              onClick={onAlphaZoneToggle}
+              className={cn(
+                'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out',
+                'focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2',
+                isAlphaZone ? 'bg-red-800' : 'bg-slate-300'
+              )}
+              role='switch'
+              aria-checked={isAlphaZone}
+            >
+              <span
+                className={cn(
+                  'inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out',
+                  isAlphaZone ? 'translate-x-6' : 'translate-x-1'
+                )}
+              />
+            </button>
+          </div>
+          <PokemonTypes types={['Alpha']} className='w-6 h-6' />
+        </div>
+
         {/* Zone grid */}
         <div className='grid grid-cols-10 lg:grid-cols-20 gap-2 justify-items-center'>
           {zones.map((zone) => {

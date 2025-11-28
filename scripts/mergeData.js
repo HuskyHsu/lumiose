@@ -8,6 +8,47 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 /**
+ * 解析 Alpha 區域資料
+ * @returns {Promise<Object>} 包含 Alpha 區域映射的物件
+ */
+async function parseAlphaZoneData() {
+  try {
+    const alphaZonePath = path.join(__dirname, 'wildZoneAlpha.json');
+    const alphaZoneContent = await fs.readFile(alphaZonePath, 'utf8');
+    const alphaZoneData = JSON.parse(alphaZoneContent);
+
+    const pokemonToAlphaZones = new Map();
+
+    // 遍歷每個區域
+    for (const [zoneId, pokemonList] of Object.entries(alphaZoneData)) {
+      const zoneIdNum = parseInt(zoneId);
+
+      // 遍歷該區域的每個寶可夢
+      for (const pokemonName of pokemonList) {
+        // 提取英文名稱（括號內的部分）
+        const match = pokemonName.match(/\(([^)]+)\)$/);
+        if (match) {
+          const englishName = match[1];
+
+          if (!pokemonToAlphaZones.has(englishName)) {
+            pokemonToAlphaZones.set(englishName, []);
+          }
+          pokemonToAlphaZones.get(englishName).push(zoneIdNum);
+        }
+      }
+    }
+
+    console.log(
+      `成功解析 Alpha 區域資料，共 ${pokemonToAlphaZones.size} 種寶可夢有 Alpha 區域資訊`
+    );
+    return pokemonToAlphaZones;
+  } catch (error) {
+    console.error('解析 Alpha 區域資料時發生錯誤:', error);
+    return new Map();
+  }
+}
+
+/**
  * 解析區域資料並創建寶可夢到區域和天氣的映射
  * @returns {Promise<Object>} 包含區域映射和天氣映射的物件
  */
@@ -256,6 +297,55 @@ const atlFormMap = {
 };
 
 /**
+ * Alpha 區域排除條件函數陣列
+ * 每個函數接收一個寶可夢物件，返回 true 表示可以出現在 Alpha 區域，false 表示不能出現
+ */
+const pokemonAlphaZoneConditions = [
+  // 冰岩怪 Hisui 型態不會出現在 Alpha 區域中
+  (pokemon) => {
+    const isAvalugg = pokemon.name.zh.includes('冰岩怪');
+    const isHisuiForm = pokemon.altForm === 'Hisui';
+    return !(isAvalugg && isHisuiForm);
+  },
+
+  (pokemon) => {
+    const isAvalugg = pokemon.name.zh.includes('南瓜怪人');
+    const isHisuiForm = pokemon.altForm !== '巨顆種';
+    return !(isAvalugg && isHisuiForm);
+  },
+
+  (pokemon) => {
+    const isAvalugg = pokemon.name.zh.includes('雷丘');
+    const isHisuiForm = pokemon.altForm === 'Alola';
+    return !(isAvalugg && isHisuiForm);
+  },
+
+  (pokemon) => {
+    const isAvalugg = pokemon.name.zh.includes('堅盾劍怪');
+    const isHisuiForm = pokemon.altForm === '刀劍';
+    return !(isAvalugg && isHisuiForm);
+  },
+
+  // 可以在這裡添加更多 Alpha 區域排除條件
+  // 例如：
+  // (pokemon) => {
+  //   // 某些特定寶可夢不會出現在 Alpha 區域
+  //   const excludedFromAlpha = ['某寶可夢名稱'];
+  //   return !excludedFromAlpha.includes(pokemon.name.zh);
+  // },
+];
+
+/**
+ * 檢查寶可夢是否可以出現在 Alpha 區域
+ * @param {Object} pokemon - 寶可夢物件
+ * @returns {boolean} 是否可以出現在 Alpha 區域
+ */
+function checkPokemonAlphaZoneEligible(pokemon) {
+  // 所有條件都必須為 true，寶可夢才能出現在 Alpha 區域
+  return pokemonAlphaZoneConditions.every((condition) => condition(pokemon));
+}
+
+/**
  * 寶可夢捕捉條件函數陣列
  * 每個函數接收一個寶可夢物件，返回 true 表示可以被捕捉，false 表示不能被捕捉
  */
@@ -317,16 +407,18 @@ function checkPokemonCatchable(pokemon) {
 async function mergeLanguageData(zhFile, jaFile, enFile) {
   try {
     // 讀取三個語言版本的資料和區域資料
-    const [zhData, jaData, enData, rowData, moveData, zoneData] = await Promise.all([
+    const [zhData, jaData, enData, rowData, moveData, zoneData, alphaZoneData] = await Promise.all([
       fs.readFile(zhFile, 'utf8').then(JSON.parse),
       fs.readFile(jaFile, 'utf8').then(JSON.parse),
       fs.readFile(enFile, 'utf8').then(JSON.parse),
       fs.readFile('data/personal_array.json', 'utf8').then(JSON.parse),
       fs.readFile('data/waza_array.json', 'utf8').then(JSON.parse),
       parseZoneData(),
+      parseAlphaZoneData(),
     ]);
 
     const { pokemonToZones, pokemonToWeather } = zoneData;
+    const pokemonToAlphaZones = alphaZoneData;
 
     console.log(
       `載入資料: 中文 ${zhData.length} 筆, 日文 ${jaData.length} 筆, 英文 ${enData.length} 筆`
@@ -546,6 +638,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       // 添加區域和天氣資訊
       const zones = pokemonToZones.get(mergedPokemon.name.en);
       const weatherData = pokemonToWeather.get(mergedPokemon.name.en);
+      const alphaZones = pokemonToAlphaZones.get(mergedPokemon.name.en);
 
       // 檢查是否可以被捕捉
       const isCatchable = checkPokemonCatchable(mergedPokemon);
@@ -568,6 +661,16 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           // 如果沒有天氣資訊，則只添加區域資訊
           mergedPokemon.zone = zones.sort((a, b) => a - b);
         }
+      }
+
+      // 添加 Alpha 區域資訊
+      if (
+        alphaZones &&
+        alphaZones.length > 0 &&
+        isCatchable &&
+        checkPokemonAlphaZoneEligible(mergedPokemon)
+      ) {
+        mergedPokemon.alphaZone = alphaZones.sort((a, b) => a - b);
       }
 
       mergedPokemon = {
@@ -947,6 +1050,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 }
 
 export {
+  checkPokemonAlphaZoneEligible,
   checkPokemonCatchable,
   createMultiLanguageField,
   main,
@@ -955,7 +1059,9 @@ export {
   mergeMoveArray,
   mergeTMArray,
   mergeTypeArray,
+  parseAlphaZoneData,
   parseZoneData,
+  pokemonAlphaZoneConditions,
   pokemonCatchableConditions,
   saveToJSON,
 };
