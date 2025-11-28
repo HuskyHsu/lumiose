@@ -86,5 +86,16 @@
     "音波龍 (Noivern)",
     "老翁龍 (Drampa)",
     "列陣兵 (Falinks)"
-  ]
+  ],
+  "BleuDistrict": ["Pansage (花椰猴)", "Pansear (爆香猴)", "Panpour (冷水猴)"],
+  "JauneDistrict": ["Garbodor (灰塵山)", "Pidgeot (大比鳥)"],
+  "MagentaDistrict": ["Swirlix (綿綿泡芙)", "Kakuna (鐵殼蛹)"],
+  "RougeDistrict": [
+    "Pansage (花椰猴)",
+    "Pansear (爆香猴)",
+    "Panpour (冷水猴)",
+    "Spritzee (粉香香)"
+  ],
+  "VertDistrict": ["Patrat (探探鼠)", "Trubbish (破破袋)"],
+  "LysandreLabs": ["Arbok (阿柏怪)"]
 }
