@@ -21,7 +21,7 @@ async function parseAlphaZoneData() {
 
     // 遍歷每個區域
     for (const [zoneId, pokemonList] of Object.entries(alphaZoneData)) {
-      const zoneIdNum = parseInt(zoneId);
+      const zoneIdStr = String(zoneId);
 
       // 遍歷該區域的每個寶可夢
       for (const pokemonName of pokemonList) {
@@ -33,7 +33,7 @@ async function parseAlphaZoneData() {
           if (!pokemonToAlphaZones.has(englishName)) {
             pokemonToAlphaZones.set(englishName, []);
           }
-          pokemonToAlphaZones.get(englishName).push(zoneIdNum);
+          pokemonToAlphaZones.get(englishName).push(zoneIdStr);
         }
       }
     }
@@ -639,6 +639,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       const zones = pokemonToZones.get(mergedPokemon.name.en);
       const weatherData = pokemonToWeather.get(mergedPokemon.name.en);
       const alphaZones = pokemonToAlphaZones.get(mergedPokemon.name.en);
+      // console.log(mergedPokemon.name.en, alphaZones);
 
       // 檢查是否可以被捕捉
       const isCatchable = checkPokemonCatchable(mergedPokemon);
@@ -948,7 +949,7 @@ async function saveToJSON(mergedData, outputPath) {
     const dir = path.dirname(outputPath);
     await fs.mkdir(dir, { recursive: true });
     await fs.writeFile(outputPath, jsonString, 'utf8');
-    console.log(`成功保存合併資料到 ${outputPath}`);
+    // console.log(`成功保存合併資料到 ${outputPath}`);
   } catch (error) {
     console.error('保存JSON文件時發生錯誤:', error);
     throw error;

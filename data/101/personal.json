@@ -8778,7 +8778,7 @@
       }
     ],
     "alphaZone": [
-      3
+      "3"
     ],
     "evolutionTree": {
       "link": "661",
@@ -9341,7 +9341,7 @@
       }
     ],
     "alphaZone": [
-      7
+      "7"
     ],
     "evolutionTree": {
       "link": "661",
@@ -9955,7 +9955,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "661",
@@ -11196,7 +11196,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "659",
@@ -17786,7 +17786,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "664",
@@ -29367,6 +29367,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      "蓉粉區"
+    ],
     "evolutionTree": {
       "link": "13",
       "type": [
@@ -29956,7 +29959,7 @@
       }
     ],
     "alphaZone": [
-      15
+      "15"
     ],
     "evolutionTree": {
       "link": "13",
@@ -31055,7 +31058,7 @@
       }
     ],
     "alphaZone": [
-      1
+      "1"
     ],
     "evolutionTree": {
       "link": "16",
@@ -32085,6 +32088,9 @@
         "power": 0,
         "cooldown": 15
       }
+    ],
+    "alphaZone": [
+      "瓊黃區"
     ],
     "evolutionTree": {
       "link": "16",
@@ -34438,7 +34444,7 @@
       }
     ],
     "alphaZone": [
-      16
+      "16"
     ],
     "evolutionTree": {
       "link": "179",
@@ -35673,6 +35679,9 @@
         ]
       }
     ],
+    "alphaZone": [
+      "翡綠區"
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -36358,7 +36367,7 @@
       }
     ],
     "alphaZone": [
-      10
+      "10"
     ],
     "evolutionTree": {
       "link": "504",
@@ -37930,7 +37939,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "406",
@@ -38117,7 +38126,7 @@
       }
     ],
     "alphaZone": [
-      2
+      "2"
     ],
     "evolutionTree": {
       "link": "129",
@@ -38862,7 +38871,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "129",
@@ -40267,7 +40276,7 @@
       }
     ],
     "alphaZone": [
-      6
+      "6"
     ],
     "evolutionTree": {
       "link": "688",
@@ -41031,7 +41040,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "688",
@@ -42449,7 +42458,7 @@
       }
     ],
     "alphaZone": [
-      2
+      "2"
     ],
     "evolutionTree": {
       "link": "120",
@@ -43258,7 +43267,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "120",
@@ -50374,7 +50383,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "669",
@@ -53635,7 +53644,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "672",
@@ -54833,7 +54842,7 @@
       }
     ],
     "alphaZone": [
-      9
+      "9"
     ],
     "evolutionTree": {
       "link": "677",
@@ -55490,7 +55499,7 @@
       }
     ],
     "alphaZone": [
-      9
+      "9"
     ],
     "evolutionTree": {
       "link": "677",
@@ -56134,7 +56143,7 @@
       }
     ],
     "alphaZone": [
-      3
+      "3"
     ],
     "evolutionTree": {
       "link": "667",
@@ -56833,7 +56842,7 @@
       }
     ],
     "alphaZone": [
-      17
+      "17"
     ],
     "evolutionTree": {
       "link": "667",
@@ -58941,7 +58950,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "674",
@@ -59449,6 +59458,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "alphaZone": [
+      "翡綠區"
     ],
     "evolutionTree": {
       "link": "568",
@@ -60063,7 +60075,8 @@
       }
     ],
     "alphaZone": [
-      20
+      "20",
+      "瓊黃區"
     ],
     "evolutionTree": {
       "link": "568",
@@ -60600,7 +60613,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "source": "702",
     "latest": true
@@ -61778,7 +61791,7 @@
       }
     ],
     "alphaZone": [
-      6
+      "6"
     ],
     "evolutionTree": {
       "link": "172",
@@ -62421,7 +62434,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "172",
@@ -64626,7 +64639,7 @@
       }
     ],
     "alphaZone": [
-      19
+      "19"
     ],
     "evolutionTree": {
       "link": "173",
@@ -65492,7 +65505,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "173",
@@ -66952,7 +66965,7 @@
       }
     ],
     "alphaZone": [
-      4
+      "4"
     ],
     "evolutionTree": {
       "link": "167",
@@ -67559,7 +67572,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "167",
@@ -68743,7 +68756,8 @@
       }
     ],
     "alphaZone": [
-      10
+      "10",
+      "弗拉達利研究所"
     ],
     "evolutionTree": {
       "link": "23",
@@ -70414,7 +70428,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "63",
@@ -73059,7 +73073,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "92",
@@ -74793,7 +74807,7 @@
       }
     ],
     "alphaZone": [
-      5
+      "5"
     ],
     "evolutionTree": {
       "link": "543",
@@ -75471,7 +75485,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "543",
@@ -77732,7 +77746,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "679",
@@ -78851,7 +78865,7 @@
       }
     ],
     "alphaZone": [
-      5
+      "5"
     ],
     "evolutionTree": {
       "link": "69",
@@ -79397,7 +79411,7 @@
       }
     ],
     "alphaZone": [
-      13
+      "13"
     ],
     "evolutionTree": {
       "link": "69",
@@ -79990,7 +80004,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "69",
@@ -81232,6 +81246,10 @@
         }
       }
     ],
+    "alphaZone": [
+      "浦藍區",
+      "榴紅區"
+    ],
     "evolutionTree": {
       "link": "511",
       "type": [
@@ -81856,7 +81874,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "511",
@@ -82518,6 +82536,10 @@
           "en": "Fire Stone"
         }
       }
+    ],
+    "alphaZone": [
+      "浦藍區",
+      "榴紅區"
     ],
     "evolutionTree": {
       "link": "513",
@@ -83195,7 +83217,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "513",
@@ -83844,6 +83866,10 @@
           "en": "Water Stone"
         }
       }
+    ],
+    "alphaZone": [
+      "浦藍區",
+      "榴紅區"
     ],
     "evolutionTree": {
       "link": "515",
@@ -84521,7 +84547,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "515",
@@ -85891,7 +85917,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "307",
@@ -87901,7 +87927,7 @@
       }
     ],
     "alphaZone": [
-      9
+      "9"
     ],
     "evolutionTree": {
       "link": "309",
@@ -90802,7 +90828,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "280",
@@ -92556,7 +92582,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "280",
@@ -94808,7 +94834,7 @@
       }
     ],
     "alphaZone": [
-      6
+      "6"
     ],
     "evolutionTree": {
       "link": "228",
@@ -96762,7 +96788,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "333",
@@ -99397,6 +99423,9 @@
         }
       }
     ],
+    "alphaZone": [
+      "榴紅區"
+    ],
     "evolutionTree": {
       "link": "682",
       "type": [
@@ -100380,6 +100409,9 @@
           "en": "Whipped Dream"
         }
       }
+    ],
+    "alphaZone": [
+      "蓉粉區"
     ],
     "evolutionTree": {
       "link": "684",
@@ -102138,7 +102170,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -102881,7 +102913,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -103597,7 +103629,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -105727,7 +105759,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -106378,7 +106410,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -107041,7 +107073,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "133",
@@ -108424,7 +108456,7 @@
       }
     ],
     "alphaZone": [
-      18
+      "18"
     ],
     "evolutionTree": {
       "link": "427",
@@ -110394,7 +110426,7 @@
       }
     ],
     "alphaZone": [
-      15
+      "15"
     ],
     "evolutionTree": {
       "link": "353",
@@ -112395,7 +112427,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "582",
@@ -113781,7 +113813,7 @@
       }
     ],
     "alphaZone": [
-      8
+      "8"
     ],
     "evolutionTree": {
       "link": "322",
@@ -115592,7 +115624,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "449",
@@ -116770,7 +116802,7 @@
       }
     ],
     "alphaZone": [
-      14
+      "14"
     ],
     "evolutionTree": {
       "link": "529",
@@ -118658,7 +118690,7 @@
       }
     ],
     "alphaZone": [
-      8
+      "8"
     ],
     "evolutionTree": {
       "link": "551",
@@ -119406,7 +119438,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "551",
@@ -121415,7 +121447,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "66",
@@ -123400,7 +123432,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "443",
@@ -124769,7 +124801,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "source": "703",
     "latest": true
@@ -125576,7 +125608,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "302",
@@ -127188,7 +127220,7 @@
       }
     ],
     "alphaZone": [
-      17
+      "17"
     ],
     "evolutionTree": {
       "link": "303",
@@ -128711,7 +128743,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "359",
@@ -130904,7 +130936,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "447",
@@ -134028,7 +134060,7 @@
       }
     ],
     "alphaZone": [
-      11
+      "11"
     ],
     "evolutionTree": {
       "link": "79",
@@ -138840,7 +138872,7 @@
       }
     ],
     "alphaZone": [
-      10
+      "10"
     ],
     "evolutionTree": {
       "link": "318",
@@ -141050,7 +141082,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "602",
@@ -144027,7 +144059,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "147",
@@ -154561,7 +154593,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "source": "618",
     "latest": true
@@ -155688,8 +155720,8 @@
       }
     ],
     "alphaZone": [
-      19,
-      20
+      "19",
+      "20"
     ],
     "source": "676",
     "latest": true
@@ -161999,7 +162031,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "686",
@@ -163914,7 +163946,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "690",
@@ -165649,7 +165681,7 @@
       }
     ],
     "alphaZone": [
-      11
+      "11"
     ],
     "evolutionTree": {
       "link": "692",
@@ -168150,7 +168182,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "704",
@@ -168999,7 +169031,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "704",
@@ -169522,7 +169554,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "source": "225",
     "latest": true
@@ -172007,7 +172039,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "361",
@@ -173891,7 +173923,7 @@
       }
     ],
     "alphaZone": [
-      12
+      "12"
     ],
     "evolutionTree": {
       "link": "459",
@@ -175645,7 +175677,7 @@
       }
     ],
     "alphaZone": [
-      12
+      "12"
     ],
     "evolutionTree": {
       "link": "712",
@@ -178692,7 +178724,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "127",
@@ -179934,7 +179966,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "214",
@@ -181801,7 +181833,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "701",
@@ -183526,7 +183558,7 @@
       }
     ],
     "alphaZone": [
-      13
+      "13"
     ],
     "evolutionTree": {
       "link": "708",
@@ -185015,7 +185047,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "559",
@@ -187230,7 +187262,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "714",
@@ -187728,7 +187760,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "source": "707",
     "latest": true
@@ -189499,7 +189531,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "607",
@@ -198429,7 +198461,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "304",
@@ -200645,7 +200677,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "694",
@@ -205383,8 +205415,8 @@
       }
     ],
     "alphaZone": [
-      15,
-      20
+      "15",
+      "20"
     ],
     "evolutionTree": {
       "link": "710-3",
@@ -207597,7 +207629,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "246",
@@ -212023,7 +212055,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "870",
@@ -216238,7 +216270,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "227",
@@ -221551,7 +221583,7 @@
       }
     ],
     "alphaZone": [
-      18
+      "18"
     ],
     "evolutionTree": {
       "link": "371",
@@ -223141,7 +223173,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "115",
@@ -224733,7 +224765,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "780",
@@ -227162,7 +227194,7 @@
       }
     ],
     "alphaZone": [
-      20
+      "20"
     ],
     "evolutionTree": {
       "link": "374",

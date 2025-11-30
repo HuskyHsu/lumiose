@@ -43,11 +43,11 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     if (!zoneId.trim()) return true;
 
     const zoneNumber = parseInt(zoneId, 10);
-    if (isNaN(zoneNumber)) return true;
+    if (!useAlphaZone && isNaN(zoneNumber)) return true;
 
     if (useAlphaZone) {
       // Check alphaZone array
-      return pokemon.alphaZone?.includes(zoneNumber) || false;
+      return pokemon.alphaZone?.includes(zoneId) || false;
     } else {
       // Check regular zone array
       return pokemon.zone?.some((zone) => zone.id === zoneNumber) || false;

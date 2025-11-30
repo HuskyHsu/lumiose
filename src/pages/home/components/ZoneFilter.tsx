@@ -15,10 +15,10 @@ export function ZoneFilter({
   isAlphaZone,
   onAlphaZoneToggle,
 }: ZoneFilterProps) {
-  const zones = Array.from({ length: 20 }, (_, i) => i + 1);
+  const otherZones = ['浦藍區', '瓊黃區', '蓉粉區', '榴紅區', '翡綠區', '弗拉達利研究所'];
+  const zones = Array.from({ length: 20 }, (_, i) => `${i + 1}`);
 
-  const handleZoneClick = (zone: number) => {
-    const zoneStr = zone.toString();
+  const handleZoneClick = (zoneStr: string) => {
     let newZone: string;
     let action: string;
 
@@ -99,6 +99,32 @@ export function ZoneFilter({
             );
           })}
         </div>
+        {isAlphaZone && (
+          <div className='flex flex-wrap gap-2'>
+            {otherZones.map((zone) => {
+              const isSelected = selectedZone === zone;
+
+              return (
+                <button
+                  key={zone}
+                  onClick={() => handleZoneClick(zone)}
+                  className={`
+                    w-auto px-3 h-8 rounded-lg text-xs font-bold transition-all duration-200 flex items-center justify-center
+                    ${
+                      isSelected
+                        ? 'bg-green-600 text-white shadow-md ring-2 ring-green-400'
+                        : 'bg-green-500/30 text-gray-700 hover:bg-gray-200 hover:shadow-sm'
+                    }
+                    hover:scale-110 active:scale-95
+                  `}
+                  title={zone}
+                >
+                  {zone}
+                </button>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
