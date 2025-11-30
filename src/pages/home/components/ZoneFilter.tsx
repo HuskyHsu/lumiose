@@ -100,7 +100,7 @@ export function ZoneFilter({
           })}
         </div>
         {isAlphaZone && (
-          <div className='flex flex-wrap gap-2'>
+          <div className='flex flex-wrap gap-2 md:ml-2'>
             {otherZones.map((zone) => {
               const isSelected = selectedZone === zone;
 
