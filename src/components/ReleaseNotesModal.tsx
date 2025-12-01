@@ -26,12 +26,12 @@ export const ReleaseNotesModal: React.FC<ReleaseNotesModalProps> = ({
   const formatReleaseBody = (body: string) => {
     // Convert markdown-style formatting to basic HTML
     return body
-      .replace(/^######\s+(.*$)/gm, '<h6>$1</h6>')
-      .replace(/^#####\s+(.*$)/gm, '<h5>$1</h5>')
-      .replace(/^####\s+(.*$)/gm, '<h4>$1</h4>')
-      .replace(/^###\s+(.*$)/gm, '<h3>$1</h3>')
-      .replace(/^##\s+(.*$)/gm, '<h2>$1</h2>')
-      .replace(/^#\s+(.*$)/gm, '<h1>$1</h1>')
+      .replace(/^######\s+(.*$)/gm, '<h6 class="text-xs">$1</h6>')
+      .replace(/^#####\s+(.*$)/gm, '<h5 class="text-sm">$1</h5>')
+      .replace(/^####\s+(.*$)/gm, '<h4 class="text-base">$1</h4>')
+      .replace(/^###\s+(.*$)/gm, '<h3 class="text-lg">$1</h3>')
+      .replace(/^##\s+(.*$)/gm, '<h2 class="text-xl">$1</h2>')
+      .replace(/^#\s+(.*$)/gm, '<h1 class="text-2xl">$1</h1>')
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/\n/g, '<br />');
