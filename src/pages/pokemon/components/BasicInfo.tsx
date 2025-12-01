@@ -1,5 +1,6 @@
 import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ShareButton } from '@/components/ui/share-button';
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
 import { TypeWeakness } from './TypeWeakness';
@@ -107,7 +108,13 @@ export default function BasicInfo({ pokemon }: BasicInfoProps) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Basic Information</CardTitle>
+        <CardTitle className='flex items-center gap-2'>
+          Basic Information
+          <ShareButton
+            title={`${pokemon.name.zh}${pokemon.altForm ? '(' + pokemon.altForm + ')' : ''}`}
+            className='w-6 h-6'
+          />
+        </CardTitle>
       </CardHeader>
       <CardContent className='space-y-4'>
         <div className='flex justify-around'>

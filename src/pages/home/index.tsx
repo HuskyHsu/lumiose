@@ -1,6 +1,7 @@
 import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
+import { ShareButton } from '@/components/ui/share-button';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
@@ -66,6 +67,7 @@ function PageHeader() {
     <h1 className='flex items-end gap-2 text-3xl font-bold'>
       <img src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`} className='w-8 h-8' />
       Lumiose Pokédex
+      <ShareButton title='Lumiose Pokédex' />
     </h1>
   );
 }
