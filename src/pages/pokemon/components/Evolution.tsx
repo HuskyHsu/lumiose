@@ -147,7 +147,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
     } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
       rowsClass = secRows;
     } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
-      rowsClass = secRows;
+      rowsClass = `row-span-2 md:row-[span_20_/_span_20]`;
     } else {
       rowsClass = 'row-span-1';
     }
@@ -159,7 +159,7 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
       } else if (rows === 'row-span-1' && secRows === 'row-span-2') {
         firstPokemonRowSpan = secRows;
       } else if (rows === 'row-span-1' && secRows === 'row-[span_20_/_span_20]') {
-        firstPokemonRowSpan = secRows;
+        firstPokemonRowSpan = `row-span-2 md:row-[span_20_/_span_20]`;
       }
 
       rowElement.push(
@@ -256,7 +256,11 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
             pm={evolution}
             className={cn(
               'text-xs md:hidden',
-              list.length > 1 ? (i === 0 ? 'row-span-2' : 'hidden') : ''
+              list.length > 1
+                ? i === 0
+                  ? rowSpanMap[list.length as keyof typeof rowSpanMap]
+                  : 'hidden'
+                : ''
             )}
             onClick={() => handlePokemonNavigation(evolution.link)}
           />,
@@ -269,7 +273,9 @@ export function Evolution({ pokemon, onPokemonChange }: Props) {
           />
         );
         keyId += 3;
+      });
 
+      evolution.to.forEach((evolution_) => {
         // Handle 4th level evolution for mobile
         if (evolution_.to) {
           evolution_.to.forEach((fourthEvolution, j, fourthList) => {
