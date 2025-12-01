@@ -6,7 +6,8 @@ import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
 import type { PokemonList } from '@/types/pokemon';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   FinalFormToggle,
   PWAInstallButton,
@@ -32,6 +33,10 @@ function Home() {
     filteredPokemonList,
   } = usePokemonFilter(pokemonList);
   const { isShiny, toggleShiny } = useShinyToggle();
+
+  useEffect(() => {
+    document.title = 'Lumiose Pokédex App';
+  }, []);
 
   return (
     <div className='space-y-6'>
@@ -66,7 +71,7 @@ function PageHeader() {
   return (
     <h1 className='flex items-end gap-2 text-3xl font-bold'>
       <img src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`} className='w-8 h-8' />
-      Lumiose Pokédex
+      <Link to={`/`}>Lumiose Pokédex</Link>
       <ShareButton title='Lumiose Pokédex' />
     </h1>
   );

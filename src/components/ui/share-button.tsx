@@ -13,14 +13,14 @@ const ShareButton = React.forwardRef<HTMLButtonElement, ShareButtonProps>(
     const handleShare = async () => {
       // Use current URL if no URL is provided
       const shareUrl = url || window.location.href;
-      const fullText = text || document.title;
+      const fullText = text || title || document.title;
 
       // Check if navigator.share is supported
       if (navigator.share) {
         try {
           await navigator.share({
             title: title,
-            text: fullText,
+            text: `${fullText}\n`,
             url: shareUrl,
           });
         } catch (error) {
