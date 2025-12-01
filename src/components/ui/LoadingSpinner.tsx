@@ -1,11 +1,9 @@
-interface LoadingSpinnerProps {
-  message?: string;
-}
+import { Loading } from './Loading';
 
-function LoadingSpinner({ message = 'Loading...' }: LoadingSpinnerProps) {
+function LoadingSpinner() {
   return (
     <div className='flex justify-center items-center h-64'>
-      <p className='text-lg'>{message}</p>
+      return <Loading />;
     </div>
   );
 }

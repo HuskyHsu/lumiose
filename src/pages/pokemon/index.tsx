@@ -127,7 +127,7 @@ function PokemonDetail() {
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div id='basic-info'>
-          <BasicInfo pokemon={pokemon} />
+          <BasicInfo pokemon={pokemon} loading={loading} />
         </div>
         <div id='stats'>
           <StatsCard pokemon={pokemon} />

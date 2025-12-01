@@ -1,5 +1,6 @@
 import { PokemonTypes } from '@/components/pokemon';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Loading } from '@/components/ui/Loading';
 import { ShareButton } from '@/components/ui/share-button';
 import type { DetailedPokemon } from '@/types/pokemon';
 import type { JSX } from 'react';
@@ -7,6 +8,7 @@ import { TypeWeakness } from './TypeWeakness';
 
 interface BasicInfoProps {
   pokemon: DetailedPokemon;
+  loading: boolean;
 }
 
 type ContentProps = { pokemon: DetailedPokemon };
@@ -27,7 +29,7 @@ type Render = {
   Content: ({ pokemon }: ContentProps) => JSX.Element;
 };
 
-export default function BasicInfo({ pokemon }: BasicInfoProps) {
+export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) {
   const renderData: Render[] = [
     {
       title: 'Name(zh)',
@@ -118,14 +120,23 @@ export default function BasicInfo({ pokemon }: BasicInfoProps) {
       </CardHeader>
       <CardContent className='space-y-4'>
         <div className='flex justify-around'>
-          <img
-            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
-            alt={pokemon.name.zh}
-          />
-          <img
-            src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
-            alt={pokemon.name.zh}
-          />
+          {loading ? (
+            <>
+              <Loading size='h-[160px]' />
+              <Loading size='h-[160px]' />
+            </>
+          ) : (
+            <>
+              <img
+                src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`}
+                alt={pokemon.name.zh}
+              />
+              <img
+                src={`${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`}
+                alt={pokemon.name.zh}
+              />
+            </>
+          )}
         </div>
         <div className='space-y-2'>
           {renderData.map((data, index) => (
