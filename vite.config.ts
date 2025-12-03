@@ -6,7 +6,15 @@ import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss(), svgr()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ['babel-plugin-react-compiler'],
+      },
+    }),
+    tailwindcss(),
+    svgr(),
+  ],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
