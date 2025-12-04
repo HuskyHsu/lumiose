@@ -476,6 +476,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
 
     const evolutionMap = new Map();
     const inverseEvolutionMap = new Map();
+    const moveToPmMap = new Map();
 
     const baseMaxValues = [0, 0, 0, 0, 0, 0];
 
@@ -830,6 +831,118 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
 
     console.log('單項最大個體質', baseMaxValues);
 
+    // levelUpMoves
+    mergedData.forEach((pm) => {
+      const basePm = {
+        link: pm.link,
+        type: pm.type,
+        name: pm.name,
+      };
+      if (pm.altForm) {
+        basePm.altForm = pm.altForm;
+      }
+
+      pm.levelUpMoves.forEach((move) => {
+        const id = move.id;
+        if (moveToPmMap.has(id) === false) {
+          moveToPmMap.set(id, {
+            ...moveMap[move.name.zh],
+            levelUpPm: [],
+          });
+        }
+
+        const move_ = moveToPmMap.get(id);
+        move_.levelUpPm.push({
+          ...basePm,
+          level: move.level,
+        });
+      });
+    });
+
+    // tmMoves
+    mergedData.forEach((pm) => {
+      const basePm = {
+        link: pm.link,
+        type: pm.type,
+        name: pm.name,
+      };
+      if (pm.altForm) {
+        basePm.altForm = pm.altForm;
+      }
+
+      pm.tmMoves.forEach((move) => {
+        const id = move.id;
+        if (moveToPmMap.has(id) === false) {
+          moveToPmMap.set(id, {
+            ...moveMap[move.name.zh],
+            tmPm: [],
+          });
+        }
+
+        const move_ = moveToPmMap.get(id);
+        if (move_.tmPm === undefined) {
+          move_.tmPm = [];
+        }
+        move_.tm = move.tm;
+
+        move_.tmPm.push({
+          ...basePm,
+        });
+      });
+    });
+
+    // alphaMove
+    mergedData.forEach((pm) => {
+      const basePm = {
+        link: pm.link,
+        type: pm.type,
+        name: pm.name,
+      };
+      if (pm.altForm) {
+        basePm.altForm = pm.altForm;
+      }
+
+      const move = pm.alphaMove;
+      const id = move.id;
+      const move_ = moveToPmMap.get(id);
+      if (move_.alphaPm === undefined) {
+        move_.alphaPm = [];
+      }
+
+      move_.alphaPm.push({
+        ...basePm,
+      });
+    });
+
+    const moveList = Object.values(Object.fromEntries(moveToPmMap));
+    moveList.sort((a, b) => a.id - b.id);
+    moveList.forEach((move) => {
+      if (move.levelUpPm) {
+        move.levelUpPm = pmFilter(move.levelUpPm);
+      }
+
+      if (move.tmPm) {
+        move.tmPm = pmFilter(move.tmPm);
+      }
+
+      if (move.alphaPm) {
+        move.alphaPm = pmFilter(move.alphaPm);
+      }
+    });
+
+    for (let i = 0; i < moveList.length; i++) {
+      const move = moveList[i];
+      const moveJsonString = JSON.stringify(move);
+      await fs.writeFile(`./public/data/move/${move.id}.json`, moveJsonString, 'utf8');
+    }
+    const moveJsonString = JSON.stringify(
+      moveList.map((move) => {
+        const { levelUpPm, tmPm, alphaPm, ...rest } = move;
+        return rest;
+      })
+    );
+    await fs.writeFile(`./public/data/base_move_list_101.json`, moveJsonString, 'utf8');
+
     return mergedData;
   } catch (error) {
     console.error('合併資料時發生錯誤:', error);
@@ -931,6 +1044,31 @@ function mergeTMArray(zhTMs, jaTMs, enTMs, moveMap) {
   });
 }
 
+function pmFilter(pmList) {
+  return pmList
+    .filter((row) => row.lumioseId === undefined || row.lumioseId > 0)
+    .filter(
+      (row) =>
+        !Array.from({ length: 19 }, (_, i) => i + 1)
+          .map((i) => `664-${i}`)
+          .includes(row.link)
+    )
+    .filter(
+      (row) =>
+        !Array.from({ length: 19 }, (_, i) => i + 1)
+          .map((i) => `665-${i}`)
+          .includes(row.link)
+    )
+    .filter(
+      (row) =>
+        !Array.from({ length: 20 }, (_, i) => i)
+          .filter((i) => ![6, 8].includes(i))
+          .map((i) => `666${i > 0 ? '-' : ''}${i > 0 ? i : ''}`)
+          .includes(row.link)
+    )
+    .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link));
+}
+
 /**
  * 保存合併後的資料為JSON文件
  * @param {Array} mergedData - 合併後的資料
@@ -970,10 +1108,7 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile, detailPath) {
     const mergedData = await mergeLanguageData(zhFile, jaFile, enFile);
 
     if (outputFile) {
-      const pmList = mergedData
-        .filter((row) => row.lumioseId > 0)
-        .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
-        .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link));
+      const pmList = pmFilter(mergedData);
 
       await saveToJSON(pmList, outputFile);
 
@@ -984,32 +1119,28 @@ async function main(zhFile, jaFile, enFile, outputFile, baseFile, detailPath) {
     }
 
     if (baseFile) {
-      const baseList = mergedData
-        .filter((row) => row.lumioseId > 0)
-        .filter((row) => !([664, 665].includes(row.pid) && row.link.includes('-')))
-        .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link))
-        .map((row) => {
-          const {
-            levelUpMoves,
-            tmMoves,
-            form,
-            alphaMove,
-            eggGroup,
-            expGroup,
-            genderRatio,
-            catchRate,
-            height,
-            weight,
-            color,
-            stage,
-            abilities,
-            abilitiyH,
-            evolution,
-            evolutionTree,
-            ...rest
-          } = row;
-          return rest;
-        });
+      const baseList = pmFilter(mergedData).map((row) => {
+        const {
+          levelUpMoves,
+          tmMoves,
+          form,
+          alphaMove,
+          eggGroup,
+          expGroup,
+          genderRatio,
+          catchRate,
+          height,
+          weight,
+          color,
+          stage,
+          abilities,
+          abilitiyH,
+          evolution,
+          evolutionTree,
+          ...rest
+        } = row;
+        return rest;
+      });
 
       await saveToJSON(baseList, baseFile);
     }
