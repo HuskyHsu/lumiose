@@ -278,11 +278,18 @@ function parseLevelUpMoves(lines, startIndex) {
     const line = lines[i];
     if (!line.startsWith('- [')) break;
 
-    // 解析格式: "- [01] 撞擊 {10}"
-    const moveMatch = line.match(/- \[(\d+)\]\s*(.+?)\s*\{(\d+)\}/);
+    // 解析格式: "- [01] 撞擊 {10}" 或 "- [-02] 火焰拳 {10}"
+    const moveMatch = line.match(/- \[(-?\d+)\]\s*(.+?)\s*\{(\d+)\}/);
     if (moveMatch) {
+      let level = parseInt(moveMatch[1]);
+
+      // 將 -02 轉換為 01
+      if (level === -2) {
+        level = 1;
+      }
+
       moves.push({
-        level: parseInt(moveMatch[1]),
+        level: level,
         name: moveMatch[2].trim(),
         plus: parseInt(moveMatch[3]),
       });

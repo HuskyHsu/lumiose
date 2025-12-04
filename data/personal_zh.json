@@ -4829,6 +4829,11 @@
       },
       {
         "level": 1,
+        "name": "怪異電波",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "搖尾巴",
         "plus": 10
       },
@@ -5042,6 +5047,11 @@
       {
         "level": 0,
         "name": "精神強念",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "怪異電波",
         "plus": 10
       },
       {
@@ -6447,6 +6457,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "念力",
+        "plus": 19
+      },
+      {
+        "level": 1,
         "name": "幻象光線",
         "plus": 10
       },
@@ -6648,6 +6663,11 @@
     "color": "Brown",
     "alphaMove": "魔法閃耀",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "念力",
+        "plus": 19
+      },
       {
         "level": 1,
         "name": "幻象光線",
@@ -7711,6 +7731,11 @@
     "color": "Green",
     "alphaMove": "能量球",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "猛撲",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "藤鞭",
@@ -12594,6 +12619,16 @@
       },
       {
         "level": 1,
+        "name": "水槍",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "潮旋",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -12835,6 +12870,16 @@
         "level": 0,
         "name": "咬住",
         "plus": 23
+      },
+      {
+        "level": 1,
+        "name": "水槍",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "潮旋",
+        "plus": 10
       },
       {
         "level": 1,
@@ -13279,6 +13324,31 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -13498,6 +13568,36 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "怪異電波",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -13709,6 +13809,31 @@
       {
         "level": 0,
         "name": "火花",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
         "plus": 10
       },
       {
@@ -14812,6 +14937,21 @@
       },
       {
         "level": 1,
+        "name": "火焰拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "雷電拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "翅膀攻擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -15098,6 +15238,21 @@
         "level": 0,
         "name": "暴風",
         "plus": 58
+      },
+      {
+        "level": 1,
+        "name": "火焰拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "雷電拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "翅膀攻擊",
+        "plus": 10
       },
       {
         "level": 1,
@@ -16736,6 +16891,11 @@
       },
       {
         "level": 1,
+        "name": "終極吸取",
+        "plus": 19
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -16958,6 +17118,11 @@
         "level": 0,
         "name": "葉刃",
         "plus": 35
+      },
+      {
+        "level": 1,
+        "name": "終極吸取",
+        "plus": 19
       },
       {
         "level": 1,
@@ -19337,6 +19502,11 @@
       },
       {
         "level": 1,
+        "name": "怪異電波",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -19571,6 +19741,11 @@
         "level": 0,
         "name": "雷電拳",
         "plus": 33
+      },
+      {
+        "level": 1,
+        "name": "怪異電波",
+        "plus": 10
       },
       {
         "level": 1,
@@ -19809,6 +19984,31 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -20015,6 +20215,31 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -20217,6 +20442,11 @@
     "color": "Pink",
     "alphaMove": "冰凍光束",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "念力",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
@@ -20495,6 +20725,16 @@
     "color": "Pink",
     "alphaMove": "暗影球",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "劇毒",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "念力",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
@@ -22357,6 +22597,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "空氣斬",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "瞪眼",
         "plus": 10
       },
@@ -22571,6 +22816,11 @@
     "color": "Gray",
     "alphaMove": "岩石封鎖",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "空氣斬",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "瞪眼",
@@ -23873,6 +24123,16 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "鐵壁",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "惡之波動",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -24171,6 +24431,16 @@
     "color": "Green",
     "alphaMove": "逆鱗",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "鐵壁",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "惡之波動",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
@@ -27795,6 +28065,21 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "火焰拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰凍拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "雷電拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "念力",
         "plus": 10
       },
@@ -28028,6 +28313,21 @@
     "color": "Red",
     "alphaMove": "暗影球",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "火焰拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰凍拳",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "雷電拳",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "念力",
@@ -34121,6 +34421,16 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "大爆炸",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "重磅衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -34354,6 +34664,16 @@
     "color": "Blue",
     "alphaMove": "增強拳",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "大爆炸",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "重磅衝撞",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
@@ -34722,6 +35042,11 @@
     "color": "Green",
     "alphaMove": "魔法閃耀",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "毒針",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "吸取",
@@ -36699,6 +37024,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "看穿",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "電光一閃",
         "plus": 10
       },
@@ -36979,6 +37309,11 @@
     "color": "Blue",
     "alphaMove": "冰凍拳",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "看穿",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "電光一閃",
@@ -38222,6 +38557,31 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -38425,6 +38785,31 @@
       },
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -38610,6 +38995,51 @@
       {
         "level": 0,
         "name": "劈開",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "精神強念",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "奇異之光",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "預知未來",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "魔法葉",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冥想",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "暗襲要害",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吸取之吻",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "魔法火焰",
         "plus": 10
       },
       {
@@ -38894,6 +39324,51 @@
       {
         "level": 0,
         "name": "劈開",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "精神強念",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "奇異之光",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "預知未來",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "魔法葉",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冥想",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "暗襲要害",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吸取之吻",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "魔法火焰",
         "plus": 10
       },
       {
@@ -39183,6 +39658,26 @@
       },
       {
         "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "咬碎",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰凍牙",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰柱墜擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "頭錘",
         "plus": 10
       },
@@ -39418,6 +39913,26 @@
       {
         "level": 0,
         "name": "吸取之吻",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "咬碎",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰凍牙",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "冰柱墜擊",
         "plus": 10
       },
       {
@@ -40085,6 +40600,11 @@
       },
       {
         "level": 1,
+        "name": "增強拳",
+        "plus": 20
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -40351,6 +40871,11 @@
         "level": 0,
         "name": "高溫重壓",
         "plus": 39
+      },
+      {
+        "level": 1,
+        "name": "增強拳",
+        "plus": 20
       },
       {
         "level": 1,
@@ -42549,6 +43074,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "金屬音",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -42765,6 +43295,11 @@
     "color": "Gray",
     "alphaMove": "真氣彈",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "金屬音",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
@@ -50063,6 +50598,16 @@
       },
       {
         "level": 1,
+        "name": "暗影球",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "預知未來",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -50304,6 +50849,16 @@
         "level": 0,
         "name": "魔法火焰",
         "plus": 39
+      },
+      {
+        "level": 1,
+        "name": "暗影球",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "預知未來",
+        "plus": 10
       },
       {
         "level": 1,
@@ -56127,6 +56682,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -56314,6 +56889,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -56507,6 +57102,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -56694,6 +57309,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -56887,6 +57522,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -57074,6 +57729,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -57267,6 +57942,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -57454,6 +58149,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -57647,6 +58362,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -57834,6 +58569,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -58027,6 +58782,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -58214,6 +58989,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -58407,6 +59202,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -58594,6 +59409,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -58787,6 +59622,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -58974,6 +59829,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -59167,6 +60042,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -59354,6 +60249,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -59547,6 +60462,26 @@
       },
       {
         "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "毒粉",
         "plus": 10
       },
@@ -59734,6 +60669,26 @@
         "level": 0,
         "name": "起風",
         "plus": 15
+      },
+      {
+        "level": 1,
+        "name": "撞擊",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "吐絲",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "變硬",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "守住",
+        "plus": 10
       },
       {
         "level": 1,
@@ -60147,6 +61102,11 @@
       },
       {
         "level": 1,
+        "name": "破壞光線",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -60373,6 +61333,11 @@
         "level": 0,
         "name": "過熱",
         "plus": 38
+      },
+      {
+        "level": 1,
+        "name": "破壞光線",
+        "plus": 10
       },
       {
         "level": 1,
@@ -62293,6 +63258,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "月亮之力",
+        "plus": 22
+      },
+      {
+        "level": 1,
         "name": "藤鞭",
         "plus": 10
       },
@@ -62461,6 +63431,11 @@
     "color": "White",
     "alphaMove": "守住",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "月亮之力",
+        "plus": 22
+      },
       {
         "level": 1,
         "name": "藤鞭",
@@ -62633,6 +63608,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "魅惑之聲",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "藤鞭",
         "plus": 10
       },
@@ -62801,6 +63781,11 @@
     "color": "White",
     "alphaMove": "精神強念",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "魅惑之聲",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "藤鞭",
@@ -62973,6 +63958,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "魅惑之聲",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "藤鞭",
         "plus": 10
       },
@@ -63143,6 +64133,11 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "魅惑之聲",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "藤鞭",
         "plus": 10
       },
@@ -63311,6 +64306,11 @@
     "color": "White",
     "alphaMove": "精神強念",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "魅惑之聲",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "藤鞭",
@@ -72246,6 +73246,31 @@
     "levelUpMoves": [
       {
         "level": 1,
+        "name": "猛撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "捨身衝撞",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "高速星星",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "撒嬌",
+        "plus": 10
+      },
+      {
+        "level": 1,
+        "name": "祈願",
+        "plus": 10
+      },
+      {
+        "level": 1,
         "name": "撞擊",
         "plus": 10
       },
@@ -74115,6 +75140,11 @@
     "color": "Purple",
     "alphaMove": "暴風雪",
     "levelUpMoves": [
+      {
+        "level": 1,
+        "name": "廣域破壞",
+        "plus": 10
+      },
       {
         "level": 1,
         "name": "撞擊",
