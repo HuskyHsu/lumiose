@@ -26,9 +26,9 @@ export const evolutionMethodTranslations = {
     LevelUpNatureLowKey:
       '怕寂寞、大膽、悠閒、內斂、慢吞吞、害羞、冷靜、溫和、溫順、慎重、膽小或認真',
     LevelUpCollect999: '收集999個硬幣',
-    LevelUpUseMoveSpecial: '使出20次憤怒之拳',
+    LevelUpUseMoveSpecial: '使出憤怒之拳',
     CriticalHitsInBattle: '對戰中擊中要害3次或以上結束對戰',
-    UseMovePlusStyle: '使出20次毒千針',
+    UseMovePlusStyle: '使出毒千針',
     LevelUpKnowMove: '學會特定招式時',
     HitPointsLostInBattle: '受到至少49傷害後，來到庫流水路拱橋',
   },
@@ -58,9 +58,9 @@ export const evolutionMethodTranslations = {
     LevelUpNatureLowKey:
       '怕寂寞、大膽、悠閒、內斂、慢吞吞、害羞、冷靜、溫和、溫順、慎重、膽小或認真',
     LevelUpCollect999: '收集999個硬幣',
-    LevelUpUseMoveSpecial: '使出20次憤怒之拳',
+    LevelUpUseMoveSpecial: '使出憤怒之拳',
     CriticalHitsInBattle: '對戰中擊中要害3次或以上結束對戰',
-    UseMovePlusStyle: '使出20次毒千針',
+    UseMovePlusStyle: '使出毒千針',
     LevelUpKnowMove: '學會特定招式時',
     HitPointsLostInBattle: '受到至少49傷害後，來到庫流水路拱橋',
   },
