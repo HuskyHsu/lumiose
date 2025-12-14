@@ -47773,12 +47773,7 @@
       }
     ],
     "evolution": [
-      {
-        "into": "ミロカロス-0",
-        "level": 0,
-        "method": "LevelUpBeauty",
-        "condition": "170"
-      },
+      null,
       {
         "into": "ミロカロス-0",
         "level": 0,
@@ -120551,12 +120546,7 @@
       }
     ],
     "evolution": [
-      {
-        "into": "ケケンカニ-0",
-        "level": 0,
-        "method": "LevelUpSummit",
-        "condition": "0"
-      },
+      null,
       {
         "into": "ケケンカニ-0",
         "level": 0,

@@ -356,6 +356,12 @@ function parseEvolution(line) {
     .replace('(LevelUpMoveType) [Normal]', '(LevelUpMoveType) [Dark]');
   const match = line.match(/Evolves into\s*(.+?)\s*@\s*lv(\d+)\s*\((.+?)\)\s*\[(.+)\]/);
   if (match) {
+    if (match[3].trim() === 'LevelUpSummit') {
+      return null;
+    } else if (match[3].trim() === 'LevelUpBeauty') {
+      return null;
+    }
+
     return {
       into: match[1].trim(),
       level: parseInt(match[2]),

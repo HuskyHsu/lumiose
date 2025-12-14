@@ -20,6 +20,17 @@ export const evolutionMethodTranslations = {
     UseItemFemale: '使用道具(雌性)',
     UseItemMale: '使用道具(雄性)',
     MegaEvolution: '超級進化',
+
+    LevelUpNatureAmped:
+      '勤奮、固執、頑皮、勇敢、坦率、淘氣、樂天、馬虎、浮躁、自大、急躁、爽朗或天真',
+    LevelUpNatureLowKey:
+      '怕寂寞、大膽、悠閒、內斂、慢吞吞、害羞、冷靜、溫和、溫順、慎重、膽小或認真',
+    LevelUpCollect999: '收集999個硬幣',
+    LevelUpUseMoveSpecial: '使出20次憤怒之拳',
+    CriticalHitsInBattle: '對戰中擊中要害3次或以上結束對戰',
+    UseMovePlusStyle: '使出20次毒千針',
+    LevelUpKnowMove: '學會特定招式時',
+    HitPointsLostInBattle: '受到至少49傷害後，來到庫流水路拱橋',
   },
   en: {
     Hisui: 'Hisui',
@@ -41,6 +52,17 @@ export const evolutionMethodTranslations = {
     UseItemFemale: 'Use Item (Female)',
     UseItemMale: 'Use Item (Male)',
     MegaEvolution: 'Mega Evolution',
+
+    LevelUpNatureAmped:
+      '勤奮、固執、頑皮、勇敢、坦率、淘氣、樂天、馬虎、浮躁、自大、急躁、爽朗或天真',
+    LevelUpNatureLowKey:
+      '怕寂寞、大膽、悠閒、內斂、慢吞吞、害羞、冷靜、溫和、溫順、慎重、膽小或認真',
+    LevelUpCollect999: '收集999個硬幣',
+    LevelUpUseMoveSpecial: '使出20次憤怒之拳',
+    CriticalHitsInBattle: '對戰中擊中要害3次或以上結束對戰',
+    UseMovePlusStyle: '使出20次毒千針',
+    LevelUpKnowMove: '學會特定招式時',
+    HitPointsLostInBattle: '受到至少49傷害後，來到庫流水路拱橋',
   },
 } as const;
 

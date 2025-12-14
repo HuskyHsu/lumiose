@@ -309666,16 +309666,6 @@
       {
         "link": "350",
         "level": 0,
-        "method": "LevelUpBeauty",
-        "condition": {
-          "zh": "170",
-          "ja": "170",
-          "en": "170"
-        }
-      },
-      {
-        "link": "350",
-        "level": 0,
         "method": "TradeHeldItem",
         "condition": {
           "zh": "美麗鱗片",
@@ -309695,24 +309685,6 @@
         "en": "Feebas"
       },
       "to": [
-        {
-          "link": "350",
-          "type": [
-            "Water"
-          ],
-          "name": {
-            "zh": "美納斯",
-            "ja": "ミロカロス",
-            "en": "Milotic"
-          },
-          "level": 0,
-          "method": "TradeHeldItem",
-          "condition": {
-            "zh": "美麗鱗片",
-            "ja": "きれいなウロコ",
-            "en": "Prism Scale"
-          }
-        },
         {
           "link": "350",
           "type": [
@@ -310503,24 +310475,6 @@
         "en": "Feebas"
       },
       "to": [
-        {
-          "link": "350",
-          "type": [
-            "Water"
-          ],
-          "name": {
-            "zh": "美納斯",
-            "ja": "ミロカロス",
-            "en": "Milotic"
-          },
-          "level": 0,
-          "method": "TradeHeldItem",
-          "condition": {
-            "zh": "美麗鱗片",
-            "ja": "きれいなウロコ",
-            "en": "Prism Scale"
-          }
-        },
         {
           "link": "350",
           "type": [
@@ -344984,11 +344938,6 @@
       {
         "link": "740",
         "level": 0,
-        "method": "LevelUpSummit"
-      },
-      {
-        "link": "740",
-        "level": 0,
         "method": "UseItem",
         "condition": {
           "zh": "冰之石",
@@ -345008,47 +344957,6 @@
         "en": "Crabrawler"
       },
       "to": [
-        {
-          "link": "740",
-          "type": [
-            "Fighting",
-            "Ice"
-          ],
-          "name": {
-            "zh": "好勝毛蟹",
-            "ja": "ケケンカニ",
-            "en": "Crabominable"
-          },
-          "to": [
-            {
-              "link": "740-1",
-              "type": [
-                "Fighting",
-                "Ice"
-              ],
-              "name": {
-                "zh": "好勝毛蟹",
-                "ja": "ケケンカニ",
-                "en": "Crabominable"
-              },
-              "altForm": "MEGA",
-              "level": 0,
-              "method": "MegaEvolution",
-              "condition": {
-                "zh": "好勝毛蟹進化石",
-                "ja": "ケケンカニナイト",
-                "en": "Crabominableite"
-              }
-            }
-          ],
-          "level": 0,
-          "method": "UseItem",
-          "condition": {
-            "zh": "冰之石",
-            "ja": "こおりのいし",
-            "en": "Ice Stone"
-          }
-        },
         {
           "link": "740",
           "type": [
@@ -345925,47 +345833,6 @@
             "ja": "こおりのいし",
             "en": "Ice Stone"
           }
-        },
-        {
-          "link": "740",
-          "type": [
-            "Fighting",
-            "Ice"
-          ],
-          "name": {
-            "zh": "好勝毛蟹",
-            "ja": "ケケンカニ",
-            "en": "Crabominable"
-          },
-          "to": [
-            {
-              "link": "740-1",
-              "type": [
-                "Fighting",
-                "Ice"
-              ],
-              "name": {
-                "zh": "好勝毛蟹",
-                "ja": "ケケンカニ",
-                "en": "Crabominable"
-              },
-              "altForm": "MEGA",
-              "level": 0,
-              "method": "MegaEvolution",
-              "condition": {
-                "zh": "好勝毛蟹進化石",
-                "ja": "ケケンカニナイト",
-                "en": "Crabominableite"
-              }
-            }
-          ],
-          "level": 0,
-          "method": "UseItem",
-          "condition": {
-            "zh": "冰之石",
-            "ja": "こおりのいし",
-            "en": "Ice Stone"
-          }
         }
       ]
     },
@@ -346763,47 +346630,6 @@
         "en": "Crabrawler"
       },
       "to": [
-        {
-          "link": "740",
-          "type": [
-            "Fighting",
-            "Ice"
-          ],
-          "name": {
-            "zh": "好勝毛蟹",
-            "ja": "ケケンカニ",
-            "en": "Crabominable"
-          },
-          "to": [
-            {
-              "link": "740-1",
-              "type": [
-                "Fighting",
-                "Ice"
-              ],
-              "name": {
-                "zh": "好勝毛蟹",
-                "ja": "ケケンカニ",
-                "en": "Crabominable"
-              },
-              "altForm": "MEGA",
-              "level": 0,
-              "method": "MegaEvolution",
-              "condition": {
-                "zh": "好勝毛蟹進化石",
-                "ja": "ケケンカニナイト",
-                "en": "Crabominableite"
-              }
-            }
-          ],
-          "level": 0,
-          "method": "UseItem",
-          "condition": {
-            "zh": "冰之石",
-            "ja": "こおりのいし",
-            "en": "Ice Stone"
-          }
-        },
         {
           "link": "740",
           "type": [
