@@ -39,34 +39,37 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow className='bg-red-100'>
-                  <TableCell>
-                    <div className='flex justify-center'>
-                      <PokemonTypes types={['Alpha']} />
-                    </div>
-                  </TableCell>
-                  <TableCell>
-                    {pokemon.tmMoves
-                      .find((tm) => tm.id === pokemon.alphaMove.id)
-                      ?.tm.toString()
-                      .padStart(3, '0')}
-                  </TableCell>
-                  <TableCell>{pokemon.alphaMove.name.zh}</TableCell>
-                  <TableCell>
-                    <div className='flex justify-center'>
-                      <PokemonTypes types={[pokemon.alphaMove.type]} />
-                    </div>
-                  </TableCell>
-                  <TableCell>
-                    <div className='flex justify-center'>
-                      <PokemonTypes types={[pokemon.alphaMove.category]} />
-                    </div>
-                  </TableCell>
-                  <TableCell>
-                    {pokemon.alphaMove.power <= 0 ? '—' : pokemon.alphaMove.power}
-                  </TableCell>
-                  <TableCell>{pokemon.alphaMove.cooldown}</TableCell>
-                </TableRow>
+                {pokemon.alphaMove && (
+                  <TableRow className='bg-red-100'>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={['Alpha']} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      {pokemon.tmMoves
+                        .find((tm) => tm.id === pokemon.alphaMove?.id)
+                        ?.tm.toString()
+                        .padStart(3, '0')}
+                    </TableCell>
+                    <TableCell>{pokemon.alphaMove.name.zh}</TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[pokemon.alphaMove.type]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div className='flex justify-center'>
+                        <PokemonTypes types={[pokemon.alphaMove.category]} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      {pokemon.alphaMove.power <= 0 ? '—' : pokemon.alphaMove.power}
+                    </TableCell>
+                    <TableCell>{pokemon.alphaMove.cooldown}</TableCell>
+                  </TableRow>
+                )}
+
                 {pokemon.levelUpMoves.map((move) => {
                   const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
                   const subInfo = `+${move.plus}`;

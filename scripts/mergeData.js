@@ -291,9 +291,81 @@ const atlFormMap = {
   '基格爾德-4': '完全體',
   '基格爾德-5': 'MEGA',
   '蒂安希-1': 'MEGA',
-  '胡帕-1': 'MEGA',
   '老翁龍-1': 'MEGA',
   '列陣兵-1': 'MEGA',
+
+  '超能妙喵-2': 'MEGA(♂)',
+  '超能妙喵-3': 'MEGA(♀)',
+  '雷丘-2': 'MEGA-X',
+  '雷丘-3': 'MEGA-Y',
+  '烈咬陸鯊-2': 'MEGA-Z',
+  '阿勃梭魯-2': 'MEGA-Z',
+  '路卡利歐-2': 'MEGA-Z',
+  '喵喵-1': 'Alola',
+  '喵喵-2': 'Galar',
+  '貓老大-1': 'Alola',
+  '大蔥鴨-1': 'Galar',
+  '嘎啦嘎啦-1': 'Alola',
+  '狠辣椒-1': 'MEGA',
+  '晶光花-1': 'MEGA',
+  '洛托姆-1': '加熱',
+  '洛托姆-2': '清洗',
+  '洛托姆-3': '結冰',
+  '洛托姆-4': '旋轉',
+  '洛托姆-5': '切割',
+  米立龍: '上弓',
+  '米立龍-1': '下垂',
+  '米立龍-2': '平挺',
+  '米立龍-3': 'MEGA(上弓)',
+  '米立龍-4': 'MEGA(下垂)',
+  '米立龍-5': 'MEGA(平挺)',
+  '戟脊龍-1': 'MEGA',
+  索財靈: '寶箱',
+  '索財靈-1': '徒步',
+  '千針魚-1': 'Hisui',
+  '蜥蜴王-1': 'MEGA',
+  '火焰雞-1': 'MEGA',
+  '巨沼怪-1': 'MEGA',
+  '風鈴鈴-1': 'MEGA',
+  愛管侍: '雄性',
+  '愛管侍-1': '雌性',
+  '哭哭面具-1': 'Galar',
+  '具甲武者-1': 'MEGA',
+  謎擬Ｑ: '化形',
+  '謎擬Ｑ-1': '現形',
+  莫魯貝可: '滿腹花紋',
+  '莫魯貝可-1': '空腹花紋',
+  '泥偶巨人-1': 'MEGA',
+  '姆克鷹-1': 'MEGA',
+  怒鸚哥: '綠羽毛',
+  '怒鸚哥-1': '藍羽毛',
+  '怒鸚哥-2': '黃羽毛',
+  '怒鸚哥-3': '白羽毛',
+  '好勝毛蟹-1': 'MEGA',
+  顫弦蠑螈: '高調',
+  '顫弦蠑螈-1': '低調',
+  '魔牆人偶-1': 'Galar',
+  '席多藍恩-1': 'MEGA',
+  凱路迪歐: '平常',
+  '凱路迪歐-1': '覺悟',
+  美洛耶塔: '歌聲',
+  '美洛耶塔-1': '舞步',
+  '蓋諾賽克特-1': '水流卡帶',
+  '蓋諾賽克特-2': '閃電卡帶',
+  '蓋諾賽克特-3': '火焰卡帶',
+  '蓋諾賽克特-4': '冰凍卡帶',
+  胡帕: '懲戒',
+  '胡帕-1': '解放',
+  '達克萊伊-1': 'MEGA',
+  '拉帝亞斯-1': 'MEGA',
+  '拉帝歐斯-1': 'MEGA',
+  '蓋歐卡-1': '原始',
+  '固拉多-1': '原始',
+  '烈空座-1': 'MEGA',
+  '瑪機雅娜-1': '500年前',
+  '瑪機雅娜-2': 'MEGA',
+  '瑪機雅娜-3': 'MEGA(500年前)',
+  '捷拉奧拉-1': 'MEGA',
 };
 
 /**
@@ -431,14 +503,14 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
             [
               `${item.Name.zh}-${item.Info.Form}`,
               {
-                pid: item.Info.SpeciesInternal,
+                pid: item.Info.SpeciesNational,
                 form: item.Info.Form,
               },
             ],
             [
               `${item.Name.zh}${item.Info.Form > 0 ? `-${item.Info.Form}` : ''}`,
               {
-                pid: item.Info.SpeciesInternal,
+                pid: item.Info.SpeciesNational,
                 form: item.Info.Form,
               },
             ],
@@ -620,7 +692,20 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       }
 
       if (nameToPidMap[mergedPokemon.name.zh].pid != mergedPokemon.pid) {
-        mergedPokemon.pid = nameToPidMap[mergedPokemon.name.zh].pid;
+        // console.log(
+        //   '-----------------------------',
+        //   mergedPokemon.name.zh,
+        //   nameToPidMap[mergedPokemon.name.zh].pid,
+        //   mergedPokemon.pid
+        // );
+
+        if (nameToPidMap[mergedPokemon.name.zh].pid < mergedPokemon.pid) {
+          mergedPokemon.pid = nameToPidMap[mergedPokemon.name.zh].pid;
+        }
+      }
+
+      if (nameToPidMap[mergedPokemon.name.zh].pid > mergedPokemon.pid) {
+        nameToPidMap[mergedPokemon.name.zh].pid = mergedPokemon.pid;
       }
 
       if (atlFormMap[mergedPokemon.name.zh] !== undefined) {
@@ -723,6 +808,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           from = evolutionMap.get('670-5');
         } else if (pokemon.pid === 718) {
           from = evolutionMap.get('718-4');
+        } else if (pokemon.pid === 678 && pokemon.link === '678-2') {
+          from = evolutionMap.get('678');
+        } else if (pokemon.pid === 678 && pokemon.link === '678-3') {
+          from = evolutionMap.get('678-1');
         }
 
         const to = evolutionMap.get(pokemon.link);
@@ -743,6 +832,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
             to.condition.zh = to.condition.zh + 'Y';
             to.condition.ja = to.condition.ja + 'Y';
             to.condition.en = to.condition.en + 'Y';
+          } else if (to.altForm === 'MEGA-Z') {
+            to.condition.zh = to.condition.zh + 'Z';
+            to.condition.ja = to.condition.ja + 'Z';
+            to.condition.en = to.condition.en + 'Z';
           }
 
           from.to.push(to);
@@ -798,6 +891,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       // delete pokemon.evolution;
       // delete pokemon.levelUpMoves;
       // delete pokemon.tmMoves;
+
+      if (pokemon.lumioseId > 232) {
+        pokemon.hyperspaceId = pokemon.lumioseId - 232;
+      }
     });
 
     for (const evo of evolutionMap.values()) {
@@ -902,6 +999,10 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         basePm.altForm = pm.altForm;
       }
 
+      if (!pm.alphaMove) {
+        return;
+      }
+
       const move = pm.alphaMove;
       const id = move.id;
       const move_ = moveToPmMap.get(id);
@@ -941,7 +1042,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         return rest;
       })
     );
-    await fs.writeFile(`./public/data/base_move_list_101.json`, moveJsonString, 'utf8');
+    await fs.writeFile(`./public/data/base_move_list_200.json`, moveJsonString, 'utf8');
 
     return mergedData;
   } catch (error) {
@@ -1163,7 +1264,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     process.exit(1);
   }
 
-  const version = '101';
+  const version = '200';
   const zhFile = args[0];
   const jaFile = args[1];
   const enFile = args[2];

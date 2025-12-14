@@ -5,10 +5,11 @@ import PokemonNumber from './Number';
 
 interface PokemonImageProps {
   pokemon: Pokemon;
+  pokedexId: number;
   isShiny?: boolean;
 }
 
-function PokemonImage({ pokemon, isShiny = false }: PokemonImageProps) {
+function PokemonImage({ pokemon, pokedexId, isShiny = false }: PokemonImageProps) {
   const imagePath = isShiny
     ? `${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}s.png`
     : `${import.meta.env.BASE_URL}images/pmIcon/${pokemon.link}.png`;
@@ -20,7 +21,7 @@ function PokemonImage({ pokemon, isShiny = false }: PokemonImageProps) {
         backgroundImage: `url(${imagePath})`,
       }}
     >
-      <PokemonNumber number={pokemon.lumioseId} />
+      <PokemonNumber number={pokedexId} />
       {pokemon.altForm && <PokemonAltForm altForm={pokemon.altForm} />}
     </div>
   );

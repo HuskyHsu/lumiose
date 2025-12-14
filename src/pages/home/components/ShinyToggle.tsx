@@ -18,7 +18,7 @@ function ShinyToggle({ isShiny, onToggle }: ShinyToggleProps) {
   };
 
   return (
-    <div className='mb-4 flex gap-2 items-center'>
+    <div className='flex gap-2 items-center'>
       <div className='flex flex-col justify-center h-10'>
         <button
           type='button'

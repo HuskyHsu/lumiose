@@ -1,16 +1,23 @@
 import type { Pokemon, PokemonList } from '@/types/pokemon';
 import { useCallback, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useUrlParams } from './useUrlParams';
+
+type Pokedex = 'lumiose' | 'hyperspace';
 
 export function usePokemonFilter(pokemonList: PokemonList) {
   const { getArrayParam, getParam, getBooleanParam, setArrayParam, setParam, setBooleanParam } =
     useUrlParams();
+
+  // Get setSearchParams directly from useSearchParams for batch updates
+  const [, setSearchParams] = useSearchParams();
 
   const selectedTypes = getArrayParam('types');
   const searchKeyword = getParam('search') || '';
   const isFinalFormOnly = getBooleanParam('finalForm', false);
   const selectedZone = getParam('zone') || '';
   const isAlphaZone = getBooleanParam('alphaZone', false);
+  const selectedPokedex = (getParam('Pokedex') as Pokedex) || 'lumiose';
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -54,6 +61,16 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     }
   }, []);
 
+  // Memoize the pokedex matching function
+  const pokedexMatches = useCallback((pokemon: Pokemon, pokedex: Pokedex) => {
+    if (pokedex === 'lumiose') {
+      return pokemon.lumioseId <= 232;
+    } else if (pokedex === 'hyperspace') {
+      return pokemon.hyperspaceId !== undefined;
+    }
+    return true;
+  }, []);
+
   // Function to filter only final evolution forms
   const getFinalFormPokemon = useCallback((pokemonList: PokemonList) => {
     return pokemonList.filter((pokemon) => pokemon.latest);
@@ -82,17 +99,22 @@ export function usePokemonFilter(pokemonList: PokemonList) {
       result = result.filter((pokemon) => zoneMatches(pokemon, selectedZone, isAlphaZone));
     }
 
+    // Apply Pokedex filter
+    result = result.filter((pokemon) => pokedexMatches(pokemon, selectedPokedex));
+
     return result;
   }, [
     pokemonList,
     selectedTypes,
     searchKeyword,
     selectedZone,
+    selectedPokedex,
     isAlphaZone,
     isFinalFormOnly,
     typeMatches,
     keywordMatches,
     zoneMatches,
+    pokedexMatches,
     getFinalFormPokemon,
   ]);
 
@@ -126,6 +148,25 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     setBooleanParam('alphaZone', !isAlphaZone, false);
   }, [setBooleanParam, isAlphaZone]);
 
+  const memoizedSetSelectedPokedex = useCallback(
+    (Pokedex: Pokedex) => {
+      if (Pokedex === 'hyperspace') {
+        // Use a single setSearchParams call to update all parameters at once
+        setSearchParams((prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set('Pokedex', Pokedex);
+          newParams.delete('zone');
+          newParams.delete('alphaZone');
+          return newParams;
+        });
+      } else {
+        setParam('Pokedex', Pokedex);
+      }
+    },
+
+    [setParam, setSearchParams]
+  );
+
   return {
     selectedTypes,
     setSelectedTypes: memoizedSetSelectedTypes,
@@ -137,6 +178,8 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     toggleFinalFormOnly,
     isAlphaZone,
     toggleAlphaZone,
+    selectedPokedex,
+    setSelectedPokedex: memoizedSetSelectedPokedex,
     filteredPokemonList,
   };
 }

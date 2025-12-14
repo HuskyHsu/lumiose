@@ -99,7 +99,7 @@ export function RadarChart({
     getPosition(270, (hp * radius) / 216),
     getPosition(330, (atk * radius) / 216),
     getPosition(30, (def * radius) / 230),
-    getPosition(90, (speed * radius) / 150),
+    getPosition(90, (speed * radius) / 153),
     getPosition(150, (spDef * radius) / 230),
     getPosition(210, (spAtk * radius) / 216),
   ];

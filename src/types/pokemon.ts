@@ -14,6 +14,7 @@ interface Zone {
 export interface Pokemon {
   pid: number;
   lumioseId: number;
+  hyperspaceId?: number;
   link: string;
   name: PokemonName;
   base: [number, number, number, number, number, number]; // HP, Attack, Defense, Sp.Attack, Sp.Defense, Speed
@@ -64,7 +65,7 @@ export interface DetailedPokemon extends Pokemon {
   expGroup: string;
   height: number;
   weight: number;
-  alphaMove: PokemonMove;
+  alphaMove?: PokemonMove;
   levelUpMoves: LevelUpMove[];
   tmMoves: TMMove[];
   evolutionTree?: EvolutionNode;
@@ -93,3 +94,5 @@ export type BasePoint = {
   Spe: number;
   Total: number;
 };
+
+export type Pokedex = 'lumiose' | 'hyperspace';

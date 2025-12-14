@@ -1,7 +1,7 @@
 import { trackCustomEvent, trackEvent } from '@/lib/analytics';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
-import type { Pokemon } from '@/types/pokemon';
+import type { Pokedex, Pokemon } from '@/types/pokemon';
 import { Haze, Moon, Sun } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -14,6 +14,7 @@ interface PokemonCardProps {
   isShiny?: boolean;
   selectedZone?: string | null;
   isAlphaZone?: boolean;
+  selectedPokedex: Pokedex;
 }
 
 // Weather emoji mapping
@@ -52,6 +53,7 @@ const PokemonCard = memo(function PokemonCard({
   isShiny = false,
   selectedZone,
   isAlphaZone = false,
+  selectedPokedex,
 }: PokemonCardProps) {
   const location = useLocation();
 
@@ -97,6 +99,9 @@ const PokemonCard = memo(function PokemonCard({
     });
   };
 
+  const pokedexId =
+    selectedPokedex === 'lumiose' ? pokemon.lumioseId : pokemon.hyperspaceId || pokemon.lumioseId;
+
   return (
     <Link
       to={`/pokemon/${pokemon.link}`}
@@ -114,7 +119,7 @@ const PokemonCard = memo(function PokemonCard({
           'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60'
         )}
       >
-        <PokemonImage pokemon={pokemon} isShiny={isShiny} />
+        <PokemonImage pokemon={pokemon} pokedexId={pokedexId} isShiny={isShiny} />
         {/* Weather indicator or Alpha indicator */}
         {selectedZone && (
           <div className='absolute top-1 right-1 flex gap-1'>

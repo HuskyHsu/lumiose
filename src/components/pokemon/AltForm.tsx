@@ -5,12 +5,18 @@ interface PokemonAltFormProps {
 }
 
 function PokemonAltForm({ altForm }: PokemonAltFormProps) {
+  let textSizeClass = 'text-md';
+  if (altForm.length > 8) {
+    textSizeClass = 'text-sm';
+  }
+
   return (
     <span
       className={cn(
         'absolute -right-2 -bottom-1',
         'text-white group-hover:text-yellow-400 group-hover:translate-x-4',
-        'font-bold text-md drop-shadow-lg',
+        'font-bold drop-shadow-lg',
+        textSizeClass,
         'transition-all duration-300'
       )}
       style={{

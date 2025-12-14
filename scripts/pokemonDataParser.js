@@ -279,7 +279,7 @@ function parseLevelUpMoves(lines, startIndex) {
     if (!line.startsWith('- [')) break;
 
     // 解析格式: "- [01] 撞擊 {10}" 或 "- [-02] 火焰拳 {10}"
-    const moveMatch = line.match(/- \[(-?\d+)\]\s*(.+?)\s*\{(\d+)\}/);
+    let moveMatch = line.match(/- \[(-?\d+)\]\s*(.+?)\s*\{(\d+)\}/);
     if (moveMatch) {
       let level = parseInt(moveMatch[1]);
 
@@ -290,6 +290,27 @@ function parseLevelUpMoves(lines, startIndex) {
 
       moves.push({
         level: level,
+        name: moveMatch[2].trim(),
+        plus: parseInt(moveMatch[3]),
+      });
+      continue;
+    }
+
+    // 解析格式: "- [EVO] 強力鞭打 {35}"
+    moveMatch = line.match(/- \[(EVO)\]\s*(.+?)\s*\{(\d+)\}/);
+    if (moveMatch) {
+      moves.push({
+        level: 0,
+        name: moveMatch[2].trim(),
+        plus: parseInt(moveMatch[3]),
+      });
+    }
+
+    // 解析格式: "- [RELEARN] 火焰拳 {10}"
+    moveMatch = line.match(/- \[(RELEARN)\]\s*(.+?)\s*\{(\d+)\}/);
+    if (moveMatch) {
+      moves.push({
+        level: 1,
         name: moveMatch[2].trim(),
         plus: parseInt(moveMatch[3]),
       });

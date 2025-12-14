@@ -5,11 +5,12 @@ import { ShareButton } from '@/components/ui/share-button';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
-import type { PokemonList } from '@/types/pokemon';
+import type { Pokedex, PokemonList } from '@/types/pokemon';
 import { memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   FinalFormToggle,
+  PokedexToggle,
   PWAInstallButton,
   SearchFilter,
   ShinyToggle,
@@ -30,6 +31,8 @@ function Home() {
     toggleFinalFormOnly,
     isAlphaZone,
     toggleAlphaZone,
+    selectedPokedex,
+    setSelectedPokedex,
     filteredPokemonList,
   } = usePokemonFilter(pokemonList);
   const { isShiny, toggleShiny } = useShinyToggle();
@@ -42,15 +45,17 @@ function Home() {
     <div className='space-y-6'>
       <PageHeader />
       <PWAInstallButton />
-      {/* <PWAStatus /> */}
+      <PokedexToggle selectedPokedex={selectedPokedex} onPokedexChange={setSelectedPokedex} />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />
-      <ZoneFilter
-        selectedZone={selectedZone}
-        onZoneChange={setSelectedZone}
-        isAlphaZone={isAlphaZone}
-        onAlphaZoneToggle={toggleAlphaZone}
-      />
+      {selectedPokedex === 'lumiose' && (
+        <ZoneFilter
+          selectedZone={selectedZone}
+          onZoneChange={setSelectedZone}
+          isAlphaZone={isAlphaZone}
+          onAlphaZoneToggle={toggleAlphaZone}
+        />
+      )}
       <div className='flex gap-4'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
@@ -62,6 +67,7 @@ function Home() {
         isShiny={isShiny}
         selectedZone={selectedZone}
         isAlphaZone={isAlphaZone}
+        selectedPokedex={selectedPokedex}
       />
     </div>
   );
@@ -84,6 +90,7 @@ interface PageContentProps {
   isShiny: boolean;
   selectedZone: string;
   isAlphaZone: boolean;
+  selectedPokedex: Pokedex;
 }
 
 function PageContent({
@@ -93,6 +100,7 @@ function PageContent({
   isShiny,
   selectedZone,
   isAlphaZone,
+  selectedPokedex,
 }: PageContentProps) {
   if (loading) {
     return <LoadingSpinner />;
@@ -108,6 +116,7 @@ function PageContent({
       isShiny={isShiny}
       selectedZone={selectedZone}
       isAlphaZone={isAlphaZone}
+      selectedPokedex={selectedPokedex}
     />
   );
 }
@@ -117,6 +126,7 @@ interface PokemonGridProps {
   isShiny: boolean;
   selectedZone: string;
   isAlphaZone: boolean;
+  selectedPokedex: Pokedex;
 }
 
 const PokemonGrid = memo(function PokemonGrid({
@@ -124,6 +134,7 @@ const PokemonGrid = memo(function PokemonGrid({
   isShiny,
   selectedZone,
   isAlphaZone,
+  selectedPokedex,
 }: PokemonGridProps) {
   return (
     <div className='grid grid-cols-3 sm:grid-cols-4 mt-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800 transition-all duration-200 ease-in-out'>
@@ -134,6 +145,7 @@ const PokemonGrid = memo(function PokemonGrid({
           isShiny={isShiny}
           selectedZone={selectedZone}
           isAlphaZone={isAlphaZone}
+          selectedPokedex={selectedPokedex}
         />
       ))}
     </div>
