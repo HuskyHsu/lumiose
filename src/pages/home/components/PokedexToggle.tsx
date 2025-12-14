@@ -44,7 +44,7 @@ function PokedexToggle({ selectedPokedex, onPokedexChange }: PokedexToggleProps)
               'relative px-3 py-1 text-sm font-medium rounded-full transition-all duration-200 ease-in-out',
               'focus:outline-none focus:ring-2 focus:ring-purple-400 focus:ring-offset-2',
               selectedPokedex === 'hyperspace'
-                ? 'bg-purple-500 text-white shadow-sm'
+                ? 'bg-linear-to-r from-sky-700 to-purple-400 text-white shadow-sm'
                 : 'text-slate-600 hover:text-slate-900'
             )}
           >
