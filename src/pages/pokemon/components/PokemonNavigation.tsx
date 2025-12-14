@@ -103,7 +103,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
       <button
         onClick={() => handlePokemonNavigation(previousPokemon.link)}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
-        title={`前往 ${previousPokemon.name.zh}`}
+        title={`to ${previousPokemon.name.zh}`}
       >
         <ChevronLeft className='w-5 h-5 text-gray-600' />
       </button>
@@ -113,7 +113,14 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
         {navigationPokemon.map((pokemon, index) => {
           const sideCount = isMobile ? 2 : 3;
           const isCurrent = index === sideCount; // Middle item is current (mobile: index 2, desktop: index 3)
-          const pokemonNumber = pokemon.lumioseId.toString().padStart(3, '0');
+
+          const isLumioseForm = pokemon.lumioseId <= 232;
+
+          const pokemonNumber =
+            (isLumioseForm ? 'L' : 'H') +
+            (isLumioseForm ? pokemon.lumioseId : pokemon.hyperspaceId || pokemon.lumioseId)
+              .toString()
+              .padStart(3, '0');
 
           return (
             <button
@@ -162,7 +169,7 @@ function PokemonNavigation({ currentPokemonLink, onPokemonChange }: PokemonNavig
       <button
         onClick={() => handlePokemonNavigation(nextPokemon.link)}
         className='flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-md hover:shadow-lg transition-shadow duration-200 hover:bg-gray-50'
-        title={`前往 ${nextPokemon.name.zh}`}
+        title={`to ${nextPokemon.name.zh}`}
       >
         <ChevronRight className='w-5 h-5 text-gray-600' />
       </button>

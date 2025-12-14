@@ -288644,46 +288644,6 @@
             "ja": "シャリタツナイト",
             "en": "Tatsugiriite"
           }
-        },
-        {
-          "link": "978-4",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(下垂)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
-        },
-        {
-          "link": "978-5",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(平挺)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
         }
       ]
     },
@@ -289321,8 +289281,43 @@
         "cooldown": 7
       }
     ],
+    "evolutionTree": {
+      "link": "978-1",
+      "type": [
+        "Dragon",
+        "Water"
+      ],
+      "name": {
+        "zh": "米立龍",
+        "ja": "シャリタツ",
+        "en": "Tatsugiri"
+      },
+      "altForm": "下垂",
+      "to": [
+        {
+          "link": "978-4",
+          "type": [
+            "Dragon",
+            "Water"
+          ],
+          "name": {
+            "zh": "米立龍",
+            "ja": "シャリタツ",
+            "en": "Tatsugiri"
+          },
+          "altForm": "MEGA(下垂)",
+          "level": 0,
+          "method": "MegaEvolution",
+          "condition": {
+            "zh": "米立龍進化石",
+            "ja": "シャリタツナイト",
+            "en": "Tatsugiriite"
+          }
+        }
+      ]
+    },
     "source": "978-1",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 31
   },
   {
@@ -289955,8 +289950,43 @@
         "cooldown": 7
       }
     ],
+    "evolutionTree": {
+      "link": "978-2",
+      "type": [
+        "Dragon",
+        "Water"
+      ],
+      "name": {
+        "zh": "米立龍",
+        "ja": "シャリタツ",
+        "en": "Tatsugiri"
+      },
+      "altForm": "平挺",
+      "to": [
+        {
+          "link": "978-5",
+          "type": [
+            "Dragon",
+            "Water"
+          ],
+          "name": {
+            "zh": "米立龍",
+            "ja": "シャリタツ",
+            "en": "Tatsugiri"
+          },
+          "altForm": "MEGA(平挺)",
+          "level": 0,
+          "method": "MegaEvolution",
+          "condition": {
+            "zh": "米立龍進化石",
+            "ja": "シャリタツナイト",
+            "en": "Tatsugiriite"
+          }
+        }
+      ]
+    },
     "source": "978-2",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 31
   },
   {
@@ -290621,46 +290651,6 @@
             "ja": "シャリタツナイト",
             "en": "Tatsugiriite"
           }
-        },
-        {
-          "link": "978-4",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(下垂)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
-        },
-        {
-          "link": "978-5",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(平挺)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
         }
       ]
     },
@@ -291299,7 +291289,7 @@
       }
     ],
     "evolutionTree": {
-      "link": "978",
+      "link": "978-1",
       "type": [
         "Dragon",
         "Water"
@@ -291309,28 +291299,8 @@
         "ja": "シャリタツ",
         "en": "Tatsugiri"
       },
-      "altForm": "上弓",
+      "altForm": "下垂",
       "to": [
-        {
-          "link": "978-3",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(上弓)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
-        },
         {
           "link": "978-4",
           "type": [
@@ -291350,30 +291320,10 @@
             "ja": "シャリタツナイト",
             "en": "Tatsugiriite"
           }
-        },
-        {
-          "link": "978-5",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(平挺)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
         }
       ]
     },
-    "source": "978",
+    "source": "978-1",
     "latest": true,
     "hyperspaceId": 31
   },
@@ -292008,7 +291958,7 @@
       }
     ],
     "evolutionTree": {
-      "link": "978",
+      "link": "978-2",
       "type": [
         "Dragon",
         "Water"
@@ -292018,48 +291968,8 @@
         "ja": "シャリタツ",
         "en": "Tatsugiri"
       },
-      "altForm": "上弓",
+      "altForm": "平挺",
       "to": [
-        {
-          "link": "978-3",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(上弓)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
-        },
-        {
-          "link": "978-4",
-          "type": [
-            "Dragon",
-            "Water"
-          ],
-          "name": {
-            "zh": "米立龍",
-            "ja": "シャリタツ",
-            "en": "Tatsugiri"
-          },
-          "altForm": "MEGA(下垂)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "米立龍進化石",
-            "ja": "シャリタツナイト",
-            "en": "Tatsugiriite"
-          }
-        },
         {
           "link": "978-5",
           "type": [
@@ -292082,7 +291992,7 @@
         }
       ]
     },
-    "source": "978",
+    "source": "978-2",
     "latest": true,
     "hyperspaceId": 31
   },
@@ -387448,8 +387358,40 @@
         "cooldown": 20
       }
     ],
+    "evolutionTree": {
+      "link": "382",
+      "type": [
+        "Water"
+      ],
+      "name": {
+        "zh": "蓋歐卡",
+        "ja": "カイオーガ",
+        "en": "Kyogre"
+      },
+      "to": [
+        {
+          "link": "382-1",
+          "type": [
+            "Water"
+          ],
+          "name": {
+            "zh": "蓋歐卡",
+            "ja": "カイオーガ",
+            "en": "Kyogre"
+          },
+          "altForm": "原始",
+          "level": 0,
+          "method": "PrimalReversion",
+          "condition": {
+            "zh": "靛藍色寶珠",
+            "ja": "あいいろのたま",
+            "en": "Blue Orb"
+          }
+        }
+      ]
+    },
     "source": "382",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 128
   },
   {
@@ -388239,7 +388181,39 @@
         "cooldown": 20
       }
     ],
-    "source": "382-1",
+    "evolutionTree": {
+      "link": "382",
+      "type": [
+        "Water"
+      ],
+      "name": {
+        "zh": "蓋歐卡",
+        "ja": "カイオーガ",
+        "en": "Kyogre"
+      },
+      "to": [
+        {
+          "link": "382-1",
+          "type": [
+            "Water"
+          ],
+          "name": {
+            "zh": "蓋歐卡",
+            "ja": "カイオーガ",
+            "en": "Kyogre"
+          },
+          "altForm": "原始",
+          "level": 0,
+          "method": "PrimalReversion",
+          "condition": {
+            "zh": "靛藍色寶珠",
+            "ja": "あいいろのたま",
+            "en": "Blue Orb"
+          }
+        }
+      ]
+    },
+    "source": "382",
     "latest": true,
     "hyperspaceId": 128
   },
@@ -389200,8 +389174,41 @@
         "cooldown": 20
       }
     ],
+    "evolutionTree": {
+      "link": "383",
+      "type": [
+        "Ground"
+      ],
+      "name": {
+        "zh": "固拉多",
+        "ja": "グラードン",
+        "en": "Groudon"
+      },
+      "to": [
+        {
+          "link": "383-1",
+          "type": [
+            "Ground",
+            "Fire"
+          ],
+          "name": {
+            "zh": "固拉多",
+            "ja": "グラードン",
+            "en": "Groudon"
+          },
+          "altForm": "原始",
+          "level": 0,
+          "method": "PrimalReversion",
+          "condition": {
+            "zh": "朱紅色寶珠",
+            "ja": "べにいろのたま",
+            "en": "Red Orb"
+          }
+        }
+      ]
+    },
     "source": "383",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 129
   },
   {
@@ -390163,7 +390170,40 @@
         "cooldown": 20
       }
     ],
-    "source": "383-1",
+    "evolutionTree": {
+      "link": "383",
+      "type": [
+        "Ground"
+      ],
+      "name": {
+        "zh": "固拉多",
+        "ja": "グラードン",
+        "en": "Groudon"
+      },
+      "to": [
+        {
+          "link": "383-1",
+          "type": [
+            "Ground",
+            "Fire"
+          ],
+          "name": {
+            "zh": "固拉多",
+            "ja": "グラードン",
+            "en": "Groudon"
+          },
+          "altForm": "原始",
+          "level": 0,
+          "method": "PrimalReversion",
+          "condition": {
+            "zh": "朱紅色寶珠",
+            "ja": "べにいろのたま",
+            "en": "Red Orb"
+          }
+        }
+      ]
+    },
+    "source": "383",
     "latest": true,
     "hyperspaceId": 129
   },
@@ -391121,14 +391161,49 @@
         "cooldown": 12
       }
     ],
+    "evolutionTree": {
+      "link": "384",
+      "type": [
+        "Dragon",
+        "Flying"
+      ],
+      "name": {
+        "zh": "烈空坐",
+        "ja": "レックウザ",
+        "en": "Rayquaza"
+      },
+      "to": [
+        {
+          "link": "384-1",
+          "type": [
+            "Dragon",
+            "Flying"
+          ],
+          "name": {
+            "zh": "烈空坐",
+            "ja": "レックウザ",
+            "en": "Rayquaza"
+          },
+          "altForm": "MEGA",
+          "level": 0,
+          "method": "LevelUpKnowMove",
+          "condition": {
+            "zh": "畫龍點睛",
+            "ja": "ガリョウテンセイ",
+            "en": "Dragon Ascent"
+          }
+        }
+      ]
+    },
     "source": "384",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 130
   },
   {
     "pid": 384,
     "form": 1,
     "lumioseId": 362,
+    "altForm": "MEGA",
     "link": "384-1",
     "name": {
       "zh": "烈空坐",
@@ -392079,7 +392154,41 @@
         "cooldown": 12
       }
     ],
-    "source": "384-1",
+    "evolutionTree": {
+      "link": "384",
+      "type": [
+        "Dragon",
+        "Flying"
+      ],
+      "name": {
+        "zh": "烈空坐",
+        "ja": "レックウザ",
+        "en": "Rayquaza"
+      },
+      "to": [
+        {
+          "link": "384-1",
+          "type": [
+            "Dragon",
+            "Flying"
+          ],
+          "name": {
+            "zh": "烈空坐",
+            "ja": "レックウザ",
+            "en": "Rayquaza"
+          },
+          "altForm": "MEGA",
+          "level": 0,
+          "method": "LevelUpKnowMove",
+          "condition": {
+            "zh": "畫龍點睛",
+            "ja": "ガリョウテンセイ",
+            "en": "Dragon Ascent"
+          }
+        }
+      ]
+    },
+    "source": "384",
     "latest": true,
     "hyperspaceId": 130
   },
@@ -392954,26 +393063,6 @@
             "ja": "マギアナナイト",
             "en": "Magearnaite"
           }
-        },
-        {
-          "link": "801-3",
-          "type": [
-            "Steel",
-            "Fairy"
-          ],
-          "name": {
-            "zh": "瑪機雅娜",
-            "ja": "マギアナ",
-            "en": "Magearna"
-          },
-          "altForm": "MEGA(500年前)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "瑪機雅娜進化石",
-            "ja": "マギアナナイト",
-            "en": "Magearnaite"
-          }
         }
       ]
     },
@@ -393822,8 +393911,43 @@
         "cooldown": 20
       }
     ],
+    "evolutionTree": {
+      "link": "801-1",
+      "type": [
+        "Steel",
+        "Fairy"
+      ],
+      "name": {
+        "zh": "瑪機雅娜",
+        "ja": "マギアナ",
+        "en": "Magearna"
+      },
+      "altForm": "500年前",
+      "to": [
+        {
+          "link": "801-3",
+          "type": [
+            "Steel",
+            "Fairy"
+          ],
+          "name": {
+            "zh": "瑪機雅娜",
+            "ja": "マギアナ",
+            "en": "Magearna"
+          },
+          "altForm": "MEGA-500年前",
+          "level": 0,
+          "method": "MegaEvolution",
+          "condition": {
+            "zh": "瑪機雅娜進化石",
+            "ja": "マギアナナイト",
+            "en": "Magearnaite"
+          }
+        }
+      ]
+    },
     "source": "801-1",
-    "latest": true,
+    "latest": false,
     "hyperspaceId": 131
   },
   {
@@ -394698,26 +394822,6 @@
             "ja": "マギアナナイト",
             "en": "Magearnaite"
           }
-        },
-        {
-          "link": "801-3",
-          "type": [
-            "Steel",
-            "Fairy"
-          ],
-          "name": {
-            "zh": "瑪機雅娜",
-            "ja": "マギアナ",
-            "en": "Magearna"
-          },
-          "altForm": "MEGA(500年前)",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "瑪機雅娜進化石",
-            "ja": "マギアナナイト",
-            "en": "Magearnaite"
-          }
         }
       ]
     },
@@ -394729,7 +394833,7 @@
     "pid": 801,
     "form": 3,
     "lumioseId": 363,
-    "altForm": "MEGA(500年前)",
+    "altForm": "MEGA-500年前",
     "link": "801-3",
     "name": {
       "zh": "瑪機雅娜",
@@ -395567,7 +395671,7 @@
       }
     ],
     "evolutionTree": {
-      "link": "801",
+      "link": "801-1",
       "type": [
         "Steel",
         "Fairy"
@@ -395577,27 +395681,8 @@
         "ja": "マギアナ",
         "en": "Magearna"
       },
+      "altForm": "500年前",
       "to": [
-        {
-          "link": "801-2",
-          "type": [
-            "Steel",
-            "Fairy"
-          ],
-          "name": {
-            "zh": "瑪機雅娜",
-            "ja": "マギアナ",
-            "en": "Magearna"
-          },
-          "altForm": "MEGA",
-          "level": 0,
-          "method": "MegaEvolution",
-          "condition": {
-            "zh": "瑪機雅娜進化石",
-            "ja": "マギアナナイト",
-            "en": "Magearnaite"
-          }
-        },
         {
           "link": "801-3",
           "type": [
@@ -395609,7 +395694,7 @@
             "ja": "マギアナ",
             "en": "Magearna"
           },
-          "altForm": "MEGA(500年前)",
+          "altForm": "MEGA-500年前",
           "level": 0,
           "method": "MegaEvolution",
           "condition": {
@@ -395620,7 +395705,7 @@
         }
       ]
     },
-    "source": "801",
+    "source": "801-1",
     "latest": true,
     "hyperspaceId": 131
   },

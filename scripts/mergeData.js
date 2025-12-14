@@ -361,10 +361,10 @@ const atlFormMap = {
   '拉帝歐斯-1': 'MEGA',
   '蓋歐卡-1': '原始',
   '固拉多-1': '原始',
-  '烈空座-1': 'MEGA',
+  '烈空坐-1': 'MEGA',
   '瑪機雅娜-1': '500年前',
   '瑪機雅娜-2': 'MEGA',
-  '瑪機雅娜-3': 'MEGA(500年前)',
+  '瑪機雅娜-3': 'MEGA-500年前',
   '捷拉奧拉-1': 'MEGA',
 };
 
@@ -812,6 +812,12 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           from = evolutionMap.get('678');
         } else if (pokemon.pid === 678 && pokemon.link === '678-3') {
           from = evolutionMap.get('678-1');
+        } else if (pokemon.pid === 978 && pokemon.link === '978-4') {
+          from = evolutionMap.get('978-1');
+        } else if (pokemon.pid === 978 && pokemon.link === '978-5') {
+          from = evolutionMap.get('978-2');
+        } else if (pokemon.pid === 801 && pokemon.link === '801-3') {
+          from = evolutionMap.get('801-1');
         }
 
         const to = evolutionMap.get(pokemon.link);
@@ -837,6 +843,45 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
             to.condition.ja = to.condition.ja + 'Z';
             to.condition.en = to.condition.en + 'Z';
           }
+
+          if (pokemon.pid === 384) {
+            to.level = 0;
+            to.method = 'LevelUpKnowMove';
+            to.condition = {
+              zh: '畫龍點睛',
+              ja: 'ガリョウテンセイ',
+              en: 'Dragon Ascent',
+            };
+          }
+
+          from.to.push(to);
+          from.to.sort((a, b) => a.link.localeCompare(b.link));
+
+          inverseEvolutionMap.set(to.link, from.link);
+        }
+      }
+
+      if (pokemon.altForm === '原始') {
+        const from = evolutionMap.get(pokemon.link.replace(/-\d+$/, ''));
+        const to = evolutionMap.get(pokemon.link);
+
+        const primalCondition = {
+          382: {
+            zh: `靛藍色寶珠`,
+            ja: `あいいろのたま`,
+            en: `Blue Orb`,
+          },
+          383: {
+            zh: `朱紅色寶珠`,
+            ja: `べにいろのたま`,
+            en: `Red Orb`,
+          },
+        };
+
+        if (from && to) {
+          to.level = 0;
+          to.method = 'PrimalReversion';
+          to.condition = primalCondition[pokemon.pid];
 
           from.to.push(to);
           from.to.sort((a, b) => a.link.localeCompare(b.link));
