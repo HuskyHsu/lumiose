@@ -2,6 +2,7 @@ import { PokemonCard } from '@/components/pokemon';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 import { ShareButton } from '@/components/ui/share-button';
+import { useEVToggle } from '@/hooks/useEVToggle';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
@@ -9,6 +10,8 @@ import type { Pokedex, PokemonList } from '@/types/pokemon';
 import { memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  EVFilter,
+  EVToggle,
   FinalFormToggle,
   PokedexToggle,
   PWAInstallButton,
@@ -34,8 +37,11 @@ function Home() {
     selectedPokedex,
     setSelectedPokedex,
     filteredPokemonList,
+    selectedEVStat,
+    setSelectedEVStat,
   } = usePokemonFilter(pokemonList);
   const { isShiny, toggleShiny } = useShinyToggle();
+  const { isShowEV, toggleEV } = useEVToggle();
 
   useEffect(() => {
     document.title = 'Lumiose Pokédex App';
@@ -56,15 +62,18 @@ function Home() {
           onAlphaZoneToggle={toggleAlphaZone}
         />
       )}
-      <div className='flex gap-4'>
+      <div className='flex gap-4 mb-2'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
+        <EVToggle isShowEV={isShowEV} onToggle={toggleEV} />
       </div>
+      {isShowEV && <EVFilter selectedEVStat={selectedEVStat} onSelectEVStat={setSelectedEVStat} />}
       <PageContent
         loading={loading}
         error={error}
         pokemonList={filteredPokemonList}
         isShiny={isShiny}
+        isShowEV={isShowEV}
         selectedZone={selectedZone}
         isAlphaZone={isAlphaZone}
         selectedPokedex={selectedPokedex}
@@ -88,6 +97,7 @@ interface PageContentProps {
   error: string | null;
   pokemonList: PokemonList;
   isShiny: boolean;
+  isShowEV: boolean;
   selectedZone: string;
   isAlphaZone: boolean;
   selectedPokedex: Pokedex;
@@ -98,6 +108,7 @@ function PageContent({
   error,
   pokemonList,
   isShiny,
+  isShowEV,
   selectedZone,
   isAlphaZone,
   selectedPokedex,
@@ -114,6 +125,7 @@ function PageContent({
     <PokemonGrid
       pokemonList={pokemonList}
       isShiny={isShiny}
+      isShowEV={isShowEV}
       selectedZone={selectedZone}
       isAlphaZone={isAlphaZone}
       selectedPokedex={selectedPokedex}
@@ -124,6 +136,7 @@ function PageContent({
 interface PokemonGridProps {
   pokemonList: PokemonList;
   isShiny: boolean;
+  isShowEV: boolean;
   selectedZone: string;
   isAlphaZone: boolean;
   selectedPokedex: Pokedex;
@@ -132,6 +145,7 @@ interface PokemonGridProps {
 const PokemonGrid = memo(function PokemonGrid({
   pokemonList,
   isShiny,
+  isShowEV,
   selectedZone,
   isAlphaZone,
   selectedPokedex,
@@ -143,6 +157,7 @@ const PokemonGrid = memo(function PokemonGrid({
           key={pokemon.link}
           pokemon={pokemon}
           isShiny={isShiny}
+          isShowEV={isShowEV}
           selectedZone={selectedZone}
           isAlphaZone={isAlphaZone}
           selectedPokedex={selectedPokedex}

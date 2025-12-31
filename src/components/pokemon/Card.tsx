@@ -5,6 +5,7 @@ import type { Pokedex, Pokemon } from '@/types/pokemon';
 import { Haze, Moon, Sun } from 'lucide-react';
 import { memo, useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import PokemonEVs from './EVs';
 import PokemonImage from './Image';
 import PokemonName from './Name';
 import PokemonTypes from './Types';
@@ -12,6 +13,7 @@ import PokemonTypes from './Types';
 interface PokemonCardProps {
   pokemon: Pokemon;
   isShiny?: boolean;
+  isShowEV?: boolean;
   selectedZone?: string | null;
   isAlphaZone?: boolean;
   selectedPokedex: Pokedex;
@@ -51,6 +53,7 @@ const getWeatherDisplay = (weatherConditions: string[]) => {
 const PokemonCard = memo(function PokemonCard({
   pokemon,
   isShiny = false,
+  isShowEV = false,
   selectedZone,
   isAlphaZone = false,
   selectedPokedex,
@@ -150,6 +153,7 @@ const PokemonCard = memo(function PokemonCard({
         )}
         <PokemonName name={pokemon.name.zh} />
         <PokemonTypes types={pokemon.type} />
+        {isShowEV && <PokemonEVs ev={pokemon.ev} />}
       </div>
     </Link>
   );

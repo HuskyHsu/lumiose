@@ -1,3 +1,4 @@
+import { EV_STATS } from '@/lib/constants/pokemon';
 import type { Pokemon, PokemonList } from '@/types/pokemon';
 import { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -18,6 +19,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   const selectedZone = getParam('zone') || '';
   const isAlphaZone = getBooleanParam('alphaZone', false);
   const selectedPokedex = (getParam('Pokedex') as Pokedex) || 'lumiose';
+  const selectedEVStat = getParam('evStat') || '';
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -71,6 +73,16 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     return true;
   }, []);
 
+  // Memoize the EV matching function
+  const evMatches = useCallback((pokemon: Pokemon, evStat: string) => {
+    if (!evStat) return true;
+
+    const index = EV_STATS.indexOf(evStat as (typeof EV_STATS)[number]);
+    if (index === -1) return true;
+
+    return pokemon.ev[index] > 0;
+  }, []);
+
   // Function to filter only final evolution forms
   const getFinalFormPokemon = useCallback((pokemonList: PokemonList) => {
     return pokemonList.filter((pokemon) => pokemon.latest);
@@ -102,6 +114,11 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     // Apply Pokedex filter
     result = result.filter((pokemon) => pokedexMatches(pokemon, selectedPokedex));
 
+    // Apply EV filter
+    if (selectedEVStat) {
+      result = result.filter((pokemon) => evMatches(pokemon, selectedEVStat));
+    }
+
     return result;
   }, [
     pokemonList,
@@ -115,7 +132,9 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     keywordMatches,
     zoneMatches,
     pokedexMatches,
+    evMatches,
     getFinalFormPokemon,
+    selectedEVStat,
   ]);
 
   // Memoize the setters to prevent unnecessary re-renders
@@ -167,6 +186,13 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     [setParam, setSearchParams]
   );
 
+  const memoizedSetSelectedEVStat = useCallback(
+    (evStat: string) => {
+      setParam('evStat', evStat);
+    },
+    [setParam]
+  );
+
   return {
     selectedTypes,
     setSelectedTypes: memoizedSetSelectedTypes,
@@ -181,5 +207,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     selectedPokedex,
     setSelectedPokedex: memoizedSetSelectedPokedex,
     filteredPokemonList,
+    selectedEVStat,
+    setSelectedEVStat: memoizedSetSelectedEVStat,
   };
 }

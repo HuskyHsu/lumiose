@@ -425,7 +425,7 @@ const pokemonCatchableConditions = [
   // 彩粉蝶只有花園花紋可以被捕捉到
   (pokemon) => {
     const isVivillon = pokemon.name.zh.includes('彩粉蝶');
-    const isGardenPattern = pokemon.altForm === '花園花紋';
+    const isGardenPattern = pokemon.altForm === '花園花紋' || pokemon.altForm === '庭園花紋';
     return !isVivillon || isGardenPattern;
   },
 
@@ -1208,7 +1208,7 @@ function pmFilter(pmList) {
     .filter(
       (row) =>
         !Array.from({ length: 20 }, (_, i) => i)
-          .filter((i) => ![6, 8].includes(i))
+          .filter((i) => ![4, 6, 8].includes(i))
           .map((i) => `666${i > 0 ? '-' : ''}${i > 0 ? i : ''}`)
           .includes(row.link)
     )
