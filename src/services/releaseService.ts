@@ -16,3 +16,14 @@ export const fetchLatestRelease = async (): Promise<GitHubRelease> => {
   const data: GitHubRelease = await response.json();
   return data;
 };
+
+export const fetchReleases = async (): Promise<GitHubRelease[]> => {
+  const response = await fetch('https://api.github.com/repos/HuskyHsu/lumiose/releases');
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch releases: ${response.status}`);
+  }
+
+  const data: GitHubRelease[] = await response.json();
+  return data;
+};

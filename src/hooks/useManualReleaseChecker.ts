@@ -1,8 +1,8 @@
-import { fetchLatestRelease, type GitHubRelease } from '@/services/releaseService';
+import { fetchReleases, type GitHubRelease } from '@/services/releaseService';
 import { useState } from 'react';
 
 export const useManualReleaseChecker = () => {
-  const [release, setRelease] = useState<GitHubRelease | null>(null);
+  const [releases, setReleases] = useState<GitHubRelease[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -12,8 +12,8 @@ export const useManualReleaseChecker = () => {
       setIsLoading(true);
       setError(null);
 
-      const latestRelease = await fetchLatestRelease();
-      setRelease(latestRelease);
+      const allReleases = await fetchReleases();
+      setReleases(allReleases);
       setShowModal(true);
     } catch (err) {
       console.error('Failed to fetch release:', err);
@@ -28,7 +28,7 @@ export const useManualReleaseChecker = () => {
   };
 
   return {
-    release,
+    releases,
     showModal,
     isLoading,
     error,

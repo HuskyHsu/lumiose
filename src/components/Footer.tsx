@@ -3,7 +3,7 @@ import { useManualReleaseChecker } from '@/hooks/useManualReleaseChecker';
 import { ExternalLink, FileText, Github } from 'lucide-react';
 
 export const Footer = () => {
-  const { release, showModal, isLoading, checkRelease, closeModal } = useManualReleaseChecker();
+  const { releases, showModal, isLoading, checkRelease, closeModal } = useManualReleaseChecker();
 
   return (
     <>
@@ -20,7 +20,7 @@ export const Footer = () => {
                 />
                 <span className='text-sm font-medium text-gray-700'>Lumiose Pokédex</span>
               </div>
-              <span className='text-xs text-gray-500'>© 2025</span>
+              <span className='text-xs text-gray-500'>© 2025-2026</span>
             </div>
 
             {/* Center - Links */}
@@ -28,7 +28,7 @@ export const Footer = () => {
               <button
                 onClick={checkRelease}
                 disabled={isLoading}
-                className='flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors disabled:opacity-50'
+                className='flex items-center gap-1 text-gray-600 hover:text-gray-900 transition-colors disabled:opacity-50 cursor-pointer'
               >
                 <FileText size={16} />
                 {isLoading ? 'Loading...' : 'Release Notes'}
@@ -53,7 +53,9 @@ export const Footer = () => {
       </footer>
 
       {/* Release Notes Modal */}
-      {release && <ReleaseNotesModal release={release} isOpen={showModal} onClose={closeModal} />}
+      {releases.length > 0 && (
+        <ReleaseNotesModal releases={releases} isOpen={showModal} onClose={closeModal} />
+      )}
     </>
   );
 };

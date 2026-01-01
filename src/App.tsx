@@ -12,7 +12,7 @@ function App() {
   useAnalytics();
 
   // Check for new releases
-  const { release, showModal, closeModal } = useReleaseChecker();
+  const { releases, showModal, closeModal } = useReleaseChecker();
 
   return (
     <>
@@ -23,7 +23,9 @@ function App() {
         </Route>
       </Routes>
 
-      {release && <ReleaseNotesModal release={release} isOpen={showModal} onClose={closeModal} />}
+      {releases.length > 0 && (
+        <ReleaseNotesModal releases={releases} isOpen={showModal} onClose={closeModal} />
+      )}
     </>
   );
 }

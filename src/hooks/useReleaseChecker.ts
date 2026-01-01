@@ -1,9 +1,9 @@
-import { fetchLatestRelease, type GitHubRelease } from '@/services/releaseService';
+import { fetchReleases, type GitHubRelease } from '@/services/releaseService';
 import { hasSeenVersion, setLastSeenVersion } from '@/utils/versionStorage';
 import { useEffect, useState } from 'react';
 
 export const useReleaseChecker = () => {
-  const [release, setRelease] = useState<GitHubRelease | null>(null);
+  const [releases, setReleases] = useState<GitHubRelease[]>([]);
   const [showModal, setShowModal] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -14,12 +14,15 @@ export const useReleaseChecker = () => {
         setIsLoading(true);
         setError(null);
 
-        const latestRelease = await fetchLatestRelease();
-        setRelease(latestRelease);
+        const allReleases = await fetchReleases();
+        setReleases(allReleases);
 
-        // Check if this version has been seen before
-        if (!hasSeenVersion(latestRelease.tag_name)) {
-          setShowModal(true);
+        if (allReleases.length > 0) {
+          const latestRelease = allReleases[0];
+          // Check if this version has been seen before
+          if (!hasSeenVersion(latestRelease.tag_name)) {
+            setShowModal(true);
+          }
         }
       } catch (err) {
         console.error('Failed to check for new release:', err);
@@ -33,14 +36,14 @@ export const useReleaseChecker = () => {
   }, []);
 
   const handleCloseModal = () => {
-    if (release) {
-      setLastSeenVersion(release.tag_name);
+    if (releases.length > 0) {
+      setLastSeenVersion(releases[0].tag_name);
     }
     setShowModal(false);
   };
 
   return {
-    release,
+    releases,
     showModal,
     isLoading,
     error,
