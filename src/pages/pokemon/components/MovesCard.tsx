@@ -52,7 +52,18 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         ?.tm.toString()
                         .padStart(3, '0')}
                     </TableCell>
-                    <TableCell>{pokemon.alphaMove.name.zh}</TableCell>
+                    <TableCell>
+                      {
+                        <a
+                          href={`https://wiki.52poke.com/zh-hant/${pokemon.alphaMove.name.zh}（招式）`}
+                          target='_blank'
+                          rel='noreferrer'
+                          className='inline text-blue-800 underline'
+                        >
+                          {pokemon.alphaMove.name.zh}
+                        </a>
+                      }
+                    </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[pokemon.alphaMove.type]} />
@@ -82,7 +93,16 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                         <span className='text-xs font-light italic'>{subInfo}</span>
                       </TableCell>
                       <TableCell>{TM?.tm.toString().padStart(3, '0')}</TableCell>
-                      <TableCell>{move.name.zh}</TableCell>
+                      <TableCell>
+                        <a
+                          href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+                          target='_blank'
+                          rel='noreferrer'
+                          className='inline text-blue-800 underline'
+                        >
+                          {move.name.zh}
+                        </a>
+                      </TableCell>
                       <TableCell>
                         <div className='flex justify-center'>
                           <PokemonTypes types={[move.type]} />
@@ -119,7 +139,16 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 {pokemon.tmMoves.map((move) => (
                   <TableRow key={move.id}>
                     <TableCell>{move.tm.toString().padStart(3, '0')}</TableCell>
-                    <TableCell>{move.name.zh}</TableCell>
+                    <TableCell>
+                      <a
+                        href={`https://wiki.52poke.com/zh-hant/${move.name.zh}（招式）`}
+                        target='_blank'
+                        rel='noreferrer'
+                        className='inline text-blue-800 underline'
+                      >
+                        {move.name.zh}
+                      </a>
+                    </TableCell>
                     <TableCell>
                       <div className='flex justify-center'>
                         <PokemonTypes types={[move.type]} />

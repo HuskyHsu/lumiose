@@ -32,12 +32,48 @@ type Render = {
 export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) {
   const renderData: Render[] = [
     {
+      title: 'National ID',
+      Content: ({ pokemon }: ContentProps) => <>#{pokemon.pid.toString().padStart(4, '0')}</>,
+    },
+    {
+      title: 'Local ID',
+      Content: ({ pokemon }: ContentProps) => {
+        const id = (pokemon.lumioseId <= 232 ? pokemon.lumioseId : pokemon.lumioseId - 232)
+          .toString()
+          .padStart(3, '0');
+
+        return (
+          <>
+            {pokemon.lumioseId <= 232 ? 'Lumiose' : 'Hyperspace'}#{id}
+          </>
+        );
+      },
+    },
+    {
       title: 'Name(zh)',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.name.zh}</>,
+      Content: ({ pokemon }: ContentProps) => (
+        <a
+          href={`https://wiki.52poke.com/zh-hant/${pokemon.name.zh}`}
+          target='_blank'
+          rel='noreferrer'
+          className='inline text-blue-800 underline'
+        >
+          {pokemon.name.zh}
+        </a>
+      ),
     },
     {
       title: 'Name(en)',
-      Content: ({ pokemon }: ContentProps) => <>{pokemon.name.en}</>,
+      Content: ({ pokemon }: ContentProps) => (
+        <a
+          href={`https://www.serebii.net/pokedex-sv/${pokemon.name.en.toLocaleLowerCase()}/`}
+          target='_blank'
+          rel='noreferrer'
+          className='inline text-blue-800 underline'
+        >
+          {pokemon.name.en}
+        </a>
+      ),
     },
     {
       title: 'Name(jp)',
