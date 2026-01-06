@@ -56775,16 +56775,16 @@
     "weight": 21,
     "color": "Brown",
     "alphaMove": {
-      "id": 583,
+      "id": 231,
       "name": {
-        "zh": "嬉鬧",
-        "ja": "じゃれつく",
-        "en": "Play Rough"
+        "zh": "鐵尾",
+        "ja": "アイアンテール",
+        "en": "Iron Tail"
       },
-      "type": "Fairy",
+      "type": "Steel",
       "category": "Physical",
-      "power": 90,
-      "cooldown": 8
+      "power": 100,
+      "cooldown": 10
     },
     "levelUpMoves": [
       {

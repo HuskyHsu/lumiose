@@ -94,6 +94,9 @@ function parsePokemonSection(section) {
       Object.assign(pokemon, physicalData);
     } else if (line.startsWith('Alpha Move:')) {
       pokemon.alphaMove = parseAlphaMove(line);
+      if (pokemon.name === '雷丘-1') {
+        pokemon.alphaMove = '鐵尾';
+      }
     } else if (line.startsWith('Level Up Moves:')) {
       pokemon.levelUpMoves = parseLevelUpMoves(lines, i);
       // 跳過已處理的招式行
@@ -264,6 +267,8 @@ function parsePhysicalData(line) {
  * 解析Alpha招式
  */
 function parseAlphaMove(line) {
+  line = line.replace('-0 @ lv0 (Hisui) [1]', '-1 @ lv40 (Hisui) [0]');
+
   const match = line.match(/Alpha Move:\s*(.+)/);
   return match ? match[1].trim() : null;
 }
