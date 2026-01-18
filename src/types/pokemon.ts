@@ -95,4 +95,24 @@ export type BasePoint = {
   Total: number;
 };
 
+export interface MinimalPokemon {
+  link: string;
+  type: string[];
+  name: PokemonName;
+  altForm?: string;
+  level?: number;
+}
+
+export interface ExpandedMoveData {
+  id: number;
+  name: PokemonName;
+  type: string;
+  category: string;
+  power: number;
+  cooldown: number;
+  levelUpPm?: MinimalPokemon[];
+  tmPm?: MinimalPokemon[];
+  alphaPm?: MinimalPokemon[];
+}
+
 export type Pokedex = 'lumiose' | 'hyperspace';

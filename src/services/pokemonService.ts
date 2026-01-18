@@ -23,3 +23,16 @@ export const fetchPokemonDetail = async (link: string): Promise<DetailedPokemon>
   const data: DetailedPokemon = await response.json();
   return data;
 };
+
+export const fetchMoveData = async (
+  moveId: number,
+): Promise<import('@/types/pokemon').ExpandedMoveData> => {
+  const response = await fetch(`${HOST}/data/move/${moveId}.json`);
+
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+
+  const data: import('@/types/pokemon').ExpandedMoveData = await response.json();
+  return data;
+};

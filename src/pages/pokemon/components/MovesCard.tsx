@@ -9,6 +9,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import type { DetailedPokemon } from '@/types/pokemon';
+import MoveRow from './MoveRow';
 
 interface MovesCardProps {
   pokemon: DetailedPokemon;
@@ -40,7 +41,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableHeader>
               <TableBody>
                 {pokemon.alphaMove && (
-                  <TableRow className='bg-red-100'>
+                  <MoveRow moveId={pokemon.alphaMove.id} colSpan={7} className='bg-red-100'>
                     <TableCell>
                       <div className='flex justify-center'>
                         <PokemonTypes types={['Alpha']} />
@@ -78,7 +79,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       {pokemon.alphaMove.power <= 0 ? '—' : pokemon.alphaMove.power}
                     </TableCell>
                     <TableCell>{pokemon.alphaMove.cooldown}</TableCell>
-                  </TableRow>
+                  </MoveRow>
                 )}
 
                 {pokemon.levelUpMoves.map((move) => {
@@ -87,7 +88,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   const TM = pokemon.tmMoves.find((tm) => tm.id === move.id);
 
                   return (
-                    <TableRow key={move.id}>
+                    <MoveRow key={move.id} moveId={move.id} colSpan={7}>
                       <TableCell className='flex gap-0 justify-center items-end'>
                         {from}
                         <span className='text-xs font-light italic'>{subInfo}</span>
@@ -115,7 +116,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                       </TableCell>
                       <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
                       <TableCell>{move.cooldown}</TableCell>
-                    </TableRow>
+                    </MoveRow>
                   );
                 })}
               </TableBody>
@@ -137,7 +138,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableHeader>
               <TableBody>
                 {pokemon.tmMoves.map((move) => (
-                  <TableRow key={move.id}>
+                  <MoveRow key={move.id} moveId={move.id} colSpan={6}>
                     <TableCell>{move.tm.toString().padStart(3, '0')}</TableCell>
                     <TableCell>
                       <a
@@ -161,7 +162,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                     </TableCell>
                     <TableCell>{move.power <= 0 ? '—' : move.power}</TableCell>
                     <TableCell>{move.cooldown}</TableCell>
-                  </TableRow>
+                  </MoveRow>
                 ))}
               </TableBody>
             </Table>
