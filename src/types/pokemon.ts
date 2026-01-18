@@ -107,7 +107,7 @@ export interface ExpandedMoveData {
   id: number;
   name: PokemonName;
   type: string;
-  category: string;
+  category: 'Status' | 'Physical' | 'Special';
   power: number;
   cooldown: number;
   levelUpPm?: MinimalPokemon[];

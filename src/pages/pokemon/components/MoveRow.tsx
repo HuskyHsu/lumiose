@@ -1,11 +1,15 @@
-import { TableCell, TableRow } from '@/components/ui/table';
-import { FromClass, ToClass } from '@/lib/color';
-import { cn } from '@/lib/utils';
-import { fetchMoveData } from '@/services/pokemonService';
-import type { ExpandedMoveData, MinimalPokemon } from '@/types/pokemon';
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+import { PokemonTypes } from '@/components/pokemon';
+import { TableCell, TableRow } from '@/components/ui/table';
+import { FromClass, ToClass } from '@/lib/color';
+import { TYPE_EFFECTIVENESS_CHART } from '@/lib/constants/typeEffectiveness';
+import { cn } from '@/lib/utils';
+import { getMoveEffectiveness } from '@/lib/utils/typeWeakness';
+import { fetchMoveData } from '@/services/pokemonService';
+import type { ExpandedMoveData, MinimalPokemon } from '@/types/pokemon';
 
 interface MoveRowProps {
   moveId: number;
@@ -43,6 +47,56 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
     }
   };
 
+  const renderEffectiveness = (type: string) => {
+    // Check if type is valid key of TYPE_EFFECTIVENESS_CHART
+    if (!(type in TYPE_EFFECTIVENESS_CHART)) return null;
+
+    const effectiveness = getMoveEffectiveness(type as keyof typeof TYPE_EFFECTIVENESS_CHART);
+    const superEffective = effectiveness[2] || [];
+    const notVeryEffective = effectiveness[0.5] || [];
+    const noEffect = effectiveness[0] || [];
+
+    return (
+      <div className='mb-6 last:mb-0'>
+        <h5 className='font-semibold text-sm mb-3 text-muted-foreground uppercase tracking-wider pl-1'>
+          Move Effectiveness
+        </h5>
+        <div className='flex flex-wrap gap-8 pl-1 text-muted-foreground'>
+          {superEffective.length > 0 && (
+            <div className='flex flex-col gap-2'>
+              <span className='font-bold border-b border-green-200 pb-1'>2x</span>
+              <div className='flex flex-wrap gap-2'>
+                {superEffective.map((t) => (
+                  <PokemonTypes key={t} types={[t]} className='text-[10px]' />
+                ))}
+              </div>
+            </div>
+          )}
+          {notVeryEffective.length > 0 && (
+            <div className='flex flex-col gap-2'>
+              <span className='font-bold border-b border-orange-200 pb-1'>0.5x</span>
+              <div className='flex flex-wrap gap-2'>
+                {notVeryEffective.map((t) => (
+                  <PokemonTypes key={t} types={[t]} className='text-[10px]' />
+                ))}
+              </div>
+            </div>
+          )}
+          {noEffect.length > 0 && (
+            <div className='flex flex-col gap-2'>
+              <span className='font-bold border-b border-gray-200 pb-1'>0x</span>
+              <div className='flex flex-wrap gap-2'>
+                {noEffect.map((t) => (
+                  <PokemonTypes key={t} types={[t]} className='text-[10px]' />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   const renderPokemonList = (list: MinimalPokemon[] | undefined, source: string) => {
     if (!list || list.length === 0) return null;
 
@@ -66,9 +120,9 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
                 key={`${pm.link}-${idx}`}
                 to={`/pokemon/${pm.link}`}
                 className={cn(
-                  'group  relative flex flex-col items-center justify-center p-8 w-10 h-10',
-                  ' transition-all duration-300',
-                  'hover:scale-105 hover:z-10',
+                  'group relative flex flex-col items-center justify-center p-8 w-10 h-10',
+                  'transition-all duration-300',
+                  'hover:scale-105 hover:z-20', // Z-index increased for dropdown
                 )}
                 title={pm.name.zh}
               >
@@ -82,11 +136,11 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
                   <img
                     src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`}
                     alt={pm.name.zh}
-                    className='w-full h-full object-contain filter drop-shadow-md'
+                    className='w-full h-full object-contain filter drop-shadow-md relative z-10'
                     loading='lazy'
                   />
                   {pm.level !== undefined && (
-                    <span className='text-black absolute -bottom-6 left-1/2 -translate-x-1/2 text-[12px]'>
+                    <span className='text-black absolute -bottom-6 left-1/2 -translate-x-1/2 text-[12px] whitespace-nowrap z-10'>
                       {from}
                     </span>
                   )}
@@ -122,6 +176,7 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
               <div className='text-center py-4 text-red-500'>{error}</div>
             ) : data ? (
               <div className='text-left'>
+                {renderEffectiveness(data.type)}
                 {renderPokemonList(data.levelUpPm, 'Level Up')}
                 {renderPokemonList(data.tmPm, 'TM Machine')}
                 {renderPokemonList(data.alphaPm, 'Alpha Pokemon')}

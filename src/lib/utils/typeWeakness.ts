@@ -40,7 +40,7 @@ export function calculateTypeWeaknesses(defensiveTypes: string[]): TypeEffective
  */
 export function filterTypesByEffectiveness(
   typeWeaknesses: TypeEffectiveness[],
-  targetMultiplier: EffectivenessMultiplier
+  targetMultiplier: EffectivenessMultiplier,
 ): TypeEffectiveness[] {
   return typeWeaknesses.filter(({ rate }) => rate === targetMultiplier);
 }
@@ -73,4 +73,23 @@ export function getResistances(defensiveTypes: string[]): TypeEffectiveness[] {
 export function getImmunities(defensiveTypes: string[]): TypeEffectiveness[] {
   const allEffectiveness = calculateTypeWeaknesses(defensiveTypes);
   return allEffectiveness.filter(({ rate }) => rate === 0);
+}
+
+/**
+ * Get the offensive effectiveness of a move type against single defending types.
+ * @param moveType - The type of the move
+ * @returns Object grouping defending types by effectiveness multiplier
+ */
+export function getMoveEffectiveness(moveType: PokemonType): Record<number, string[]> {
+  const effectivenessMap = TYPE_EFFECTIVENESS_CHART[moveType];
+  const result: Record<number, string[]> = {};
+
+  Object.entries(effectivenessMap).forEach(([defendingType, multiplier]) => {
+    if (!result[multiplier]) {
+      result[multiplier] = [];
+    }
+    result[multiplier].push(defendingType);
+  });
+
+  return result;
 }

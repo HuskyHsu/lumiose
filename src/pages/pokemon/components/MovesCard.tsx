@@ -41,7 +41,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
               </TableHeader>
               <TableBody>
                 {pokemon.alphaMove && (
-                  <MoveRow moveId={pokemon.alphaMove.id} colSpan={7} className='bg-red-100'>
+                  <MoveRow moveId={pokemon.alphaMove.id} colSpan={7}>
                     <TableCell>
                       <div className='flex justify-center'>
                         <PokemonTypes types={['Alpha']} />
