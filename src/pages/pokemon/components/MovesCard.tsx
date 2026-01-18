@@ -8,7 +8,9 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
+import { cn } from '@/lib/utils';
 import type { DetailedPokemon } from '@/types/pokemon';
+import { useState } from 'react';
 import MoveRow from './MoveRow';
 
 interface MovesCardProps {
@@ -16,12 +18,92 @@ interface MovesCardProps {
 }
 
 export default function MovesCard({ pokemon }: MovesCardProps) {
+  const [selectedType, setSelectedType] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const allMoves = [
+    ...(pokemon.alphaMove ? [pokemon.alphaMove] : []),
+    ...pokemon.levelUpMoves,
+    ...pokemon.tmMoves,
+  ];
+
+  const uniqueTypes = Array.from(new Set(allMoves.map((m) => m.type))).sort();
+  const categories = ['Physical', 'Special', 'Status'];
+
+  const filterMove = (
+    move:
+      | DetailedPokemon['levelUpMoves'][0]
+      | DetailedPokemon['tmMoves'][0]
+      | DetailedPokemon['alphaMove'],
+  ) => {
+    if (!move) return false;
+    const typeMatch = selectedType === null || move.type === selectedType;
+    const categoryMatch = selectedCategory === null || move.category === selectedCategory;
+    return typeMatch && categoryMatch;
+  };
+
+  const toggleType = (type: string) => {
+    setSelectedType((prev) => (prev === type ? null : type));
+  };
+
+  const toggleCategory = (category: string) => {
+    setSelectedCategory((prev) => (prev === category ? null : category));
+  };
+
   return (
     <Card className='lg:col-span-2'>
       <CardHeader>
         <CardTitle>Moves</CardTitle>
       </CardHeader>
       <CardContent className='px-0 md:px-6'>
+        <div className='mb-6 -mt-4 space-y-4 px-6 md:px-0'>
+          <p className='text-sm font-semibold'>Type:</p>
+          <div className='flex flex-wrap gap-2 items-center'>
+            {uniqueTypes.map((type) => {
+              const isSelected = selectedType === type;
+              const shouldFade = selectedType !== null && !isSelected;
+
+              return (
+                <button
+                  key={type}
+                  onClick={() => toggleType(type)}
+                  className={cn(
+                    'flex items-center justify-center rounded-lg transition-all duration-100',
+                    shouldFade ? 'opacity-30' : 'opacity-100',
+                    'hover:scale-110 active:scale-90',
+                  )}
+                  title={type}
+                >
+                  <PokemonTypes types={[type]} className='w-8 h-8' />
+                </button>
+              );
+            })}
+          </div>
+          <p className='text-sm font-semibold'>Category:</p>
+          <div className='flex flex-wrap gap-2 items-center'>
+            {categories.map((category) => {
+              const isSelected = selectedCategory === category;
+              const shouldFade = selectedCategory !== null && !isSelected;
+
+              return (
+                <button
+                  key={category}
+                  onClick={() => toggleCategory(category)}
+                  className={cn(
+                    'flex items-center justify-center rounded-lg transition-all duration-100',
+                    'border-gray-200 bg-white hover:border-gray-300 border',
+                    shouldFade ? 'opacity-30' : 'opacity-100',
+                    'hover:scale-110 active:scale-90',
+                  )}
+                  title={category}
+                >
+                  <PokemonTypes types={[category]} className='w-8 h-8' />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 text-center'>
           <div>
             <h4 className='font-semibold mb-3'>Level Up Moves</h4>
@@ -40,7 +122,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {pokemon.alphaMove && (
+                {pokemon.alphaMove && filterMove(pokemon.alphaMove) && (
                   <MoveRow moveId={pokemon.alphaMove.id} colSpan={7}>
                     <TableCell>
                       <div className='flex justify-center'>
@@ -82,7 +164,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                   </MoveRow>
                 )}
 
-                {pokemon.levelUpMoves.map((move) => {
+                {pokemon.levelUpMoves.filter(filterMove).map((move) => {
                   const from = move.level > 1 ? move.level : move.level === 0 ? 'Evolve' : '—';
                   const subInfo = `+${move.plus}`;
                   const TM = pokemon.tmMoves.find((tm) => tm.id === move.id);
@@ -137,7 +219,7 @@ export default function MovesCard({ pokemon }: MovesCardProps) {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                {pokemon.tmMoves.map((move) => (
+                {pokemon.tmMoves.filter(filterMove).map((move) => (
                   <MoveRow key={move.id} moveId={move.id} colSpan={6}>
                     <TableCell>{move.tm.toString().padStart(3, '0')}</TableCell>
                     <TableCell>
