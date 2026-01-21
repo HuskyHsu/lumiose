@@ -20,6 +20,7 @@ import {
   TypeFilter,
   ZoneFilter,
 } from './components';
+import PageViewToggle from '@/pages/move/components/PageViewToggle';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
@@ -51,6 +52,7 @@ function Home() {
     <div className='space-y-6'>
       <PageHeader />
       <PWAInstallButton />
+      <PageViewToggle />
       <PokedexToggle selectedPokedex={selectedPokedex} onPokedexChange={setSelectedPokedex} />
       <SearchFilter searchKeyword={searchKeyword} onSearchChange={setSearchKeyword} />
       <TypeFilter selectedTypes={selectedTypes} onTypeChange={setSelectedTypes} />

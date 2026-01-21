@@ -1,10 +1,8 @@
 import { Loader2 } from 'lucide-react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 
-import { PokemonTypes } from '@/components/pokemon';
+import { PokemonIconLink, PokemonTypes } from '@/components/pokemon';
 import { TableCell, TableRow } from '@/components/ui/table';
-import { FromClass, ToClass } from '@/lib/color';
 import { TYPE_EFFECTIVENESS_CHART } from '@/lib/constants/typeEffectiveness';
 import { cn } from '@/lib/utils';
 import { getMoveEffectiveness } from '@/lib/utils/typeWeakness';
@@ -106,48 +104,13 @@ export default function MoveRow({ moveId, colSpan, className, children }: MoveRo
           {source} <span className='text-xs opacity-70'>({list.length})</span>
         </h5>
         <div className='flex flex-wrap gap-x-2 gap-y-4'>
-          {list.map((pm, idx) => {
-            const primaryType = pm.type[0];
-            const secondaryType = pm.type[1] || pm.type[0];
-            const bgClass = cn(
-              FromClass[primaryType as keyof typeof FromClass],
-              ToClass[secondaryType as keyof typeof ToClass],
-            );
-            const from = (pm?.level || 0) > 1 ? `Lv.${pm.level}` : pm.level === 0 ? 'Evolve' : '—';
-
-            return (
-              <Link
-                key={`${pm.link}-${idx}`}
-                to={`/pokemon/${pm.link}`}
-                className={cn(
-                  'group relative flex flex-col items-center justify-center p-8 w-10 h-10',
-                  'transition-all duration-300',
-                  'hover:scale-105 hover:z-20', // Z-index increased for dropdown
-                )}
-                title={pm.name.zh}
-              >
-                <div className='w-10 h-10 relative'>
-                  <div
-                    className={cn(
-                      'absolute top-6 -left-2 h-4 w-14 bg-linear-to-l rounded',
-                      bgClass,
-                    )}
-                  ></div>
-                  <img
-                    src={`${import.meta.env.BASE_URL}images/pmIcon/${pm.link}.png`}
-                    alt={pm.name.zh}
-                    className='w-full h-full object-contain filter drop-shadow-md relative z-10'
-                    loading='lazy'
-                  />
-                  {pm.level !== undefined && (
-                    <span className='text-black absolute -bottom-6 left-1/2 -translate-x-1/2 text-[12px] whitespace-nowrap z-10'>
-                      {from}
-                    </span>
-                  )}
-                </div>
-              </Link>
-            );
-          })}
+          {list.map((pm, idx) => (
+            <PokemonIconLink
+              key={`${pm.link}-${idx}`}
+              pokemon={pm}
+              showLevel={true}
+            />
+          ))}
         </div>
       </div>
     );

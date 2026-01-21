@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 
 import Home from '@/pages/home';
 import PokemonDetail from '@/pages/pokemon';
+import MoveList from '@/pages/move';
 
 function App() {
   // init Google Analytics
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path='pokemon/:link' element={<PokemonDetail />} />
+          <Route path='moves' element={<MoveList />} />
         </Route>
       </Routes>
 

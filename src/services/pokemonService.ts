@@ -1,4 +1,5 @@
 import type { DetailedPokemon, PokemonList } from '@/types/pokemon';
+import type { MoveList } from '@/types/move';
 
 const HOST = import.meta.env.BASE_URL;
 
@@ -34,5 +35,14 @@ export const fetchMoveData = async (
   }
 
   const data: import('@/types/pokemon').ExpandedMoveData = await response.json();
+  return data;
+};
+
+export const fetchMoveList = async (): Promise<MoveList> => {
+  const response = await fetch(`${HOST}/data/base_move_list_200.json`);
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
+  }
+  const data: MoveList = await response.json();
   return data;
 };
