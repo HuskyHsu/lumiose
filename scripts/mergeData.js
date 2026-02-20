@@ -39,11 +39,42 @@ async function parseAlphaZoneData() {
     }
 
     console.log(
-      `成功解析 Alpha 區域資料，共 ${pokemonToAlphaZones.size} 種寶可夢有 Alpha 區域資訊`
+      `成功解析 Alpha 區域資料，共 ${pokemonToAlphaZones.size} 種寶可夢有 Alpha 區域資訊`,
     );
     return pokemonToAlphaZones;
   } catch (error) {
     console.error('解析 Alpha 區域資料時發生錯誤:', error);
+    return new Map();
+  }
+}
+
+/**
+ * 解析 Raid 資料
+ * @returns {Promise<Map<string, number[]>>} 包含寶可夢到 Raid 星數映射的 Map
+ */
+async function parseHyperspacedistortionsData() {
+  try {
+    const distortionsPath = path.join(__dirname, 'hyperspace_lumiose_distortions.json');
+    const distortionsContent = await fs.readFile(distortionsPath, 'utf8');
+    const distortionsData = JSON.parse(distortionsContent);
+
+    const pokemonTodistortions = new Map();
+
+    for (const [starLabel, pokemonList] of Object.entries(distortionsData)) {
+      // 提取星數 (例如 '1 Star' -> 1)
+      const starNumber = parseInt(starLabel.replace(' Star', ''), 10);
+      for (const pokemonName of pokemonList) {
+        if (!pokemonTodistortions.has(pokemonName)) {
+          pokemonTodistortions.set(pokemonName, []);
+        }
+        pokemonTodistortions.get(pokemonName).push(starNumber);
+      }
+    }
+
+    console.log(`成功解析 Raid 資料，共 ${pokemonTodistortions.size} 種寶可夢有 Raid 資訊`);
+    return pokemonTodistortions;
+  } catch (error) {
+    console.error('解析 Raid 資料時發生錯誤:', error);
     return new Map();
   }
 }
@@ -440,13 +471,57 @@ const pokemonCatchableConditions = [
 
   (pokemon) => {
     return ['黃花', '橙花', '藍花', '白花', 'Eternal'].every(
-      (color) => !pokemon.altForm?.startsWith(color)
+      (color) => !pokemon.altForm?.startsWith(color),
     );
   },
 
   (pokemon) => {
     const isVivillon = pokemon.name.zh.includes('多麗米亞');
     const isGardenPattern = pokemon.altForm === undefined;
+    return !isVivillon || isGardenPattern;
+  },
+
+  // 可以在這裡添加更多條件函數
+  // 例如：
+  // (pokemon) => {
+  //   // 某些特定寶可夢不能被捕捉
+  //   const excludedPokemon = ['某寶可夢名稱'];
+  //   return !excludedPokemon.includes(pokemon.name.zh);
+  // },
+];
+
+const pokemonCatchableDistortionsConditions = [
+  // 彩粉蝶只有花園花紋可以被捕捉到
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('彩粉蝶');
+    const isGardenPattern = pokemon.altForm === '庭園花紋';
+    return !isVivillon || isGardenPattern;
+  },
+
+  // Mega型態的都不會被捕捉到
+  (pokemon) => {
+    return !pokemon.altForm?.startsWith('MEGA');
+  },
+
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('多麗米亞');
+    const isGardenPattern = pokemon.altForm === undefined;
+    return !isVivillon || isGardenPattern;
+  },
+
+  (pokemon) => {
+    return ['Eternal'].every((color) => !pokemon.altForm?.startsWith(color));
+  },
+
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('黏美龍');
+    const isGardenPattern = pokemon.altForm === undefined;
+    return !isVivillon || !isGardenPattern;
+  },
+
+  (pokemon) => {
+    const isVivillon = pokemon.name.zh.includes('索財靈');
+    const isGardenPattern = pokemon.altForm === '寶箱';
     return !isVivillon || isGardenPattern;
   },
 
@@ -469,6 +544,11 @@ function checkPokemonCatchable(pokemon) {
   return pokemonCatchableConditions.every((condition) => condition(pokemon));
 }
 
+function checkPokemonCatchableDistortions(pokemon) {
+  // 所有條件都必須為 true，寶可夢才能被捕捉
+  return pokemonCatchableDistortionsConditions.every((condition) => condition(pokemon));
+}
+
 /**
  * 合併三種語言的寶可夢資料
  * @param {string} zhFile - 中文資料文件路徑
@@ -479,21 +559,24 @@ function checkPokemonCatchable(pokemon) {
 async function mergeLanguageData(zhFile, jaFile, enFile) {
   try {
     // 讀取三個語言版本的資料和區域資料
-    const [zhData, jaData, enData, rowData, moveData, zoneData, alphaZoneData] = await Promise.all([
-      fs.readFile(zhFile, 'utf8').then(JSON.parse),
-      fs.readFile(jaFile, 'utf8').then(JSON.parse),
-      fs.readFile(enFile, 'utf8').then(JSON.parse),
-      fs.readFile('data/personal_array.json', 'utf8').then(JSON.parse),
-      fs.readFile('data/waza_array.json', 'utf8').then(JSON.parse),
-      parseZoneData(),
-      parseAlphaZoneData(),
-    ]);
+    const [zhData, jaData, enData, rowData, moveData, zoneData, alphaZoneData, distortionsData] =
+      await Promise.all([
+        fs.readFile(zhFile, 'utf8').then(JSON.parse),
+        fs.readFile(jaFile, 'utf8').then(JSON.parse),
+        fs.readFile(enFile, 'utf8').then(JSON.parse),
+        fs.readFile('data/personal_array.json', 'utf8').then(JSON.parse),
+        fs.readFile('data/waza_array.json', 'utf8').then(JSON.parse),
+        parseZoneData(),
+        parseAlphaZoneData(),
+        parseHyperspacedistortionsData(),
+      ]);
 
     const { pokemonToZones, pokemonToWeather } = zoneData;
     const pokemonToAlphaZones = alphaZoneData;
+    const pokemonTodistortions = distortionsData;
 
     console.log(
-      `載入資料: 中文 ${zhData.length} 筆, 日文 ${jaData.length} 筆, 英文 ${enData.length} 筆`
+      `載入資料: 中文 ${zhData.length} 筆, 日文 ${jaData.length} 筆, 英文 ${enData.length} 筆`,
     );
 
     const nameToPidMap = Object.fromEntries(
@@ -516,13 +599,13 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
             ],
           ];
         })
-        .flat()
+        .flat(),
     );
 
     const nameToFormMap = Object.fromEntries(
       rowData.map((item) => {
         return [`${item.Name.zh}-${item.Info.Form}`, item.Info.Form];
-      })
+      }),
     );
 
     const moveMap = Object.fromEntries(
@@ -538,7 +621,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
             cooldown: item.Parameters.WazaRecastTime,
           },
         ];
-      })
+      }),
     );
 
     // 創建以 pid 為鍵的映射
@@ -587,7 +670,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       mergedPokemon.name = createMultiLanguageField(
         zhPokemon?.name,
         jaPokemon?.name,
-        enPokemon?.name
+        enPokemon?.name,
       );
 
       // 合併特性
@@ -595,7 +678,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         mergedPokemon.abilities = mergeAbilitiesArray(
           zhPokemon?.abilities,
           jaPokemon?.abilities,
-          enPokemon?.abilities
+          enPokemon?.abilities,
         );
       }
 
@@ -604,7 +687,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         mergedPokemon.abilitiyH = mergeAbilitiesArray(
           zhPokemon?.abilitiyH,
           jaPokemon?.abilitiyH,
-          enPokemon?.abilitiyH
+          enPokemon?.abilitiyH,
         );
       }
 
@@ -625,7 +708,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           zhPokemon?.levelUpMoves,
           jaPokemon?.levelUpMoves,
           enPokemon?.levelUpMoves,
-          moveMap
+          moveMap,
         );
       }
 
@@ -635,7 +718,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
           zhPokemon?.tmMoves,
           jaPokemon?.tmMoves,
           enPokemon?.tmMoves,
-          moveMap
+          moveMap,
         );
       }
 
@@ -682,7 +765,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
               evolution.condition = createMultiLanguageField(
                 zhEvo?.condition,
                 jaEvo?.condition,
-                enEvo?.condition
+                enEvo?.condition,
               );
             }
 
@@ -725,10 +808,12 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       const zones = pokemonToZones.get(mergedPokemon.name.en);
       const weatherData = pokemonToWeather.get(mergedPokemon.name.en);
       const alphaZones = pokemonToAlphaZones.get(mergedPokemon.name.en);
+      let distortions = pokemonTodistortions.get(mergedPokemon.name.en);
       // console.log(mergedPokemon.name.en, alphaZones);
 
       // 檢查是否可以被捕捉
       const isCatchable = checkPokemonCatchable(mergedPokemon);
+      const isCatchableDistortions = checkPokemonCatchableDistortions(mergedPokemon);
 
       if (zones && zones.length > 0 && isCatchable) {
         // 添加天氣資訊
@@ -758,6 +843,27 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
         checkPokemonAlphaZoneEligible(mergedPokemon)
       ) {
         mergedPokemon.alphaZone = alphaZones.sort((a, b) => a - b);
+      }
+
+      // 添加 distortions 資訊
+      if (distortions && distortions.length > 0 && isCatchableDistortions) {
+        if (['大蔥鴨', '千針魚'].includes(mergedPokemon.name.zh)) {
+          distortions = mergedPokemon.altForm === undefined ? [2] : [3];
+        }
+
+        if (['貓老大', '泥巴魚'].includes(mergedPokemon.name.zh)) {
+          distortions = mergedPokemon.altForm === undefined ? [3] : [4];
+        }
+
+        if (['呆殼獸', '呆呆王', '黏美兒', '冰岩怪'].includes(mergedPokemon.name.zh)) {
+          distortions = mergedPokemon.altForm === undefined ? [4] : [5];
+        }
+
+        if (['哭哭面具'].includes(mergedPokemon.name.zh)) {
+          distortions = mergedPokemon.altForm === undefined ? [1] : [3];
+        }
+
+        mergedPokemon.distortions = distortions.sort((a, b) => a - b);
       }
 
       mergedPokemon = {
@@ -1085,7 +1191,7 @@ async function mergeLanguageData(zhFile, jaFile, enFile) {
       moveList.map((move) => {
         const { levelUpPm, tmPm, alphaPm, ...rest } = move;
         return rest;
-      })
+      }),
     );
     await fs.writeFile(`./public/data/base_move_list_200.json`, moveJsonString, 'utf8');
 
@@ -1128,7 +1234,7 @@ function mergeAbilitiesArray(zhAbilities, jaAbilities, enAbilities) {
       return createMultiLanguageField(
         zhAbilities?.[index],
         jaAbilities?.[index],
-        enAbilities?.[index]
+        enAbilities?.[index],
       );
     })
     .filter((ability) => ability !== null);
@@ -1197,20 +1303,20 @@ function pmFilter(pmList) {
       (row) =>
         !Array.from({ length: 19 }, (_, i) => i + 1)
           .map((i) => `664-${i}`)
-          .includes(row.link)
+          .includes(row.link),
     )
     .filter(
       (row) =>
         !Array.from({ length: 19 }, (_, i) => i + 1)
           .map((i) => `665-${i}`)
-          .includes(row.link)
+          .includes(row.link),
     )
     .filter(
       (row) =>
         !Array.from({ length: 20 }, (_, i) => i)
           .filter((i) => ![4, 6, 8].includes(i))
           .map((i) => `666${i > 0 ? '-' : ''}${i > 0 ? i : ''}`)
-          .includes(row.link)
+          .includes(row.link),
     )
     .filter((row) => !['658-1', '718-2', '718-3'].includes(row.link));
 }
@@ -1304,7 +1410,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (args.length < 3) {
     console.log('使用方法: node mergeLanguageData.js <中文文件> <日文文件> <英文文件> [輸出文件]');
     console.log(
-      '範例: node mergeLanguageData.js data/personal_zh.json data/personal_ja.json data/personal_en.json data/personal_merged.json'
+      '範例: node mergeLanguageData.js data/personal_zh.json data/personal_ja.json data/personal_en.json data/personal_merged.json',
     );
     process.exit(1);
   }
@@ -1338,6 +1444,7 @@ export {
   mergeTMArray,
   mergeTypeArray,
   parseAlphaZoneData,
+  parseHyperspacedistortionsData,
   parseZoneData,
   pokemonAlphaZoneConditions,
   pokemonCatchableConditions,

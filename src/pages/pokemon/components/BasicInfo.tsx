@@ -125,7 +125,7 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
                 {pokemon.zone
                   ?.map(
                     (zone) =>
-                      `${zone.id}${zone.weather[0] === 'any' ? '' : `(${zone.weather.join(', ')})`}`
+                      `${zone.id}${zone.weather[0] === 'any' ? '' : `(${zone.weather.join(', ')})`}`,
                   )
                   .join('; ')}
               </>
@@ -138,6 +138,16 @@ export default function BasicInfo({ pokemon, loading = false }: BasicInfoProps) 
           {
             title: 'Wild Zone(alpha)',
             Content: ({ pokemon }: ContentProps) => <>{pokemon.alphaZone?.join('; ')}</>,
+          },
+        ]
+      : []),
+    ...(pokemon.distortions !== undefined
+      ? [
+          {
+            title: 'Hyperspace Distortions',
+            Content: ({ pokemon }: ContentProps) => (
+              <>{pokemon.distortions?.map((r) => `${r} ★ ⬆`).join('; ')}</>
+            ),
           },
         ]
       : []),

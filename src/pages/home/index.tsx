@@ -6,10 +6,12 @@ import { useEVToggle } from '@/hooks/useEVToggle';
 import { usePokemonData } from '@/hooks/usePokemonData';
 import { usePokemonFilter } from '@/hooks/usePokemonFilter';
 import { useShinyToggle } from '@/hooks/useShinyToggle';
+import PageViewToggle from '@/pages/move/components/PageViewToggle';
 import type { Pokedex, PokemonList } from '@/types/pokemon';
 import { memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  DistortionFilter,
   EVFilter,
   EVToggle,
   FinalFormToggle,
@@ -20,7 +22,6 @@ import {
   TypeFilter,
   ZoneFilter,
 } from './components';
-import PageViewToggle from '@/pages/move/components/PageViewToggle';
 
 function Home() {
   const { pokemonList, loading, error } = usePokemonData();
@@ -40,6 +41,8 @@ function Home() {
     filteredPokemonList,
     selectedEVStat,
     setSelectedEVStat,
+    selectedDistortion,
+    setSelectedDistortion,
   } = usePokemonFilter(pokemonList);
   const { isShiny, toggleShiny } = useShinyToggle();
   const { isShowEV, toggleEV } = useEVToggle();
@@ -64,6 +67,10 @@ function Home() {
           onAlphaZoneToggle={toggleAlphaZone}
         />
       )}
+      <DistortionFilter
+        selectedDistortion={selectedDistortion}
+        onDistortionChange={setSelectedDistortion}
+      />
       <div className='flex gap-4 mb-2'>
         <ShinyToggle isShiny={isShiny} onToggle={toggleShiny} />
         <FinalFormToggle isFinalFormOnly={isFinalFormOnly} onToggle={toggleFinalFormOnly} />
@@ -154,17 +161,25 @@ const PokemonGrid = memo(function PokemonGrid({
 }: PokemonGridProps) {
   return (
     <div className='grid grid-cols-3 sm:grid-cols-4 mt-4 md:grid-cols-5 lg:grid-cols-7 justify-items-center gap-x-3 gap-y-8 text-slate-800 transition-all duration-200 ease-in-out'>
-      {pokemonList.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.link}
-          pokemon={pokemon}
-          isShiny={isShiny}
-          isShowEV={isShowEV}
-          selectedZone={selectedZone}
-          isAlphaZone={isAlphaZone}
-          selectedPokedex={selectedPokedex}
-        />
-      ))}
+      {pokemonList
+        .sort((a, b) => {
+          if (selectedPokedex === 'national') {
+            return a.pid - b.pid;
+          } else {
+            return a.lumioseId - b.lumioseId;
+          }
+        })
+        .map((pokemon) => (
+          <PokemonCard
+            key={pokemon.link}
+            pokemon={pokemon}
+            isShiny={isShiny}
+            isShowEV={isShowEV}
+            selectedZone={selectedZone}
+            isAlphaZone={isAlphaZone}
+            selectedPokedex={selectedPokedex}
+          />
+        ))}
     </div>
   );
 });

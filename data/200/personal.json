@@ -604,6 +604,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "152",
       "type": [
@@ -1306,6 +1309,9 @@
         "level": 32,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "152",
@@ -2094,6 +2100,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "152",
@@ -3463,6 +3472,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "498",
       "type": [
@@ -4258,6 +4270,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "498",
@@ -5270,6 +5285,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "498",
@@ -6994,6 +7012,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "158",
       "type": [
@@ -7733,6 +7754,9 @@
         "level": 30,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "158",
@@ -8623,6 +8647,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "158",
@@ -10071,6 +10098,9 @@
     "alphaZone": [
       "3"
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "661",
       "type": [
@@ -10685,6 +10715,9 @@
     ],
     "alphaZone": [
       "7"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "661",
@@ -11378,6 +11411,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "661",
       "type": [
@@ -11971,6 +12007,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "659",
@@ -12723,6 +12762,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "659",
       "type": [
@@ -12922,6 +12964,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "664",
@@ -13487,6 +13532,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "664",
@@ -14457,6 +14505,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "664",
@@ -16857,6 +16908,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "13",
       "type": [
@@ -17100,6 +17154,9 @@
     ],
     "alphaZone": [
       "蓉粉區"
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "13",
@@ -17756,6 +17813,9 @@
     ],
     "alphaZone": [
       "15"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "13",
@@ -18947,6 +19007,9 @@
     "alphaZone": [
       "1"
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "16",
       "type": [
@@ -19520,6 +19583,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "16",
@@ -20108,6 +20174,9 @@
     ],
     "alphaZone": [
       "瓊黃區"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "16",
@@ -21258,6 +21327,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "179",
       "type": [
@@ -21880,6 +21952,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "179",
@@ -22697,6 +22772,9 @@
     ],
     "alphaZone": [
       "16"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "179",
@@ -24052,6 +24130,9 @@
     "alphaZone": [
       "翡綠區"
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -24778,6 +24859,9 @@
     "alphaZone": [
       "10"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "504",
       "type": [
@@ -25160,6 +25244,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "406",
@@ -25805,6 +25892,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "406",
@@ -26495,6 +26585,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "406",
       "type": [
@@ -26694,6 +26787,9 @@
     ],
     "alphaZone": [
       "2"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "129",
@@ -27558,6 +27654,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "129",
@@ -29135,6 +29234,9 @@
     "alphaZone": [
       "6"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "688",
       "type": [
@@ -30028,6 +30130,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "688",
@@ -31616,6 +31721,9 @@
     "alphaZone": [
       "2"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "120",
       "type": [
@@ -32554,6 +32662,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "120",
@@ -34028,6 +34139,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -34558,6 +34672,9 @@
         "level": 19,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "669-1",
@@ -35090,6 +35207,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "669-2",
       "type": [
@@ -35621,6 +35741,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -36151,6 +36274,9 @@
         "level": 19,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "669-4",
@@ -36762,6 +36888,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -37363,6 +37492,9 @@
           "en": "Shiny Stone"
         }
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "669-1",
@@ -37966,6 +38098,9 @@
         }
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "669-2",
       "type": [
@@ -38568,6 +38703,9 @@
         }
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -39169,6 +39307,9 @@
           "en": "Shiny Stone"
         }
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "669-4",
@@ -41000,6 +41141,13 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
     "evolutionTree": {
       "link": "669",
       "type": [
@@ -41616,6 +41764,13 @@
         "power": 125,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      3,
+      3,
+      3,
+      3,
+      3
     ],
     "evolutionTree": {
       "link": "669-1",
@@ -42234,6 +42389,13 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
     "evolutionTree": {
       "link": "669-2",
       "type": [
@@ -42851,6 +43013,13 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
     "evolutionTree": {
       "link": "669-3",
       "type": [
@@ -43467,6 +43636,13 @@
         "power": 125,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      3,
+      3,
+      3,
+      3,
+      3
     ],
     "evolutionTree": {
       "link": "669-4",
@@ -44112,6 +44288,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "672",
@@ -44837,6 +45016,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "672",
       "type": [
@@ -45405,6 +45587,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "677",
@@ -46249,6 +46434,10 @@
     "alphaZone": [
       "9"
     ],
+    "distortions": [
+      4,
+      4
+    ],
     "evolutionTree": {
       "link": "677",
       "type": [
@@ -47066,6 +47255,10 @@
     ],
     "alphaZone": [
       "9"
+    ],
+    "distortions": [
+      4,
+      4
     ],
     "evolutionTree": {
       "link": "677",
@@ -49460,6 +49653,9 @@
     "alphaZone": [
       "3"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "667",
       "type": [
@@ -50224,6 +50420,9 @@
     ],
     "alphaZone": [
       "17"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "667",
@@ -51645,6 +51844,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "674",
       "type": [
@@ -52594,6 +52796,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "674",
       "type": [
@@ -53155,6 +53360,9 @@
     ],
     "alphaZone": [
       "翡綠區"
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "568",
@@ -53850,6 +54058,9 @@
       "20",
       "瓊黃區"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "568",
       "type": [
@@ -54465,6 +54676,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "source": "702",
     "latest": true
   },
@@ -55058,6 +55272,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "172",
@@ -55800,6 +56017,9 @@
     ],
     "alphaZone": [
       "6"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "172",
@@ -56628,6 +56848,10 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4,
+      4
     ],
     "evolutionTree": {
       "link": "172",
@@ -57481,6 +57705,10 @@
         "power": 130,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      4,
+      4
     ],
     "source": "26-1",
     "latest": true
@@ -59852,6 +60080,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "173",
       "type": [
@@ -60801,6 +61032,9 @@
     ],
     "alphaZone": [
       "19"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "173",
@@ -61784,6 +62018,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "173",
@@ -63401,6 +63638,9 @@
     "alphaZone": [
       "4"
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "167",
       "type": [
@@ -64073,6 +64313,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "167",
       "type": [
@@ -64725,6 +64968,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "23",
@@ -65440,6 +65686,9 @@
       "10",
       "弗拉達利研究所"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "23",
       "type": [
@@ -65909,6 +66158,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "63",
@@ -66594,6 +66846,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "63",
@@ -67306,6 +67561,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "63",
@@ -68628,6 +68886,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "92",
       "type": [
@@ -69380,6 +69641,9 @@
           "night"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "92",
@@ -70199,6 +70463,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "92",
@@ -71526,6 +71793,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "543",
       "type": [
@@ -72051,6 +72321,9 @@
     ],
     "alphaZone": [
       "5"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "543",
@@ -72821,6 +73094,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "543",
@@ -74138,6 +74414,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "679",
       "type": [
@@ -74769,6 +75048,9 @@
           "en": "Dusk Stone"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "679",
@@ -75464,6 +75746,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "679",
       "type": [
@@ -76155,6 +76440,9 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "679",
       "type": [
@@ -76752,6 +77040,9 @@
     ],
     "alphaZone": [
       "5"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "69",
@@ -77364,6 +77655,9 @@
     ],
     "alphaZone": [
       "13"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "69",
@@ -78009,6 +78303,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "69",
@@ -79371,6 +79668,9 @@
       "浦藍區",
       "榴紅區"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "511",
       "type": [
@@ -80101,6 +80401,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "511",
       "type": [
@@ -80791,6 +81094,9 @@
     "alphaZone": [
       "浦藍區",
       "榴紅區"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "513",
@@ -81548,6 +81854,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "513",
       "type": [
@@ -82251,6 +82560,9 @@
     "alphaZone": [
       "浦藍區",
       "榴紅區"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "515",
@@ -82995,6 +83307,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "515",
       "type": [
@@ -83710,6 +84025,9 @@
           "day"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "307",
@@ -84575,6 +84893,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "307",
@@ -86082,6 +86403,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "309",
       "type": [
@@ -86835,6 +87159,9 @@
     ],
     "alphaZone": [
       "9"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "309",
@@ -88277,6 +88604,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "280",
       "type": [
@@ -89079,6 +89409,9 @@
           "en": "Dawn Stone"
         }
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "280",
@@ -90022,6 +90355,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "280",
@@ -92177,6 +92513,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "280",
       "type": [
@@ -94113,6 +94452,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "228",
       "type": [
@@ -94880,6 +95222,9 @@
     ],
     "alphaZone": [
       "6"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "228",
@@ -96282,6 +96627,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "333",
       "type": [
@@ -97107,6 +97455,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "333",
@@ -98713,6 +99064,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "531",
       "type": [
@@ -99952,6 +100306,9 @@
     "alphaZone": [
       "榴紅區"
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "682",
       "type": [
@@ -100536,6 +100893,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "682",
       "type": [
@@ -101029,6 +101389,9 @@
     ],
     "alphaZone": [
       "蓉粉區"
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "684",
@@ -101600,6 +101963,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "684",
       "type": [
@@ -102136,6 +102502,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "133",
@@ -103054,6 +103423,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -103959,6 +104331,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -104823,6 +105198,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -105683,6 +106061,9 @@
         "power": 130,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "133",
@@ -106584,6 +106965,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -107449,6 +107833,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -108287,6 +108674,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -109072,6 +109462,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "133",
       "type": [
@@ -109829,6 +110222,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "427",
@@ -110649,6 +111045,9 @@
     ],
     "alphaZone": [
       "18"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "427",
@@ -112116,6 +112515,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "353",
       "type": [
@@ -112905,6 +113307,9 @@
     ],
     "alphaZone": [
       "15"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "353",
@@ -114196,6 +114601,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "582",
       "type": [
@@ -114682,6 +115090,9 @@
         "level": 47,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "582",
@@ -115218,6 +115629,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "582",
@@ -115951,6 +116365,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "322",
@@ -116747,6 +117164,9 @@
     ],
     "alphaZone": [
       "8"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "322",
@@ -118127,6 +118547,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "449",
       "type": [
@@ -118741,6 +119164,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "449",
       "type": [
@@ -119305,6 +119731,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "529",
@@ -120036,6 +120465,9 @@
     ],
     "alphaZone": [
       "14"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "529",
@@ -121425,6 +121857,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "551",
       "type": [
@@ -122133,6 +122568,9 @@
     ],
     "alphaZone": [
       "8"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "551",
@@ -122973,6 +123411,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "551",
       "type": [
@@ -123713,6 +124154,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "66",
       "type": [
@@ -124443,6 +124887,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "66",
@@ -125229,6 +125676,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "66",
       "type": [
@@ -125862,6 +126312,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "443",
@@ -126597,6 +127050,9 @@
         "level": 48,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "443",
@@ -129921,6 +130377,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      2
+    ],
     "source": "703",
     "latest": true
   },
@@ -130831,6 +131290,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "302",
@@ -132652,6 +133114,9 @@
     "alphaZone": [
       "17"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "303",
       "type": [
@@ -134386,6 +134851,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "359",
@@ -136809,6 +137277,9 @@
         "method": "LevelUpFriendshipMorning"
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "447",
       "type": [
@@ -137828,6 +138299,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "447",
@@ -140654,6 +141128,10 @@
         ]
       }
     ],
+    "distortions": [
+      3,
+      3
+    ],
     "evolutionTree": {
       "link": "79",
       "type": [
@@ -141446,6 +141924,10 @@
           "en": "Galarica Wreath"
         }
       }
+    ],
+    "distortions": [
+      3,
+      3
     ],
     "evolutionTree": {
       "link": "79-1",
@@ -142388,6 +142870,9 @@
     ],
     "alphaZone": [
       "11"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "79",
@@ -144413,6 +144898,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "79-1",
       "type": [
@@ -145405,6 +145893,9 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "79",
@@ -146547,6 +147038,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "79-1",
       "type": [
@@ -147193,6 +147687,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "318",
@@ -147970,6 +148467,9 @@
     ],
     "alphaZone": [
       "10"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "318",
@@ -148977,6 +149477,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "602",
       "type": [
@@ -149569,6 +150072,9 @@
           "en": "Thunder Stone"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "602",
@@ -150453,6 +150959,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "602",
@@ -152028,6 +152537,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "147",
       "type": [
@@ -152716,6 +153228,9 @@
         "level": 55,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "147",
@@ -155409,6 +155924,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "1",
       "type": [
@@ -156051,6 +156569,9 @@
         "level": 32,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "1",
@@ -156779,6 +157300,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "1",
@@ -158233,6 +158757,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "4",
       "type": [
@@ -158966,6 +159493,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "4",
@@ -159931,6 +160461,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "4",
@@ -162605,6 +163138,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "7",
       "type": [
@@ -163315,6 +163851,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "7",
@@ -164203,6 +164742,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "7",
@@ -165739,6 +166281,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "source": "618",
     "latest": true
   },
@@ -166360,6 +166905,9 @@
         "power": 140,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "source": "618-1",
     "latest": true
@@ -167035,6 +167583,9 @@
     "alphaZone": [
       "19",
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "source": "676",
     "latest": true
@@ -173532,6 +174083,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "686",
       "type": [
@@ -174321,6 +174875,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "686",
@@ -175785,6 +176342,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "690",
       "type": [
@@ -176510,6 +177070,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "690",
@@ -177806,6 +178369,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "692",
       "type": [
@@ -178428,6 +178994,9 @@
     "alphaZone": [
       "11"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "692",
       "type": [
@@ -178958,6 +179527,9 @@
         "level": 40,
         "method": "Hisui"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "704",
@@ -179597,6 +180169,9 @@
         "level": 50,
         "method": "LevelUpWeather"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "704",
@@ -180317,6 +180892,9 @@
         "level": 50,
         "method": "LevelUpWeather"
       }
+    ],
+    "distortions": [
+      5
     ],
     "evolutionTree": {
       "link": "704",
@@ -182117,6 +182695,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "704",
       "type": [
@@ -182783,6 +183364,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "source": "225",
     "latest": true
   },
@@ -183313,6 +183897,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "361",
@@ -184052,6 +184639,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "361",
@@ -185701,6 +186291,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "361",
       "type": [
@@ -187216,6 +187809,9 @@
         ]
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "459",
       "type": [
@@ -187953,6 +188549,9 @@
     ],
     "alphaZone": [
       "12"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "459",
@@ -189262,6 +189861,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "712",
       "type": [
@@ -189942,6 +190544,9 @@
     ],
     "alphaZone": [
       "12"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "712",
@@ -190703,6 +191308,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      5
+    ],
     "source": "713-1",
     "latest": true
   },
@@ -191329,6 +191937,9 @@
           "night"
         ]
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "123",
@@ -192147,6 +192758,9 @@
         "power": 140,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "123",
@@ -193629,6 +194243,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "127",
       "type": [
@@ -195040,6 +195657,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "214",
       "type": [
@@ -196435,6 +197055,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "587",
     "latest": true
   },
@@ -197179,6 +197802,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "701",
@@ -198498,6 +199124,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "708",
       "type": [
@@ -199164,6 +199793,9 @@
     ],
     "alphaZone": [
       "13"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "708",
@@ -199941,6 +200573,9 @@
         "level": 39,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "559",
@@ -200887,6 +201522,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "559",
@@ -202501,6 +203139,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "714",
       "type": [
@@ -203337,6 +203978,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "714",
       "type": [
@@ -203886,6 +204530,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      2
     ],
     "source": "707",
     "latest": true
@@ -204439,6 +205086,9 @@
         "level": 41,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "607",
@@ -205089,6 +205739,9 @@
           "night"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "607",
@@ -205787,6 +206440,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "607",
@@ -207296,6 +207952,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "142",
       "type": [
@@ -208791,6 +209450,9 @@
         "method": "LevelUpMorning"
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "696",
       "type": [
@@ -209583,6 +210245,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "696",
       "type": [
@@ -210262,6 +210927,9 @@
         "level": 39,
         "method": "LevelUpNight"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "698",
@@ -211067,6 +211735,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "698",
       "type": [
@@ -211663,6 +212334,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "95",
@@ -212490,6 +213164,9 @@
         "power": 140,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "95",
@@ -213973,6 +214650,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "304",
       "type": [
@@ -214654,6 +215334,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "304",
@@ -215709,6 +216392,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "304",
@@ -217399,6 +218085,9 @@
         }
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "694",
       "type": [
@@ -218174,6 +218863,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "694",
       "type": [
@@ -218755,6 +219447,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "710",
       "type": [
@@ -219332,6 +220027,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "710-1",
@@ -219911,6 +220609,9 @@
         ]
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "710-2",
       "type": [
@@ -220488,6 +221189,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "710-3",
@@ -221185,6 +221889,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "710",
       "type": [
@@ -221881,6 +222588,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "710-1",
       "type": [
@@ -222576,6 +223286,9 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "710-2",
@@ -223277,6 +223990,9 @@
       "15",
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "710-3",
       "type": [
@@ -223913,6 +224629,9 @@
           "any"
         ]
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "246",
@@ -224605,6 +225324,9 @@
         "level": 55,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "246",
@@ -225647,6 +226369,9 @@
     ],
     "alphaZone": [
       "20"
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "246",
@@ -227347,6 +228072,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "656",
       "type": [
@@ -228127,6 +228855,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "656",
@@ -229007,6 +229738,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "656",
@@ -230622,6 +231356,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "870",
       "type": [
@@ -231976,6 +232713,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "650",
       "type": [
@@ -232701,6 +233441,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "650",
@@ -233672,6 +234415,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "650",
@@ -235436,6 +236182,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "227",
       "type": [
@@ -236710,6 +237459,9 @@
         ]
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "653",
       "type": [
@@ -237307,6 +238059,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "653",
@@ -238201,6 +238956,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "653",
@@ -239767,6 +240525,9 @@
         ]
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "371",
       "type": [
@@ -240442,6 +241203,9 @@
         "level": 50,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "371",
@@ -243072,6 +243836,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "115",
       "type": [
@@ -244820,6 +245587,9 @@
     "alphaZone": [
       "20"
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "780",
       "type": [
@@ -245935,6 +246705,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "374",
       "type": [
@@ -246677,6 +247450,9 @@
         "level": 45,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "374",
@@ -258359,6 +259135,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "56",
       "type": [
@@ -259395,6 +260174,9 @@
           "en": "20"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "56",
@@ -261310,6 +262092,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "52",
       "type": [
@@ -262178,6 +262963,9 @@
         "level": 0,
         "method": "LevelUpFriendship"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "52-1",
@@ -263166,6 +263954,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "52-2",
       "type": [
@@ -264065,6 +264856,9 @@
         "power": 130,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "52",
@@ -265020,6 +265814,9 @@
         "power": 40,
         "cooldown": 3
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "52-1",
@@ -266092,6 +266889,9 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "52-2",
       "type": [
@@ -266774,6 +267574,9 @@
         "power": 140,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      2
     ],
     "source": "83",
     "latest": true,
@@ -267477,6 +268280,9 @@
           "en": "3"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "83-1",
@@ -268983,6 +269789,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "104",
       "type": [
@@ -269789,6 +270598,10 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4,
+      4
     ],
     "evolutionTree": {
       "link": "104",
@@ -270758,6 +271571,10 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      4,
+      4
+    ],
     "source": "105-1",
     "latest": true,
     "hyperspaceId": 10
@@ -271472,6 +272289,9 @@
           "en": "Upgrade"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "137",
@@ -272252,6 +273072,9 @@
           "en": "Dubious Disc"
         }
       }
+    ],
+    "distortions": [
+      5
     ],
     "evolutionTree": {
       "link": "137",
@@ -273060,6 +273883,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "137",
       "type": [
@@ -273579,6 +274405,9 @@
           "en": "Fire Stone"
         }
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "951",
@@ -274315,6 +275144,9 @@
         "power": 0,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "951",
@@ -275660,6 +276492,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "957",
       "type": [
@@ -276269,6 +277104,9 @@
         "level": 38,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "957",
@@ -276941,6 +277779,9 @@
         "power": 140,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "957",
@@ -277686,6 +278527,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      4
+    ],
     "source": "967",
     "latest": true,
     "hyperspaceId": 19
@@ -278260,6 +279104,9 @@
         "level": 35,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "969",
@@ -279012,6 +279859,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "969",
@@ -280437,6 +281287,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      5
+    ],
     "source": "479",
     "latest": true,
     "hyperspaceId": 22
@@ -281085,6 +281938,9 @@
         "power": 50,
         "cooldown": 6
       }
+    ],
+    "distortions": [
+      5
     ],
     "source": "479-1",
     "latest": true,
@@ -281735,6 +282591,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      5
+    ],
     "source": "479-2",
     "latest": true,
     "hyperspaceId": 22
@@ -282384,6 +283243,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      5
+    ],
     "source": "479-3",
     "latest": true,
     "hyperspaceId": 22
@@ -283019,6 +283881,9 @@
         "power": 50,
         "cooldown": 6
       }
+    ],
+    "distortions": [
+      5
     ],
     "source": "479-4",
     "latest": true,
@@ -283656,6 +284521,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      5
+    ],
     "source": "479-5",
     "latest": true,
     "hyperspaceId": 22
@@ -284245,6 +285113,9 @@
         "level": 30,
         "method": "LevelUpNight"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "971",
@@ -284934,6 +285805,9 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "971",
       "type": [
@@ -285559,6 +286433,9 @@
         "level": 42,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "769",
@@ -286258,6 +287135,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "769",
@@ -287077,6 +287957,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      4
+    ],
     "source": "352",
     "latest": true,
     "hyperspaceId": 27
@@ -287715,6 +288598,9 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      4
+    ],
     "source": "973",
     "latest": true,
     "hyperspaceId": 28
@@ -288337,6 +289223,9 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "615",
     "latest": true,
     "hyperspaceId": 29
@@ -288947,6 +289836,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "source": "977",
     "latest": true,
@@ -289581,6 +290473,11 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4,
+      4,
+      4
     ],
     "evolutionTree": {
       "link": "978",
@@ -290251,6 +291148,11 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4,
+      4,
+      4
+    ],
     "evolutionTree": {
       "link": "978-1",
       "type": [
@@ -290919,6 +291821,11 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4,
+      4,
+      4
     ],
     "evolutionTree": {
       "link": "978-2",
@@ -293461,6 +294368,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "996",
       "type": [
@@ -294077,6 +294987,9 @@
         "level": 54,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      5
     ],
     "evolutionTree": {
       "link": "996",
@@ -294886,6 +295799,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      5
     ],
     "evolutionTree": {
       "link": "996",
@@ -295993,6 +296909,9 @@
           "en": "999"
         }
       }
+    ],
+    "distortions": [
+      5
     ],
     "evolutionTree": {
       "link": "999",
@@ -297686,6 +298605,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      2
+    ],
     "source": "211",
     "latest": true,
     "hyperspaceId": 37
@@ -298443,6 +299365,9 @@
           "en": "20"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "211-1",
@@ -299250,6 +300175,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      5
+    ],
     "evolutionTree": {
       "link": "211-1",
       "type": [
@@ -299925,6 +300853,9 @@
         "level": 16,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "252",
@@ -300763,6 +301694,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "252",
@@ -301764,6 +302698,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "252",
@@ -303418,6 +304355,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "255",
       "type": [
@@ -304280,6 +305220,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "255",
@@ -305306,6 +306249,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "255",
@@ -307108,6 +308054,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "258",
       "type": [
@@ -308003,6 +308952,9 @@
         "level": 36,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "258",
@@ -309049,6 +310001,9 @@
         "power": 150,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "258",
@@ -310554,6 +311509,9 @@
         }
       }
     ],
+    "distortions": [
+      2
+    ],
     "evolutionTree": {
       "link": "349",
       "type": [
@@ -311947,6 +312905,9 @@
         "method": "LevelUpFriendshipNight"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "433",
       "type": [
@@ -312666,6 +313627,9 @@
         "power": 120,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "433",
@@ -314035,6 +314999,10 @@
         "cooldown": 3
       }
     ],
+    "distortions": [
+      3,
+      3
+    ],
     "source": "876",
     "latest": true,
     "hyperspaceId": 52
@@ -314632,6 +315600,10 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      3,
+      3
     ],
     "source": "876-1",
     "latest": true,
@@ -315291,6 +316263,9 @@
         "level": 20,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "509",
@@ -316087,6 +317062,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "509",
       "type": [
@@ -316694,6 +317672,9 @@
           "en": "Moon Stone"
         }
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "517",
@@ -317334,6 +318315,9 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "517",
@@ -318082,6 +319066,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "538",
     "latest": true,
     "hyperspaceId": 57
@@ -318798,6 +319785,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "539",
     "latest": true,
     "hyperspaceId": 58
@@ -319411,6 +320401,9 @@
         "level": 34,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "562",
@@ -320110,6 +321103,9 @@
           "en": "49"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "562-1",
@@ -320817,6 +321813,9 @@
         "power": 100,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "562",
@@ -321964,6 +322963,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "767",
       "type": [
@@ -322845,6 +323847,9 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "767",
@@ -324357,6 +325362,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "827",
       "type": [
@@ -325084,6 +326092,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "827",
       "type": [
@@ -325741,6 +326752,9 @@
           "en": "Taunt"
         }
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "852",
@@ -326486,6 +327500,9 @@
         "cooldown": 3
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "852",
       "type": [
@@ -327123,6 +328140,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "778",
     "latest": true,
     "hyperspaceId": 68
@@ -327728,6 +328748,9 @@
         "power": 75,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      3
     ],
     "source": "778-1",
     "latest": true,
@@ -328445,6 +329468,9 @@
         "power": 40,
         "cooldown": 3
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "123",
@@ -329222,6 +330248,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "877",
     "latest": true,
     "hyperspaceId": 70
@@ -329923,6 +330952,9 @@
         "power": 130,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      3
     ],
     "source": "877-1",
     "latest": true,
@@ -330645,6 +331677,9 @@
         "level": 43,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "622",
@@ -331566,6 +332601,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "622",
@@ -333000,6 +334038,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "821",
       "type": [
@@ -333528,6 +334569,9 @@
         "level": 38,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "821",
@@ -334318,6 +335362,9 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "821",
       "type": [
@@ -335042,6 +336089,9 @@
         "level": 0,
         "method": "LevelUpFriendship"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "174",
@@ -336070,6 +337120,9 @@
           "en": "Moon Stone"
         }
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "174",
@@ -337126,6 +338179,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "174",
       "type": [
@@ -337725,6 +338781,9 @@
         "level": 26,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "926",
@@ -338335,6 +339394,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "926",
       "type": [
@@ -338844,6 +339906,9 @@
         "level": 14,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "396",
@@ -339446,6 +340511,9 @@
         "level": 34,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "396",
@@ -340225,6 +341293,9 @@
         "power": 140,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "396",
@@ -341703,6 +342774,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "325",
       "type": [
@@ -342614,6 +343688,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "325",
       "type": [
@@ -343268,6 +344345,9 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      1
+    ],
     "source": "931",
     "latest": true,
     "hyperspaceId": 86
@@ -343895,6 +344975,9 @@
         "power": 140,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      1
     ],
     "source": "931-1",
     "latest": true,
@@ -344524,6 +345607,9 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      1
+    ],
     "source": "931-2",
     "latest": true,
     "hyperspaceId": 86
@@ -345151,6 +346237,9 @@
         "power": 140,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      1
     ],
     "source": "931-3",
     "latest": true,
@@ -345825,6 +346914,9 @@
           "en": "Ice Stone"
         }
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "739",
@@ -346661,6 +347753,9 @@
         "power": 1,
         "cooldown": 20
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "739",
@@ -348159,6 +349254,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      3
+    ],
     "evolutionTree": {
       "link": "932",
       "type": [
@@ -348858,6 +349956,9 @@
         "level": 38,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "932",
@@ -349646,6 +350747,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "932",
       "type": [
@@ -350344,6 +351448,9 @@
         "level": 26,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "316",
@@ -351126,6 +352233,9 @@
         "cooldown": 7
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "316",
       "type": [
@@ -351713,6 +352823,9 @@
         "level": 22,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "41",
@@ -352424,6 +353537,9 @@
         "level": 0,
         "method": "LevelUpFriendship"
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "41",
@@ -353234,6 +354350,9 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "41",
       "type": [
@@ -353653,6 +354772,9 @@
           "en": "Malicious Armor"
         }
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "935",
@@ -355841,6 +356963,9 @@
         "method": "LevelUp"
       }
     ],
+    "distortions": [
+      1
+    ],
     "evolutionTree": {
       "link": "942",
       "type": [
@@ -356546,6 +357671,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "942",
       "type": [
@@ -356742,6 +357870,9 @@
         "level": 30,
         "method": "LevelUpNatureLowKey"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "848",
@@ -357563,6 +358694,10 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      4,
+      4
+    ],
     "evolutionTree": {
       "link": "848",
       "type": [
@@ -358383,6 +359518,10 @@
         "cooldown": 10
       }
     ],
+    "distortions": [
+      4,
+      4
+    ],
     "evolutionTree": {
       "link": "848",
       "type": [
@@ -359046,6 +360185,9 @@
         "level": 28,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "944",
@@ -359791,6 +360933,9 @@
         "power": 80,
         "cooldown": 7
       }
+    ],
+    "distortions": [
+      3
     ],
     "evolutionTree": {
       "link": "944",
@@ -360764,6 +361909,9 @@
         "cooldown": 12
       }
     ],
+    "distortions": [
+      2
+    ],
     "source": "335",
     "latest": true,
     "hyperspaceId": 106
@@ -361554,6 +362702,9 @@
         "cooldown": 6
       }
     ],
+    "distortions": [
+      3
+    ],
     "source": "336",
     "latest": true,
     "hyperspaceId": 107
@@ -362313,6 +363464,9 @@
           "en": "Mimic"
         }
       }
+    ],
+    "distortions": [
+      1
     ],
     "evolutionTree": {
       "link": "439",
@@ -363316,6 +364470,10 @@
         "power": 20,
         "cooldown": 10
       }
+    ],
+    "distortions": [
+      3,
+      3
     ],
     "evolutionTree": {
       "link": "439",
@@ -364393,6 +365551,10 @@
         "level": 42,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      3,
+      3
     ],
     "evolutionTree": {
       "link": "122-1",
@@ -365473,6 +366635,9 @@
         "cooldown": 20
       }
     ],
+    "distortions": [
+      4
+    ],
     "evolutionTree": {
       "link": "122-1",
       "type": [
@@ -365997,6 +367162,9 @@
         "level": 39,
         "method": "LevelUp"
       }
+    ],
+    "distortions": [
+      2
     ],
     "evolutionTree": {
       "link": "590",
@@ -366566,6 +367734,9 @@
         "power": 130,
         "cooldown": 12
       }
+    ],
+    "distortions": [
+      4
     ],
     "evolutionTree": {
       "link": "590",

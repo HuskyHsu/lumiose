@@ -1,3 +1,4 @@
+export { DistortionFilter } from './DistortionFilter';
 export { default as EVFilter } from './EVFilter';
 export { default as EVToggle } from './EVToggle';
 export { default as FinalFormToggle } from './FinalFormToggle';

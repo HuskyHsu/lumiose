@@ -25,6 +25,7 @@ export interface Pokemon {
   altForm?: string; // Optional alternative form name
   zone?: Zone[];
   alphaZone?: string[]; // Alpha zone IDs where this Pokemon can be found
+  distortions?: number[]; // Hyperspace distortions star levels
 }
 
 export type PokemonList = Pokemon[];
@@ -115,4 +116,4 @@ export interface ExpandedMoveData {
   alphaPm?: MinimalPokemon[];
 }
 
-export type Pokedex = 'lumiose' | 'hyperspace';
+export type Pokedex = 'lumiose' | 'hyperspace' | 'national';

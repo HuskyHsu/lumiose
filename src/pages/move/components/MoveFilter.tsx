@@ -53,10 +53,7 @@ export default function MoveFilter({
   return (
     <div className='mb-6 space-y-4'>
       <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img
-          src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
-          className='w-8 h-8 mr-2'
-        />
+        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-8 h-8 mr-2' />
         Type Filter
       </h2>
       <div className='flex flex-wrap gap-2 items-center'>
@@ -71,7 +68,7 @@ export default function MoveFilter({
               className={cn(
                 'flex items-center justify-center rounded-lg transition-all duration-100',
                 shouldFade ? 'opacity-30' : 'opacity-100',
-                'hover:scale-110 active:scale-90'
+                'hover:scale-110 active:scale-90',
               )}
               title={type}
             >
@@ -81,10 +78,7 @@ export default function MoveFilter({
         })}
       </div>
       <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img
-          src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
-          className='w-8 h-8 mr-2'
-        />
+        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-8 h-8 mr-2' />
         Category Filter
       </h2>
       <div className='flex flex-wrap gap-2 items-center'>
@@ -100,7 +94,7 @@ export default function MoveFilter({
                 'flex items-center justify-center rounded-lg transition-all duration-100',
                 'border-gray-200 bg-white hover:border-gray-300 border',
                 shouldFade ? 'opacity-30' : 'opacity-100',
-                'hover:scale-110 active:scale-90'
+                'hover:scale-110 active:scale-90',
               )}
               title={category}
             >
@@ -118,7 +112,7 @@ export default function MoveFilter({
             className={cn(
               'relative inline-flex h-6 w-11 items-center rounded-full transition-colors duration-200 ease-in-out',
               'focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2',
-              isTM ? 'bg-green-600' : 'bg-slate-300'
+              isTM ? 'bg-green-600' : 'bg-slate-300',
             )}
             role='switch'
             aria-checked={isTM}
@@ -126,7 +120,7 @@ export default function MoveFilter({
             <span
               className={cn(
                 'inline-block h-4 w-4 transform rounded-full bg-white transition-transform duration-200 ease-in-out',
-                isTM ? 'translate-x-6' : 'translate-x-1'
+                isTM ? 'translate-x-6' : 'translate-x-1',
               )}
             />
           </button>

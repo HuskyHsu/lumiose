@@ -55,7 +55,10 @@ export default function MoveList() {
   return (
     <div className='space-y-6'>
       <h1 className='flex items-end gap-2 text-3xl font-bold'>
-        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-8 h-8' />
+        <img
+          src={`${import.meta.env.BASE_URL}images/appIcon/mega_symbol.svg`}
+          className='w-8 h-8'
+        />
         <Link to={`/`}>Move List</Link>
       </h1>
       <PageViewToggle />

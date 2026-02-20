@@ -1,10 +1,8 @@
 import { EV_STATS } from '@/lib/constants/pokemon';
-import type { Pokemon, PokemonList } from '@/types/pokemon';
+import type { Pokedex, Pokemon, PokemonList } from '@/types/pokemon';
 import { useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { useUrlParams } from './useUrlParams';
-
-type Pokedex = 'lumiose' | 'hyperspace';
 
 export function usePokemonFilter(pokemonList: PokemonList) {
   const { getArrayParam, getParam, getBooleanParam, setArrayParam, setParam, setBooleanParam } =
@@ -20,6 +18,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
   const isAlphaZone = getBooleanParam('alphaZone', false);
   const selectedPokedex = (getParam('Pokedex') as Pokedex) || 'lumiose';
   const selectedEVStat = getParam('evStat') || '';
+  const selectedDistortion = getParam('distortion') || '';
 
   // Memoize the type checking function to avoid recreating it on every render
   const typeMatches = useCallback((pokemonTypes: string[], filterTypes: string[]) => {
@@ -69,8 +68,20 @@ export function usePokemonFilter(pokemonList: PokemonList) {
       return pokemon.lumioseId <= 232;
     } else if (pokedex === 'hyperspace') {
       return pokemon.hyperspaceId !== undefined;
+    } else if (pokedex === 'national') {
+      return true;
     }
     return true;
+  }, []);
+
+  // Memoize the distortion matching function
+  const distortionMatches = useCallback((pokemon: Pokemon, distortionStr: string) => {
+    if (!distortionStr.trim()) return true;
+
+    const distortionNumber = parseInt(distortionStr, 10);
+    if (isNaN(distortionNumber)) return true;
+
+    return pokemon.distortions?.includes(distortionNumber) || false;
   }, []);
 
   // Memoize the EV matching function
@@ -114,6 +125,11 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     // Apply Pokedex filter
     result = result.filter((pokemon) => pokedexMatches(pokemon, selectedPokedex));
 
+    // Apply Distortion filter
+    if (selectedDistortion.trim()) {
+      result = result.filter((pokemon) => distortionMatches(pokemon, selectedDistortion));
+    }
+
     // Apply EV filter
     if (selectedEVStat) {
       result = result.filter((pokemon) => evMatches(pokemon, selectedEVStat));
@@ -132,6 +148,8 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     keywordMatches,
     zoneMatches,
     pokedexMatches,
+    distortionMatches,
+    selectedDistortion,
     evMatches,
     getFinalFormPokemon,
     selectedEVStat,
@@ -142,21 +160,21 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     (types: string[]) => {
       setArrayParam('types', types);
     },
-    [setArrayParam]
+    [setArrayParam],
   );
 
   const memoizedSetSearchKeyword = useCallback(
     (keyword: string) => {
       setParam('search', keyword);
     },
-    [setParam]
+    [setParam],
   );
 
   const memoizedSetSelectedZone = useCallback(
     (zone: string) => {
       setParam('zone', zone);
     },
-    [setParam]
+    [setParam],
   );
 
   const toggleFinalFormOnly = useCallback(() => {
@@ -169,7 +187,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
 
   const memoizedSetSelectedPokedex = useCallback(
     (Pokedex: Pokedex) => {
-      if (Pokedex === 'hyperspace') {
+      if (Pokedex === 'hyperspace' || Pokedex === 'national') {
         // Use a single setSearchParams call to update all parameters at once
         setSearchParams((prev) => {
           const newParams = new URLSearchParams(prev);
@@ -179,18 +197,30 @@ export function usePokemonFilter(pokemonList: PokemonList) {
           return newParams;
         });
       } else {
-        setParam('Pokedex', Pokedex);
+        // Clear hyperspace specific params when switching back to lumiose
+        setSearchParams((prev) => {
+          const newParams = new URLSearchParams(prev);
+          newParams.set('Pokedex', 'lumiose');
+          return newParams;
+        });
       }
     },
 
-    [setParam, setSearchParams]
+    [setParam, setSearchParams],
   );
 
   const memoizedSetSelectedEVStat = useCallback(
     (evStat: string) => {
       setParam('evStat', evStat);
     },
-    [setParam]
+    [setParam],
+  );
+
+  const memoizedSetSelectedDistortion = useCallback(
+    (distortion: string) => {
+      setParam('distortion', distortion);
+    },
+    [setParam],
   );
 
   return {
@@ -209,5 +239,7 @@ export function usePokemonFilter(pokemonList: PokemonList) {
     filteredPokemonList,
     selectedEVStat,
     setSelectedEVStat: memoizedSetSelectedEVStat,
+    selectedDistortion,
+    setSelectedDistortion: memoizedSetSelectedDistortion,
   };
 }

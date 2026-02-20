@@ -67,7 +67,7 @@ const PokemonCard = memo(function PokemonCard({
 
     return cn(
       FromClass[primaryType as keyof typeof FromClass],
-      ToClass[secondaryType as keyof typeof ToClass]
+      ToClass[secondaryType as keyof typeof ToClass],
     );
   }, [pokemon.type]);
 
@@ -103,7 +103,11 @@ const PokemonCard = memo(function PokemonCard({
   };
 
   const pokedexId =
-    selectedPokedex === 'lumiose' ? pokemon.lumioseId : pokemon.hyperspaceId || pokemon.lumioseId;
+    selectedPokedex === 'national'
+      ? pokemon.pid
+      : selectedPokedex === 'lumiose'
+        ? pokemon.lumioseId
+        : pokemon.hyperspaceId || pokemon.pid;
 
   return (
     <Link
@@ -119,7 +123,7 @@ const PokemonCard = memo(function PokemonCard({
           'bg-linear-to-tl to-pokemon-fighting',
           colorClasses,
           'transition-all duration-300 ease-in-out',
-          'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60'
+          'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60',
         )}
       >
         <PokemonImage pokemon={pokemon} pokedexId={pokedexId} isShiny={isShiny} />
@@ -141,7 +145,7 @@ const PokemonCard = memo(function PokemonCard({
                     'rounded-full w-10 h-10 flex items-center justify-center',
                     weatherDisplay.title.includes('day') || weatherDisplay.title.includes('Sunny')
                       ? 'bg-sky-600'
-                      : 'bg-blue-900'
+                      : 'bg-blue-900',
                   )}
                   title={`Available during ${weatherDisplay.title}`}
                 >
