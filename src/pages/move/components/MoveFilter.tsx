@@ -53,7 +53,7 @@ export default function MoveFilter({
   return (
     <div className='mb-6 space-y-4'>
       <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-8 h-8 mr-2' />
+        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-6 h-6 mr-2' />
         Type Filter
       </h2>
       <div className='flex flex-wrap gap-2 items-center'>
@@ -78,7 +78,7 @@ export default function MoveFilter({
         })}
       </div>
       <h2 className='text-lg font-semibold text-slate-700 mb-2 flex items-center'>
-        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-8 h-8 mr-2' />
+        <img src={`${import.meta.env.BASE_URL}images/type/Move.png`} className='w-6 h-6 mr-2' />
         Category Filter
       </h2>
       <div className='flex flex-wrap gap-2 items-center'>
