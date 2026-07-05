@@ -228,17 +228,29 @@ interface PokemonMinimalistListProps {
   selectedPokedex: Pokedex;
 }
 
+// Define keywords to exclude specific forms (e.g. temporary forms like MEGA) from the minimalist layout.
+// You can manually adjust this array to filter out other forms.
+const MINIMALIST_EXCLUDE_FORMS = ['mega', '覺悟', '舞步', '卡帶', '解放', '原始', '現形', '%'];
+
 const PokemonMinimalistList = memo(function PokemonMinimalistList({
   pokemonList,
   isShiny,
   selectedPokedex,
 }: PokemonMinimalistListProps) {
   const sortedPokemon = useMemo(() => {
-    return [...pokemonList].sort((a, b) => {
-      const idA = getPokedexId(a, selectedPokedex);
-      const idB = getPokedexId(b, selectedPokedex);
-      return idA - idB;
-    });
+    return [...pokemonList]
+      .filter((pokemon) => {
+        if (!pokemon.altForm) return true;
+        const altFormLower = pokemon.altForm.toLowerCase();
+        return !MINIMALIST_EXCLUDE_FORMS.some((keyword) =>
+          altFormLower.includes(keyword.toLowerCase())
+        );
+      })
+      .sort((a, b) => {
+        const idA = getPokedexId(a, selectedPokedex);
+        const idB = getPokedexId(b, selectedPokedex);
+        return idA - idB;
+      });
   }, [pokemonList, selectedPokedex]);
 
   const groups = useMemo(() => {
