@@ -1,3 +1,4 @@
+import { useCaught } from '@/contexts/CaughtContext';
 import { trackCustomEvent, trackEvent } from '@/lib/analytics';
 import { FromClass, ToClass } from '@/lib/color';
 import { cn } from '@/lib/utils';
@@ -59,6 +60,8 @@ const PokemonCard = memo(function PokemonCard({
   selectedPokedex,
 }: PokemonCardProps) {
   const location = useLocation();
+  const { isCaught, toggleCaught } = useCaught();
+  const caught = isCaught(pokemon.link);
 
   // Memoize expensive color class calculations
   const colorClasses = useMemo(() => {
@@ -124,8 +127,33 @@ const PokemonCard = memo(function PokemonCard({
           colorClasses,
           'transition-all duration-300 ease-in-out',
           'hover:shadow-xl hover:-translate-y-2 hover:bg-sky-200/60',
+          caught && 'ring-2 ring-emerald-400/50 shadow-emerald-100/30'
         )}
       >
+        {/* Caught toggle Poke Ball */}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleCaught(pokemon.link);
+            trackCustomEvent('pokemon_caught_toggle', {
+              pokemon_name: pokemon.name.en,
+              pokemon_id: pokedexId,
+              is_caught: !caught,
+              location: 'grid_card',
+            });
+          }}
+          className='absolute top-2 left-2 z-10 p-1 rounded-full hover:scale-110 active:scale-95 transition-all duration-150'
+          title={caught ? 'Mark as uncaught' : 'Mark as caught'}
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
+            className={cn(
+              'w-5 h-5 transition-all duration-300',
+              caught ? 'opacity-100 drop-shadow-md scale-110' : 'opacity-25 grayscale hover:opacity-60'
+            )}
+          />
+        </button>
         <PokemonImage pokemon={pokemon} pokedexId={pokedexId} isShiny={isShiny} />
         {/* Weather indicator or Alpha indicator */}
         {selectedZone && (

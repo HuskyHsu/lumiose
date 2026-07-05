@@ -1,5 +1,6 @@
 import { MoveProvider } from '@/contexts/MoveContext';
 import { PokemonProvider } from '@/contexts/PokemonContext';
+import { CaughtProvider } from '@/contexts/CaughtContext';
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
@@ -11,7 +12,9 @@ createRoot(document.getElementById('root')!).render(
     <HashRouter>
       <PokemonProvider>
         <MoveProvider>
-          <App />
+          <CaughtProvider>
+            <App />
+          </CaughtProvider>
         </MoveProvider>
       </PokemonProvider>
     </HashRouter>

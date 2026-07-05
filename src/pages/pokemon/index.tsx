@@ -4,7 +4,9 @@ import { useLocation, useParams } from 'react-router-dom';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 import LoadingSpinner from '@/components/ui/LoadingSpinner';
 
+import { useCaught } from '@/contexts/CaughtContext';
 import { trackCustomEvent, trackPageView } from '@/lib/analytics';
+import { cn } from '@/lib/utils';
 import { fetchPokemonDetail } from '@/services/pokemonService';
 import type { DetailedPokemon } from '@/types/pokemon';
 
@@ -26,6 +28,8 @@ function PokemonDetail() {
   const [pokemon, setPokemon] = useState<DetailedPokemon | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const { isCaught, toggleCaught } = useCaught();
+  const caught = pokemon ? isCaught(pokemon.link) : false;
 
   const loadPokemonDetail = async (pokemonLink: string) => {
     try {
@@ -123,7 +127,34 @@ function PokemonDetail() {
 
   return (
     <div className='space-y-6'>
-      <BackButton />
+      <div className='flex items-center justify-between gap-4 flex-wrap'>
+        <BackButton />
+        <button
+          onClick={() => {
+            if (pokemon) {
+              toggleCaught(pokemon.link);
+              trackCustomEvent('pokemon_caught_toggle', {
+                pokemon_name: pokemon.name.en,
+                pokemon_id: pokemon.lumioseId,
+                is_caught: !caught,
+                location: 'detail_page',
+              });
+            }
+          }}
+          className={cn(
+            'inline-flex items-center gap-2 px-4 py-2 text-sm font-bold rounded-xl border shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 active:scale-95 cursor-pointer',
+            caught
+              ? 'bg-emerald-500 hover:bg-emerald-600 text-white border-emerald-500 shadow-emerald-100'
+              : 'bg-white hover:bg-slate-50 text-slate-600 border-slate-200'
+          )}
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}images/type/PokemonBall.png`}
+            className={cn('w-5 h-5 transition-transform duration-300', caught ? 'rotate-360' : 'grayscale opacity-60')}
+          />
+          <span>{caught ? 'Caught' : 'Mark as Caught'}</span>
+        </button>
+      </div>
       <PokemonNavigation currentPokemonLink={currentLink} onPokemonChange={handlePokemonChange} />
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         <div id='basic-info'>
