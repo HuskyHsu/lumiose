@@ -297,7 +297,7 @@ const PokemonMinimalistList = memo(function PokemonMinimalistList({
             </span>
           </div>
 
-          <div className='grid grid-cols-3 sm:grid-cols-6 md:grid-cols-6 lg:grid-cols-6 justify-items-stretch gap-3'>
+          <div className='grid grid-cols-6 justify-items-stretch gap-1.5 sm:gap-3'>
             {group.pokemon.map((pokemon) => {
               const id = getPokedexId(pokemon, selectedPokedex);
               return (
