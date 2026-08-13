@@ -7,9 +7,9 @@ const getPokedexId = (pokemon: Pokemon, selectedPokedex: Pokedex): number => {
   if (selectedPokedex === 'national') {
     return pokemon.pid;
   } else if (selectedPokedex === 'hyperspace') {
-    return pokemon.hyperspaceId ?? pokemon.pid;
+    return pokemon.hyperspaceId as number;
   } else {
-    return pokemon.lumioseId ?? pokemon.pid;
+    return pokemon.lumioseId as number;
   }
 };
 
