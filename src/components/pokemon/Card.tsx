@@ -60,7 +60,7 @@ const PokemonCard = memo(function PokemonCard({
   selectedPokedex,
 }: PokemonCardProps) {
   const location = useLocation();
-  const { isCaught, toggleCaught, isCatchMode } = useCaught();
+  const { isCaught, toggleCaught } = useCaught();
   const caught = isCaught(pokemon.link);
 
   // Memoize expensive color class calculations

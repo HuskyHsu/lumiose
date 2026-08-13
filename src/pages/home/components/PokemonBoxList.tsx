@@ -3,13 +3,13 @@ import type { Pokedex, Pokemon, PokemonList } from '@/types/pokemon';
 import { Package } from 'lucide-react';
 import { memo, useMemo } from 'react';
 
-const getPokedexId = (pokemon: Pokemon, selectedPokedex: Pokedex) => {
+const getPokedexId = (pokemon: Pokemon, selectedPokedex: Pokedex): number => {
   if (selectedPokedex === 'national') {
     return pokemon.pid;
   } else if (selectedPokedex === 'hyperspace') {
-    return pokemon.hyperspaceId;
+    return pokemon.hyperspaceId ?? pokemon.pid;
   } else {
-    return pokemon.lumioseId;
+    return pokemon.lumioseId ?? pokemon.pid;
   }
 };
 
