@@ -9,4 +9,5 @@ export { default as ShinyToggle } from './ShinyToggle';
 export { TypeFilter } from './TypeFilter';
 export { ZoneFilter } from './ZoneFilter';
 export { default as LayoutToggle } from './LayoutToggle';
-
+export { default as CatchModeToggle } from './CatchModeToggle';
+export { PokemonBoxList } from './PokemonBoxList';

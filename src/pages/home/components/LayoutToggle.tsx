@@ -1,14 +1,14 @@
 import { trackCustomEvent } from '@/lib/analytics';
 import { cn } from '@/lib/utils';
-import { LayoutGrid, List } from 'lucide-react';
+import { LayoutGrid, Package } from 'lucide-react';
 
 interface LayoutToggleProps {
-  layout: 'grid' | 'minimalist';
-  onLayoutChange: (layout: 'grid' | 'minimalist') => void;
+  layout: 'grid' | 'box';
+  onLayoutChange: (layout: 'grid' | 'box') => void;
 }
 
 export default function LayoutToggle({ layout, onLayoutChange }: LayoutToggleProps) {
-  const handleToggle = (newLayout: 'grid' | 'minimalist') => {
+  const handleToggle = (newLayout: 'grid' | 'box') => {
     if (newLayout === layout) return;
     trackCustomEvent('layout_toggle', {
       new_layout: newLayout,
@@ -37,17 +37,17 @@ export default function LayoutToggle({ layout, onLayoutChange }: LayoutTogglePro
         </button>
         <button
           type='button'
-          onClick={() => handleToggle('minimalist')}
+          onClick={() => handleToggle('box')}
           className={cn(
             'flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold rounded-lg transition-all duration-200 ease-out',
-            layout === 'minimalist'
+            layout === 'box'
               ? 'bg-white text-slate-800 shadow-sm scale-[1.02]'
               : 'text-slate-500 hover:text-slate-700 hover:bg-white/40'
           )}
-          title="Minimalist view"
+          title="Box view"
         >
-          <List className='w-4 h-4' />
-          <span>Minimalist</span>
+          <Package className='w-4 h-4' />
+          <span>Box View</span>
         </button>
       </div>
     </div>

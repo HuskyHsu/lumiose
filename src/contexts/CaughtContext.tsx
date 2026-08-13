@@ -4,6 +4,8 @@ interface CaughtContextType {
   caughtList: string[];
   isCaught: (link: string) => boolean;
   toggleCaught: (link: string) => void;
+  isCatchMode: boolean;
+  toggleCatchMode: () => void;
 }
 
 const CaughtContext = createContext<CaughtContextType | undefined>(undefined);
@@ -17,6 +19,8 @@ export function CaughtProvider({ children }: { children: React.ReactNode }) {
       return new Set();
     }
   });
+
+  const [isCatchMode, setIsCatchMode] = useState(false);
 
   useEffect(() => {
     localStorage.setItem('lumiose_caught_list', JSON.stringify(Array.from(caughtSet)));
@@ -36,8 +40,12 @@ export function CaughtProvider({ children }: { children: React.ReactNode }) {
     });
   };
 
+  const toggleCatchMode = () => {
+    setIsCatchMode((prev) => !prev);
+  };
+
   return (
-    <CaughtContext.Provider value={{ caughtList: Array.from(caughtSet), isCaught, toggleCaught }}>
+    <CaughtContext.Provider value={{ caughtList: Array.from(caughtSet), isCaught, toggleCaught, isCatchMode, toggleCatchMode }}>
       {children}
     </CaughtContext.Provider>
   );

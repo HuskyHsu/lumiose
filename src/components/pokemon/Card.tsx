@@ -60,7 +60,7 @@ const PokemonCard = memo(function PokemonCard({
   selectedPokedex,
 }: PokemonCardProps) {
   const location = useLocation();
-  const { isCaught, toggleCaught } = useCaught();
+  const { isCaught, toggleCaught, isCatchMode } = useCaught();
   const caught = isCaught(pokemon.link);
 
   // Memoize expensive color class calculations
@@ -87,6 +87,13 @@ const PokemonCard = memo(function PokemonCard({
     return specialWeather.length > 0 ? specialWeather : null;
   }, [selectedZone, pokemon.zone]);
 
+  const pokedexId =
+    selectedPokedex === 'national'
+      ? pokemon.pid
+      : selectedPokedex === 'lumiose'
+        ? pokemon.lumioseId
+        : pokemon.hyperspaceId || pokemon.pid;
+
   const handleClick = () => {
     // Store current URL (including search params) for the back button
     const currentUrl = location.pathname + location.search;
@@ -104,13 +111,6 @@ const PokemonCard = memo(function PokemonCard({
       page_location: location.pathname,
     });
   };
-
-  const pokedexId =
-    selectedPokedex === 'national'
-      ? pokemon.pid
-      : selectedPokedex === 'lumiose'
-        ? pokemon.lumioseId
-        : pokemon.hyperspaceId || pokemon.pid;
 
   return (
     <Link
